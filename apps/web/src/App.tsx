@@ -4,6 +4,7 @@ import { TrackView } from './pages/TrackView';
 import { LabWorkspace } from './pages/LabWorkspace';
 import { IncidentSimulator } from './pages/IncidentSimulator';
 import { Assessments } from './pages/Assessments';
+import { SkillGraph } from './pages/SkillGraph';
 import {
   LayoutDashboard,
   Terminal,
@@ -14,10 +15,11 @@ import {
   Layers,
   CheckCircle2,
   Activity,
+  GitBranch,
 } from 'lucide-react';
 
 export const App: React.FC = () => {
-  const [currentView, setCurrentView] = useState<'dashboard' | 'labs' | 'workspace' | 'incidents' | 'assessments'>('dashboard');
+  const [currentView, setCurrentView] = useState<'dashboard' | 'skills' | 'labs' | 'workspace' | 'incidents' | 'assessments'>('dashboard');
   const [selectedLabId, setSelectedLabId] = useState<string>('linux-inode-exhaustion');
   const [selectedIncidentId, setSelectedIncidentId] = useState<string>('checkout-latency-spike');
 
@@ -84,6 +86,20 @@ export const App: React.FC = () => {
             }}
           >
             <LayoutDashboard size={16} /> Dashboard
+          </button>
+
+          <button
+            onClick={() => setCurrentView('skills')}
+            className="btn"
+            style={{
+              justifyContent: 'flex-start',
+              backgroundColor: currentView === 'skills' ? '#141b2d' : 'transparent',
+              color: currentView === 'skills' ? '#00f2fe' : '#94a3b8',
+              border: currentView === 'skills' ? '1px solid var(--border-accent)' : 'none',
+              padding: '10px 14px',
+            }}
+          >
+            <GitBranch size={16} /> Skill & Dependency Map
           </button>
 
           <button
@@ -187,6 +203,10 @@ export const App: React.FC = () => {
               onSelectIncident={handleLaunchIncident}
               onNavigate={(v) => setCurrentView(v as any)}
             />
+          )}
+
+          {currentView === 'skills' && (
+            <SkillGraph onSelectTrack={() => setCurrentView('labs')} />
           )}
 
           {currentView === 'labs' && <TrackView onSelectLab={handleLaunchLab} />}

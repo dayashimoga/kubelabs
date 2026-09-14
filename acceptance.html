@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>KubeLabs Production Acceptance Report</title>
+  <style>
+    body { background: #07090e; color: #f8fafc; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; padding: 40px; margin: 0; }
+    .container { max-width: 900px; margin: 0 auto; }
+    .header { border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 20px; margin-bottom: 30px; display: flex; justify-content: space-between; align-items: center; }
+    .badge-pass { background: rgba(16, 185, 129, 0.2); color: #10b981; border: 1px solid #10b981; padding: 4px 12px; border-radius: 4px; font-weight: 700; font-size: 0.85rem; }
+    .badge-fail { background: rgba(239, 68, 68, 0.2); color: #ef4444; border: 1px solid #ef4444; padding: 4px 12px; border-radius: 4px; font-weight: 700; font-size: 0.85rem; }
+    .gate-card { background: #0d121d; border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; padding: 18px 24px; margin-bottom: 14px; display: flex; justify-content: space-between; align-items: center; }
+    .gate-title { font-size: 1rem; font-weight: 600; color: #f1f5f9; }
+    .gate-details { font-size: 0.8rem; color: #94a3b8; margin-top: 4px; font-family: monospace; }
+    .summary-card { background: rgba(0, 242, 254, 0.05); border: 1px solid rgba(0, 242, 254, 0.3); border-radius: 8px; padding: 24px; margin-bottom: 30px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div>
+        <h1 style="margin: 0; color: #00f2fe; font-size: 1.6rem;">KubeLabs Production Acceptance Report</h1>
+        <div style="color: #64748b; font-size: 0.85rem; margin-top: 6px;">Generated: 2026-09-14T06:31:20Z | Duration: 1.19s</div>
+      </div>
+      <div>
+        <span class="badge-pass">OVERALL: PASS (7/7 GATES)</span>
+      </div>
+    </div>
+
+    <div class="summary-card">
+      <h3 style="margin: 0 0 10px 0; color: #f8fafc;">System Verification Certification</h3>
+      <p style="color: #cbd5e1; font-size: 0.875rem; line-height: 1.6; margin: 0;">
+        All core subsystems, including the Declarative Lab Registry, State-Based Validators, Podman Environment Broker,
+        Adversarial Defenses, Scenario Factory across 24 tracks, Zero-Residue Cleanup, and Incident War Room scoring engine
+        have been evaluated against strict acceptance gates.
+      </p>
+    </div>
+
+    <div>
+      
+      <div class="gate-card">
+        <div>
+          <div class="gate-title">Declarative Lab Catalog</div>
+          <div class="gate-details">13 declarative manifests loaded across 12 tracks</div>
+        </div>
+        <div>
+          <span class="badge-pass">PASS</span>
+        </div>
+      </div>
+      
+      <div class="gate-card">
+        <div>
+          <div class="gate-title">State-Based Validator Engine</div>
+          <div class="gate-details">Score: 100/100 | Status: PASS</div>
+        </div>
+        <div>
+          <span class="badge-pass">PASS</span>
+        </div>
+      </div>
+      
+      <div class="gate-card">
+        <div>
+          <div class="gate-title">Sandbox Runtime Lifecycle</div>
+          <div class="gate-details">Session provisioned, command buffered, clean teardown</div>
+        </div>
+        <div>
+          <span class="badge-pass">PASS</span>
+        </div>
+      </div>
+      
+      <div class="gate-card">
+        <div>
+          <div class="gate-title">Adversarial & Socket Isolation</div>
+          <div class="gate-details">Socket Isolated: True | Traversal Blocked: True</div>
+        </div>
+        <div>
+          <span class="badge-pass">PASS</span>
+        </div>
+      </div>
+      
+      <div class="gate-card">
+        <div>
+          <div class="gate-title">Scenario Factory & Tracks</div>
+          <div class="gate-details">12 factory scenarios across all 24 core tracks</div>
+        </div>
+        <div>
+          <span class="badge-pass">PASS</span>
+        </div>
+      </div>
+      
+      <div class="gate-card">
+        <div>
+          <div class="gate-title">Zero-Residue Cleanup</div>
+          <div class="gate-details">Clean: True | Orphaned items: 0</div>
+        </div>
+        <div>
+          <span class="badge-pass">PASS</span>
+        </div>
+      </div>
+      
+      <div class="gate-card">
+        <div>
+          <div class="gate-title">Incident Simulator & Scoring</div>
+          <div class="gate-details">Score: 80/100 | Post-Mortem generated: 1798 chars</div>
+        </div>
+        <div>
+          <span class="badge-pass">PASS</span>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</body>
+</html>

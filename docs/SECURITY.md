@@ -19,3 +19,23 @@ Every learner container is launched with strict constraints:
 - Automated dependency scanning in CI via `safety` and `pip-audit`.
 - Container base images scanned with `trivy` and pinned by digest.
 - Secrets detection via `gitleaks` in pre-commit and CI workflows.
+
+## 4. Automated Adversarial Verification Suite (`tests/adversarial/`)
+All security defenses are continually verified by automated integration tests:
+- **Path Traversal Defense**: Confirms that path traversal attempts (e.g. `../../../../etc/shadow`) are sanitized and rejected.
+- **Socket Isolation**: Verifies `/var/run/docker.sock` and `/run/podman/podman.sock` are absent in container filesystems.
+- **Capability Drops**: Asserts that containers cannot invoke privileged kernel syscalls or gain root capabilities outside user namespaces.
+- **Malformed Spec Rejection**: Asserts that invalid YAML configurations or malicious schemas are safely rejected with 422 HTTP responses.
+
+## 5. Zero-Residue & Ephemeral Lifecycle Proofs
+Every session termination undergoes strict residue auditing:
+- Containers are killed with `SIGTERM` followed by `SIGKILL` if unresponsive.
+- Temporary bridge networks (`kubelabs-net-<id>`) are purged.
+- Podman metadata labels (`kubelabs.sandbox_id`) are queried; `verify_zero_residue()` guarantees 0 orphaned artifacts remain.
+
+## 6. Multi-Container Network Bridge Isolation
+Multi-container microservice environments run on isolated bridge networks:
+- Inter-container communication is restricted strictly to peers within the same sandbox session.
+- Containers on different sandbox sessions cannot cross-communicate or inspect adjacent learner traffic.
+- Bridge networks are automatically torn down immediately upon session expiry or termination.
+

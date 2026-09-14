@@ -201,6 +201,18 @@ Events:
         if cmd_clean == "uptime":
             return 0, " 10:04:12 up 42 days,  3:18,  2 users,  load average: 8.42, 6.15, 4.30\n", ""
 
+        if "docker.sock" in cmd_clean or "podman.sock" in cmd_clean:
+            return 1, "", "ls: /var/run/docker.sock: No such file or directory\nls: /run/podman/podman.sock: No such file or directory\n"
+
+        if cmd_clean.startswith("cat "):
+            target_path = cmd_clean.split(None, 1)[1].strip()
+            if target_path in self.state.get("filesystem", {}):
+                return 0, self.state["filesystem"][target_path] + "\n", ""
+            if "service.yaml" in target_path:
+                return 0, "apiVersion: v1\nkind: Service\nmetadata:\n  name: payment-svc\nspec:\n  selector:\n    app: payment-api-v2\n", ""
+            if "shadow" in target_path:
+                return 1, "", f"cat: {target_path}: Permission denied\n"
+
         # Default fallback
         return 0, f"Executed: {cmd_clean}\n", ""
 

@@ -22,8 +22,11 @@ graph TD
     end
 
     subgraph Execution ["Execution & Isolation Sandbox"]
-        Podman[Rootless Podman Runtime]
+        Broker[Environment Broker]
+        SingleCont[Single Container Provider]
+        MultiPod[Multi-Container Pod Provider]
         Sim[Deterministic SRE State Simulator]
+        Injector[Fault Scenario Injector]
         TTL[Background TTL Sweeper]
     end
 
@@ -34,11 +37,14 @@ graph TD
     Router --> Incident
     LabSvc --> Validator
     LabSvc --> Troubleshoot
-    LabSvc --> Podman
-    LabSvc --> Sim
+    LabSvc --> Broker
+    Broker --> SingleCont
+    Broker --> MultiPod
+    Broker --> Sim
+    Broker --> Injector
     Incident --> Sim
     Router --> DB
-    TTL --> Podman
+    TTL --> Broker
 ```
 
 ## 2. Component Deconstruction
@@ -46,18 +52,18 @@ graph TD
 ### 2.1 Frontend Client (`apps/web`)
 - **Technology**: React 18, TypeScript, Vite, Monaco Editor, xterm.js, Lucide Icons.
 - **State Management**: Localized state with lightweight context providers for active sandbox session and incident state.
-- **Workspace Layout**: Split pane responsive layout separating instructions, configuration editor, architecture topology, interactive terminal, telemetry streams, and validation results.
+- **Workspace Layout**: Split-pane responsive layout separating instructions, configuration editor, architecture topology, interactive terminal, telemetry streams, validation results, and interactive `SkillGraph` for tracking 24 competency paths.
 
 ### 2.2 Backend Modular Monolith (`apps/api`)
-- **Technology**: Python 3.11, FastAPI, SQLAlchemy ORM, SQLite in Write-Ahead-Logging (WAL) mode, Pydantic v2.
-- **WebSocket Terminal Streamer**: Bi-directional PTY handler connecting the browser xterm.js instance to either a live rootless Podman container or deterministic simulation engine.
+- **Technology**: Python 3.11, FastAPI, SQLAlchemy ORM, PostgreSQL connection pool (`pool_size=20`) with SQLite WAL fallback, Redis sliding-window rate limiter, Pydantic v2.
+- **WebSocket Terminal Streamer**: Bi-directional PTY handler connecting the browser xterm.js instance with a 1000-line scrollback buffer for resilient reconnection replay.
 - **REST APIs**: Versioned under `/api/v1` (`/labs`, `/incidents`, `/assessments`, `/dashboard`, `/telemetry`).
 
 ### 2.3 Domain Packages (`packages/`)
-- `packages/lab_schema`: Strict Pydantic models and registry loader for declarative YAML labs.
-- `packages/validator_core`: 14 state-based verification engines checking system final state.
-- `packages/sandbox_runtime`: Rootless Podman container lifecycle manager and deterministic SRE simulator.
-- `packages/incident_core`: SEV-1/SEV-2 cascading outage scenarios, real-time alert timelines, and SRE scoring.
+- `packages/lab_schema`: Strict Pydantic models, registry loader, and `ScenarioFactory` generating failure scenarios across all 24 tracks.
+- `packages/validator_core`: 15 state-based verification engines checking system final state across containers, hosts, and simulated environments.
+- `packages/sandbox_runtime`: `EnvironmentBroker`, `SingleContainerProvider`, `MultiContainerPodProvider`, `ScenarioInjector`, `PodmanSandboxExecutor`, and `DeterministicSimulator`.
+- `packages/incident_core`: SEV-1/SEV-2 cascading outage scenarios, canonical 6-tier microservices topology, distributed trace generator, and automated Markdown post-mortem engine.
 
 ## 3. Data Flow & Execution Lifecycles
 

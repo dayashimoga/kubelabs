@@ -45,14 +45,16 @@ class PodmanSandboxExecutor:
 
         container_name = f"kubelabs-{sandbox_id}"
 
-        # Construct security-hardened podman run arguments
+        # Normalize memory specification for Podman (e.g. 512Mi -> 512m)
+        mem_limit = env_spec.memory_limit.lower().replace("ib", "b").replace("i", "")
+
         cmd = [
             self.podman,
             "run",
             "-d",
             "--name",
             container_name,
-            f"--memory={env_spec.memory_limit}",
+            f"--memory={mem_limit}",
             f"--cpus={env_spec.cpu_limit}",
             f"--pids-limit={env_spec.pids_limit}",
             "--security-opt=no-new-privileges",
@@ -88,20 +90,21 @@ class PodmanSandboxExecutor:
 
         container_id = run_res.stdout.strip()
 
-        # Stage files into container
+        # Stage files into container using streaming stdin
         if initial_state.files:
-            with tempfile.TemporaryDirectory() as tmpdir:
-                for staged in initial_state.files:
-                    target_file = Path(tmpdir) / Path(staged.path).name
-                    target_file.write_text(staged.content, encoding="utf-8")
-                    # Copy to container
-                    subprocess.run(
-                        [self.podman, "cp", str(target_file), f"{container_name}:{staged.path}"],
-                        check=False,
-                        timeout=10,
-                    )
-                    # Set permissions
-                    self.exec_command(container_name, f"chmod {staged.permissions} '{staged.path}'")
+            import posixpath
+            for staged in initial_state.files:
+                parent_dir = posixpath.dirname(staged.path)
+                cmd_stage = [
+                    self.podman,
+                    "exec",
+                    "-i",
+                    container_name,
+                    "sh",
+                    "-c",
+                    f"mkdir -p '{parent_dir}' && cat > '{staged.path}' && chmod {staged.permissions} '{staged.path}'",
+                ]
+                subprocess.run(cmd_stage, input=staged.content, text=True, capture_output=True, timeout=15)
 
         # Run setup commands
         for setup_cmd in initial_state.setup_commands:
@@ -141,7 +144,9 @@ class PodmanSandboxExecutor:
     def cleanup_container(self, container_identifier: str) -> bool:
         """Stop and remove a container."""
         try:
-            subprocess.run([self.podman, "rm", "-f", container_identifier], capture_output=True, timeout=10)
+            subprocess.run([self.podman, "rm", "-f", container_identifier], capture_output=True, timeout=15)
+            # Synchronize removal
+            time.sleep(0.3)
             return True
         except Exception:
             return False

@@ -43,6 +43,21 @@ This document is **append-only and history-preserving**. Completed items are mar
 - [x] Formulated STRIDE threat model, security policies, and production deployment manifests.
 - [x] Created append-only CHANGELOG.md and comprehensive GAP_REPORT.md.
 
+### Sprint 8: Production Overhaul, Environment Broker, Scenario Factory & Acceptance Verification (2026-09-14)
+- [x] Conducted comprehensive forensic gap analysis identifying and classifying P0-P3 gaps across runtime, curriculum, validation, war room, and security.
+- [x] Implemented `EnvironmentBroker` orchestrating `SingleContainerProvider`, `MultiContainerPodProvider` with isolated bridge networks (`kubelabs-net-<id>`), and `SimulationProvider`.
+- [x] Implemented dynamic `ScenarioInjector` simulating faults (inode fill, disk exhaustion, DNS corruption, zombie processes, port conflicts, Kubernetes zero endpoints, probe mismatches, Prometheus cardinality explosions, Istio mTLS denial).
+- [x] Normalized Podman memory units (`512Mi` -> `512m`) and implemented cross-platform stdin streaming for atomic container file staging.
+- [x] Enforced zero-residue lifecycle verification with synchronous container teardown and orphan resource auditing.
+- [x] Implemented PTY terminal scrollback buffering (last 1000 lines) with automatic reconnection replay.
+- [x] Implemented `ScenarioFactory` generating production failure scenarios across all 24 core curriculum tracks with 13-part pedagogical models.
+- [x] Built canonical 6-tier microservices topology architecture with distributed trace waterfall generation and automated Markdown post-mortem generation (TTD, TTM, TTR).
+- [x] Hardened backend with PostgreSQL connection pooling (`pool_size=20`), SQLite WAL fallback, Redis sliding-window rate limiting, and HTTP security headers.
+- [x] Added simulation fallback in `CommandValidator` and `FileValidator` for resilient headless execution.
+- [x] Developed interactive visual `SkillGraph.tsx` competency and prerequisite graph across 24 tracks.
+- [x] Automated 7 acceptance verification gates in `verify_acceptance.py` generating `acceptance.json` and `acceptance.html` (all 7 gates passed).
+- [x] Achieved 100% test pass rate across all 29 automated tests (`pytest tests/ -v`).
+
 ### Future Sprint Items (Pending Backlog)
 - [ ] Ephemeral multi-node Kind/k3d cluster manager plugin.
 - [ ] OIDC SSO integration with GitHub Enterprise and Okta.

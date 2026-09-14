@@ -18,6 +18,8 @@ export const IncidentSimulator: React.FC<IncidentSimulatorProps> = ({ initialInc
   const [mitigationCmd, setMitigationCmd] = useState('');
   const [mitigationStatus, setMitigationStatus] = useState<any>(null);
   const [finalScore, setFinalScore] = useState<IncidentScore | null>(null);
+  const [postMortem, setPostMortem] = useState<string | null>(null);
+  const [showPostMortemModal, setShowPostMortemModal] = useState<boolean>(false);
 
   useEffect(() => {
     fetch('/api/v1/incidents')
@@ -75,6 +77,9 @@ export const IncidentSimulator: React.FC<IncidentSimulatorProps> = ({ initialInc
     });
     const data = await res.json();
     setFinalScore(data.score);
+    if (data.post_mortem) {
+      setPostMortem(data.post_mortem);
+    }
   };
 
   return (
@@ -281,6 +286,84 @@ export const IncidentSimulator: React.FC<IncidentSimulatorProps> = ({ initialInc
                 {finalScore.feedback.map((f, i) => (
                   <div key={i}>• {f}</div>
                 ))}
+              </div>
+
+              {postMortem && (
+                <div style={{ marginTop: 16 }}>
+                  <button
+                    onClick={() => setShowPostMortemModal(true)}
+                    className="btn btn-secondary"
+                    style={{ width: '100%', padding: '8px 12px', fontSize: '0.8rem', fontWeight: 700 }}
+                  >
+                    📄 View Full SRE Post-Mortem & Incident Timeline
+                  </button>
+                </div>
+              )}
+            </div>
+          )}
+
+          {/* Post-Mortem Modal */}
+          {showPostMortemModal && postMortem && (
+            <div
+              style={{
+                position: 'fixed',
+                top: 0,
+                left: 0,
+                right: 0,
+                bottom: 0,
+                backgroundColor: 'rgba(0,0,0,0.85)',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                zIndex: 1000,
+                padding: 24,
+              }}
+            >
+              <div
+                style={{
+                  backgroundColor: '#0a0e17',
+                  border: '1px solid rgba(0,242,254,0.3)',
+                  borderRadius: 8,
+                  width: '800px',
+                  maxWidth: '100%',
+                  maxHeight: '90vh',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  boxShadow: '0 20px 50px rgba(0,0,0,0.8)',
+                }}
+              >
+                <div style={{ padding: '16px 20px', borderBottom: '1px solid rgba(255,255,255,0.08)', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                  <span style={{ fontWeight: 700, color: '#f8fafc', fontSize: '1rem' }}>
+                    SRE Post-Mortem Report ({session?.session_id})
+                  </span>
+                  <button
+                    onClick={() => setShowPostMortemModal(false)}
+                    style={{ background: 'none', border: 'none', color: '#94a3b8', fontSize: '1.2rem', cursor: 'pointer' }}
+                  >
+                    ✕
+                  </button>
+                </div>
+                <div style={{ padding: 20, overflowY: 'auto', flex: 1 }}>
+                  <pre style={{ margin: 0, fontFamily: 'monospace', fontSize: '0.825rem', color: '#e2e8f0', whiteSpace: 'pre-wrap', lineHeight: 1.6, backgroundColor: '#07090e', padding: 16, borderRadius: 6 }}>
+                    {postMortem}
+                  </pre>
+                </div>
+                <div style={{ padding: '12px 20px', borderTop: '1px solid rgba(255,255,255,0.08)', display: 'flex', justifyContent: 'flex-end', gap: 10 }}>
+                  <button
+                    onClick={() => navigator.clipboard.writeText(postMortem)}
+                    className="btn btn-secondary"
+                    style={{ padding: '6px 14px', fontSize: '0.8rem' }}
+                  >
+                    Copy Markdown
+                  </button>
+                  <button
+                    onClick={() => setShowPostMortemModal(false)}
+                    className="btn btn-primary"
+                    style={{ padding: '6px 14px', fontSize: '0.8rem' }}
+                  >
+                    Close
+                  </button>
+                </div>
               </div>
             </div>
           )}

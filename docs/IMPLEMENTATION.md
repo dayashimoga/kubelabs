@@ -37,4 +37,33 @@ cmd = [
 Provides interactive shell I/O streaming with ANSI terminal rendering, escape sequence processing, backspace handling, and command execution in containers or simulators.
 
 ### 2.4 Frontend Workspace Assembly (`apps/web`)
-Combines xterm.js, Monaco Editor, interactive SVG topology viewer, and real-time metric jitter simulators into a cohesive, responsive multi-panel SRE command center.
+Combines xterm.js, Monaco Editor, interactive SVG topology viewer, real-time metric jitter simulators, and interactive `SkillGraph` into a cohesive, responsive multi-panel SRE command center.
+
+### 2.5 Multi-Provider Environment Broker (`packages/sandbox_runtime/src/broker.py`)
+Orchestrates heterogeneous execution backends transparently:
+- **`SingleContainerProvider`**: Rootless Podman container with `--cap-drop=ALL` and cgroup quotas.
+- **`MultiContainerPodProvider`**: Spawns isolated bridge networks (`kubelabs-net-<id>`) with interconnected microservice containers (e.g. frontend, gateway, auth, database) with internal DNS discovery.
+- **`SimulationProvider`**: Deterministic state machine simulating kernel syscalls, Kubernetes clusters, and cloud telemetry.
+
+### 2.6 Dynamic Fault Injection Engine (`packages/sandbox_runtime/src/scenario_injector.py`)
+Injects real and simulated failure modes:
+- Filesystem: Inode filling, disk block saturation.
+- Networking: DNS resolution breakage, TCP port contention, latency injection.
+- Orchestration: Kubernetes zero endpoint services, readiness probe mismatches, CrashLoopBackOff.
+- Observability: Prometheus high-cardinality explosions, Istio mTLS handshake rejections.
+
+### 2.7 Cross-Platform Atomic File Staging via Stdin Streaming (`executor.py`)
+To prevent Windows path mangling during `podman cp`, files are staged atomically over standard input:
+```python
+cmd = [self.podman, "exec", "-i", container_id, "sh", "-c", f"mkdir -p {target_dir} && cat > '{target_path}'"]
+subprocess.run(cmd, input=content, text=True, check=True, timeout=15)
+```
+
+### 2.8 Curriculum Scenario Factory across 24 Tracks (`packages/lab_schema/src/scenario_factory.py`)
+Generates standardized, pedagogically complete failure scenarios adhering to the 13-part curriculum model with 5-tier layered hints and state validator rules.
+
+### 2.9 Automated SRE Post-Mortem Generator (`packages/incident_core/src/engine.py`)
+Analyzes learner investigation timelines and generates structured Markdown post-mortems computing Time-To-Detect (TTD), Time-To-Mitigate (TTM), Time-To-Resolve (TTR), and 6D SRE scorecards.
+
+### 2.10 Zero-Residue Lifecycle Verification (`manager.py`)
+Guarantees clean tear down by synchronizing container stopping, network purging, and inspecting Podman labels (`kubelabs.sandbox_id`) to certify zero leftover artifacts.

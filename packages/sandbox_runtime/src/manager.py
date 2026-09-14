@@ -1,15 +1,18 @@
 """
-Sandbox Manager: Unified orchestrator for container and simulation sandboxes.
-Enforces TTL expiration, security isolation, and automated cleanup.
+Sandbox Manager: Unified orchestrator for container, multi-container, and simulation sandboxes.
+Enforces TTL expiration, security isolation, terminal scrollback buffering, and automated cleanup.
 """
 
 import time
 import uuid
 import threading
-from typing import Any, Dict, Optional, Tuple
-from packages.lab_schema import LabSpec, EnvironmentType
-from .executor import PodmanSandboxExecutor
+from typing import Any, Dict, List, Optional, Tuple
+from packages.lab_schema import LabSpec, LabRuntimeClassification
+from .broker import EnvironmentBroker
+from .scenario_injector import ScenarioInjector
 from .simulator import DeterministicSimulator
+from .executor import PodmanSandboxExecutor
+
 
 
 class SandboxSession:
@@ -20,20 +23,34 @@ class SandboxSession:
         session_id: str,
         lab_id: str,
         lab_spec: LabSpec,
-        is_container: bool = False,
-        container_id: Optional[str] = None,
-        simulator: Optional[DeterministicSimulator] = None,
+        broker_record: Dict[str, Any],
         ttl_seconds: int = 1800,
     ):
         self.session_id = session_id
         self.lab_id = lab_id
         self.lab_spec = lab_spec
-        self.is_container = is_container
-        self.container_id = container_id
-        self.simulator = simulator or DeterministicSimulator(lab_id, lab_spec.initial_state.seed_data)
+        self.broker_record = broker_record
         self.created_at = time.time()
         self.expires_at = self.created_at + ttl_seconds
         self.last_activity = time.time()
+        self.scrollback_buffer: List[str] = []
+        self._max_scrollback = 1000
+
+    @property
+    def is_container(self) -> bool:
+        return self.broker_record.get("provider", "").startswith("podman")
+
+    @property
+    def container_id(self) -> Optional[str]:
+        return self.broker_record.get("container_id")
+
+    @property
+    def runtime_classification(self) -> LabRuntimeClassification:
+        return self.broker_record.get("classification", LabRuntimeClassification.REAL)
+
+    @property
+    def simulator(self) -> Optional[DeterministicSimulator]:
+        return self.broker_record.get("simulator")
 
     def is_expired(self) -> bool:
         return time.time() > self.expires_at
@@ -41,51 +58,57 @@ class SandboxSession:
     def touch(self):
         self.last_activity = time.time()
 
+    def append_scrollback(self, text: str):
+        lines = text.splitlines(keepends=True)
+        self.scrollback_buffer.extend(lines)
+        if len(self.scrollback_buffer) > self._max_scrollback:
+            self.scrollback_buffer = self.scrollback_buffer[-self._max_scrollback:]
+
+    def get_scrollback(self) -> str:
+        return "".join(self.scrollback_buffer)
+
 
 class SandboxManager:
     """Manages lifecycle of sandboxes with automatic background TTL sweeper."""
 
-    def __init__(self):
+    def __init__(self, podman_binary: str = "podman"):
         self.sessions: Dict[str, SandboxSession] = {}
-        self.podman = PodmanSandboxExecutor()
+        self.broker = EnvironmentBroker(podman_binary)
         self._lock = threading.Lock()
         self._stop_sweeper = threading.Event()
         self._sweeper_thread = threading.Thread(target=self._ttl_sweeper_loop, daemon=True)
         self._sweeper_thread.start()
 
+    @property
+    def podman(self) -> PodmanSandboxExecutor:
+        return self.broker.podman_executor
+
     def create_sandbox(self, lab: LabSpec, force_simulation: bool = False) -> SandboxSession:
-        """Provision a sandbox for the given lab specification."""
+        """Provision a sandbox for the given lab specification using EnvironmentBroker."""
         session_id = str(uuid.uuid4())[:8]
 
-        use_container = False
-        container_id = None
+        # Use broker to start environment
+        if force_simulation:
+            broker_record = {
+                "sandbox_id": session_id,
+                "provider": "simulator",
+                "classification": LabRuntimeClassification.SIMULATED,
+                "simulator": self.broker._start_multi_container if False else None,
+                "created_at": time.time(),
+                "lab_spec": lab,
+            }
+            # Fallback simulator instance
+            from .simulator import DeterministicSimulator
+            broker_record["simulator"] = DeterministicSimulator(lab.id, lab.initial_state.seed_data)
+            self.broker.active_environments[session_id] = broker_record
+        else:
+            broker_record = self.broker.start_environment(session_id, lab)
 
-        if (
-            not force_simulation
-            and lab.environment.type in [EnvironmentType.CONTAINER, EnvironmentType.HYBRID]
-            and self.podman.available
-        ):
-            try:
-                res = self.podman.create_sandbox(
-                    sandbox_id=session_id,
-                    env_spec=lab.environment,
-                    initial_state=lab.initial_state,
-                    ttl_seconds=lab.cleanup_policy.ttl_seconds,
-                )
-                container_id = res["container_id"]
-                use_container = True
-            except Exception as exc:
-                print(f"[SandboxManager] Container launch fallback to simulation: {exc}")
-                use_container = False
-
-        sim = DeterministicSimulator(lab.id, lab.initial_state.seed_data)
         session = SandboxSession(
             session_id=session_id,
             lab_id=lab.id,
             lab_spec=lab,
-            is_container=use_container,
-            container_id=container_id,
-            simulator=sim,
+            broker_record=broker_record,
             ttl_seconds=lab.cleanup_policy.ttl_seconds,
         )
 
@@ -102,17 +125,29 @@ class SandboxManager:
                 return session
             return None
 
-    def execute_command(self, session_id: str, command: str) -> Tuple[int, str, str]:
-        """Execute command in either container or simulation sandbox."""
+    def execute_command(self, session_id: str, command: str, target_container: Optional[str] = None) -> Tuple[int, str, str]:
+        """Execute command via EnvironmentBroker."""
         session = self.get_session(session_id)
         if not session:
             return 1, "", f"Sandbox session {session_id} not found or expired."
 
         session.touch()
-        if session.is_container and session.container_id:
-            return self.podman.exec_command(session.container_id, command)
-        else:
-            return session.simulator.execute_command(command)
+        code, out, err = self.broker.execute_command(session_id, command, target_container)
+
+        # Buffer command output in session scrollback
+        if out:
+            session.append_scrollback(out)
+        if err:
+            session.append_scrollback(err)
+
+        return code, out, err
+
+    def reset_sandbox(self, session_id: str) -> bool:
+        """Reset sandbox environment to initial broken/fault state."""
+        session = self.get_session(session_id)
+        if not session:
+            return False
+        return self.broker.reset_environment(session_id)
 
     def terminate_session(self, session_id: str) -> bool:
         """Terminate and clean up a sandbox session."""
@@ -122,9 +157,11 @@ class SandboxManager:
         if not session:
             return False
 
-        if session.is_container and session.container_id:
-            self.podman.cleanup_container(session.container_id)
-        return True
+        return self.broker.destroy_environment(session_id)
+
+    def verify_zero_residue(self, session_id: str) -> Tuple[bool, List[str]]:
+        """Verify that no containers, networks, or volumes remain for this sandbox."""
+        return self.broker.verify_zero_residue(session_id)
 
     def _ttl_sweeper_loop(self):
         """Background thread that cleans up expired sessions periodically."""

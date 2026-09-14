@@ -134,4 +134,17 @@ def resolve_incident(session_id: str):
         "root_cause_revealed": session.incident.root_cause_explanation,
         "remediation_revealed": session.incident.remediation_steps,
         "prevention_measures": session.incident.prevention_measures,
+        "post_mortem": session.generate_post_mortem(),
     }
+
+
+@router.get("/session/{session_id}/post-mortem")
+def get_incident_post_mortem(session_id: str):
+    session = incident_engine.get_session(session_id)
+    if not session:
+        raise HTTPException(status_code=404, detail=f"Session {session_id} not found.")
+    return {
+        "session_id": session_id,
+        "post_mortem_markdown": session.generate_post_mortem(),
+    }
+

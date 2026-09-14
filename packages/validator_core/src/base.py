@@ -18,6 +18,7 @@ class ExecutionContext(BaseModel):
     host_base_url: Optional[str] = "http://localhost"
     podman_executor: Optional[Any] = None
     simulation_state: Optional[Dict[str, Any]] = None
+    simulator: Optional[Any] = None
 
 
 class BaseValidator(ABC):

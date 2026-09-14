@@ -4,6 +4,27 @@ All notable changes to this project will be documented in this file. The format 
 
 ---
 
+## [1.1.0] - 2026-09-14
+
+### Added
+- **Multi-Provider Environment Broker (`EnvironmentBroker`)**: Dynamically provisions single-container (`SingleContainerProvider`), interconnected multi-container bridge networks (`MultiContainerPodProvider`), and high-fidelity deterministic simulations (`SimulationProvider`).
+- **Fault Injection Engine (`ScenarioInjector`)**: Dynamic real-time fault injection for inode saturation, disk filling, DNS corruption, zombie process leaks, port conflicts, Kubernetes zero endpoints, probe mismatches, Prometheus cardinality explosions, and Istio mTLS denial.
+- **Scenario Factory (`ScenarioFactory`)**: Procedural and template generator providing production-grade failure scenarios across all 24 core curriculum tracks with 13-part pedagogical models.
+- **PTY Terminal Reconnect Buffering**: 1000-line circular scrollback buffer stored in `SandboxSession` with automatic replay across WebSocket reconnections.
+- **Automated SRE Post-Mortem Generator**: Generates comprehensive incident post-mortems with TTD, TTM, TTR, timeline events, and corrective action items in Markdown.
+- **Skill Graph Visualizer (`SkillGraph.tsx`)**: Interactive competency and dependency visualizer across 24 tracks with prerequisite tracking.
+- **Enterprise Storage & Cache Architecture**: Dynamic PostgreSQL connection pool (`pool_size=20`) with SQLite WAL fallback, and Redis sliding-window rate limiting with in-memory fallback.
+- **Headless Simulation Fallbacks in State Validators**: Enhanced `CommandValidator` and `FileValidator` with simulation evaluation matching `ExecutionContext.simulation_state`.
+- **7 Automated Acceptance Verification Gates**: Runner script `scripts/verify_acceptance.py` certifying production readiness across catalog schemas, state validators, sandbox lifecycle, security isolation, scenario factory, zero-residue cleanup, and SRE incident scoring.
+
+### Changed
+- **Podman Memory String Normalization**: Automatically converts standard YAML memory strings (e.g., `512Mi`) to Podman-compatible flags (`512m`).
+- **Atomic Stdin Staging**: Replaced `podman cp` with atomic stdin streaming (`podman exec -i ... sh -c "mkdir -p ... && cat > ..."`) to eliminate Windows path translation issues.
+- **Synchronous Zero-Residue Cleanup**: Enforced synchronized session termination and zero-residue verification preventing race conditions.
+- **Hardened HTTP Headers**: Injected `X-Content-Type-Options: nosniff`, `X-Frame-Options: SAMEORIGIN`, and `X-XSS-Protection: 1; mode=block`.
+
+---
+
 ## [1.0.0] - 2026-09-14
 
 ### Added

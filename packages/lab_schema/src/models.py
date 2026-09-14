@@ -23,6 +23,13 @@ class ValidationStatus(str, Enum):
     HARDWARE_CLOUD_REQUIRED = "HARDWARE/CLOUD-REQUIRED"
 
 
+class LabRuntimeClassification(str, Enum):
+    REAL = "REAL"
+    EMULATED = "EMULATED"
+    SIMULATED = "SIMULATED"
+    CLOUD_REQUIRED = "CLOUD-REQUIRED"
+
+
 class EnvironmentType(str, Enum):
     CONTAINER = "container"
     KUBERNETES = "kubernetes"
@@ -95,6 +102,21 @@ class TopologySpec(BaseModel):
     edges: List[TopologyEdge] = Field(default_factory=list)
 
 
+class ContainerNodeSpec(BaseModel):
+    name: str
+    image: str = "docker.io/library/alpine:latest"
+    ports: List[str] = Field(default_factory=list)
+    environment: Dict[str, str] = Field(default_factory=dict)
+    command: Optional[str] = None
+    depends_on: List[str] = Field(default_factory=list)
+
+
+class MultiContainerSpec(BaseModel):
+    network_name: str = "kubelabs-net"
+    pod_name: Optional[str] = None
+    containers: List[ContainerNodeSpec] = Field(default_factory=list)
+
+
 class EnvironmentSpec(BaseModel):
     type: EnvironmentType = Field(default=EnvironmentType.CONTAINER)
     image: str = Field(default="docker.io/library/alpine:latest")
@@ -108,6 +130,7 @@ class EnvironmentSpec(BaseModel):
     port_mappings: List[str] = Field(default_factory=list)
     mount_paths: List[str] = Field(default_factory=list)
     isolated_network: bool = Field(default=True)
+    multi_container: Optional[MultiContainerSpec] = None
 
 
 class StagedFile(BaseModel):
@@ -166,6 +189,12 @@ class LabSpec(BaseModel):
     difficulty: DifficultyLevel = Field(default=DifficultyLevel.INTERMEDIATE)
     estimated_minutes: int = Field(default=30)
     validation_status: ValidationStatus = Field(default=ValidationStatus.PROVEN)
+    runtime_classification: LabRuntimeClassification = Field(default=LabRuntimeClassification.REAL)
+    pedagogical_steps: List[str] = Field(
+        default_factory=lambda: [
+            "Learn", "Practice", "Break", "Troubleshoot", "Fix", "Validate", "Explain", "Assess", "Master"
+        ]
+    )
 
     objectives: List[str] = Field(default_factory=list)
     prerequisites: List[str] = Field(default_factory=list)

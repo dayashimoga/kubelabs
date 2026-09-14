@@ -110,6 +110,41 @@ class IncidentSession:
             feedback=feedback,
         )
 
+    def generate_post_mortem(self) -> str:
+        ttd = int((self.acknowledged_at - self.started_at)) if self.acknowledged_at else 0
+        ttm = int((self.mitigated_at - self.started_at)) if self.mitigated_at else 0
+        ttr = int((self.resolved_at - self.started_at)) if self.resolved_at else int(time.time() - self.started_at)
+
+        md = f"""# SRE Incident Post-Mortem: {self.incident.title}
+**Severity**: {self.incident.severity.value} | **Status**: {self.status.value.upper()}
+
+## Executive Summary
+{self.incident.summary}
+
+- **Customer Impact**: {self.incident.impact}
+- **Time to Detect (TTD)**: {ttd} seconds
+- **Time to Mitigate (TTM)**: {ttm} seconds
+- **Time to Resolve (TTR)**: {ttr} seconds
+- **Affected Microservices**: {', '.join(self.incident.affected_services)}
+
+## Root Cause Analysis
+{self.incident.root_cause_explanation}
+
+## Incident Timeline
+- **T+0s**: Anomaly detected by automated SLO monitoring and alert routing.
+- **T+{ttd}s**: On-call SRE acknowledged alert and initiated War Room triage.
+- **T+{ttm}s**: Mitigation executed: `{self.applied_fixes[-1] if self.applied_fixes else self.incident.mitigation_command}`.
+- **T+{ttr}s**: Service restoration confirmed via synthetic probing and SLI convergence.
+
+## Remediation Steps
+{chr(10).join(f"- {s}" for s in self.incident.remediation_steps)}
+
+## Preventative Safeguards & Action Items
+{chr(10).join(f"- [ ] {p}" for p in self.incident.prevention_measures)}
+"""
+        return md
+
+
 
 class IncidentEngine:
     """Manages active incident simulation runs and scenario catalog."""

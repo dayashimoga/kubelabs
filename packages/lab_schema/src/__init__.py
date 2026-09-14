@@ -19,12 +19,15 @@ from .models import (
     ValidationResultItem,
     ValidationOverallStatus,
     ValidationReport,
+    LabRuntimeClassification,
 )
 from .loader import LabRegistry
+from .scenario_factory import ScenarioFactory
 
 __all__ = [
     "DifficultyLevel",
     "ValidationStatus",
+    "LabRuntimeClassification",
     "EnvironmentType",
     "HintTier",
     "Hint",
@@ -44,4 +47,5 @@ __all__ = [
     "ValidationOverallStatus",
     "ValidationReport",
     "LabRegistry",
+    "ScenarioFactory",
 ]

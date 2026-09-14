@@ -7,7 +7,7 @@ from pathlib import Path
 from typing import Any, Dict, List, Optional
 from ..core.config import settings
 
-from packages.lab_schema import LabSpec, TaskSpec, ValidationReport, ValidationOverallStatus, LabRegistry
+from packages.lab_schema import LabSpec, TaskSpec, ValidationReport, ValidationOverallStatus, LabRegistry, ScenarioFactory
 from packages.validator_core import ValidatorEngine, ExecutionContext
 from packages.sandbox_runtime import SandboxManager, SandboxSession
 from .troubleshooting_service import TroubleshootingAdvisor
@@ -23,7 +23,11 @@ class LabService:
         self.reload_labs()
 
     def reload_labs(self) -> int:
-        return self.registry.load_from_directory(self.labs_dir)
+        self.registry.load_from_directory(self.labs_dir)
+        for s in ScenarioFactory.get_all_scenarios():
+            if s.id not in self.registry._labs:
+                self.registry.register(s)
+        return len(self.registry.list_all())
 
     def list_labs(self, track: Optional[str] = None) -> List[LabSpec]:
         if track:
@@ -48,10 +52,18 @@ class LabService:
             "title": lab.title,
             "track": lab.track,
             "is_container": session.is_container,
+            "runtime_classification": session.runtime_classification.value,
             "expires_at": session.expires_at,
             "tasks": [t.model_dump() for t in lab.tasks],
             "topology": lab.topology.model_dump() if lab.topology else None,
         }
+
+    def reset_session(self, session_id: str) -> bool:
+        return self.sandbox_manager.reset_sandbox(session_id)
+
+    def verify_session_residue(self, session_id: str) -> Dict[str, Any]:
+        clean, residue = self.sandbox_manager.verify_zero_residue(session_id)
+        return {"clean": clean, "residue": residue}
 
     def execute_command(self, session_id: str, command: str) -> Dict[str, Any]:
         exit_code, stdout, stderr = self.sandbox_manager.execute_command(session_id, command)
@@ -95,11 +107,14 @@ class LabService:
         if not target_task:
             raise ValueError(f"Task {task_id} not found in lab {session.lab_id}")
 
+        sim = session.simulator
+        sim_state = sim.state if sim else {}
+
         context = ExecutionContext(
             sandbox_id=session.session_id,
             container_id=session.container_id,
             podman_executor=self.sandbox_manager.podman if session.is_container else None,
-            simulation_state=session.simulator.state,
+            simulation_state=sim_state,
         )
 
         return self.validator_engine.validate_rules(target_task.validators, context)

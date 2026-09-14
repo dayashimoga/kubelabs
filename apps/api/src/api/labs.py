@@ -99,7 +99,19 @@ def validate_task(session_id: str, req: ValidateTaskRequest):
         raise HTTPException(status_code=400, detail=str(exc))
 
 
+@router.post("/session/{session_id}/reset")
+def reset_session(session_id: str):
+    success = lab_service.reset_session(session_id)
+    return {"session_id": session_id, "reset": success}
+
+
+@router.get("/session/{session_id}/residue")
+def verify_session_residue(session_id: str):
+    return lab_service.verify_session_residue(session_id)
+
+
 @router.delete("/session/{session_id}")
 def terminate_session(session_id: str):
     success = lab_service.sandbox_manager.terminate_session(session_id)
     return {"session_id": session_id, "terminated": success}
+

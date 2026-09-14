@@ -16,16 +16,23 @@ async def websocket_terminal(websocket: WebSocket, session_id: str):
     await websocket.accept()
     session = lab_service.sandbox_manager.get_session(session_id)
 
-    # Initial greeting banner
-    banner = (
-        "\r\n\x1b[1;36m========================================================\x1b[0m\r\n"
-        "\x1b[1;32m  KubeLabs SRE Shell Environment - Live Session\x1b[0m\r\n"
-        f"\x1b[33m  Session ID: {session_id} | TTL: 30m\x1b[0m\r\n"
-        "\x1b[1;36m========================================================\x1b[0m\r\n\r\n"
-        "sre-engineer@kubelabs-sandbox:~$ "
-    )
-    await websocket.send_text(banner)
+    # Replay scrollback if reconnecting to existing session
+    scrollback = session.get_scrollback() if session else ""
+    if scrollback:
+        formatted_scrollback = scrollback.replace("\n", "\r\n")
+        await websocket.send_text(formatted_scrollback)
+        await websocket.send_text("\r\n\x1b[32m[Session reconnected]\x1b[0m\r\n")
+    else:
+        # Initial greeting banner
+        banner = (
+            "\r\n\x1b[1;36m========================================================\x1b[0m\r\n"
+            "\x1b[1;32m  KubeLabs SRE Shell Environment - Live Session\x1b[0m\r\n"
+            f"\x1b[33m  Session ID: {session_id} | TTL: 30m\x1b[0m\r\n"
+            "\x1b[1;36m========================================================\x1b[0m\r\n\r\n"
+        )
+        await websocket.send_text(banner)
 
+    await websocket.send_text("sre-engineer@kubelabs-sandbox:~$ ")
     buffer = ""
 
     try:
