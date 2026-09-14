@@ -91,6 +91,12 @@ jobs:
         working-directory: apps/web
         run: npm run build
 
+      - name: Upload Production Web Bundle
+        uses: actions/upload-artifact@v4
+        with:
+          name: web-dist
+          path: apps/web/dist/
+
   full-production-acceptance:
     name: Full End-to-End Podman & K8s Runtime Acceptance
     runs-on: ubuntu-latest
@@ -109,6 +115,12 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
+      - name: Download Production Web Bundle
+        uses: actions/download-artifact@v4
+        with:
+          name: web-dist
+          path: apps/web/dist
+
       - name: Set up Podman
         run: |
           sudo apt-get update
@@ -116,3 +128,4 @@ jobs:
 
       - name: Run FULL 18-Gate Acceptance Suite (Genuine Containers & Zero Residue)
         run: python scripts/verify_acceptance.py --full
+
