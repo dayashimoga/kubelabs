@@ -155,10 +155,10 @@ class FileValidator(BaseValidator):
         # Simulation fallback
         if context.simulation_state is not None:
             sim = context.simulation_state
-            sim_fs = sim.get("filesystem", {})
+            sim_fs = sim.get("filesystem", {}) or sim.get("files", {})
             if file_path_str in sim_fs:
                 content = sim_fs[file_path_str]
-                expected_content = rule.args.get("content_contains")
+                expected_content = rule.args.get("content_contains") or rule.args.get("contains")
                 if expected_content and expected_content not in str(content):
                     return ValidationResultItem(
                         rule_id=rule.id,
@@ -168,6 +168,17 @@ class FileValidator(BaseValidator):
                         score_awarded=0,
                         max_score=rule.weight,
                         feedback=f"{rule.failure_message} (Missing expected content in simulated file)",
+                    )
+                min_lines = rule.args.get("min_lines")
+                if min_lines and len(str(content).splitlines()) < min_lines:
+                    return ValidationResultItem(
+                        rule_id=rule.id,
+                        rule_type=rule.type.value,
+                        description=rule.description,
+                        passed=False,
+                        score_awarded=0,
+                        max_score=rule.weight,
+                        feedback=f"{rule.failure_message} (Simulated file has fewer lines than {min_lines})",
                     )
                 return ValidationResultItem(
                     rule_id=rule.id,
@@ -324,21 +335,45 @@ class YamlValidator(BaseValidator):
                 feedback="Error: No target YAML file specified.",
             )
 
-        # Resolve path
-        path = Path(context.workdir) / target_file if context.workdir and not os.path.isabs(target_file) else Path(target_file)
-        if not path.exists():
-            return ValidationResultItem(
-                rule_id=rule.id,
-                rule_type=rule.type.value,
-                description=rule.description,
-                passed=False,
-                score_awarded=0,
-                max_score=rule.weight,
-                feedback=f"{rule.failure_message} (File {target_file} not found)",
-            )
+        # Resolve content from simulation state or host disk
+        content = None
+        if context.simulation_state is not None:
+            sim = context.simulation_state
+            sim_fs = sim.get("filesystem", {}) or sim.get("files", {})
+            if target_file in sim_fs:
+                content = str(sim_fs[target_file])
+            elif not os.path.isabs(target_file):
+                for k, v in sim_fs.items():
+                    if k.endswith(target_file):
+                        content = str(v)
+                        break
+
+        if content is None:
+            path = Path(context.workdir) / target_file if context.workdir and not os.path.isabs(target_file) else Path(target_file)
+            if not path.exists():
+                return ValidationResultItem(
+                    rule_id=rule.id,
+                    rule_type=rule.type.value,
+                    description=rule.description,
+                    passed=False,
+                    score_awarded=0,
+                    max_score=rule.weight,
+                    feedback=f"{rule.failure_message} (File {target_file} not found)",
+                )
+            try:
+                content = path.read_text(encoding="utf-8")
+            except Exception as e:
+                return ValidationResultItem(
+                    rule_id=rule.id,
+                    rule_type=rule.type.value,
+                    description=rule.description,
+                    passed=False,
+                    score_awarded=0,
+                    max_score=rule.weight,
+                    feedback=f"Failed to read file: {str(e)}",
+                )
 
         try:
-            content = path.read_text(encoding="utf-8")
             data = yaml.safe_load(content)
         except Exception as e:
             return ValidationResultItem(
@@ -355,6 +390,8 @@ class YamlValidator(BaseValidator):
         assertions: Dict[str, Any] = rule.args.get("assertions", {})
         if not assertions and rule.expected is not None and isinstance(rule.expected, dict):
             assertions = rule.expected
+        if not assertions and "path" in rule.args and "expected_value" in rule.args:
+            assertions = {rule.args["path"]: rule.args["expected_value"]}
 
         for dot_path, expected_val in assertions.items():
             keys = dot_path.split(".")
@@ -411,20 +448,46 @@ class JsonValidator(BaseValidator):
                 feedback="Error: No target JSON file specified.",
             )
 
-        path = Path(context.workdir) / target if context.workdir and not os.path.isabs(target) else Path(target)
-        if not path.exists():
-            return ValidationResultItem(
-                rule_id=rule.id,
-                rule_type=rule.type.value,
-                description=rule.description,
-                passed=False,
-                score_awarded=0,
-                max_score=rule.weight,
-                feedback=f"{rule.failure_message} (File not found: {target})",
-            )
+        # Resolve content from simulation state or host disk
+        content = None
+        if context.simulation_state is not None:
+            sim = context.simulation_state
+            sim_fs = sim.get("filesystem", {}) or sim.get("files", {})
+            if target in sim_fs:
+                content = str(sim_fs[target])
+            elif not os.path.isabs(target):
+                for k, v in sim_fs.items():
+                    if k.endswith(target):
+                        content = str(v)
+                        break
+
+        if content is None:
+            path = Path(context.workdir) / target if context.workdir and not os.path.isabs(target) else Path(target)
+            if not path.exists():
+                return ValidationResultItem(
+                    rule_id=rule.id,
+                    rule_type=rule.type.value,
+                    description=rule.description,
+                    passed=False,
+                    score_awarded=0,
+                    max_score=rule.weight,
+                    feedback=f"{rule.failure_message} (File not found: {target})",
+                )
+            try:
+                content = path.read_text(encoding="utf-8")
+            except Exception as e:
+                return ValidationResultItem(
+                    rule_id=rule.id,
+                    rule_type=rule.type.value,
+                    description=rule.description,
+                    passed=False,
+                    score_awarded=0,
+                    max_score=rule.weight,
+                    feedback=f"Failed to read file: {str(e)}",
+                )
 
         try:
-            data = json.loads(path.read_text(encoding="utf-8"))
+            data = json.loads(content)
         except Exception as e:
             return ValidationResultItem(
                 rule_id=rule.id,
@@ -437,6 +500,8 @@ class JsonValidator(BaseValidator):
             )
 
         assertions: Dict[str, Any] = rule.args.get("assertions", {})
+        if not assertions and "path" in rule.args and "expected_value" in rule.args:
+            assertions = {rule.args["path"]: rule.args["expected_value"]}
         for dot_path, expected_val in assertions.items():
             curr = data
             for k in dot_path.split("."):
@@ -637,8 +702,8 @@ class ContainerValidator(BaseValidator):
         # Simulation fallback
         if context.simulation_state and "containers" in context.simulation_state:
             c_info = context.simulation_state["containers"].get(container_name, {})
-            current_state = c_info.get("state", "stopped")
-            passed = (current_state == expected_state)
+            current_state = c_info.get("state") or c_info.get("status") or "stopped"
+            passed = (current_state.lower() == expected_state.lower())
             return ValidationResultItem(
                 rule_id=rule.id,
                 rule_type=rule.type.value,
@@ -702,19 +767,43 @@ class KubernetesValidator(BaseValidator):
         # Simulation fallback
         if context.simulation_state and "k8s" in context.simulation_state:
             k8s_state = context.simulation_state["k8s"]
+
+            # Check deployments
+            if "deployments" in k8s_state:
+                dep_name = resource.split("/")[-1] if "/" in resource else resource
+                if dep_name in k8s_state["deployments"]:
+                    dep = k8s_state["deployments"][dep_name]
+                    field = rule.args.get("field", "replicas")
+                    expected_val = rule.args.get("expected_value", 1)
+                    actual_val = dep.get(field)
+                    passed = (actual_val == expected_val)
+                    return ValidationResultItem(
+                        rule_id=rule.id,
+                        rule_type=rule.type.value,
+                        description=rule.description,
+                        passed=passed,
+                        score_awarded=rule.weight if passed else 0,
+                        max_score=rule.weight,
+                        feedback=f"Deployment {dep_name} verified." if passed else f"{rule.failure_message} ({field}={actual_val}, expected {expected_val})",
+                    )
+
             # Check pod phase
-            if "pods" in k8s_state and resource in k8s_state["pods"]:
-                pod = k8s_state["pods"][resource]
-                passed = pod.get("phase") == expected_phase
-                return ValidationResultItem(
-                    rule_id=rule.id,
-                    rule_type=rule.type.value,
-                    description=rule.description,
-                    passed=passed,
-                    score_awarded=rule.weight if passed else 0,
-                    max_score=rule.weight,
-                    feedback=f"Pod {resource} phase is {expected_phase}." if passed else f"{rule.failure_message} (Phase: {pod.get('phase')})",
-                )
+            if "pods" in k8s_state:
+                pod_name = resource.split("/")[-1] if "/" in resource else resource
+                if pod_name in k8s_state["pods"]:
+                    pod = k8s_state["pods"][pod_name]
+                    phase = pod.get("phase") or pod.get("status") or ""
+                    passed = (phase.lower() == expected_phase.lower())
+                    return ValidationResultItem(
+                        rule_id=rule.id,
+                        rule_type=rule.type.value,
+                        description=rule.description,
+                        passed=passed,
+                        score_awarded=rule.weight if passed else 0,
+                        max_score=rule.weight,
+                        feedback=f"Pod {pod_name} phase is {phase}." if passed else f"{rule.failure_message} (Phase: {phase})",
+                    )
+
             # Check service endpoints
             if "services" in k8s_state and resource in k8s_state["services"]:
                 svc = k8s_state["services"][resource]
@@ -771,9 +860,46 @@ class KubernetesValidator(BaseValidator):
 class GitValidator(BaseValidator):
     def validate(self, rule: ValidatorRule, context: ExecutionContext) -> ValidationResultItem:
         cwd = context.workdir if context.workdir and os.path.exists(context.workdir) else "."
-        expected_branch = rule.args.get("branch")
-        require_clean = rule.args.get("clean_worktree", True)
+        expected_branch = rule.args.get("branch") or rule.args.get("expected_branch")
+        require_clean = rule.args.get("clean_worktree", False)
         commit_message_regex = rule.args.get("commit_message_regex")
+
+        # Simulation fallback
+        if context.simulation_state and "git" in context.simulation_state:
+            git_state = context.simulation_state["git"]
+            current_branch = git_state.get("branch", "main")
+            clean_tree = git_state.get("clean", True)
+            last_commit = git_state.get("last_commit", "")
+
+            if expected_branch and current_branch != expected_branch:
+                return ValidationResultItem(
+                    rule_id=rule.id,
+                    rule_type=rule.type.value,
+                    description=rule.description,
+                    passed=False,
+                    score_awarded=0,
+                    max_score=rule.weight,
+                    feedback=f"Branch is '{current_branch}', expected '{expected_branch}'.",
+                )
+            if require_clean and not clean_tree:
+                return ValidationResultItem(
+                    rule_id=rule.id,
+                    rule_type=rule.type.value,
+                    description=rule.description,
+                    passed=False,
+                    score_awarded=0,
+                    max_score=rule.weight,
+                    feedback="Working tree has uncommitted modifications.",
+                )
+            return ValidationResultItem(
+                rule_id=rule.id,
+                rule_type=rule.type.value,
+                description=rule.description,
+                passed=True,
+                score_awarded=rule.weight,
+                max_score=rule.weight,
+                feedback="Git repository state verified.",
+            )
 
         try:
             # Check branch
@@ -850,12 +976,16 @@ class PrometheusValidator(BaseValidator):
         if context.simulation_state and "metrics" in context.simulation_state:
             val = context.simulation_state["metrics"].get(query, 0)
             passed = False
-            if operator == "==":
+            if operator in ("==", "="):
                 passed = (val == threshold)
             elif operator == ">":
                 passed = (val > threshold)
+            elif operator in (">=", "=>"):
+                passed = (val >= threshold)
             elif operator == "<":
                 passed = (val < threshold)
+            elif operator in ("<=", "=<"):
+                passed = (val <= threshold)
             elif operator == "!=":
                 passed = (val != threshold)
 
@@ -888,8 +1018,30 @@ class OpenTelemetryValidator(BaseValidator):
         expected_status = rule.args.get("status", "OK")
 
         if context.simulation_state and "traces" in context.simulation_state:
-            spans = context.simulation_state["traces"]
-            matching = [s for s in spans if s.get("name") == span_name]
+            traces_data = context.simulation_state["traces"]
+            # Case 1: dictionary mapping trace_name to trace info
+            if isinstance(traces_data, dict):
+                trace_target = rule.target or rule.args.get("trace_name")
+                if trace_target and trace_target in traces_data:
+                    t_info = traces_data[trace_target]
+                    min_spans = rule.args.get("min_spans")
+                    if min_spans is not None:
+                        actual_spans = t_info.get("spans", 0)
+                        passed = actual_spans >= min_spans
+                        return ValidationResultItem(
+                            rule_id=rule.id,
+                            rule_type=rule.type.value,
+                            description=rule.description,
+                            passed=passed,
+                            score_awarded=rule.weight if passed else 0,
+                            max_score=rule.weight,
+                            feedback=f"Trace '{trace_target}' contains {actual_spans} spans." if passed else f"{rule.failure_message} (Spans: {actual_spans}, min: {min_spans})",
+                        )
+                spans = traces_data.get("spans", [])
+            else:
+                spans = traces_data if isinstance(traces_data, list) else []
+
+            matching = [s for s in spans if isinstance(s, dict) and s.get("name") == span_name]
             if not matching:
                 return ValidationResultItem(
                     rule_id=rule.id,

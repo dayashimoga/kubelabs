@@ -246,7 +246,11 @@ class EnvironmentBroker:
             raise exc
 
     def execute_command(
-        self, sandbox_id: str, command: str, container_name: Optional[str] = None
+        self,
+        sandbox_id: str,
+        command: str,
+        container_name: Optional[str] = None,
+        target_container: Optional[str] = None,
     ) -> Tuple[int, str, str]:
         """Execute command in target environment."""
         env = self.active_environments.get(sandbox_id)
@@ -260,7 +264,7 @@ class EnvironmentBroker:
             return self.podman_executor.exec_command(target, command)
 
         elif provider == "podman-multi":
-            target = container_name or env.get("primary_container")
+            target = container_name or target_container or env.get("primary_container")
             if not target:
                 return 1, "", "No container target available in multi-container sandbox."
             return self.podman_executor.exec_command(target, command)

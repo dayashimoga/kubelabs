@@ -299,3 +299,6 @@ spec:
                 pass
 
         return len(residue) == 0, residue
+
+    def verify_k8s_zero_residue(self, sandbox_id: str) -> Tuple[bool, List[str]]:
+        return self.verify_zero_residue(sandbox_id)

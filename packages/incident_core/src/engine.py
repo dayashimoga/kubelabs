@@ -164,5 +164,24 @@ class IncidentEngine:
         self.sessions[session_id] = session
         return session
 
+    def start_random_incident(self, session_id: str) -> IncidentSession:
+        import random
+        import copy
+        incidents = self.catalog.list_all()
+        if not incidents:
+            raise ValueError("No incidents available in catalog.")
+        selected = random.choice(incidents)
+        spec = copy.deepcopy(selected)
+        noise_symptoms = [
+            "Transient 1.2% CPU jitter observed on neighboring ingress proxies.",
+            "Periodic BGP route flap noted in secondary availability zone.",
+            "Cron batch analytics report triggered elevated disk read I/O.",
+            "DNS cache TTL expiration spike observed on internal CoreDNS.",
+        ]
+        spec.initial_symptoms.append(random.choice(noise_symptoms))
+        session = IncidentSession(session_id, spec)
+        self.sessions[session_id] = session
+        return session
+
     def get_session(self, session_id: str) -> Optional[IncidentSession]:
         return self.sessions.get(session_id)

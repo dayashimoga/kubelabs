@@ -57,6 +57,27 @@ def get_incident_detail(incident_id: str):
     return data
 
 
+@router.post("/random/start")
+def start_random_incident(req: StartIncidentRequest):
+    """Start Random Production Incident with compatible topology, fault cascade, and noise."""
+    try:
+        session = incident_engine.start_random_incident(req.session_id)
+        return {
+            "session_id": session.session_id,
+            "incident_id": session.incident.id,
+            "title": session.incident.title,
+            "severity": session.incident.severity.value,
+            "status": session.status.value,
+            "alerts": [a.model_dump() for a in session.incident.alerts],
+            "topology": session.incident.topology,
+            "initial_symptoms": session.incident.initial_symptoms,
+            "hypotheses": [h.model_dump() for h in session.incident.hypotheses],
+            "diagnostic_commands": session.incident.diagnostic_commands,
+        }
+    except Exception as exc:
+        raise HTTPException(status_code=400, detail=str(exc))
+
+
 @router.post("/{incident_id}/start")
 def start_incident(incident_id: str, req: StartIncidentRequest):
     try:

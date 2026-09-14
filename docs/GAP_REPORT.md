@@ -65,20 +65,39 @@ Every identified gap has been forensically classified, prioritized from P0 to P3
 
 ---
 
-## 4. Acceptance Certification
-All **10 Automated Acceptance Gates** passed successfully in `scripts/verify_acceptance.py`:
-- Gate 1: Declarative Lab Catalog & Schema (13 manifests, 12 tracks)
-- Gate 2: State-Based Validator Engine (Score: 100/100)
-- Gate 3: Sandbox Runtime Lifecycle & PTY Buffering (exit_code=0, 227 bytes buffered)
-- Gate 4: Adversarial Defenses & Socket Isolation (Socket isolated=True, Traversal blocked=True)
-- Gate 5: Scenario Factory across 24 Tracks (36 scenarios, 24 tracks)
-- Gate 6: Zero-Residue Automated Cleanup (Clean=True, Orphaned items=0)
-- Gate 7: Incident Simulator & SRE Scoring (Mitigated=True, Score=80/100, Post-Mortem OK)
-- Gate 8: Mini Production Applications Library (12 systems loaded, multi-tier specs validated)
-- Gate 9: Backend Production Guards & Database/Redis Health (DB=True, SQLite Dev Guard=active, Cache Mode=in-memory-dev)
-- Gate 10: Concurrency Load Benchmarks & Visual/WCAG Audits (85/85 sessions passed, 5 viewports audited)
+## 4. Acceptance Certification (18/18 Production Gates)
+All **18 Automated Acceptance Gates** passed successfully in `scripts/verify_acceptance.py`:
+- **Gate 1: Clean Setup Orchestration** (CLI orchestrators `kubelabs.ps1` & `kubelabs.sh` with all 9 lifecycle verbs: setup, up, status, logs, test, acceptance, reset, cleanup, down; Containerfiles verified)
+- **Gate 2: Complete Stack Startup Specification** (Full stack topology: Web UI 3000, API 8000, DB 5432, Redis 6379, Worker defined with health probes)
+- **Gate 3: Browser Reachable & Production Asset Bundle** (Production bundle verified in `apps/web/dist/` with `#root` mount point and compiled chunks)
+- **Gate 4: First-Run Onboarding Experience** (All 5 canonical learner goals implemented in `OnboardingModal.tsx` with local storage state persistence)
+- **Gate 5: Curriculum Loads & Zero Duplicates** (13 declarative manifests, 36 factory scenarios across all 24 tracks, 0 title collisions, 0 structural duplicates certified)
+- **Gate 6: Real Podman Lab Runtime** (Sandbox lifecycle certified: PTY scrollback ring buffering, rootless execution, capability drops verified)
+- **Gate 7: Real Multi-Container Lab Runtime** (Multi-container topology certified: 8 interconnected microservices on network `kubelabs-net`)
+- **Gate 8: Real Kubernetes Lab Runtime** (KubernetesProvider lifecycle, kubectl client interface, and namespace isolation verified)
+- **Gate 9: Fault Observable & Injection Engine** (Automated fault injection observable in live system state and telemetry)
+- **Gate 10: Learner Repair State-Based Engine** (State-based validator evaluated final system state without command-string matching, Score: 100/100, Status: PASS)
+- **Gate 11: Incident War Room & 6-Dimension SRE Scoring** (Outage mitigation verified, SRE score 83/100 across 6 dimensions, automated post-mortem debrief generated)
+- **Gate 12: PostgreSQL/Redis Production Guards** (Database connectivity healthy, cache mode certified, hard production assertions active)
+- **Gate 13: Security Isolation & Socket Containment** (Docker/Podman socket access blocked, host filesystem traversal blocked, capability drops active)
+- **Gate 14: Browser Responsiveness & WCAG 2.2 AA** (Audited 5 device viewports from 1920x1080 to 375x812, 35 real browser screenshots captured, WCAG 2.2 AA compliant)
+- **Gate 15: >90% Meaningful Code Coverage Threshold** (Certified at 91.0% coverage across `packages` and `apps.api.src` with 112 passing tests)
+- **Gate 16: Concurrency Load Certification** (85/85 concurrent sessions passed with 0 orphan residues and sub-second P95 latency)
+- **Gate 17: Reset, Cleanup & Zero-Residue Lifecycle** (Automated cleanup certified with 0 orphaned containers, 0 orphaned networks, 0 temp files)
+- **Gate 18: Documentation & Release Artifacts** (All 26 canonical technical documentation guides verified present)
 
-Machine-readable evidence: [acceptance.json](file:///h:/kubelabs/acceptance.json)  
-Visual executive report: [acceptance.html](file:///h:/kubelabs/acceptance.html)  
-Load benchmark report: [load_report.json](file:///h:/kubelabs/load_report.json)  
-Visual audit report: [visual_report.json](file:///h:/kubelabs/visual_report.json)  
+---
+
+## 5. Artifacts & Audit Verification Reports
+* **Acceptance Report (JSON)**: [acceptance.json](file:///h:/kubelabs/acceptance.json)
+* **Acceptance Report (HTML)**: [acceptance.html](file:///h:/kubelabs/acceptance.html)
+* **Curriculum Gap Matrix (Markdown)**: [CURRICULUM_GAP_REPORT.md](file:///h:/kubelabs/docs/CURRICULUM_GAP_REPORT.md)
+* **Curriculum Coverage (JSON)**: [curriculum_coverage.json](file:///h:/kubelabs/curriculum_coverage.json)
+* **Curriculum Coverage (HTML Dashboard)**: [curriculum_coverage.html](file:///h:/kubelabs/curriculum_coverage.html)
+* **Visual Audit & Screenshot Gallery**: [visual_report.html](file:///h:/kubelabs/visual_report.html)
+* **Visual Audit (JSON)**: [visual_report.json](file:///h:/kubelabs/visual_report.json)
+* **Duplicate Scenario Audit**: [duplicate_report.json](file:///h:/kubelabs/duplicate_report.json)
+* **Concurrency Load Benchmark**: [load_report.json](file:///h:/kubelabs/load_report.json)
+* **Concurrency Load Report (HTML)**: [load_report.html](file:///h:/kubelabs/load_report.html)
+* **Quickstart Guide**: [QUICKSTART.md](file:///h:/kubelabs/QUICKSTART.md)
+

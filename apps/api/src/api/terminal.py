@@ -4,11 +4,9 @@ Streams interactive shell I/O between xterm.js and the sandbox executor/simulato
 """
 
 from fastapi import APIRouter, WebSocket, WebSocketDisconnect
-from ..services.lab_service import LabService
-from ..core.config import settings
+from .labs import lab_service
 
 router = APIRouter(tags=["terminal"])
-lab_service = LabService(settings.LABS_DIR)
 
 
 @router.websocket("/ws/terminal/{session_id}")
@@ -39,8 +37,10 @@ async def websocket_terminal(websocket: WebSocket, session_id: str):
         while True:
             data = await websocket.receive_text()
 
-            # Handle Enter key (\r or \n)
-            if data in ["\r", "\n"]:
+            # Handle Enter key or buffered command ending with Enter
+            if data in ["\r", "\n"] or data.endswith("\r") or data.endswith("\n"):
+                if data not in ["\r", "\n"]:
+                    buffer += data.rstrip("\r\n")
                 await websocket.send_text("\r\n")
                 cmd = buffer.strip()
                 buffer = ""

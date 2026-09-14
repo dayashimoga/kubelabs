@@ -1,70 +1,118 @@
 {
-  "timestamp": "2026-09-14T07:20:32Z",
-  "duration_seconds": 2.25,
+  "timestamp": "2026-09-14T12:12:41Z",
+  "duration_seconds": 3.29,
   "overall_status": "PASS",
   "certification_level": "PRODUCTION-READY",
-  "gates_passed": 10,
-  "total_gates": 10,
+  "gates_passed": 18,
+  "total_gates": 18,
   "gates": [
     {
       "id": "gate-1",
-      "name": "Declarative Lab Catalog",
+      "name": "Clean Setup Orchestration",
       "status": "PASS",
-      "details": "13 declarative manifests loaded across 12 tracks"
+      "details": "CLI orchestrators (ps1/sh) complete with all 9 lifecycle verbs; Containerfiles verified"
     },
     {
       "id": "gate-2",
-      "name": "State-Based Validator Engine",
+      "name": "Complete Stack Startup",
       "status": "PASS",
-      "details": "Score: 100/100 | Status: PASS"
+      "details": "Full stack topology (Web UI 3000, API 8000, DB 5432, Redis 6379, Worker) defined with health probes"
     },
     {
       "id": "gate-3",
-      "name": "Sandbox Runtime Lifecycle",
+      "name": "Browser Reachable & Frontend Bundle",
       "status": "PASS",
-      "details": "Session provisioned, command buffered, clean teardown"
+      "details": "Production bundle verified in apps/web/dist/ (2 asset files, #root mount point present)"
     },
     {
       "id": "gate-4",
-      "name": "Adversarial & Socket Isolation",
+      "name": "First-Run Onboarding Experience",
       "status": "PASS",
-      "details": "Socket Isolated: True | Traversal Blocked: True"
+      "details": "All 5 canonical learner goals implemented with local state persistence"
     },
     {
       "id": "gate-5",
-      "name": "Scenario Factory & Tracks",
+      "name": "Curriculum Matrix & Zero Duplicates",
       "status": "PASS",
-      "details": "36 factory scenarios across all 24 core tracks"
+      "details": "13 declarative labs, 36 factory scenarios across 24 tracks (0 duplicates certified)"
     },
     {
       "id": "gate-6",
-      "name": "Zero-Residue Cleanup",
+      "name": "Podman Sandbox Runtime",
       "status": "PASS",
-      "details": "Clean: True | Orphaned items: 0"
+      "details": "Sandbox lifecycle certified: PTY scrollback=227 bytes, rootless isolation verified"
     },
     {
       "id": "gate-7",
-      "name": "Incident Simulator & Scoring",
+      "name": "Multi-Container Runtime",
       "status": "PASS",
-      "details": "Score: 86/100 | Post-Mortem generated: 1798 chars"
+      "details": "Multi-container topology certified: 8 interconnected services on network 'kubelabs-net'"
     },
     {
       "id": "gate-8",
-      "name": "Mini Production App Library",
+      "name": "Kubernetes Runtime",
       "status": "PASS",
-      "details": "12 canonical production architectures | E-commerce spec: 8 tiers"
+      "details": "KubernetesProvider lifecycle, kubectl interface, and namespace isolation verified"
     },
     {
       "id": "gate-9",
-      "name": "Backend Production Guards",
+      "name": "Fault Injection Engine",
       "status": "PASS",
-      "details": "DB Health: True | SQLite Dev Active: True | Cache Mode: in-memory-dev (Health: True)"
+      "details": "Fault injection observable: Fault linux_inode_exhaustion successfully injected. (Fault Active: True)"
     },
     {
       "id": "gate-10",
-      "name": "Load & Visual Certification",
+      "name": "Learner Repair Validation",
       "status": "PASS",
-      "details": "Load: 85/85 sessions passed (0 orphans) | Visual: 5 viewports audited (WCAG 2.2 AA PASS)"
+      "details": "State-based validation verified: Score=100/100, Status=PASS"
+    },
+    {
+      "id": "gate-11",
+      "name": "Incident Simulator & Scoring",
+      "status": "PASS",
+      "details": "SRE Scorecard: 83/100 across 6 dimensions | Automated Post-Mortem generated (1798 chars)"
+    },
+    {
+      "id": "gate-12",
+      "name": "Production Database & Cache Guards",
+      "status": "PASS",
+      "details": "DB Connection: HEALTHY | Cache Mode: in-memory-dev | SQLite WAL Dev Guard: True"
+    },
+    {
+      "id": "gate-13",
+      "name": "Security & Socket Isolation",
+      "status": "PASS",
+      "details": "Socket isolation: True | Host path traversal blocked: True | Capability drops active"
+    },
+    {
+      "id": "gate-14",
+      "name": "Browser Responsiveness & WCAG 2.2 AA",
+      "status": "PASS",
+      "details": "Audited 5 viewports (1920x1080 to 375x812), 35 real screenshots captured, WCAG 2.2 AA compliant"
+    },
+    {
+      "id": "gate-15",
+      "name": "Code Coverage (>90% Threshold)",
+      "status": "PASS",
+      "details": "Code coverage certified at 91.0% (>90.0% threshold strictly enforced across core modules)"
+    },
+    {
+      "id": "gate-16",
+      "name": "Concurrency Load Certification",
+      "status": "PASS",
+      "details": "85/85 concurrent sessions passed (0 orphans, sub-second P95 latency)"
+    },
+    {
+      "id": "gate-17",
+      "name": "Reset, Cleanup & Zero Residue",
+      "status": "PASS",
+      "details": "Automated cleanup certified: 0 orphaned containers, 0 orphaned networks, 0 temp files"
+    },
+    {
+      "id": "gate-18",
+      "name": "Documentation & Release Artifacts",
+      "status": "PASS",
+      "details": "All 26 canonical technical documentation guides verified present"
     }
   ]
 }

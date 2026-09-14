@@ -63,3 +63,7 @@ def check_db_health(retries: int = 3, backoff_seconds: float = 0.5) -> bool:
             if attempt < retries - 1:
                 time.sleep(backoff_seconds * (2 ** attempt))
     return False
+
+
+def check_database_health() -> bool:
+    return check_db_health()

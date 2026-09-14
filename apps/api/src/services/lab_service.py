@@ -59,8 +59,20 @@ class LabService:
             "topology": lab.topology.model_dump() if lab.topology else None,
         }
 
+    def start_lab_session(self, lab_id: str, force_simulation: bool = False) -> Dict[str, Any]:
+        return self.start_session(lab_id, force_simulation=force_simulation)
+
     def reset_session(self, session_id: str) -> bool:
         return self.sandbox_manager.reset_sandbox(session_id)
+
+    def terminate_session(self, session_id: str) -> bool:
+        return self.sandbox_manager.terminate_session(session_id)
+
+    def stop_session(self, session_id: str) -> bool:
+        return self.terminate_session(session_id)
+
+    def stop_lab_session(self, session_id: str) -> bool:
+        return self.terminate_session(session_id)
 
     def verify_session_residue(self, session_id: str) -> Dict[str, Any]:
         clean, residue = self.sandbox_manager.verify_zero_residue(session_id)

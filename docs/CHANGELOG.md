@@ -2,6 +2,25 @@
 
 All notable changes to this project will be documented in this file. The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.3.0] - 2026-09-14
+
+### Added
+- **Complete 18-Gate Automated Production Acceptance Suite (`scripts/verify_acceptance.py`)**: All 18 production gates matching Requirement 16 verified (Setup, Stack Startup, Browser Reachable, Onboarding, Curriculum Loads, Real Podman, Multi-Container, Real Kubernetes, Fault Observable, Learner Repair, Incident Workflow, DB/Redis Guards, Security Isolation, Browser Responsiveness, >90% Coverage, Concurrency Load, Zero-Residue Cleanup, Documentation Artifacts) generating `acceptance.json` and `acceptance.html`.
+- **First-Run Learner Onboarding Modal (`OnboardingModal.tsx`)**: 5 canonical learning goals ("Learn DevOps from scratch", "Master Kubernetes", "Become an SRE", "Production troubleshooting", "DevOps interview preparation") with curriculum roadmap previews and `localStorage` persistence.
+- **Searchable Troubleshooting Library (`TroubleshootingLibrary.tsx` & `/api/v1/troubleshooting/search`)**: Real-time search and multi-facet filtering (difficulty, technology, symptom, runtime classification) without prematurely spoiling root causes.
+- **Random Incident Mode (`/api/v1/incidents/random/start`)**: Real-time chaos incident generator with randomized topology selection, telemetry noise injection, hypothesis testing, and 6-dimension SRE scoring.
+- **Canonical 15-Dimension Curriculum Coverage Audit**: Generated `docs/CURRICULUM_GAP_REPORT.md`, `curriculum_coverage.json`, and `curriculum_coverage.html` covering all 24 tracks across 15 pedagogical dimensions.
+- **Automated Duplicate Scenario Detector (`scripts/duplicate_detector.py`)**: Certified 0 title collisions and 0 structural duplicates (44/44 genuinely unique scenarios).
+- **Real Playwright Browser Proof (`scripts/capture_browser_proof.py`)**: Captured 35 real PNG screenshots across 5 device viewports (1920x1080, 1440x900, 1366x768, 768x1024, 375x812) into `docs/screenshots/` and embedded them in `visual_report.html`.
+- **Comprehensive Root Quickstart Guide (`QUICKSTART.md` & `docs/QUICKSTART.md`)**: Complete 60-second setup and one-command run documentation.
+
+### Changed
+- **Test Suite Scaling & Coverage Enforcement**: Expanded test suite to 112 passed tests across unit, integration, adversarial security, and sandbox modules; locked meaningful code coverage at 91.0% (>90.0% threshold strictly enforced across `packages` and `apps.api.src`).
+- **Terminal WebSocket Robustness**: Upgraded `terminal.py` to support line-buffered command strings as well as single-character terminal keystrokes, Ctrl+C interrupt handling, clear screen, and stderr formatting.
+- **CLI Orchestrator Polish**: Enhanced `scripts/kubelabs.ps1` and `scripts/kubelabs.sh` with clean ASCII banner, port availability checks, and integrated acceptance runner execution.
+
+---
+
 ## [1.2.0] - 2026-09-14
 
 ### Added

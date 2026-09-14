@@ -9,7 +9,7 @@ from fastapi.middleware.cors import CORSMiddleware
 
 from .core.config import settings
 from .core.database import engine, Base
-from .api import labs, incidents, assessments, dashboard, telemetry, terminal
+from .api import labs, incidents, assessments, dashboard, telemetry, terminal, troubleshooting
 
 
 @asynccontextmanager
@@ -60,6 +60,7 @@ app.include_router(labs.router, prefix=settings.API_V1_STR)
 app.include_router(incidents.router, prefix=settings.API_V1_STR)
 app.include_router(assessments.router, prefix=settings.API_V1_STR)
 app.include_router(dashboard.router, prefix=settings.API_V1_STR)
+app.include_router(troubleshooting.router, prefix=settings.API_V1_STR)
 app.include_router(telemetry.router, prefix=settings.API_V1_STR)
 app.include_router(terminal.router)
 

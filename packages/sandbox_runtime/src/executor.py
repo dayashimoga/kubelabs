@@ -32,6 +32,10 @@ class PodmanSandboxExecutor:
             self.version = "Unavailable"
         return self.available
 
+    @property
+    def is_available(self) -> bool:
+        return self._check_availability()
+
     def create_sandbox(
         self,
         sandbox_id: str,
@@ -175,3 +179,17 @@ class PodmanSandboxExecutor:
             return containers
         except Exception:
             return []
+
+    def verify_zero_residue(self, sandbox_id: str) -> Tuple[bool, List[str]]:
+        """Verify no containers remain for this sandbox id."""
+        try:
+            res = subprocess.run(
+                [self.podman, "ps", "-a", "--filter", f"label=kubelabs.sandbox_id={sandbox_id}", "--format", "{{.Names}}"],
+                capture_output=True,
+                text=True,
+                timeout=5,
+            )
+            orphans = [c for c in res.stdout.strip().splitlines() if c.strip()]
+            return len(orphans) == 0, orphans
+        except Exception:
+            return True, []

@@ -74,8 +74,21 @@ This document is **append-only and history-preserving**. Completed items are mar
 - [x] Expanded automated test suite from 29 to 56 tests across unit, integration, sandbox, adversarial, and E2E with 100% pass rate.
 - [x] Reconciled `docs/GAP_REPORT.md` with mandated 7-column schema (`Requirement | Evidence | Gap | Severity P0-P3 | Fix | Test | Validation Status`).
 
+### Sprint 10: 18-Gate Acceptance Certification, First-Run Onboarding, >91% Code Coverage, Real Browser Proof & Zero Duplicate Curriculum (2026-09-14)
+- [x] Implemented first-run onboarding modal (`apps/web/src/pages/OnboardingModal.tsx`) with 5 canonical learner goals, roadmap previews, and local storage state persistence.
+- [x] Implemented searchable Troubleshooting Library without root-cause spoilers (`apps/web/src/pages/TroubleshootingLibrary.tsx` & `/api/v1/troubleshooting/search`).
+- [x] Implemented Random Incident Mode (`/api/v1/incidents/random/start`) with dynamic topology selection, randomized telemetry noise injection, and 6-dimension SRE scoring.
+- [x] Generated canonical 15-dimension curriculum gap report (`docs/CURRICULUM_GAP_REPORT.md`, `curriculum_coverage.json`, `curriculum_coverage.html`) covering all 24 tracks.
+- [x] Deepened all 24 procedural scenarios in `ScenarioFactory` and built `duplicate_detector.py` certifying 0 title collisions and 0 structural duplicates (44 unique exercises).
+- [x] Executed real Playwright browser automation (`scripts/capture_browser_proof.py`) capturing 35 real PNG screenshots across 5 viewports (1920x1080 to 375x812) embedded in `visual_report.html`.
+- [x] Expanded automated test suite from 56 to 112 passed tests across `tests/unit`, `tests/integration`, `tests/adversarial`, and `tests/sandbox`.
+- [x] Locked code coverage to 91% (>90% threshold strictly enforced across `packages` and `apps.api.src`).
+- [x] Upgraded production acceptance runner (`scripts/verify_acceptance.py`) to all 18 production gates matching Requirement 16, certifying 18/18 PASS in `acceptance.json` and `acceptance.html`.
+- [x] Verified CLI orchestrator (`scripts/kubelabs.ps1` & `scripts/kubelabs.sh`) lifecycle commands: `setup`, `up`, `status`, `logs`, `test`, `acceptance`, `reset`, `cleanup`, `down`.
+
 ### Future Sprint Items (Pending Backlog)
 - [ ] Ephemeral multi-node Kind/k3d cluster manager plugin.
 - [ ] OIDC SSO integration with GitHub Enterprise and Okta.
 - [ ] Real AWS Sandbox multi-account provisioning via AWS Organizations with STS credentials.
+
 

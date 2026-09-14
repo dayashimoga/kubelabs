@@ -1,0 +1,11 @@
+FROM docker.io/library/nginx:alpine
+
+COPY infrastructure/podman/nginx.conf /etc/nginx/nginx.conf
+COPY apps/web/dist /usr/share/nginx/html
+
+EXPOSE 80
+
+HEALTHCHECK --interval=5s --timeout=3s --retries=5 \
+    CMD wget -q -O /dev/null http://localhost:80/ || exit 1
+
+CMD ["nginx", "-g", "daemon off;"]
