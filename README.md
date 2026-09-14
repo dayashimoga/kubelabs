@@ -14,12 +14,14 @@ $$\text{Learn} \longrightarrow \text{Practice} \longrightarrow \text{Break} \lon
 
 ## ⚡ Key Highlights
 
+- **Unconditional Catalog Breadth (729+ Scenarios)**: 729 uniquely authored, non-duplicate scenarios across 24 core engineering tracks with 0 title collisions and 0 structural duplicates (certified by `scripts/duplicate_detector.py`).
+- **Subtopic Curriculum Depth (103 Subtopics)**: 10-dimension pedagogical modeling (`what_why`, `internals`, `failure_cause`, `diagnostics`, `repair_action`, `validation_target`, `topology`, `scoring`, `hints`, `difficulty`) certified in `docs/CURRICULUM_DEPTH_REPORT.md`.
 - **Declarative YAML Lab Engine**: Versioned, reproducible labs with state-based assertions across 14 domains (Command, File, Regex, YAML, JSON, HTTP, TCP, DNS, Container, Kubernetes, Git, Prometheus, OpenTelemetry).
-- **Hardened Rootless Sandbox**: Automated Podman container launcher with dropped capabilities (`--cap-drop=ALL`), cgroup CPU/memory quotas, no host sockets, and automated 30-minute background TTL cleanup.
-- **Deterministic SRE Simulator**: Stateful in-process emulation of multi-tier cloud architectures, Kubernetes control planes, PromQL metrics vectors, and trace waterfalls.
-- **Step-by-Step Diagnostic Assistant**: Contextual guidance with 5 progressive hint tiers (Conceptual $\rightarrow$ Area $\rightarrow$ Command $\rightarrow$ Clue $\rightarrow$ Solution) and answering canonical SRE queries without spoiling solutions.
-- **SEV-1 / SEV-2 Incident War Room**: 12 cascading multi-service production outages with live topology, real-time alert timelines, hypothesis testing, and 6-dimensional SRE scorecard evaluation (`Detection | Investigation | Root Cause | Fix | Verification | Prevention`).
-- **Comprehensive Curriculum**: 12 in-depth guides following the 13-part pedagogical architecture across Linux, Networking, Docker, Kubernetes, Helm/Kustomize, Terraform, Ansible, Git/CI, Argo CD, Observability, Service Mesh, and AWS EKS.
+- **Hardened Rootless Podman Sandbox**: Automated rootless Podman launcher with dropped capabilities (`--cap-drop=ALL`), cgroup CPU/memory quotas, no host sockets, and automated 30-minute background TTL cleanup.
+- **Deterministic SRE Simulator & Truthful Cloud**: Stateful emulation of multi-tier cloud architectures, Prometheus metrics, and truthful cloud classification (`SIMULATION-PROVEN` / `CLOUD-REQUIRED`) with disposable zero-residue AWS testing (`scripts/aws_disposable_acceptance.py`).
+- **SEV-1 / SEV-2 Incident War Room**: 12 cascading multi-service production outages with live topology, real-time alert timelines, hypothesis testing, and 7-dimensional SRE scorecard evaluation (`Detection | Evidence Gathering | Hypothesis | Root Cause | Fix | Verification | Prevention`).
+- **Multi-Viewport Visual Regression**: Validated across 5 standardized viewports (`1920x1080`, `1440x900`, `1366x768`, `768x1024`, `375x812`) with 0 horizontal overflow anomalies (`scripts/run_visual_regression.py`).
+- **18-Gate Production Acceptance**: Complete acceptance suite with dual execution modes (`--fast` in <2s, `--full` with real runtimes) via `scripts/verify_acceptance.py`.
 - **Modern Web Console**: High-performance React 18 + Vite SPA featuring xterm.js terminal, Monaco configuration editor, SVG topology visualizer, live telemetry charts, and dark SRE console styling.
 
 ---
@@ -73,14 +75,28 @@ All 25 mandated technical documentation files are located in `docs/`:
 25. [TODO.md](file:///h:/kubelabs/docs/TODO.md) - Append-only task history log
 26. [CHANGELOG.md](file:///h:/kubelabs/docs/CHANGELOG.md) - History-preserving release log
 27. [GAP_REPORT.md](file:///h:/kubelabs/docs/GAP_REPORT.md) - System verification classification audit
+28. [CURRICULUM_DEPTH_REPORT.md](file:///h:/kubelabs/docs/CURRICULUM_DEPTH_REPORT.md) - Subtopic-level pedagogical depth audit across 103 domains
 
 ---
 
-## 🧪 Automated Testing
+## 🧪 Automated Testing & Verification
 ```bash
-# Run test suite
-pytest tests/ -v
+# Run full test suite with coverage
+pytest tests/ --cov=packages --cov-report=term-missing
 
-# Run acceptance verification
-python scripts/verify_acceptance.py
+# Run automated 18-gate production acceptance (Fast mode <2s)
+python scripts/verify_acceptance.py --fast
+
+# Run full acceptance verification (Real Podman runtimes)
+python scripts/verify_acceptance.py --full
+
+# Run semantic & structural duplicate detector (0 collisions certified)
+python scripts/duplicate_detector.py
+
+# Run multi-viewport visual regression audit (5 viewports, 0 overflow)
+python scripts/run_visual_regression.py
+
+# Run truthful cloud disposable AWS acceptance
+python scripts/aws_disposable_acceptance.py
 ```
+

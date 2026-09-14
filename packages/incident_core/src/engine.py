@@ -59,7 +59,7 @@ class IncidentSession:
         return False
 
     def verify_resolution(self) -> IncidentScore:
-        """Calculate SRE score across 6 production dimensions."""
+        """Calculate SRE score across 7 production dimensions."""
         now = time.time()
         self.resolved_at = now
         self.status = IncidentStatus.RESOLVED
@@ -71,32 +71,40 @@ class IncidentSession:
         else:
             detection_score = max(50, min(100, int(round(100 - ((ack_delay - 60) / 10)))))
 
-        # 2. Investigation score (Variety of diagnostic commands)
-        investigation_score = min(100, len(self.inspected_commands) * 20) if self.inspected_commands else 30
+        # 2. Evidence Gathering score (Diagnostic telemetry and commands)
+        evidence_gathering_score = min(100, 50 + len(self.inspected_commands) * 20) if self.inspected_commands else 50
 
-        # 3. Root Cause score
+        # 3. Hypothesis score (Hypothesis formulations and tests)
+        hypothesis_score = min(100, 50 + len(self.tested_hypotheses) * 35) if self.tested_hypotheses else 50
+
+        # Investigation composite score
+        investigation_score = int((evidence_gathering_score + hypothesis_score) / 2)
+
+        # 4. Root Cause score
         root_cause_score = 90 if self.tested_hypotheses else 60
 
-        # 4. Fix score
+        # 5. Fix score
         fix_score = 95 if self.status in [IncidentStatus.MITIGATING, IncidentStatus.RESOLVED] else 30
 
-        # 5. Verification score
+        # 6. Verification score
         verification_score = 90
 
-        # 6. Prevention score
+        # 7. Prevention score
         prevention_score = 85
 
         # Penalty for hint requests
         penalty = self.hint_requests_count * 5
 
-        total = int((detection_score + investigation_score + root_cause_score + fix_score + verification_score + prevention_score) / 6)
+        total = int((detection_score + evidence_gathering_score + hypothesis_score + root_cause_score + fix_score + verification_score + prevention_score) / 7)
         total = max(10, total - penalty)
 
         feedback = [
             f"Detection: Acknowledged in {int(ack_delay)}s.",
-            f"Investigation: Executed {len(self.inspected_commands)} diagnostic probes.",
+            f"Evidence Gathering: Executed {len(self.inspected_commands)} diagnostic probes.",
+            f"Hypothesis: Tested {len(self.tested_hypotheses)} root-cause hypotheses.",
             f"Root Cause: Thorough analysis of subsystem failure.",
             f"Mitigation: Applied verified remediation commands.",
+            f"Verification: Automated system state confirmed healthy.",
             f"Prevention: Reviewed architectural safeguards to stop recurrence.",
         ]
         if penalty > 0:
@@ -104,6 +112,8 @@ class IncidentSession:
 
         return IncidentScore(
             detection_score=detection_score,
+            evidence_gathering_score=evidence_gathering_score,
+            hypothesis_score=hypothesis_score,
             investigation_score=investigation_score,
             root_cause_score=root_cause_score,
             fix_score=fix_score,

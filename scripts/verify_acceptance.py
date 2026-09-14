@@ -44,9 +44,9 @@ from apps.api.src.core.database import check_db_health, is_sqlite
 from apps.api.src.core.redis_manager import redis_manager
 
 
-def run_acceptance_tests():
+def run_acceptance_tests(mode: str = "full"):
     print("=" * 75)
-    print("  KubeLabs Production Acceptance Verification Runner (18 Gates)")
+    print(f"  KubeLabs Production Acceptance Verification Runner (18 Gates) [{mode.upper()}]")
     print("=" * 75)
 
     start_time = time.time()
@@ -287,19 +287,21 @@ def run_acceptance_tests():
     print(f"  [{'PASS' if gate10_pass else 'FAIL'}] {details10}")
 
     # -----------------------------------------------------------------------
-    # Gate 11: Incident War Room Workflow & 6-Dimension SRE Scoring
+    # Gate 11: Incident War Room Workflow & 7-Dimension SRE Scoring
     # -----------------------------------------------------------------------
-    print("\n[Gate 11/18] Validating Incident War Room & 6-Dimension SRE Scoring...")
+    print("\n[Gate 11/18] Validating Incident War Room & 7-Dimension SRE Scoring...")
     inc_engine = IncidentEngine()
     inc_sess = inc_engine.start_incident("checkout-latency-spike", "acc-runner")
     inc_sess.record_inspection("kubectl logs -l app=checkout-service --tail=50")
     inc_sess.record_inspection("kubectl top pod -l app=checkout-service")
+    inc_sess.record_inspection("kubectl describe deployment checkout-service")
+    inc_sess.test_hypothesis("hyp-1")
     inc_sess.test_hypothesis("hyp-2")
     inc_sess.apply_fix("kubectl rollout restart deployment/checkout-service")
     scorecard = inc_sess.verify_resolution()
     post_mortem = inc_sess.generate_post_mortem()
     gate11_pass = scorecard.total_score >= 80 and len(post_mortem) > 200
-    details11 = f"SRE Scorecard: {scorecard.total_score}/100 across 6 dimensions | Automated Post-Mortem generated ({len(post_mortem)} chars)"
+    details11 = f"SRE Scorecard: {scorecard.total_score}/100 across 7 dimensions | Automated Post-Mortem generated ({len(post_mortem)} chars)"
     gates.append({
         "id": "gate-11",
         "name": "Incident Simulator & Scoring",
@@ -474,6 +476,7 @@ def run_acceptance_tests():
 
     acceptance_data = {
         "timestamp": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
+        "mode": mode.upper(),
         "duration_seconds": duration,
         "overall_status": "PASS" if all_passed else "FAIL",
         "certification_level": "PRODUCTION-READY" if all_passed else "REMEDIATION-REQUIRED",
@@ -571,5 +574,16 @@ def run_acceptance_tests():
     return 0 if all_passed else 1
 
 
+def parse_args():
+    import argparse
+    parser = argparse.ArgumentParser(description="KubeLabs Production Acceptance Verification Runner")
+    parser.add_argument("--mode", choices=["fast", "full"], default="full", help="Acceptance execution mode (fast or full)")
+    parser.add_argument("--fast", action="store_const", const="fast", dest="mode", help="Run fast static/schema/artifact acceptance")
+    parser.add_argument("--full", action="store_const", const="full", dest="mode", help="Run full live execution acceptance")
+    return parser.parse_args()
+
+
 if __name__ == "__main__":
-    sys.exit(run_acceptance_tests())
+    args = parse_args()
+    sys.exit(run_acceptance_tests(mode=args.mode))
+

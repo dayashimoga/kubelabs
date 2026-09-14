@@ -153,9 +153,15 @@ case "$ACTION" in
 
     acceptance)
         show_header
-        echo -e "\nExecuting 18-Gate Production Acceptance Suite..."
+        MODE_ARG="--full"
+        if [ "$2" = "--fast" ] || [ "$2" = "-Fast" ] || [ "$2" = "fast" ]; then
+            MODE_ARG="--fast"
+        elif [ "$2" = "--full" ] || [ "$2" = "-Full" ] || [ "$2" = "full" ]; then
+            MODE_ARG="--full"
+        fi
+        echo -e "\nExecuting 18-Gate Production Acceptance Suite ($MODE_ARG)..."
         cd "$ROOT_PATH"
-        python3 scripts/verify_acceptance.py || python scripts/verify_acceptance.py
+        python3 scripts/verify_acceptance.py $MODE_ARG || python scripts/verify_acceptance.py $MODE_ARG
         ;;
 
     reset)

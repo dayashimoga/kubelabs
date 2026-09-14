@@ -1,6 +1,7 @@
 {
-  "timestamp": "2026-09-14T12:12:41Z",
-  "duration_seconds": 3.29,
+  "timestamp": "2026-09-14T13:55:03Z",
+  "mode": "FAST",
+  "duration_seconds": 1.79,
   "overall_status": "PASS",
   "certification_level": "PRODUCTION-READY",
   "gates_passed": 18,
@@ -34,7 +35,7 @@
       "id": "gate-5",
       "name": "Curriculum Matrix & Zero Duplicates",
       "status": "PASS",
-      "details": "13 declarative labs, 36 factory scenarios across 24 tracks (0 duplicates certified)"
+      "details": "13 declarative labs, 722 factory scenarios across 24 tracks (0 duplicates certified)"
     },
     {
       "id": "gate-6",
@@ -70,7 +71,7 @@
       "id": "gate-11",
       "name": "Incident Simulator & Scoring",
       "status": "PASS",
-      "details": "SRE Scorecard: 83/100 across 6 dimensions | Automated Post-Mortem generated (1798 chars)"
+      "details": "SRE Scorecard: 94/100 across 7 dimensions | Automated Post-Mortem generated (1798 chars)"
     },
     {
       "id": "gate-12",

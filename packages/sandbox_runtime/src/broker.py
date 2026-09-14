@@ -123,20 +123,24 @@ class EnvironmentBroker:
                             f"Failed to provision REAL container sandbox for '{lab_spec.id}': {str(exc)}"
                         )
 
-        # 4. Deterministic Simulation Provider (Explicit or Cloud-Required fallback)
+        # 4. Deterministic Simulation Provider (Explicit, Simulation Environment, or Cloud-Required fallback)
         classification = lab_spec.runtime_classification
-        if force_simulation or classification in [
-            LabRuntimeClassification.SIMULATED,
-            LabRuntimeClassification.EMULATED,
-            LabRuntimeClassification.CLOUD_REQUIRED,
-        ]:
+        if (
+            force_simulation
+            or env_type == EnvironmentType.SIMULATION
+            or classification in [
+                LabRuntimeClassification.SIMULATED,
+                LabRuntimeClassification.EMULATED,
+                LabRuntimeClassification.CLOUD_REQUIRED,
+            ]
+        ):
             sim = DeterministicSimulator(lab_spec.id, lab_spec.initial_state.seed_data)
             env_record = {
                 "sandbox_id": sandbox_id,
                 "provider": "simulator",
                 "classification": (
                     LabRuntimeClassification.SIMULATED
-                    if force_simulation
+                    if force_simulation or env_type == EnvironmentType.SIMULATION
                     else classification
                 ),
                 "simulator": sim,

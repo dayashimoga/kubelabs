@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KubeLabs Visual Regression & Multi-Viewport Conformance Report</title>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #07090e; color: #f8fafc; margin: 0; padding: 2rem; }
+    .container { max-width: 1200px; margin: 0 auto; }
+    h1 { color: #00f2fe; margin-bottom: 0.5rem; }
+    .summary-card { background: #0d121d; border: 1px solid #1e293b; border-radius: 8px; padding: 1.5rem; margin-bottom: 2rem; display: flex; gap: 2rem; }
+    .stat-box { flex: 1; }
+    .stat-val { font-size: 2rem; font-weight: bold; color: #10b981; }
+    table { width: 100%; border-collapse: collapse; background: #0d121d; border: 1px solid #1e293b; border-radius: 8px; overflow: hidden; }
+    th, td { padding: 0.85rem 1rem; text-align: left; border-bottom: 1px solid #1e293b; }
+    th { background: #131b2e; color: #94a3b8; font-size: 0.85rem; text-transform: uppercase; }
+    .badge-pass { background: rgba(16, 185, 129, 0.15); color: #10b981; border: 1px solid rgba(16, 185, 129, 0.3); padding: 0.2rem 0.6rem; border-radius: 4px; font-weight: bold; font-size: 0.8rem; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>KubeLabs Visual Regression & Viewport Conformance Report</h1>
+    <p style="color: #94a3b8;">Automated multi-viewport validation across Desktop, Laptop, Tablet, and Mobile devices.</p>
+
+    <div class="summary-card">
+      <div class="stat-box">
+        <div style="color: #94a3b8; font-size: 0.85rem;">Pass Rate</div>
+        <div class="stat-val">100.0%</div>
+      </div>
+      <div class="stat-box">
+        <div style="color: #94a3b8; font-size: 0.85rem;">Viewports Tested</div>
+        <div class="stat-val" style="color: #00f2fe;">5 Profiles</div>
+      </div>
+      <div class="stat-box">
+        <div style="color: #94a3b8; font-size: 0.85rem;">Checks Executed</div>
+        <div class="stat-val" style="color: #f8fafc;">20</div>
+      </div>
+      <div class="stat-box">
+        <div style="color: #94a3b8; font-size: 0.85rem;">Horizontal Overflow</div>
+        <div class="stat-val">0 Anomalies</div>
+      </div>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Viewport</th>
+          <th>Dimensions</th>
+          <th>Category</th>
+          <th>Page View</th>
+          <th>Overflow Shield</th>
+          <th>Layout Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Full HD Desktop</strong></td>
+          <td><code>1920x1080</code></td>
+          <td>DESKTOP</td>
+          <td>Dashboard & Track Navigator</td>
+          <td><span class="badge-pass">PASS</span></td>
+          <td><span class="badge-pass">PASS</span></td>
+        </tr>
+        <tr>
+          <td><strong>Full HD Desktop</strong></td>
+          <td><code>1920x1080</code></td>
+          <td>DESKTOP</td>
+          <td>Lab Workspace & Split Terminal</td>
+          <td><span class="badge-pass">PASS</span></td>
+          <td><span class="badge-pass">PASS</span></td>
+        </tr>
+        <tr>
+          <td><strong>Full HD Desktop</strong></td>
+          <td><code>1920x1080</code></td>
+          <td>DESKTOP</td>
+          <td>Incident Command Center & War Room</td>
+          <td><span class="badge-pass">PASS</span></td>
+          <td><span class="badge-pass">PASS</span></td>
+        </tr>
+        <tr>
+          <td><strong>Full HD Desktop</strong></td>
+          <td><code>1920x1080</code></td>
+          <td>DESKTOP</td>
+          <td>Observability & Telemetry Graphs</td>
+          <td><span class="badge-pass">PASS</span></td>
+          <td><span class="badge-pass">PASS</span></td>
+        </tr>
+        <tr>
+          <td><strong>Widescreen Desktop</strong></td>
+          <td><code>1440x900</code></td>
+          <td>DESKTOP</td>
+          <td>Dashboard & Track Navigator</td>
+          <td><span class="badge-pass">PASS</span></td>
+          <td><span class="badge-pass">PASS</span></td>
+        </tr>
+        <tr>
+          <td><strong>Widescreen Desktop</strong></td>
+          <td><code>1440x900</code></td>
+          <td>DESKTOP</td>
+          <td>Lab Workspace & Split Terminal</td>
+          <td><span class="badge-pass">PASS</span></td>
+          <td><span class="badge-pass">PASS</span></td>
+        </tr>
+        <tr>
+          <td><strong>Widescreen Desktop</strong></td>
+          <td><code>1440x900</code></td>
+          <td>DESKTOP</td>
+          <td>Incident Command Center & War Room</td>
+          <td><span class="badge-pass">PASS</span></td>
+          <td><span class="badge-pass">PASS</span></td>
+        </tr>
+        <tr>
+          <td><strong>Widescreen Desktop</strong></td>
+          <td><code>1440x900</code></td>
+          <td>DESKTOP</td>
+          <td>Observability & Telemetry Graphs</td>
+          <td><span class="badge-pass">PASS</span></td>
+          <td><span class="badge-pass">PASS</span></td>
+        </tr>
+        <tr>
+          <td><strong>Standard Laptop</strong></td>
+          <td><code>1366x768</code></td>
+          <td>DESKTOP</td>
+          <td>Dashboard & Track Navigator</td>
+          <td><span class="badge-pass">PASS</span></td>
+          <td><span class="badge-pass">PASS</span></td>
+        </tr>
+        <tr>
+          <td><strong>Standard Laptop</strong></td>
+          <td><code>1366x768</code></td>
+          <td>DESKTOP</td>
+          <td>Lab Workspace & Split Terminal</td>
+          <td><span class="badge-pass">PASS</span></td>
+          <td><span class="badge-pass">PASS</span></td>
+        </tr>
+        <tr>
+          <td><strong>Standard Laptop</strong></td>
+          <td><code>1366x768</code></td>
+          <td>DESKTOP</td>
+          <td>Incident Command Center & War Room</td>
+          <td><span class="badge-pass">PASS</span></td>
+          <td><span class="badge-pass">PASS</span></td>
+        </tr>
+        <tr>
+          <td><strong>Standard Laptop</strong></td>
+          <td><code>1366x768</code></td>
+          <td>DESKTOP</td>
+          <td>Observability & Telemetry Graphs</td>
+          <td><span class="badge-pass">PASS</span></td>
+          <td><span class="badge-pass">PASS</span></td>
+        </tr>
+        <tr>
+          <td><strong>Tablet Portrait</strong></td>
+          <td><code>768x1024</code></td>
+          <td>TABLET</td>
+          <td>Dashboard & Track Navigator</td>
+          <td><span class="badge-pass">PASS</span></td>
+          <td><span class="badge-pass">PASS</span></td>
+        </tr>
+        <tr>
+          <td><strong>Tablet Portrait</strong></td>
+          <td><code>768x1024</code></td>
+          <td>TABLET</td>
+          <td>Lab Workspace & Split Terminal</td>
+          <td><span class="badge-pass">PASS</span></td>
+          <td><span class="badge-pass">PASS</span></td>
+        </tr>
+        <tr>
+          <td><strong>Tablet Portrait</strong></td>
+          <td><code>768x1024</code></td>
+          <td>TABLET</td>
+          <td>Incident Command Center & War Room</td>
+          <td><span class="badge-pass">PASS</span></td>
+          <td><span class="badge-pass">PASS</span></td>
+        </tr>
+        <tr>
+          <td><strong>Tablet Portrait</strong></td>
+          <td><code>768x1024</code></td>
+          <td>TABLET</td>
+          <td>Observability & Telemetry Graphs</td>
+          <td><span class="badge-pass">PASS</span></td>
+          <td><span class="badge-pass">PASS</span></td>
+        </tr>
+        <tr>
+          <td><strong>Mobile Handheld</strong></td>
+          <td><code>375x812</code></td>
+          <td>MOBILE</td>
+          <td>Dashboard & Track Navigator</td>
+          <td><span class="badge-pass">PASS</span></td>
+          <td><span class="badge-pass">PASS</span></td>
+        </tr>
+        <tr>
+          <td><strong>Mobile Handheld</strong></td>
+          <td><code>375x812</code></td>
+          <td>MOBILE</td>
+          <td>Lab Workspace & Split Terminal</td>
+          <td><span class="badge-pass">PASS</span></td>
+          <td><span class="badge-pass">PASS</span></td>
+        </tr>
+        <tr>
+          <td><strong>Mobile Handheld</strong></td>
+          <td><code>375x812</code></td>
+          <td>MOBILE</td>
+          <td>Incident Command Center & War Room</td>
+          <td><span class="badge-pass">PASS</span></td>
+          <td><span class="badge-pass">PASS</span></td>
+        </tr>
+        <tr>
+          <td><strong>Mobile Handheld</strong></td>
+          <td><code>375x812</code></td>
+          <td>MOBILE</td>
+          <td>Observability & Telemetry Graphs</td>
+          <td><span class="badge-pass">PASS</span></td>
+          <td><span class="badge-pass">PASS</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>

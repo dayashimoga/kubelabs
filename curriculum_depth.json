@@ -1,0 +1,2116 @@
+{
+  "timestamp": "2026-09-14T13:50:35Z",
+  "duration_seconds": 0.08,
+  "total_tracks": 24,
+  "total_subtopics": 103,
+  "maturity_summary": {
+    "production_ready_learning": 40,
+    "practiced": 63,
+    "foundational": 0,
+    "thin_coverage": 0
+  },
+  "thin_coverage_flagged": [],
+  "tracks": [
+    {
+      "track": "linux",
+      "total_subtopics": 6,
+      "subtopics": [
+        {
+          "track": "linux",
+          "subtopic_id": "linux-vfs-inodes",
+          "subtopic_name": "VFS Superblocks & Inode Tables",
+          "metrics": {
+            "lessons": 1,
+            "demos": 1,
+            "guided_labs": 1,
+            "independent_labs": 1,
+            "break_fix_labs": 1,
+            "troubleshooting_labs": 2,
+            "incidents": 1,
+            "quizzes": 1,
+            "interview_scenarios": 1,
+            "production_scenarios": 1
+          },
+          "maturity": "PRODUCTION-READY LEARNING",
+          "is_thin": false
+        },
+        {
+          "track": "linux",
+          "subtopic_id": "linux-process-signals",
+          "subtopic_name": "Process Lifecycle, PID Tables & Signals",
+          "metrics": {
+            "lessons": 1,
+            "demos": 1,
+            "guided_labs": 2,
+            "independent_labs": 2,
+            "break_fix_labs": 2,
+            "troubleshooting_labs": 2,
+            "incidents": 1,
+            "quizzes": 1,
+            "interview_scenarios": 1,
+            "production_scenarios": 1
+          },
+          "maturity": "PRODUCTION-READY LEARNING",
+          "is_thin": false
+        },
+        {
+          "track": "linux",
+          "subtopic_id": "linux-memory-oom",
+          "subtopic_name": "Virtual Memory, Page Cache & OOM Killer",
+          "metrics": {
+            "lessons": 1,
+            "demos": 1,
+            "guided_labs": 4,
+            "independent_labs": 4,
+            "break_fix_labs": 4,
+            "troubleshooting_labs": 4,
+            "incidents": 1,
+            "quizzes": 1,
+            "interview_scenarios": 1,
+            "production_scenarios": 1
+          },
+          "maturity": "PRODUCTION-READY LEARNING",
+          "is_thin": false
+        },
+        {
+          "track": "linux",
+          "subtopic_id": "linux-cpu-scheduler",
+          "subtopic_name": "CPU Scheduling, Load Average & Nice/CFS",
+          "metrics": {
+            "lessons": 1,
+            "demos": 1,
+            "guided_labs": 2,
+            "independent_labs": 2,
+            "break_fix_labs": 2,
+            "troubleshooting_labs": 2,
+            "incidents": 1,
+            "quizzes": 1,
+            "interview_scenarios": 1,
+            "production_scenarios": 1
+          },
+          "maturity": "PRODUCTION-READY LEARNING",
+          "is_thin": false
+        },
+        {
+          "track": "linux",
+          "subtopic_id": "linux-network-sockets",
+          "subtopic_name": "Socket Buffers, TCP States & Conntrack",
+          "metrics": {
+            "lessons": 1,
+            "demos": 1,
+            "guided_labs": 1,
+            "independent_labs": 1,
+            "break_fix_labs": 1,
+            "troubleshooting_labs": 2,
+            "incidents": 1,
+            "quizzes": 1,
+            "interview_scenarios": 1,
+            "production_scenarios": 1
+          },
+          "maturity": "PRODUCTION-READY LEARNING",
+          "is_thin": false
+        },
+        {
+          "track": "linux",
+          "subtopic_id": "linux-systemd-cgroups",
+          "subtopic_name": "systemd Units, cgroups v2 & Resource Slices",
+          "metrics": {
+            "lessons": 1,
+            "demos": 1,
+            "guided_labs": 2,
+            "independent_labs": 2,
+            "break_fix_labs": 2,
+            "troubleshooting_labs": 2,
+            "incidents": 1,
+            "quizzes": 1,
+            "interview_scenarios": 1,
+            "production_scenarios": 1
+          },
+          "maturity": "PRODUCTION-READY LEARNING",
+          "is_thin": false
+        }
+      ]
+    },
+    {
+      "track": "bash",
+      "total_subtopics": 4,
+      "subtopics": [
+        {
+          "track": "bash",
+          "subtopic_id": "bash-pipes-redirection",
+          "subtopic_name": "Subshells, File Descriptors & Pipe Buffers",
+          "metrics": {
+            "lessons": 1,
+            "demos": 1,
+            "guided_labs": 1,
+            "independent_labs": 1,
+            "break_fix_labs": 1,
+            "troubleshooting_labs": 1,
+            "incidents": 0,
+            "quizzes": 1,
+            "interview_scenarios": 1,
+            "production_scenarios": 1
+          },
+          "maturity": "PRACTICED",
+          "is_thin": false
+        },
+        {
+          "track": "bash",
+          "subtopic_id": "bash-traps-signals",
+          "subtopic_name": "Signal Traps (EXIT, ERR, SIGINT, SIGTERM)",
+          "metrics": {
+            "lessons": 1,
+            "demos": 1,
+            "guided_labs": 1,
+            "independent_labs": 1,
+            "break_fix_labs": 1,
+            "troubleshooting_labs": 1,
+            "incidents": 0,
+            "quizzes": 1,
+            "interview_scenarios": 1,
+            "production_scenarios": 1
+          },
+          "maturity": "PRACTICED",
+          "is_thin": false
+        },
+        {
+          "track": "bash",
+          "subtopic_id": "bash-text-stream",
+          "subtopic_name": "Stream Processing (Sed, Awk, Cut, Xargs)",
+          "metrics": {
+            "lessons": 1,
+            "demos": 1,
+            "guided_labs": 1,
+            "independent_labs": 1,
+            "break_fix_labs": 1,
+            "troubleshooting_labs": 1,
+            "incidents": 0,
+            "quizzes": 1,
+            "interview_scenarios": 1,
+            "production_scenarios": 1
+          },
+          "maturity": "PRACTICED",
+          "is_thin": false
+        },
+        {
+          "track": "bash",
+          "subtopic_id": "bash-error-handling",
+          "subtopic_name": "Defensive Scripting (set -euo pipefail)",
+          "metrics": {
+            "lessons": 1,
+            "demos": 1,
+            "guided_labs": 2,
+            "independent_labs": 2,
+            "break_fix_labs": 1,
+            "troubleshooting_labs": 2,
+            "incidents": 0,
+            "quizzes": 1,
+            "interview_scenarios": 1,
+            "production_scenarios": 1
+          },
+          "maturity": "PRACTICED",
+          "is_thin": false
+        }
+      ]
+    },
+    {
+      "track": "git",
+      "total_subtopics": 4,
+      "subtopics": [
+        {
+          "track": "git",
+          "subtopic_id": "git-object-model",
+          "subtopic_name": "Git Internals (Blobs, Trees, Commits, Tags)",
+          "metrics": {
+            "lessons": 1,
+            "demos": 1,
+            "guided_labs": 1,
+            "independent_labs": 1,
+            "break_fix_labs": 1,
+            "troubleshooting_labs": 1,
+            "incidents": 0,
+            "quizzes": 1,
+            "interview_scenarios": 1,
+            "production_scenarios": 1
+          },
+          "maturity": "PRACTICED",
+          "is_thin": false
+        },
+        {
+          "track": "git",
+          "subtopic_id": "git-branch-merge",
+          "subtopic_name": "Fast-Forward, 3-Way Merges & Conflict Resolution",
+          "metrics": {
+            "lessons": 1,
+            "demos": 1,
+            "guided_labs": 6,
+            "independent_labs": 6,
+            "break_fix_labs": 6,
+            "troubleshooting_labs": 6,
+            "incidents": 0,
+            "quizzes": 1,
+            "interview_scenarios": 1,
+            "production_scenarios": 1
+          },
+          "maturity": "PRACTICED",
+          "is_thin": false
+        },
+        {
+          "track": "git",
+          "subtopic_id": "git-rebase-interactive",
+          "subtopic_name": "Interactive Rebasing & History Rewriting",
+          "metrics": {
+            "lessons": 1,
+            "demos": 1,
+            "guided_labs": 2,
+            "independent_labs": 2,
+            "break_fix_labs": 2,
+            "troubleshooting_labs": 2,
+            "incidents": 0,
+            "quizzes": 1,
+            "interview_scenarios": 1,
+            "production_scenarios": 1
+          },
+          "maturity": "PRACTICED",
+          "is_thin": false
+        },
+        {
+          "track": "git",
+          "subtopic_id": "git-reflog-recovery",
+          "subtopic_name": "Reflog Disaster Recovery & Dangling Commits",
+          "metrics": {
+            "lessons": 1,
+            "demos": 1,
+            "guided_labs": 3,
+            "independent_labs": 3,
+            "break_fix_labs": 2,
+            "troubleshooting_labs": 3,
+            "incidents": 0,
+            "quizzes": 1,
+            "interview_scenarios": 1,
+            "production_scenarios": 1
+          },
+          "maturity": "PRACTICED",
+          "is_thin": false
+        }
+      ]
+    },
+    {
+      "track": "networking",
+      "total_subtopics": 5,
+      "subtopics": [
+        {
+          "track": "networking",
+          "subtopic_id": "net-tcp-ip-osi",
+          "subtopic_name": "TCP 3-Way Handshake, Window Scaling & TIME_WAIT",
+          "metrics": {
+            "lessons": 1,
+            "demos": 1,
+            "guided_labs": 11,
+            "independent_labs": 11,
+            "break_fix_labs": 11,
+            "troubleshooting_labs": 11,
+            "incidents": 0,
+            "quizzes": 1,
+            "interview_scenarios": 1,
+            "production_scenarios": 1
+          },
+          "maturity": "PRACTICED",
+          "is_thin": false
+        },
+        {
+          "track": "networking",
+          "subtopic_id": "net-subnet-cidr",
+          "subtopic_name": "IP Addressing, CIDR Blocks & VLSM Calculation",
+          "metrics": {
+            "lessons": 1,
+            "demos": 1,
+            "guided_labs": 1,
+            "independent_labs": 1,
+            "break_fix_labs": 1,
+            "troubleshooting_labs": 2,
+            "incidents": 0,
+            "quizzes": 1,
+            "interview_scenarios": 1,
+            "production_scenarios": 1
+          },
+          "maturity": "PRACTICED",
+          "is_thin": false
+        },
+        {
+          "track": "networking",
+          "subtopic_id": "net-routing-iptables",
+          "subtopic_name": "Linux Routing Tables, iptables & nftables",
+          "metrics": {
+            "lessons": 1,
+            "demos": 1,
+            "guided_labs": 2,
+            "independent_labs": 2,
+            "break_fix_labs": 2,
+            "troubleshooting_labs": 2,
+            "incidents": 0,
+            "quizzes": 1,
+            "interview_scenarios": 1,
+            "production_scenarios": 1
+          },
+          "maturity": "PRACTICED",
+          "is_thin": false
+        },
+        {
+          "track": "networking",
+          "subtopic_id": "net-mtu-fragmentation",
+          "subtopic_name": "MTU Discovery, MSS Clamping & Fragmentation",
+          "metrics": {
+            "lessons": 1,
+            "demos": 1,
+            "guided_labs": 1,
+            "independent_labs": 1,
+            "break_fix_labs": 1,
+            "troubleshooting_labs": 2,
+            "incidents": 0,
+            "quizzes": 1,
+            "interview_scenarios": 1,
+            "production_scenarios": 1
+          },
+          "maturity": "PRACTICED",
+          "is_thin": false
+        },
+        {
+          "track": "networking",
+          "subtopic_id": "net-packet-capture",
+          "subtopic_name": "tcpdump, Wireshark & Packet Dissection",
+          "metrics": {
+            "lessons": 1,
+            "demos": 1,
+            "guided_labs": 8,
+            "independent_labs": 8,
+            "break_fix_labs": 8,
+            "troubleshooting_labs": 8,
+            "incidents": 0,
+            "quizzes": 1,
+            "interview_scenarios": 1,
+            "production_scenarios": 1
+          },
+          "maturity": "PRACTICED",
+          "is_thin": false
+        }
+      ]
+    },
+    {
+      "track": "http-dns-tls",
+      "total_subtopics": 4,
+      "subtopics": [
+        {
+          "track": "http-dns-tls",
+          "subtopic_id": "proto-http-versions",
+          "subtopic_name": "HTTP/1.1 Pipelining vs HTTP/2 Multiplexing vs HTTP/3 QUIC",
+          "metrics": {
+            "lessons": 1,
+            "demos": 1,
+            "guided_labs": 27,
+            "independent_labs": 27,
+            "break_fix_labs": 26,
+            "troubleshooting_labs": 27,
+            "incidents": 0,
+            "quizzes": 1,
+            "interview_scenarios": 1,
+            "production_scenarios": 1
+          },
+          "maturity": "PRACTICED",
+          "is_thin": false
+        },
+        {
+          "track": "http-dns-tls",
+          "subtopic_id": "proto-dns-resolution",
+          "subtopic_name": "Recursive vs Iterative DNS, CoreDNS & /etc/resolv.conf",
+          "metrics": {
+            "lessons": 1,
+            "demos": 1,
+            "guided_labs": 26,
+            "independent_labs": 26,
+            "break_fix_labs": 25,
+            "troubleshooting_labs": 26,
+            "incidents": 0,
+            "quizzes": 1,
+            "interview_scenarios": 1,
+            "production_scenarios": 1
+          },
+          "maturity": "PRACTICED",
+          "is_thin": false
+        },
+        {
+          "track": "http-dns-tls",
+          "subtopic_id": "proto-tls-handshake",
+          "subtopic_name": "TLS 1.3 Handshake, SNI, ALPN & Session Resumption",
+          "metrics": {
+            "lessons": 1,
+            "demos": 1,
+            "guided_labs": 26,
+            "independent_labs": 26,
+            "break_fix_labs": 25,
+            "troubleshooting_labs": 26,
+            "incidents": 0,
+            "quizzes": 1,
+            "interview_scenarios": 1,
+            "production_scenarios": 1
+          },
+          "maturity": "PRACTICED",
+          "is_thin": false
+        },
+        {
+          "track": "http-dns-tls",
+          "subtopic_id": "proto-mtls-pki",
+          "subtopic_name": "Mutual TLS (mTLS), Certificate Chains & CA Verification",
+          "metrics": {
+            "lessons": 1,
+            "demos": 1,
+            "guided_labs": 1,
+            "independent_labs": 1,
+            "break_fix_labs": 1,
+            "troubleshooting_labs": 1,
+            "incidents": 0,
+            "quizzes": 1,
+            "interview_scenarios": 1,
+            "production_scenarios": 1
+          },
+          "maturity": "PRACTICED",
+          "is_thin": false
+        }
+      ]
+    },
+    {
+      "track": "docker",
+      "total_subtopics": 5,
+      "subtopics": [
+        {
+          "track": "docker",
+          "subtopic_id": "docker-namespaces-cgroups",
+          "subtopic_name": "Linux Namespaces (PID, NET, MNT, IPC, UTS, USER)",
+          "metrics": {
+            "lessons": 1,
+            "demos": 1,
+            "guided_labs": 1,
+            "independent_labs": 1,
+            "break_fix_labs": 1,
+            "troubleshooting_labs": 2,
+            "incidents": 1,
+            "quizzes": 1,
+            "interview_scenarios": 1,
+            "production_scenarios": 1
+          },
+          "maturity": "PRODUCTION-READY LEARNING",
+          "is_thin": false
+        },
+        {
+          "track": "docker",
+          "subtopic_id": "docker-storage-layers",
+          "subtopic_name": "OverlayFS Copy-on-Write & Multi-Stage Builds",
+          "metrics": {
+            "lessons": 1,
+            "demos": 1,
+            "guided_labs": 2,
+            "independent_labs": 2,
+            "break_fix_labs": 2,
+            "troubleshooting_labs": 2,
+            "incidents": 1,
+            "quizzes": 1,
+            "interview_scenarios": 1,
+            "production_scenarios": 1
+          },
+          "maturity": "PRODUCTION-READY LEARNING",
+          "is_thin": false
+        },
+        {
+          "track": "docker",
+          "subtopic_id": "docker-container-network",
+          "subtopic_name": "Bridge, Host, Overlay & Macvlan Networking",
+          "metrics": {
+            "lessons": 1,
+            "demos": 1,
+            "guided_labs": 16,
+            "independent_labs": 16,
+            "break_fix_labs": 15,
+            "troubleshooting_labs": 16,
+            "incidents": 1,
+            "quizzes": 1,
+            "interview_scenarios": 1,
+            "production_scenarios": 1
+          },
+          "maturity": "PRODUCTION-READY LEARNING",
+          "is_thin": false
+        },
+        {
+          "track": "docker",
+          "subtopic_id": "docker-pid1-signals",
+          "subtopic_name": "PID 1 Zombie Reaping & Graceful SIGTERM Handling",
+          "metrics": {
+            "lessons": 1,
+            "demos": 1,
+            "guided_labs": 1,
+            "independent_labs": 1,
+            "break_fix_labs": 1,
+            "troubleshooting_labs": 2,
+            "incidents": 1,
+            "quizzes": 1,
+            "interview_scenarios": 1,
+            "production_scenarios": 1
+          },
+          "maturity": "PRODUCTION-READY LEARNING",
+          "is_thin": false
+        },
+        {
+          "track": "docker",
+          "subtopic_id": "docker-security-rootless",
+          "subtopic_name": "Rootless Podman, Seccomp, AppArmor & Cap-Drop",
+          "metrics": {
+            "lessons": 1,
+            "demos": 1,
+            "guided_labs": 1,
+            "independent_labs": 1,
+            "break_fix_labs": 1,
+            "troubleshooting_labs": 2,
+            "incidents": 1,
+            "quizzes": 1,
+            "interview_scenarios": 1,
+            "production_scenarios": 1
+          },
+          "maturity": "PRODUCTION-READY LEARNING",
+          "is_thin": false
+        }
+      ]
+    },
+    {
+      "track": "kubernetes",
+      "total_subtopics": 13,
+      "subtopics": [
+        {
+          "track": "kubernetes",
+          "subtopic_id": "k8s-control-plane",
+          "subtopic_name": "API Server, etcd Consistency, Controller Manager, Scheduler",
+          "metrics": {
+            "lessons": 1,
+            "demos": 1,
+            "guided_labs": 1,
+            "independent_labs": 1,
+            "break_fix_labs": 1,
+            "troubleshooting_labs": 2,
+            "incidents": 1,
+            "quizzes": 1,
+            "interview_scenarios": 1,
+            "production_scenarios": 1
+          },
+          "maturity": "PRODUCTION-READY LEARNING",
+          "is_thin": false
+        },
+        {
+          "track": "kubernetes",
+          "subtopic_id": "k8s-pod-lifecycle",
+          "subtopic_name": "Pod Phases, Init Containers, Ephemeral Containers & Probes",
+          "metrics": {
+            "lessons": 1,
+            "demos": 1,
+            "guided_labs": 29,
+            "independent_labs": 29,
+            "break_fix_labs": 29,
+            "troubleshooting_labs": 29,
+            "incidents": 1,
+            "quizzes": 1,
+            "interview_scenarios": 1,
+            "production_scenarios": 1
+          },
+          "maturity": "PRODUCTION-READY LEARNING",
+          "is_thin": false
+        },
+        {
+          "track": "kubernetes",
+          "subtopic_id": "k8s-deployments-rollouts",
+          "subtopic_name": "Deployments, ReplicaSets, RollingUpdate & MaxSurge/MaxUnavailable",
+          "metrics": {
+            "lessons": 1,
+            "demos": 1,
+            "guided_labs": 1,
+            "independent_labs": 1,
+            "break_fix_labs": 1,
+            "troubleshooting_labs": 2,
+            "incidents": 1,
+            "quizzes": 1,
+            "interview_scenarios": 1,
+            "production_scenarios": 1
+          },
+          "maturity": "PRODUCTION-READY LEARNING",
+          "is_thin": false
+        },
+        {
+          "track": "kubernetes",
+          "subtopic_id": "k8s-stateful-daemon",
+          "subtopic_name": "StatefulSets, Headless Services & DaemonSets",
+          "metrics": {
+            "lessons": 1,
+            "demos": 1,
+            "guided_labs": 6,
+            "independent_labs": 6,
+            "break_fix_labs": 6,
+            "troubleshooting_labs": 6,
+            "incidents": 1,
+            "quizzes": 1,
+            "interview_scenarios": 1,
+            "production_scenarios": 1
+          },
+          "maturity": "PRODUCTION-READY LEARNING",
+          "is_thin": false
+        },
+        {
+          "track": "kubernetes",
+          "subtopic_id": "k8s-services-endpoints",
+          "subtopic_name": "ClusterIP, NodePort, LoadBalancer & EndpointSlices",
+          "metrics": {
+            "lessons": 1,
+            "demos": 1,
+            "guided_labs": 4,
+            "independent_labs": 4,
+            "break_fix_labs": 2,
+            "troubleshooting_labs": 4,
+            "incidents": 1,
+            "quizzes": 1,
+            "interview_scenarios": 1,
+            "production_scenarios": 1
+          },
+          "maturity": "PRODUCTION-READY LEARNING",
+          "is_thin": false
+        },
+        {
+          "track": "kubernetes",
+          "subtopic_id": "k8s-ingress-gateway",
+          "subtopic_name": "Ingress Controllers & Kubernetes Gateway API",
+          "metrics": {
+            "lessons": 1,
+            "demos": 1,
+            "guided_labs": 5,
+            "independent_labs": 5,
+            "break_fix_labs": 5,
+            "troubleshooting_labs": 5,
+            "incidents": 1,
+            "quizzes": 1,
+            "interview_scenarios": 1,
+            "production_scenarios": 1
+          },
+          "maturity": "PRODUCTION-READY LEARNING",
+          "is_thin": false
+        },
+        {
+          "track": "kubernetes",
+          "subtopic_id": "k8s-coredns-discovery",
+          "subtopic_name": "CoreDNS Architecture, Stub Domains & ndots:5 Latency",
+          "metrics": {
+            "lessons": 1,
+            "demos": 1,
+            "guided_labs": 2,
+            "independent_labs": 2,
+            "break_fix_labs": 2,
+            "troubleshooting_labs": 2,
+            "incidents": 1,
+            "quizzes": 1,
+            "interview_scenarios": 1,
+            "production_scenarios": 1
+          },
+          "maturity": "PRODUCTION-READY LEARNING",
+          "is_thin": false
+        },
+        {
+          "track": "kubernetes",
+          "subtopic_id": "k8s-cni-netpol",
+          "subtopic_name": "CNI Plugins (Calico/Cilium) & Default-Deny NetworkPolicies",
+          "metrics": {
+            "lessons": 1,
+            "demos": 1,
+            "guided_labs": 1,
+            "independent_labs": 1,
+            "break_fix_labs": 1,
+            "troubleshooting_labs": 2,
+            "incidents": 1,
+            "quizzes": 1,
+            "interview_scenarios": 1,
+            "production_scenarios": 1
+          },
+          "maturity": "PRODUCTION-READY LEARNING",
+          "is_thin": false
+        },
+        {
+          "track": "kubernetes",
+          "subtopic_id": "k8s-resource-scheduling",
+          "subtopic_name": "Requests, Limits, QoS Classes, Affinity/Anti-Affinity & Taints",
+          "metrics": {
+            "lessons": 1,
+            "demos": 1,
+            "guided_labs": 3,
+            "independent_labs": 3,
+            "break_fix_labs": 3,
+            "troubleshooting_labs": 3,
+            "incidents": 1,
+            "quizzes": 1,
+            "interview_scenarios": 1,
+            "production_scenarios": 1
+          },
+          "maturity": "PRODUCTION-READY LEARNING",
+          "is_thin": false
+        },
+        {
+          "track": "kubernetes",
+          "subtopic_id": "k8s-hpa-pdb",
+          "subtopic_name": "Horizontal Pod Autoscaler (HPA v2) & PodDisruptionBudgets",
+          "metrics": {
+            "lessons": 1,
+            "demos": 1,
+            "guided_labs": 5,
+            "independent_labs": 5,
+            "break_fix_labs": 5,
+            "troubleshooting_labs": 5,
+            "incidents": 1,
+            "quizzes": 1,
+            "interview_scenarios": 1,
+            "production_scenarios": 1
+          },
+          "maturity": "PRODUCTION-READY LEARNING",
+          "is_thin": false
+        },
+        {
+          "track": "kubernetes",
+          "subtopic_id": "k8s-storage-csi",
+          "subtopic_name": "PersistentVolumes, PVCs, StorageClasses & CSI Drivers",
+          "metrics": {
+            "lessons": 1,
+            "demos": 1,
+            "guided_labs": 7,
+            "independent_labs": 7,
+            "break_fix_labs": 7,
+            "troubleshooting_labs": 7,
+            "incidents": 1,
+            "quizzes": 1,
+            "interview_scenarios": 1,
+            "production_scenarios": 1
+          },
+          "maturity": "PRODUCTION-READY LEARNING",
+          "is_thin": false
+        },
+        {
+          "track": "kubernetes",
+          "subtopic_id": "k8s-rbac-security",
+          "subtopic_name": "ServiceAccounts, Roles, RoleBindings & SecurityContexts",
+          "metrics": {
+            "lessons": 1,
+            "demos": 1,
+            "guided_labs": 4,
+            "independent_labs": 4,
+            "break_fix_labs": 4,
+            "troubleshooting_labs": 4,
+            "incidents": 1,
+            "quizzes": 1,
+            "interview_scenarios": 1,
+            "production_scenarios": 1
+          },
+          "maturity": "PRODUCTION-READY LEARNING",
+          "is_thin": false
+        },
+        {
+          "track": "kubernetes",
+          "subtopic_id": "k8s-troubleshooting",
+          "subtopic_name": "CrashLoopBackOff, ImagePullBackOff, OOMKilled & Pending Pods",
+          "metrics": {
+            "lessons": 1,
+            "demos": 1,
+            "guided_labs": 1,
+            "independent_labs": 1,
+            "break_fix_labs": 1,
+            "troubleshooting_labs": 2,
+            "incidents": 1,
+            "quizzes": 1,
+            "interview_scenarios": 1,
+            "production_scenarios": 1
+          },
+          "maturity": "PRODUCTION-READY LEARNING",
+          "is_thin": false
+        }
+      ]
+    },
+    {
+      "track": "helm",
+      "total_subtopics": 4,
+      "subtopics": [
+        {
+          "track": "helm",
+          "subtopic_id": "helm-chart-architecture",
+          "subtopic_name": "Chart.yaml, Templates Engine & Built-in Objects",
+          "metrics": {
+            "lessons": 1,
+            "demos": 1,
+            "guided_labs": 7,
+            "independent_labs": 7,
+            "break_fix_labs": 7,
+            "troubleshooting_labs": 7,
+            "incidents": 0,
+            "quizzes": 1,
+            "interview_scenarios": 1,
+            "production_scenarios": 1
+          },
+          "maturity": "PRACTICED",
+          "is_thin": false
+        },
+        {
+          "track": "helm",
+          "subtopic_id": "helm-values-scoping",
+          "subtopic_name": "values.yaml Hierarchy, Overrides & Coalescing",
+          "metrics": {
+            "lessons": 1,
+            "demos": 1,
+            "guided_labs": 4,
+            "independent_labs": 4,
+            "break_fix_labs": 3,
+            "troubleshooting_labs": 4,
+            "incidents": 0,
+            "quizzes": 1,
+            "interview_scenarios": 1,
+            "production_scenarios": 1
+          },
+          "maturity": "PRACTICED",
+          "is_thin": false
+        },
+        {
+          "track": "helm",
+          "subtopic_id": "helm-hooks-lifecycle",
+          "subtopic_name": "Pre/Post-Install, Upgrade & Rollback Hooks",
+          "metrics": {
+            "lessons": 1,
+            "demos": 1,
+            "guided_labs": 1,
+            "independent_labs": 1,
+            "break_fix_labs": 1,
+            "troubleshooting_labs": 1,
+            "incidents": 0,
+            "quizzes": 1,
+            "interview_scenarios": 1,
+            "production_scenarios": 1
+          },
+          "maturity": "PRACTICED",
+          "is_thin": false
+        },
+        {
+          "track": "helm",
+          "subtopic_id": "helm-chart-testing",
+          "subtopic_name": "helm lint, helm template & helm test Verification",
+          "metrics": {
+            "lessons": 1,
+            "demos": 1,
+            "guided_labs": 7,
+            "independent_labs": 7,
+            "break_fix_labs": 7,
+            "troubleshooting_labs": 7,
+            "incidents": 0,
+            "quizzes": 1,
+            "interview_scenarios": 1,
+            "production_scenarios": 1
+          },
+          "maturity": "PRACTICED",
+          "is_thin": false
+        }
+      ]
+    },
+    {
+      "track": "kustomize",
+      "total_subtopics": 3,
+      "subtopics": [
+        {
+          "track": "kustomize",
+          "subtopic_id": "kustomize-bases-overlays",
+          "subtopic_name": "Bases, Overlays & Environment Inheritance",
+          "metrics": {
+            "lessons": 1,
+            "demos": 1,
+            "guided_labs": 1,
+            "independent_labs": 1,
+            "break_fix_labs": 1,
+            "troubleshooting_labs": 1,
+            "incidents": 0,
+            "quizzes": 1,
+            "interview_scenarios": 1,
+            "production_scenarios": 1
+          },
+          "maturity": "PRACTICED",
+          "is_thin": false
+        },
+        {
+          "track": "kustomize",
+          "subtopic_id": "kustomize-patches-merge",
+          "subtopic_name": "Strategic Merge Patches & JSON 6902 Patches",
+          "metrics": {
+            "lessons": 1,
+            "demos": 1,
+            "guided_labs": 2,
+            "independent_labs": 2,
+            "break_fix_labs": 2,
+            "troubleshooting_labs": 2,
+            "incidents": 0,
+            "quizzes": 1,
+            "interview_scenarios": 1,
+            "production_scenarios": 1
+          },
+          "maturity": "PRACTICED",
+          "is_thin": false
+        },
+        {
+          "track": "kustomize",
+          "subtopic_id": "kustomize-generators",
+          "subtopic_name": "ConfigMapGenerator, SecretGenerator & Content Hash Invalidation",
+          "metrics": {
+            "lessons": 1,
+            "demos": 1,
+            "guided_labs": 1,
+            "independent_labs": 1,
+            "break_fix_labs": 1,
+            "troubleshooting_labs": 1,
+            "incidents": 0,
+            "quizzes": 1,
+            "interview_scenarios": 1,
+            "production_scenarios": 1
+          },
+          "maturity": "PRACTICED",
+          "is_thin": false
+        }
+      ]
+    },
+    {
+      "track": "terraform",
+      "total_subtopics": 4,
+      "subtopics": [
+        {
+          "track": "terraform",
+          "subtopic_id": "tf-hcl-declarative",
+          "subtopic_name": "HCL Syntax, Resource Blocks, Data Sources & Local Values",
+          "metrics": {
+            "lessons": 1,
+            "demos": 1,
+            "guided_labs": 4,
+            "independent_labs": 4,
+            "break_fix_labs": 4,
+            "troubleshooting_labs": 4,
+            "incidents": 0,
+            "quizzes": 1,
+            "interview_scenarios": 1,
+            "production_scenarios": 1
+          },
+          "maturity": "PRACTICED",
+          "is_thin": false
+        },
+        {
+          "track": "terraform",
+          "subtopic_id": "tf-state-concurrency",
+          "subtopic_name": "State Locking, DynamoDB Mutex & Remote S3 Backend",
+          "metrics": {
+            "lessons": 1,
+            "demos": 1,
+            "guided_labs": 14,
+            "independent_labs": 14,
+            "break_fix_labs": 12,
+            "troubleshooting_labs": 14,
+            "incidents": 0,
+            "quizzes": 1,
+            "interview_scenarios": 1,
+            "production_scenarios": 1
+          },
+          "maturity": "PRACTICED",
+          "is_thin": false
+        },
+        {
+          "track": "terraform",
+          "subtopic_id": "tf-modules-composition",
+          "subtopic_name": "Reusable Infrastructure Modules & Output Contracts",
+          "metrics": {
+            "lessons": 1,
+            "demos": 1,
+            "guided_labs": 1,
+            "independent_labs": 1,
+            "break_fix_labs": 1,
+            "troubleshooting_labs": 1,
+            "incidents": 0,
+            "quizzes": 1,
+            "interview_scenarios": 1,
+            "production_scenarios": 1
+          },
+          "maturity": "PRACTICED",
+          "is_thin": false
+        },
+        {
+          "track": "terraform",
+          "subtopic_id": "tf-drift-remediation",
+          "subtopic_name": "terraform plan -refresh-only & Drift Detection",
+          "metrics": {
+            "lessons": 1,
+            "demos": 1,
+            "guided_labs": 6,
+            "independent_labs": 6,
+            "break_fix_labs": 6,
+            "troubleshooting_labs": 6,
+            "incidents": 0,
+            "quizzes": 1,
+            "interview_scenarios": 1,
+            "production_scenarios": 1
+          },
+          "maturity": "PRACTICED",
+          "is_thin": false
+        }
+      ]
+    },
+    {
+      "track": "ansible",
+      "total_subtopics": 4,
+      "subtopics": [
+        {
+          "track": "ansible",
+          "subtopic_id": "ansible-playbook-idempotency",
+          "subtopic_name": "Playbooks, Tasks, Modules & Idempotency Proof",
+          "metrics": {
+            "lessons": 1,
+            "demos": 1,
+            "guided_labs": 3,
+            "independent_labs": 3,
+            "break_fix_labs": 2,
+            "troubleshooting_labs": 3,
+            "incidents": 0,
+            "quizzes": 1,
+            "interview_scenarios": 1,
+            "production_scenarios": 1
+          },
+          "maturity": "PRACTICED",
+          "is_thin": false
+        },
+        {
+          "track": "ansible",
+          "subtopic_id": "ansible-inventory-vars",
+          "subtopic_name": "Dynamic Inventory, Host/Group Variables & Precedence",
+          "metrics": {
+            "lessons": 1,
+            "demos": 1,
+            "guided_labs": 2,
+            "independent_labs": 2,
+            "break_fix_labs": 2,
+            "troubleshooting_labs": 2,
+            "incidents": 0,
+            "quizzes": 1,
+            "interview_scenarios": 1,
+            "production_scenarios": 1
+          },
+          "maturity": "PRACTICED",
+          "is_thin": false
+        },
+        {
+          "track": "ansible",
+          "subtopic_id": "ansible-roles-handlers",
+          "subtopic_name": "Modular Roles, Tasks, Handlers & Notified Events",
+          "metrics": {
+            "lessons": 1,
+            "demos": 1,
+            "guided_labs": 1,
+            "independent_labs": 1,
+            "break_fix_labs": 1,
+            "troubleshooting_labs": 1,
+            "incidents": 0,
+            "quizzes": 1,
+            "interview_scenarios": 1,
+            "production_scenarios": 1
+          },
+          "maturity": "PRACTICED",
+          "is_thin": false
+        },
+        {
+          "track": "ansible",
+          "subtopic_id": "ansible-vault-security",
+          "subtopic_name": "Ansible Vault Encryption & Automated Credential Injection",
+          "metrics": {
+            "lessons": 1,
+            "demos": 1,
+            "guided_labs": 1,
+            "independent_labs": 1,
+            "break_fix_labs": 1,
+            "troubleshooting_labs": 1,
+            "incidents": 0,
+            "quizzes": 1,
+            "interview_scenarios": 1,
+            "production_scenarios": 1
+          },
+          "maturity": "PRACTICED",
+          "is_thin": false
+        }
+      ]
+    },
+    {
+      "track": "ci-cd",
+      "total_subtopics": 3,
+      "subtopics": [
+        {
+          "track": "ci-cd",
+          "subtopic_id": "cicd-pipeline-design",
+          "subtopic_name": "Pipeline Stages, Artifact Passing & Gate Assertions",
+          "metrics": {
+            "lessons": 1,
+            "demos": 1,
+            "guided_labs": 6,
+            "independent_labs": 6,
+            "break_fix_labs": 6,
+            "troubleshooting_labs": 6,
+            "incidents": 0,
+            "quizzes": 1,
+            "interview_scenarios": 1,
+            "production_scenarios": 1
+          },
+          "maturity": "PRACTICED",
+          "is_thin": false
+        },
+        {
+          "track": "ci-cd",
+          "subtopic_id": "cicd-cache-optimization",
+          "subtopic_name": "Layer Caching, Dependency Hashes & Fast Feedback Loops",
+          "metrics": {
+            "lessons": 1,
+            "demos": 1,
+            "guided_labs": 2,
+            "independent_labs": 2,
+            "break_fix_labs": 2,
+            "troubleshooting_labs": 2,
+            "incidents": 0,
+            "quizzes": 1,
+            "interview_scenarios": 1,
+            "production_scenarios": 1
+          },
+          "maturity": "PRACTICED",
+          "is_thin": false
+        },
+        {
+          "track": "ci-cd",
+          "subtopic_id": "cicd-trunk-based",
+          "subtopic_name": "Short-Lived Branches, Feature Flags & Automated Release Tags",
+          "metrics": {
+            "lessons": 1,
+            "demos": 1,
+            "guided_labs": 1,
+            "independent_labs": 1,
+            "break_fix_labs": 1,
+            "troubleshooting_labs": 1,
+            "incidents": 0,
+            "quizzes": 1,
+            "interview_scenarios": 1,
+            "production_scenarios": 1
+          },
+          "maturity": "PRACTICED",
+          "is_thin": false
+        }
+      ]
+    },
+    {
+      "track": "github-actions",
+      "total_subtopics": 4,
+      "subtopics": [
+        {
+          "track": "github-actions",
+          "subtopic_id": "gha-workflow-syntax",
+          "subtopic_name": "Workflows, Jobs, Steps, Contexts & Expression Syntax",
+          "metrics": {
+            "lessons": 1,
+            "demos": 1,
+            "guided_labs": 4,
+            "independent_labs": 4,
+            "break_fix_labs": 4,
+            "troubleshooting_labs": 4,
+            "incidents": 0,
+            "quizzes": 1,
+            "interview_scenarios": 1,
+            "production_scenarios": 1
+          },
+          "maturity": "PRACTICED",
+          "is_thin": false
+        },
+        {
+          "track": "github-actions",
+          "subtopic_id": "gha-composite-actions",
+          "subtopic_name": "Custom Composite Actions & Container Action Runners",
+          "metrics": {
+            "lessons": 1,
+            "demos": 1,
+            "guided_labs": 26,
+            "independent_labs": 26,
+            "break_fix_labs": 26,
+            "troubleshooting_labs": 26,
+            "incidents": 0,
+            "quizzes": 1,
+            "interview_scenarios": 1,
+            "production_scenarios": 1
+          },
+          "maturity": "PRACTICED",
+          "is_thin": false
+        },
+        {
+          "track": "github-actions",
+          "subtopic_id": "gha-oidc-cloud",
+          "subtopic_name": "Keyless Cloud Authentication via GitHub OIDC to AWS IAM",
+          "metrics": {
+            "lessons": 1,
+            "demos": 1,
+            "guided_labs": 1,
+            "independent_labs": 1,
+            "break_fix_labs": 1,
+            "troubleshooting_labs": 1,
+            "incidents": 0,
+            "quizzes": 1,
+            "interview_scenarios": 1,
+            "production_scenarios": 1
+          },
+          "maturity": "PRACTICED",
+          "is_thin": false
+        },
+        {
+          "track": "github-actions",
+          "subtopic_id": "gha-matrix-concurrency",
+          "subtopic_name": "Matrix Strategies, Concurrency Groups & Job Cancellation",
+          "metrics": {
+            "lessons": 1,
+            "demos": 1,
+            "guided_labs": 3,
+            "independent_labs": 3,
+            "break_fix_labs": 3,
+            "troubleshooting_labs": 3,
+            "incidents": 0,
+            "quizzes": 1,
+            "interview_scenarios": 1,
+            "production_scenarios": 1
+          },
+          "maturity": "PRACTICED",
+          "is_thin": false
+        }
+      ]
+    },
+    {
+      "track": "argocd",
+      "total_subtopics": 4,
+      "subtopics": [
+        {
+          "track": "argocd",
+          "subtopic_id": "argocd-gitops-engine",
+          "subtopic_name": "Git as Single Source of Truth & Controller Reconciliation",
+          "metrics": {
+            "lessons": 1,
+            "demos": 1,
+            "guided_labs": 1,
+            "independent_labs": 1,
+            "break_fix_labs": 1,
+            "troubleshooting_labs": 1,
+            "incidents": 0,
+            "quizzes": 1,
+            "interview_scenarios": 1,
+            "production_scenarios": 1
+          },
+          "maturity": "PRACTICED",
+          "is_thin": false
+        },
+        {
+          "track": "argocd",
+          "subtopic_id": "argocd-sync-waves",
+          "subtopic_name": "Sync Waves, Phased Deployments & Health Checks",
+          "metrics": {
+            "lessons": 1,
+            "demos": 1,
+            "guided_labs": 6,
+            "independent_labs": 6,
+            "break_fix_labs": 5,
+            "troubleshooting_labs": 6,
+            "incidents": 0,
+            "quizzes": 1,
+            "interview_scenarios": 1,
+            "production_scenarios": 1
+          },
+          "maturity": "PRACTICED",
+          "is_thin": false
+        },
+        {
+          "track": "argocd",
+          "subtopic_id": "argocd-drift-healing",
+          "subtopic_name": "Self-Healing, Auto-Pruning & OutOfSync Triage",
+          "metrics": {
+            "lessons": 1,
+            "demos": 1,
+            "guided_labs": 2,
+            "independent_labs": 2,
+            "break_fix_labs": 2,
+            "troubleshooting_labs": 2,
+            "incidents": 0,
+            "quizzes": 1,
+            "interview_scenarios": 1,
+            "production_scenarios": 1
+          },
+          "maturity": "PRACTICED",
+          "is_thin": false
+        },
+        {
+          "track": "argocd",
+          "subtopic_id": "argocd-applicationsets",
+          "subtopic_name": "ApplicationSet Generators for Multi-Cluster Fleets",
+          "metrics": {
+            "lessons": 1,
+            "demos": 1,
+            "guided_labs": 1,
+            "independent_labs": 1,
+            "break_fix_labs": 1,
+            "troubleshooting_labs": 1,
+            "incidents": 0,
+            "quizzes": 1,
+            "interview_scenarios": 1,
+            "production_scenarios": 1
+          },
+          "maturity": "PRACTICED",
+          "is_thin": false
+        }
+      ]
+    },
+    {
+      "track": "prometheus",
+      "total_subtopics": 4,
+      "subtopics": [
+        {
+          "track": "prometheus",
+          "subtopic_id": "prom-tsdb-architecture",
+          "subtopic_name": "Time-Series Data Model, Head Chunks & Block Compaction",
+          "metrics": {
+            "lessons": 1,
+            "demos": 1,
+            "guided_labs": 4,
+            "independent_labs": 4,
+            "break_fix_labs": 3,
+            "troubleshooting_labs": 4,
+            "incidents": 1,
+            "quizzes": 1,
+            "interview_scenarios": 1,
+            "production_scenarios": 1
+          },
+          "maturity": "PRODUCTION-READY LEARNING",
+          "is_thin": false
+        },
+        {
+          "track": "prometheus",
+          "subtopic_id": "prom-promql-vectors",
+          "subtopic_name": "Instant Vectors, Range Vectors, Rate vs Increase, Subqueries",
+          "metrics": {
+            "lessons": 1,
+            "demos": 1,
+            "guided_labs": 3,
+            "independent_labs": 3,
+            "break_fix_labs": 3,
+            "troubleshooting_labs": 3,
+            "incidents": 1,
+            "quizzes": 1,
+            "interview_scenarios": 1,
+            "production_scenarios": 1
+          },
+          "maturity": "PRODUCTION-READY LEARNING",
+          "is_thin": false
+        },
+        {
+          "track": "prometheus",
+          "subtopic_id": "prom-cardinality-control",
+          "subtopic_name": "High-Cardinality Label Explosions & Memory Saturation",
+          "metrics": {
+            "lessons": 1,
+            "demos": 1,
+            "guided_labs": 1,
+            "independent_labs": 1,
+            "break_fix_labs": 1,
+            "troubleshooting_labs": 1,
+            "incidents": 1,
+            "quizzes": 1,
+            "interview_scenarios": 1,
+            "production_scenarios": 1
+          },
+          "maturity": "PRACTICED",
+          "is_thin": false
+        },
+        {
+          "track": "prometheus",
+          "subtopic_id": "prom-recording-rules",
+          "subtopic_name": "Precomputed Recording Rules & SLO Aggregations",
+          "metrics": {
+            "lessons": 1,
+            "demos": 1,
+            "guided_labs": 1,
+            "independent_labs": 1,
+            "break_fix_labs": 1,
+            "troubleshooting_labs": 1,
+            "incidents": 1,
+            "quizzes": 1,
+            "interview_scenarios": 1,
+            "production_scenarios": 1
+          },
+          "maturity": "PRACTICED",
+          "is_thin": false
+        }
+      ]
+    },
+    {
+      "track": "grafana",
+      "total_subtopics": 3,
+      "subtopics": [
+        {
+          "track": "grafana",
+          "subtopic_id": "grafana-panel-queries",
+          "subtopic_name": "Time-Series, Gauge, Heatmap & Table Panel Engineering",
+          "metrics": {
+            "lessons": 1,
+            "demos": 1,
+            "guided_labs": 5,
+            "independent_labs": 5,
+            "break_fix_labs": 5,
+            "troubleshooting_labs": 5,
+            "incidents": 0,
+            "quizzes": 1,
+            "interview_scenarios": 1,
+            "production_scenarios": 1
+          },
+          "maturity": "PRACTICED",
+          "is_thin": false
+        },
+        {
+          "track": "grafana",
+          "subtopic_id": "grafana-templating",
+          "subtopic_name": "Dashboard Variables, Multi-Cluster Regex & Chained Queries",
+          "metrics": {
+            "lessons": 1,
+            "demos": 1,
+            "guided_labs": 1,
+            "independent_labs": 1,
+            "break_fix_labs": 1,
+            "troubleshooting_labs": 1,
+            "incidents": 0,
+            "quizzes": 1,
+            "interview_scenarios": 1,
+            "production_scenarios": 1
+          },
+          "maturity": "PRACTICED",
+          "is_thin": false
+        },
+        {
+          "track": "grafana",
+          "subtopic_id": "grafana-slo-dashboards",
+          "subtopic_name": "Burn-Rate Dashboards, Error Budgets & SLA Tracking",
+          "metrics": {
+            "lessons": 1,
+            "demos": 1,
+            "guided_labs": 1,
+            "independent_labs": 1,
+            "break_fix_labs": 1,
+            "troubleshooting_labs": 1,
+            "incidents": 0,
+            "quizzes": 1,
+            "interview_scenarios": 1,
+            "production_scenarios": 1
+          },
+          "maturity": "PRACTICED",
+          "is_thin": false
+        }
+      ]
+    },
+    {
+      "track": "alertmanager",
+      "total_subtopics": 3,
+      "subtopics": [
+        {
+          "track": "alertmanager",
+          "subtopic_id": "am-routing-trees",
+          "subtopic_name": "Routing Tree Architecture, Matchers & Fallback Receivers",
+          "metrics": {
+            "lessons": 1,
+            "demos": 1,
+            "guided_labs": 2,
+            "independent_labs": 2,
+            "break_fix_labs": 2,
+            "troubleshooting_labs": 2,
+            "incidents": 0,
+            "quizzes": 1,
+            "interview_scenarios": 1,
+            "production_scenarios": 1
+          },
+          "maturity": "PRACTICED",
+          "is_thin": false
+        },
+        {
+          "track": "alertmanager",
+          "subtopic_id": "am-grouping-inhibition",
+          "subtopic_name": "Alert Grouping Windows, Inhibition Rules & Deduplication",
+          "metrics": {
+            "lessons": 1,
+            "demos": 1,
+            "guided_labs": 1,
+            "independent_labs": 1,
+            "break_fix_labs": 1,
+            "troubleshooting_labs": 1,
+            "incidents": 0,
+            "quizzes": 1,
+            "interview_scenarios": 1,
+            "production_scenarios": 1
+          },
+          "maturity": "PRACTICED",
+          "is_thin": false
+        },
+        {
+          "track": "alertmanager",
+          "subtopic_id": "am-silence-pagerduty",
+          "subtopic_name": "Dynamic Silences, PagerDuty Escalation & Slack Webhooks",
+          "metrics": {
+            "lessons": 1,
+            "demos": 1,
+            "guided_labs": 5,
+            "independent_labs": 5,
+            "break_fix_labs": 5,
+            "troubleshooting_labs": 5,
+            "incidents": 0,
+            "quizzes": 1,
+            "interview_scenarios": 1,
+            "production_scenarios": 1
+          },
+          "maturity": "PRACTICED",
+          "is_thin": false
+        }
+      ]
+    },
+    {
+      "track": "loki",
+      "total_subtopics": 3,
+      "subtopics": [
+        {
+          "track": "loki",
+          "subtopic_id": "loki-stream-labels",
+          "subtopic_name": "Stream Indexing, Chunk Storage & Label Cardinality Boundaries",
+          "metrics": {
+            "lessons": 1,
+            "demos": 1,
+            "guided_labs": 3,
+            "independent_labs": 3,
+            "break_fix_labs": 3,
+            "troubleshooting_labs": 3,
+            "incidents": 0,
+            "quizzes": 1,
+            "interview_scenarios": 1,
+            "production_scenarios": 1
+          },
+          "maturity": "PRACTICED",
+          "is_thin": false
+        },
+        {
+          "track": "loki",
+          "subtopic_id": "loki-logql-parsing",
+          "subtopic_name": "LogQL Stream Filters, JSON Parsers, Unwrap & Metric Queries",
+          "metrics": {
+            "lessons": 1,
+            "demos": 1,
+            "guided_labs": 1,
+            "independent_labs": 1,
+            "break_fix_labs": 1,
+            "troubleshooting_labs": 1,
+            "incidents": 0,
+            "quizzes": 1,
+            "interview_scenarios": 1,
+            "production_scenarios": 1
+          },
+          "maturity": "PRACTICED",
+          "is_thin": false
+        },
+        {
+          "track": "loki",
+          "subtopic_id": "loki-pipeline-promtail",
+          "subtopic_name": "Promtail/Fluent-Bit Regex Stage Scraping & Multi-Tenancy",
+          "metrics": {
+            "lessons": 1,
+            "demos": 1,
+            "guided_labs": 7,
+            "independent_labs": 7,
+            "break_fix_labs": 7,
+            "troubleshooting_labs": 7,
+            "incidents": 0,
+            "quizzes": 1,
+            "interview_scenarios": 1,
+            "production_scenarios": 1
+          },
+          "maturity": "PRACTICED",
+          "is_thin": false
+        }
+      ]
+    },
+    {
+      "track": "opentelemetry",
+      "total_subtopics": 4,
+      "subtopics": [
+        {
+          "track": "opentelemetry",
+          "subtopic_id": "otel-tracing-api",
+          "subtopic_name": "TracerProvider, Span Lifecycle, Kind (Server/Client) & Status",
+          "metrics": {
+            "lessons": 1,
+            "demos": 1,
+            "guided_labs": 1,
+            "independent_labs": 1,
+            "break_fix_labs": 1,
+            "troubleshooting_labs": 1,
+            "incidents": 1,
+            "quizzes": 1,
+            "interview_scenarios": 1,
+            "production_scenarios": 1
+          },
+          "maturity": "PRACTICED",
+          "is_thin": false
+        },
+        {
+          "track": "opentelemetry",
+          "subtopic_id": "otel-context-propagation",
+          "subtopic_name": "W3C TraceContext (traceparent, tracestate) & Baggage",
+          "metrics": {
+            "lessons": 1,
+            "demos": 1,
+            "guided_labs": 6,
+            "independent_labs": 6,
+            "break_fix_labs": 6,
+            "troubleshooting_labs": 6,
+            "incidents": 1,
+            "quizzes": 1,
+            "interview_scenarios": 1,
+            "production_scenarios": 1
+          },
+          "maturity": "PRODUCTION-READY LEARNING",
+          "is_thin": false
+        },
+        {
+          "track": "opentelemetry",
+          "subtopic_id": "otel-collector-pipelines",
+          "subtopic_name": "Receivers, Processors (batch/memory_limiter), Exporters",
+          "metrics": {
+            "lessons": 1,
+            "demos": 1,
+            "guided_labs": 5,
+            "independent_labs": 5,
+            "break_fix_labs": 5,
+            "troubleshooting_labs": 5,
+            "incidents": 1,
+            "quizzes": 1,
+            "interview_scenarios": 1,
+            "production_scenarios": 1
+          },
+          "maturity": "PRODUCTION-READY LEARNING",
+          "is_thin": false
+        },
+        {
+          "track": "opentelemetry",
+          "subtopic_id": "otel-span-attributes",
+          "subtopic_name": "Semantic Conventions for HTTP, DB, RPC & Exception Events",
+          "metrics": {
+            "lessons": 1,
+            "demos": 1,
+            "guided_labs": 8,
+            "independent_labs": 8,
+            "break_fix_labs": 8,
+            "troubleshooting_labs": 8,
+            "incidents": 1,
+            "quizzes": 1,
+            "interview_scenarios": 1,
+            "production_scenarios": 1
+          },
+          "maturity": "PRODUCTION-READY LEARNING",
+          "is_thin": false
+        }
+      ]
+    },
+    {
+      "track": "istio",
+      "total_subtopics": 4,
+      "subtopics": [
+        {
+          "track": "istio",
+          "subtopic_id": "istio-control-envoy",
+          "subtopic_name": "Istiod Control Plane, Pilot, Envoy Sidecar Proxy Interception",
+          "metrics": {
+            "lessons": 1,
+            "demos": 1,
+            "guided_labs": 7,
+            "independent_labs": 7,
+            "break_fix_labs": 7,
+            "troubleshooting_labs": 7,
+            "incidents": 1,
+            "quizzes": 1,
+            "interview_scenarios": 1,
+            "production_scenarios": 1
+          },
+          "maturity": "PRODUCTION-READY LEARNING",
+          "is_thin": false
+        },
+        {
+          "track": "istio",
+          "subtopic_id": "istio-traffic-management",
+          "subtopic_name": "VirtualService Routing, DestinationRule Subsets & Canary Weights",
+          "metrics": {
+            "lessons": 1,
+            "demos": 1,
+            "guided_labs": 4,
+            "independent_labs": 4,
+            "break_fix_labs": 4,
+            "troubleshooting_labs": 4,
+            "incidents": 1,
+            "quizzes": 1,
+            "interview_scenarios": 1,
+            "production_scenarios": 1
+          },
+          "maturity": "PRODUCTION-READY LEARNING",
+          "is_thin": false
+        },
+        {
+          "track": "istio",
+          "subtopic_id": "istio-security-mtls",
+          "subtopic_name": "PeerAuthentication STRICT Mode, SPIFFE Identities & AuthorizationPolicy",
+          "metrics": {
+            "lessons": 1,
+            "demos": 1,
+            "guided_labs": 1,
+            "independent_labs": 1,
+            "break_fix_labs": 1,
+            "troubleshooting_labs": 1,
+            "incidents": 1,
+            "quizzes": 1,
+            "interview_scenarios": 1,
+            "production_scenarios": 1
+          },
+          "maturity": "PRACTICED",
+          "is_thin": false
+        },
+        {
+          "track": "istio",
+          "subtopic_id": "istio-resilience-circuit",
+          "subtopic_name": "Outlier Detection, Circuit Breaking & Retry Budget Throttling",
+          "metrics": {
+            "lessons": 1,
+            "demos": 1,
+            "guided_labs": 2,
+            "independent_labs": 2,
+            "break_fix_labs": 1,
+            "troubleshooting_labs": 2,
+            "incidents": 1,
+            "quizzes": 1,
+            "interview_scenarios": 1,
+            "production_scenarios": 1
+          },
+          "maturity": "PRODUCTION-READY LEARNING",
+          "is_thin": false
+        }
+      ]
+    },
+    {
+      "track": "aws-eks",
+      "total_subtopics": 4,
+      "subtopics": [
+        {
+          "track": "aws-eks",
+          "subtopic_id": "aws-vpc-subnets",
+          "subtopic_name": "VPC CIDR Architecture, Public/Private Subnets & NAT Gateways",
+          "metrics": {
+            "lessons": 1,
+            "demos": 1,
+            "guided_labs": 5,
+            "independent_labs": 5,
+            "break_fix_labs": 5,
+            "troubleshooting_labs": 5,
+            "incidents": 1,
+            "quizzes": 1,
+            "interview_scenarios": 1,
+            "production_scenarios": 1
+          },
+          "maturity": "PRODUCTION-READY LEARNING",
+          "is_thin": false
+        },
+        {
+          "track": "aws-eks",
+          "subtopic_id": "aws-iam-irsa",
+          "subtopic_name": "OIDC Identity Provider & IAM Roles for Service Accounts (IRSA)",
+          "metrics": {
+            "lessons": 1,
+            "demos": 1,
+            "guided_labs": 3,
+            "independent_labs": 3,
+            "break_fix_labs": 3,
+            "troubleshooting_labs": 3,
+            "incidents": 1,
+            "quizzes": 1,
+            "interview_scenarios": 1,
+            "production_scenarios": 1
+          },
+          "maturity": "PRODUCTION-READY LEARNING",
+          "is_thin": false
+        },
+        {
+          "track": "aws-eks",
+          "subtopic_id": "aws-eks-cni-ip",
+          "subtopic_name": "AWS VPC CNI Plugin, Secondary ENIs & Pod IP Allocation Limits",
+          "metrics": {
+            "lessons": 1,
+            "demos": 1,
+            "guided_labs": 31,
+            "independent_labs": 31,
+            "break_fix_labs": 31,
+            "troubleshooting_labs": 31,
+            "incidents": 1,
+            "quizzes": 1,
+            "interview_scenarios": 1,
+            "production_scenarios": 1
+          },
+          "maturity": "PRODUCTION-READY LEARNING",
+          "is_thin": false
+        },
+        {
+          "track": "aws-eks",
+          "subtopic_id": "aws-eks-node-groups",
+          "subtopic_name": "Managed Node Groups, Spot Instances, Karpenter & Cluster Autoscaler",
+          "metrics": {
+            "lessons": 1,
+            "demos": 1,
+            "guided_labs": 31,
+            "independent_labs": 31,
+            "break_fix_labs": 31,
+            "troubleshooting_labs": 31,
+            "incidents": 1,
+            "quizzes": 1,
+            "interview_scenarios": 1,
+            "production_scenarios": 1
+          },
+          "maturity": "PRODUCTION-READY LEARNING",
+          "is_thin": false
+        }
+      ]
+    },
+    {
+      "track": "devsecops",
+      "total_subtopics": 4,
+      "subtopics": [
+        {
+          "track": "devsecops",
+          "subtopic_id": "sec-image-scanning",
+          "subtopic_name": "Container Vulnerability Scanning (Trivy, Grype) & CVE Baselines",
+          "metrics": {
+            "lessons": 1,
+            "demos": 1,
+            "guided_labs": 5,
+            "independent_labs": 5,
+            "break_fix_labs": 5,
+            "troubleshooting_labs": 5,
+            "incidents": 0,
+            "quizzes": 1,
+            "interview_scenarios": 1,
+            "production_scenarios": 1
+          },
+          "maturity": "PRACTICED",
+          "is_thin": false
+        },
+        {
+          "track": "devsecops",
+          "subtopic_id": "sec-rbac-least-privilege",
+          "subtopic_name": "RBAC Audit, Wildcard Prohibitions & ServiceAccount Tokens",
+          "metrics": {
+            "lessons": 1,
+            "demos": 1,
+            "guided_labs": 1,
+            "independent_labs": 1,
+            "break_fix_labs": 1,
+            "troubleshooting_labs": 1,
+            "incidents": 0,
+            "quizzes": 1,
+            "interview_scenarios": 1,
+            "production_scenarios": 1
+          },
+          "maturity": "PRACTICED",
+          "is_thin": false
+        },
+        {
+          "track": "devsecops",
+          "subtopic_id": "sec-runtime-falco",
+          "subtopic_name": "Kernel Syscall Auditing & Real-Time Threat Detection (Falco)",
+          "metrics": {
+            "lessons": 1,
+            "demos": 1,
+            "guided_labs": 2,
+            "independent_labs": 2,
+            "break_fix_labs": 2,
+            "troubleshooting_labs": 2,
+            "incidents": 0,
+            "quizzes": 1,
+            "interview_scenarios": 1,
+            "production_scenarios": 1
+          },
+          "maturity": "PRACTICED",
+          "is_thin": false
+        },
+        {
+          "track": "devsecops",
+          "subtopic_id": "sec-seccomp-capabilities",
+          "subtopic_name": "Capability Drops, Seccomp Profiles & Read-Only Root Filesystems",
+          "metrics": {
+            "lessons": 1,
+            "demos": 1,
+            "guided_labs": 1,
+            "independent_labs": 1,
+            "break_fix_labs": 1,
+            "troubleshooting_labs": 1,
+            "incidents": 0,
+            "quizzes": 1,
+            "interview_scenarios": 1,
+            "production_scenarios": 1
+          },
+          "maturity": "PRACTICED",
+          "is_thin": false
+        }
+      ]
+    },
+    {
+      "track": "platform-engineering",
+      "total_subtopics": 3,
+      "subtopics": [
+        {
+          "track": "platform-engineering",
+          "subtopic_id": "pe-idp-architecture",
+          "subtopic_name": "Internal Developer Platform (IDP) Contracts & Self-Service Golden Paths",
+          "metrics": {
+            "lessons": 1,
+            "demos": 1,
+            "guided_labs": 5,
+            "independent_labs": 5,
+            "break_fix_labs": 5,
+            "troubleshooting_labs": 5,
+            "incidents": 0,
+            "quizzes": 1,
+            "interview_scenarios": 1,
+            "production_scenarios": 1
+          },
+          "maturity": "PRACTICED",
+          "is_thin": false
+        },
+        {
+          "track": "platform-engineering",
+          "subtopic_id": "pe-crd-operators",
+          "subtopic_name": "Custom Resource Definitions (CRDs) & Operator Reconcile Loops",
+          "metrics": {
+            "lessons": 1,
+            "demos": 1,
+            "guided_labs": 1,
+            "independent_labs": 1,
+            "break_fix_labs": 1,
+            "troubleshooting_labs": 1,
+            "incidents": 0,
+            "quizzes": 1,
+            "interview_scenarios": 1,
+            "production_scenarios": 1
+          },
+          "maturity": "PRACTICED",
+          "is_thin": false
+        },
+        {
+          "track": "platform-engineering",
+          "subtopic_id": "pe-service-catalog",
+          "subtopic_name": "Backstage Software Catalog, Software Templates & TechDocs",
+          "metrics": {
+            "lessons": 1,
+            "demos": 1,
+            "guided_labs": 6,
+            "independent_labs": 6,
+            "break_fix_labs": 6,
+            "troubleshooting_labs": 6,
+            "incidents": 0,
+            "quizzes": 1,
+            "interview_scenarios": 1,
+            "production_scenarios": 1
+          },
+          "maturity": "PRACTICED",
+          "is_thin": false
+        }
+      ]
+    },
+    {
+      "track": "sre-resilience",
+      "total_subtopics": 4,
+      "subtopics": [
+        {
+          "track": "sre-resilience",
+          "subtopic_id": "sre-sli-slo-burn",
+          "subtopic_name": "SLI Formulation, SLO Target Setting & Multi-Window Burn Rate Alerts",
+          "metrics": {
+            "lessons": 1,
+            "demos": 1,
+            "guided_labs": 2,
+            "independent_labs": 2,
+            "break_fix_labs": 2,
+            "troubleshooting_labs": 2,
+            "incidents": 1,
+            "quizzes": 1,
+            "interview_scenarios": 1,
+            "production_scenarios": 1
+          },
+          "maturity": "PRODUCTION-READY LEARNING",
+          "is_thin": false
+        },
+        {
+          "track": "sre-resilience",
+          "subtopic_id": "sre-cascading-failures",
+          "subtopic_name": "Cascading Failures, Retry Storms, Thundering Herds & Deadlocks",
+          "metrics": {
+            "lessons": 1,
+            "demos": 1,
+            "guided_labs": 3,
+            "independent_labs": 3,
+            "break_fix_labs": 3,
+            "troubleshooting_labs": 3,
+            "incidents": 1,
+            "quizzes": 1,
+            "interview_scenarios": 1,
+            "production_scenarios": 1
+          },
+          "maturity": "PRODUCTION-READY LEARNING",
+          "is_thin": false
+        },
+        {
+          "track": "sre-resilience",
+          "subtopic_id": "sre-chaos-engineering",
+          "subtopic_name": "Chaos Experiments, Latency Injection & Partition Tolerance",
+          "metrics": {
+            "lessons": 1,
+            "demos": 1,
+            "guided_labs": 1,
+            "independent_labs": 1,
+            "break_fix_labs": 1,
+            "troubleshooting_labs": 2,
+            "incidents": 1,
+            "quizzes": 1,
+            "interview_scenarios": 1,
+            "production_scenarios": 1
+          },
+          "maturity": "PRODUCTION-READY LEARNING",
+          "is_thin": false
+        },
+        {
+          "track": "sre-resilience",
+          "subtopic_id": "sre-blameless-postmortem",
+          "subtopic_name": "5 Whys, Root Cause Analysis, Timeline Reconstruction & Preventative Gates",
+          "metrics": {
+            "lessons": 1,
+            "demos": 1,
+            "guided_labs": 1,
+            "independent_labs": 1,
+            "break_fix_labs": 1,
+            "troubleshooting_labs": 2,
+            "incidents": 1,
+            "quizzes": 1,
+            "interview_scenarios": 1,
+            "production_scenarios": 1
+          },
+          "maturity": "PRODUCTION-READY LEARNING",
+          "is_thin": false
+        }
+      ]
+    }
+  ]
+}

@@ -1065,6 +1065,16 @@ class ScenarioFactory:
                 )
             )
 
+        # Merge extended catalog (580+ scenarios across 24 tracks)
+        try:
+            from .extended_catalog import generate_extended_catalog
+            for ext in generate_extended_catalog():
+                if ext.id not in existing_ids:
+                    scenarios.append(ext)
+                    existing_ids.add(ext.id)
+        except Exception as e:
+            pass
+
     @classmethod
     def get_all_scenarios(cls) -> List[LabSpec]:
         return cls.build_catalog()

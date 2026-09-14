@@ -57,32 +57,28 @@ def detect_duplicates():
     duplicates = []
     suspicious_pairs = []
 
+    lab_words = []
+    lab_cmds = []
+    for l in labs_list:
+        w = set((l.what_why or "").lower().split())
+        for t in l.tasks:
+            w.update(t.description.lower().split())
+        lab_words.append(w)
+
+        c = set()
+        for t in l.tasks:
+            for v in t.validators:
+                c.add(f"{v.type.value}:{v.target}")
+        lab_cmds.append(c)
+
     for i in range(total_labs):
+        l1 = labs_list[i]
+        w1 = lab_words[i]
+        c1 = lab_cmds[i]
         for j in range(i + 1, total_labs):
-            l1 = labs_list[i]
             l2 = labs_list[j]
-
-            # Tokens from what_why & tasks
-            words1 = set((l1.what_why or "").lower().split())
-            for t in l1.tasks:
-                words1.update(t.description.lower().split())
-            words2 = set((l2.what_why or "").lower().split())
-            for t in l2.tasks:
-                words2.update(t.description.lower().split())
-            desc_sim = compute_jaccard(words1, words2)
-
-            # Commands and targets
-            cmds1 = set()
-            for t in l1.tasks:
-                for v in t.validators:
-                    cmds1.add(f"{v.type.value}:{v.target}")
-
-            cmds2 = set()
-            for t in l2.tasks:
-                for v in t.validators:
-                    cmds2.add(f"{v.type.value}:{v.target}")
-
-            cmd_sim = compute_jaccard(cmds1, cmds2)
+            desc_sim = compute_jaccard(w1, lab_words[j])
+            cmd_sim = compute_jaccard(c1, lab_cmds[j])
 
             if l1.id != l2.id and (cmd_sim > 0.85 or desc_sim > 0.80):
                 duplicates.append({

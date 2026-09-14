@@ -13,7 +13,13 @@ param (
     [string]$Action,
 
     [Parameter(Mandatory = $false)]
-    [switch]$OpenBrowser
+    [switch]$OpenBrowser,
+
+    [Parameter(Mandatory = $false)]
+    [switch]$Fast,
+
+    [Parameter(Mandatory = $false)]
+    [switch]$Full
 )
 
 $ErrorActionPreference = "Continue"
@@ -228,9 +234,10 @@ switch ($Action) {
 
     "acceptance" {
         Show-Header
-        Write-Host "`nExecuting 18-Gate Production Acceptance Suite..." -ForegroundColor Yellow
+        $modeArg = if ($Fast) { "--fast" } elseif ($Full) { "--full" } else { "--full" }
+        Write-Host "`nExecuting 18-Gate Production Acceptance Suite ($modeArg)..." -ForegroundColor Yellow
         Set-Location $RootPath
-        & python scripts/verify_acceptance.py
+        & python scripts/verify_acceptance.py $modeArg
     }
 
     "reset" {

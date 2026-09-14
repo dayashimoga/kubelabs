@@ -63,7 +63,7 @@ class ApplicationLibrary:
             services=[
                 ServiceNode(name="web-frontend", role="frontend", ports=[80], dependencies=["api-gateway"]),
                 ServiceNode(name="api-gateway", role="gateway", ports=[8080], dependencies=["auth-service", "order-service"]),
-                ServiceNode(name="auth-service", role="auth", ports=[5000], dependencies=["user-db"]),
+                ServiceNode(name="auth-service", role="auth", ports=[5000], dependencies=["order-db"]),
                 ServiceNode(name="catalog-service", role="catalog", ports=[5001], dependencies=["cache-redis"]),
                 ServiceNode(name="order-service", role="orders", ports=[5002], dependencies=["payment-service", "catalog-service"]),
                 ServiceNode(name="payment-service", role="payment", ports=[5003], dependencies=["order-db"]),

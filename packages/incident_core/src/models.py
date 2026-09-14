@@ -60,6 +60,8 @@ class IncidentSpec(BaseModel):
 
 class IncidentScore(BaseModel):
     detection_score: int = Field(default=0, ge=0, le=100)
+    evidence_gathering_score: int = Field(default=0, ge=0, le=100)
+    hypothesis_score: int = Field(default=0, ge=0, le=100)
     investigation_score: int = Field(default=0, ge=0, le=100)
     root_cause_score: int = Field(default=0, ge=0, le=100)
     fix_score: int = Field(default=0, ge=0, le=100)
