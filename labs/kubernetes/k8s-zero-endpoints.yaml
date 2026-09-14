@@ -1,0 +1,115 @@
+id: k8s-zero-endpoints
+version: 1.0.0
+title: "Kubernetes Service with Zero Active Endpoints"
+track: kubernetes
+difficulty: beginner
+estimated_minutes: 20
+validation_status: PROVEN
+
+objectives:
+  - Diagnose 503 / connection drop when pods are Running and Ready
+  - Inspect Endpoints and EndpointSlices using kubectl
+  - Reconcile selector label mismatches between Service and Pod templates
+
+prerequisites:
+  - Kubernetes Service and Pod label mechanics
+
+what_why: |
+  A Kubernetes Service acts as a load balancer by selecting pods that match its `spec.selector`.
+  If a developer introduces a label mismatch (e.g., `app: checkout` vs `app: checkout-api`),
+  the Service has 0 endpoints and silently drops all traffic.
+
+troubleshooting_workflow:
+  - "Step 1: kubectl get endpoints checkout-svc (shows <none>)"
+  - "Step 2: kubectl get pods --show-labels"
+  - "Step 3: kubectl describe svc checkout-svc (compare selector against pod labels)"
+  - "Step 4: Fix selector in /workspace/service.yaml"
+  - "Step 5: Validate endpoints are populated"
+
+environment:
+  type: simulation
+
+initial_state:
+  files:
+    - path: "/workspace/service.yaml"
+      content: |
+        apiVersion: v1
+        kind: Service
+        metadata:
+          name: checkout-svc
+        spec:
+          selector:
+            app: checkout-api-v2
+          ports:
+          - port: 80
+            targetPort: 8080
+      permissions: "0644"
+  seed_data:
+    k8s:
+      services:
+        checkout-svc:
+          type: "ClusterIP"
+          cluster_ip: "10.96.12.44"
+          ports: "80/TCP"
+          endpoints: []
+      pods:
+        checkout-7b89f:
+          phase: "Running"
+          status: "Running"
+          ready: "1/1"
+          labels:
+            app: checkout-service
+
+tasks:
+  - id: fix-service-selector
+    order: 1
+    title: "Reconcile Service selector to match active Pod labels"
+    description: "Update /workspace/service.yaml so that selector matches 'app: checkout-service'."
+    hints:
+      - tier: 1
+        title: "Conceptual Hint"
+        content: "Kubernetes Services route traffic using label selectors."
+        penalty_points: 5
+      - tier: 2
+        title: "Inspection Target"
+        content: "Compare selector in /workspace/service.yaml with pod labels."
+        penalty_points: 10
+      - tier: 3
+        title: "Diagnostic Command"
+        content: "kubectl get endpoints checkout-svc && kubectl get pods --show-labels"
+        penalty_points: 15
+      - tier: 4
+        title: "Strong Clue"
+        content: "Change 'checkout-api-v2' to 'checkout-service' in service.yaml."
+        penalty_points: 20
+      - tier: 5
+        title: "Full Solution"
+        content: |
+          Update /workspace/service.yaml:
+          spec:
+            selector:
+              app: checkout-service
+        penalty_points: 35
+    validators:
+      - id: val-svc-selector
+        type: yaml
+        description: "Verify Service selector matches 'app: checkout-service'"
+        target: "/workspace/service.yaml"
+        args:
+          file: "/workspace/service.yaml"
+          assertions:
+            "spec.selector.app": "checkout-service"
+        weight: 100
+        failure_message: "service.yaml selector does not match 'checkout-service'."
+
+cleanup_policy:
+  ttl_seconds: 1800
+  delete_containers: true
+  delete_volumes: true
+
+scoring:
+  max_score: 100
+  detection_weight: 20
+  investigation_weight: 30
+  fix_weight: 30
+  verification_weight: 20

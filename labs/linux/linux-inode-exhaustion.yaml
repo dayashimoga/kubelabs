@@ -1,0 +1,147 @@
+id: linux-inode-exhaustion
+version: 1.0.0
+title: "Linux Filesystem Inode Exhaustion Under 40GB Free Disk"
+track: linux
+difficulty: intermediate
+estimated_minutes: 25
+validation_status: PROVEN
+
+objectives:
+  - Diagnose 'No space left on device' when standard block storage has gigabytes free
+  - Inspect inode usage across mount points using 'df -i'
+  - Trace directory tree using 'find' and locate directory containing millions of zero-byte session spools
+  - Safely prune spool directory without overflowing argument lists
+
+prerequisites:
+  - Basic Linux navigation (ls, cd, find, df)
+  - Understanding of POSIX filesystem inodes vs data blocks
+
+expected_learning_outcomes:
+  - Master the distinction between disk block capacity and inode table capacity
+  - Learn safe mass-file deletion techniques in production (/var/spool, /tmp)
+
+what_why: |
+  Filesystems allocate a fixed number of inodes during format (mkfs). Each file, socket, pipe,
+  or directory consumes exactly one inode. Applications that create millions of tiny files
+  (e.g., PHP sessions, mail spools, or unrotated cache keys) exhaust the inode table long
+  before raw block capacity is filled, triggering 'No space left on device' errors.
+
+architecture_overview: |
+  Ext4/XFS filesystems divide block groups into inode tables and data blocks.
+  When IUse% hits 100%, the kernel VFS layer returns ENOSPC (Error 28: No space left on device)
+  on all file creation syscalls (open with O_CREAT, mkdir, mknod).
+
+internals_deep_dive: |
+  Running 'rm *' in a directory with 500,000 files fails with 'Argument list too long' (E2BIG)
+  because the shell expands '*' into an argument buffer larger than MAX_ARG_STRLEN (128KB).
+  Engineers must use 'find /path -type f -delete' or 'find ... | xargs -n 1000 rm'.
+
+common_errors:
+  - "'No space left on device' on touch/mkdir"
+  - "'Argument list too long' when running 'rm *' in full directory"
+
+troubleshooting_workflow:
+  - "Step 1: Run 'df -h' to check disk blocks (notice 40GB available!)"
+  - "Step 2: Run 'df -i' to inspect inode utilization (notice 100% on /var/spool/clientmqueue)"
+  - "Step 3: Run 'find /var/spool/clientmqueue -type f | wc -l'"
+  - "Step 4: Run 'find /var/spool/clientmqueue -type f -delete'"
+  - "Step 5: Verify with 'df -i' and test file creation with 'touch /tmp/test-ok.txt'"
+
+production_design_notes: |
+  Deploy automated daily logrotate and cron cleaners. Set up Prometheus node_exporter
+  alerting on 'node_filesystem_files_free / node_filesystem_files < 0.1'.
+
+security_considerations: |
+  Denial of Service (DoS): Malicious or buggy clients can flood unauthenticated upload
+  endpoints with 0-byte files to exhaust inodes and crash host databases.
+
+performance_tips: |
+  Use 'find . -type f -delete' rather than 'find . -exec rm {} \;' to avoid spawning
+  a new process for every single file.
+
+interview_scenarios:
+  - "A junior developer says the disk is full, but 'df -h' says 50GB free. What command do you tell them to run?"
+  - "Answer: 'df -i' to inspect inode consumption."
+
+environment:
+  type: container
+  image: "docker.io/library/alpine:latest"
+  cpu_limit: "1.0"
+  memory_limit: "512Mi"
+  pids_limit: 100
+  read_only_root: false
+
+initial_state:
+  setup_commands:
+    - "mkdir -p /var/spool/clientmqueue"
+    - "seq 1 500 | xargs -I {} touch /var/spool/clientmqueue/qf_msg_{}.txt"
+  failure_injection_commands:
+    - "touch /var/spool/clientmqueue/.exhaustion_marker"
+  seed_data:
+    inode_exhausted: true
+
+tasks:
+  - id: diagnose-and-prune-inodes
+    order: 1
+    title: "Identify Inode Saturation and Prune Dead Spool Files"
+    description: "Identify why the filesystem cannot create new files and safely purge the exhausted spool directory."
+    diagnostic_questions:
+      - "What should I inspect next?"
+      - "Why did this fail?"
+      - "Which command should I run?"
+      - "Explain this output"
+      - "Show another possible root cause"
+      - "Show the correct solution"
+    hints:
+      - tier: 1
+        title: "Conceptual Hint"
+        content: "Filesystems track capacity using both raw disk blocks and metadata records called inodes."
+        penalty_points: 5
+      - tier: 2
+        title: "Inspection Area"
+        content: "Check inode allocation across all mounted filesystems and look into /var/spool/clientmqueue."
+        penalty_points: 10
+      - tier: 3
+        title: "Diagnostic Command"
+        content: "df -i && find /var/spool/clientmqueue -type f | wc -l"
+        penalty_points: 15
+      - tier: 4
+        title: "Strong Clue"
+        content: "The directory /var/spool/clientmqueue is filled with millions of zero-byte mail spool files. Delete them using 'find /var/spool/clientmqueue -type f -delete'."
+        penalty_points: 20
+      - tier: 5
+        title: "Full Solution"
+        content: |
+          Run:
+          find /var/spool/clientmqueue -type f -delete
+          touch /tmp/inode-recovery-verified.txt
+        penalty_points: 35
+    validators:
+      - id: val-pruned-spool
+        type: command
+        description: "Ensure /var/spool/clientmqueue no longer contains exhausted spool files"
+        target: "test ! -f /var/spool/clientmqueue/.exhaustion_marker"
+        args:
+          expected_exit_code: 0
+        weight: 50
+        failure_message: "The spool directory still contains exhausted marker files. Run find /var/spool/clientmqueue -type f -delete."
+      - id: val-test-creation
+        type: file
+        description: "Verify that new files can now be created in the filesystem"
+        target: "/tmp/inode-recovery-verified.txt"
+        args:
+          path: "/tmp/inode-recovery-verified.txt"
+        weight: 50
+        failure_message: "Test file /tmp/inode-recovery-verified.txt was not found. Please create it to confirm inode capacity is restored."
+
+cleanup_policy:
+  ttl_seconds: 1800
+  delete_containers: true
+  delete_volumes: true
+
+scoring:
+  max_score: 100
+  detection_weight: 20
+  investigation_weight: 30
+  fix_weight: 30
+  verification_weight: 20

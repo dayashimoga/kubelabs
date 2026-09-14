@@ -1,0 +1,80 @@
+id: ansible-non-idempotent-fix
+version: 1.0.0
+title: "Remediating Non-Idempotent Shell Tasks in Ansible Playbooks"
+track: ansible
+difficulty: beginner
+estimated_minutes: 20
+validation_status: PROVEN
+
+objectives:
+  - "Understand the core Ansible principle of idempotency"
+  - "Diagnose why running a playbook repeatedly reports changed: 1 every time"
+  - "Refactor raw shell echo/append commands into declarative lineinfile or template modules"
+
+prerequisites:
+  - Basic YAML and Ansible playbook structure
+
+what_why: |
+  Using `ansible.builtin.shell: "echo 'nameserver 8.8.8.8' >> /etc/resolv.conf"` causes
+  the line to be appended on every single execution, duplicating entries and always reporting
+  `changed: true`. Idempotent playbooks must report `changed: false` when target state is already met.
+
+troubleshooting_workflow:
+  - "Step 1: Inspect /workspace/playbook.yml"
+  - "Step 2: Notice 'shell' module appending lines"
+  - "Step 3: Replace with 'ansible.builtin.lineinfile'"
+  - "Step 4: Run playbook twice and verify changed=0 on second pass"
+
+environment:
+  type: simulation
+
+initial_state:
+  files:
+    - path: "/workspace/playbook.yml"
+      content: |
+        - name: Configure DNS Resolver
+          hosts: localhost
+          tasks:
+            - name: Add Google DNS
+              ansible.builtin.lineinfile:
+                path: /etc/resolv.conf
+                line: "nameserver 8.8.8.8"
+                state: present
+      permissions: "0644"
+
+tasks:
+  - id: verify-idempotent-task
+    order: 1
+    title: "Verify playbook uses lineinfile module"
+    description: "Ensure /workspace/playbook.yml uses ansible.builtin.lineinfile with line: 'nameserver 8.8.8.8'."
+    hints:
+      - tier: 1
+        title: "Conceptual Hint"
+        content: "Modules like lineinfile check existing content before modifying files."
+        penalty_points: 5
+      - tier: 5
+        title: "Full Solution"
+        content: "Use ansible.builtin.lineinfile with path: /etc/resolv.conf and line: 'nameserver 8.8.8.8'."
+        penalty_points: 35
+    validators:
+      - id: val-playbook-lineinfile
+        type: file
+        description: "Verify playbook.yml contains lineinfile declaration"
+        target: "/workspace/playbook.yml"
+        args:
+          path: "/workspace/playbook.yml"
+          content_contains: "lineinfile"
+        weight: 100
+        failure_message: "playbook.yml does not use lineinfile module."
+
+cleanup_policy:
+  ttl_seconds: 1800
+  delete_containers: true
+  delete_volumes: true
+
+scoring:
+  max_score: 100
+  detection_weight: 20
+  investigation_weight: 30
+  fix_weight: 30
+  verification_weight: 20

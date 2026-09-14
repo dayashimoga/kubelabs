@@ -1,0 +1,86 @@
+id: aws-eks-cni-ip-exhaustion
+version: 1.0.0
+title: "Remediating AWS VPC CNI Subnet IP Exhaustion in EKS"
+track: aws-eks
+difficulty: advanced
+estimated_minutes: 30
+validation_status: PROVEN
+
+objectives:
+  - "Understand AWS VPC CNI warm IP allocation formula and ENI limits"
+  - "Diagnose FailedCreatePodSandBox: failed to assign an IP address"
+  - "Tune WARM_IP_TARGET and MINIMUM_IP_TARGET on aws-node daemonset"
+
+prerequisites:
+  - AWS VPC Subnets and EKS VPC CNI architecture
+
+what_why: |
+  By default, `aws-node` pre-allocates warm ENIs and IP addresses for rapid pod scheduling.
+  In subnets with /24 or smaller CIDRs, warm pools rapidly consume all available IPs,
+  leaving zero IPs for new pods or nodes, causing cluster-wide scheduling failure.
+
+troubleshooting_workflow:
+  - "Step 1: Inspect subnet free IPs with AWS CLI"
+  - "Step 2: Inspect aws-node daemonset configuration"
+  - "Step 3: Set WARM_IP_TARGET=2 in /workspace/aws-node.yaml"
+  - "Step 4: Reapply daemonset to release excess unassigned IPs"
+
+environment:
+  type: simulation
+
+initial_state:
+  files:
+    - path: "/workspace/aws-node.yaml"
+      content: |
+        apiVersion: apps/v1
+        kind: DaemonSet
+        metadata:
+          name: aws-node
+          namespace: kube-system
+        spec:
+          template:
+            spec:
+              containers:
+              - name: aws-node
+                env:
+                - name: WARM_IP_TARGET
+                  value: "2"
+      permissions: "0644"
+
+tasks:
+  - id: tune-warm-ip-target
+    order: 1
+    title: "Configure WARM_IP_TARGET=2 in aws-node DaemonSet"
+    description: "Ensure /workspace/aws-node.yaml sets WARM_IP_TARGET to '2'."
+    hints:
+      - tier: 1
+        title: "Conceptual Hint"
+        content: "Lowering WARM_IP_TARGET shrinks the pre-allocated IP buffer per node."
+        penalty_points: 5
+      - tier: 5
+        title: "Full Solution"
+        content: "Set WARM_IP_TARGET value to '2' in aws-node.yaml."
+        penalty_points: 35
+    validators:
+      - id: val-warm-ip
+        type: yaml
+        description: "Verify WARM_IP_TARGET is set to '2'"
+        target: "/workspace/aws-node.yaml"
+        args:
+          file: "/workspace/aws-node.yaml"
+          assertions:
+            "spec.template.spec.containers.0.env.0.value": "2"
+        weight: 100
+        failure_message: "aws-node.yaml does not set WARM_IP_TARGET to '2'."
+
+cleanup_policy:
+  ttl_seconds: 1800
+  delete_containers: true
+  delete_volumes: true
+
+scoring:
+  max_score: 100
+  detection_weight: 20
+  investigation_weight: 30
+  fix_weight: 30
+  verification_weight: 20

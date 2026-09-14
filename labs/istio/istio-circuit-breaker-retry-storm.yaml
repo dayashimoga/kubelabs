@@ -1,0 +1,84 @@
+id: istio-circuit-breaker-retry-storm
+version: 1.0.0
+title: "Mitigating Cascading Service Mesh Retry Storms with Circuit Breakers"
+track: istio
+difficulty: advanced
+estimated_minutes: 30
+validation_status: PROVEN
+
+objectives:
+  - Understand how unconstrained retries multiply upstream request volume
+  - Configure Envoy outlier detection and circuit breaking in Istio DestinationRule
+  - Evict unhealthy backend instances to allow recovering services to stabilize
+
+prerequisites:
+  - Istio Service Mesh, VirtualService, and DestinationRule concepts
+
+what_why: |
+  When an upstream service experiences a brief latency hiccup, aggressive clients with
+  zero-jitter immediate retries flood the server with 10x traffic. This triggers a cascading
+  retry storm where the service can never recover. Circuit breakers fail fast, protecting downstream capacity.
+
+troubleshooting_workflow:
+  - "Step 1: Inspect incoming request rate vs client count"
+  - "Step 2: Notice 10x multiplier caused by retries"
+  - "Step 3: Configure outlierDetection in /workspace/destinationrule.yaml"
+  - "Step 4: Verify circuit breaker limits concurrent connections"
+
+environment:
+  type: simulation
+
+initial_state:
+  files:
+    - path: "/workspace/destinationrule.yaml"
+      content: |
+        apiVersion: networking.istio.io/v1beta1
+        kind: DestinationRule
+        metadata:
+          name: payment-breaker
+        spec:
+          host: payment-service
+          trafficPolicy:
+            outlierDetection:
+              consecutive5xxErrors: 3
+              interval: 10s
+              baseEjectionTime: 30s
+      permissions: "0644"
+
+tasks:
+  - id: apply-circuit-breaker
+    order: 1
+    title: "Configure outlierDetection in DestinationRule"
+    description: "Ensure /workspace/destinationrule.yaml contains outlierDetection with consecutive5xxErrors: 3."
+    hints:
+      - tier: 1
+        title: "Conceptual Hint"
+        content: "Outlier detection temporarily ejects failing instances from load balancing."
+        penalty_points: 5
+      - tier: 5
+        title: "Full Solution"
+        content: "Configure consecutive5xxErrors: 3 under outlierDetection in destinationrule.yaml."
+        penalty_points: 35
+    validators:
+      - id: val-istio-dr
+        type: yaml
+        description: "Verify outlierDetection consecutive5xxErrors is 3"
+        target: "/workspace/destinationrule.yaml"
+        args:
+          file: "/workspace/destinationrule.yaml"
+          assertions:
+            "spec.trafficPolicy.outlierDetection.consecutive5xxErrors": 3
+        weight: 100
+        failure_message: "destinationrule.yaml does not configure consecutive5xxErrors: 3."
+
+cleanup_policy:
+  ttl_seconds: 1800
+  delete_containers: true
+  delete_volumes: true
+
+scoring:
+  max_score: 100
+  detection_weight: 20
+  investigation_weight: 30
+  fix_weight: 30
+  verification_weight: 20

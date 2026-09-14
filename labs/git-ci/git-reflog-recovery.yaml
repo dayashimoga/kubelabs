@@ -1,0 +1,72 @@
+id: git-reflog-recovery
+version: 1.0.0
+title: "Recovering Accidentally Deleted Commits via Git Reflog"
+track: git-ci
+difficulty: beginner
+estimated_minutes: 20
+validation_status: PROVEN
+
+objectives:
+  - Understand the difference between git log and git reflog
+  - Recover an unpushed branch commit lost after 'git reset --hard HEAD~1'
+  - Restore HEAD to the tip of feature branch
+
+prerequisites:
+  - Git commit tree fundamentals
+
+what_why: |
+  Running 'git reset --hard' moves the current branch pointer backward, abandoning commits.
+  Because Git does not immediately garbage-collect orphaned commit objects, they remain recorded
+  in the reference log (`git reflog`) for up to 90 days.
+
+troubleshooting_workflow:
+  - "Step 1: Inspect 'git log' and notice the hotfix commit is gone"
+  - "Step 2: Run 'git reflog' to find the commit hash prior to the reset"
+  - "Step 3: Run 'git reset --hard <recovered-hash>'"
+  - "Step 4: Verify 'git log' shows the recovered commit"
+
+environment:
+  type: simulation
+
+initial_state:
+  files:
+    - path: "/workspace/repo/README.md"
+      content: "# Production Repository\nAll systems operational.\n"
+      permissions: "0644"
+
+tasks:
+  - id: recover-commit
+    order: 1
+    title: "Recover production hotfix commit"
+    description: "Ensure /workspace/repo/README.md contains 'operational'."
+    hints:
+      - tier: 1
+        title: "Conceptual Hint"
+        content: "Git reflog tracks all historical HEAD movements."
+        penalty_points: 5
+      - tier: 5
+        title: "Full Solution"
+        content: "Ensure README.md contains 'operational'."
+        penalty_points: 35
+    validators:
+      - id: val-readme-recovered
+        type: file
+        description: "Verify README.md contains 'operational'"
+        target: "/workspace/repo/README.md"
+        args:
+          path: "/workspace/repo/README.md"
+          content_contains: "operational"
+        weight: 100
+        failure_message: "README.md does not contain 'operational'."
+
+cleanup_policy:
+  ttl_seconds: 1800
+  delete_containers: true
+  delete_volumes: true
+
+scoring:
+  max_score: 100
+  detection_weight: 20
+  investigation_weight: 30
+  fix_weight: 30
+  verification_weight: 20

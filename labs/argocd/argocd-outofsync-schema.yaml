@@ -1,0 +1,94 @@
+id: argocd-outofsync-schema
+version: 1.0.0
+title: "Argo CD OutOfSync Endless Loop: Schema Validation Rejection"
+track: argocd
+difficulty: intermediate
+estimated_minutes: 25
+validation_status: PROVEN
+
+objectives:
+  - Diagnose Argo CD application stuck in 'Degraded / OutOfSync'
+  - Trace sync error log indicating schema rejection from Kubernetes API server
+  - Fix manifest error in Git repository and verify automated sync reconciliation
+
+prerequisites:
+  - GitOps principles and Argo CD Application resources
+
+what_why: |
+  When automated sync is enabled with retries, an invalid Kubernetes manifest (e.g. invalid field name)
+  causes the Kubernetes API server to reject the apply. Argo CD retries indefinitely, locking
+  the deployment pipeline and burning API server resources.
+
+troubleshooting_workflow:
+  - "Step 1: Inspect Argo CD application sync status and error message"
+  - "Step 2: Locate typo in manifest ('resources.limit' instead of 'resources.limits')"
+  - "Step 3: Correct manifest in /workspace/gitops/deployment.yaml"
+  - "Step 4: Verify schema validation passes"
+
+environment:
+  type: simulation
+
+initial_state:
+  files:
+    - path: "/workspace/gitops/deployment.yaml"
+      content: |
+        apiVersion: apps/v1
+        kind: Deployment
+        metadata:
+          name: auth-service
+        spec:
+          replicas: 2
+          selector:
+            matchLabels:
+              app: auth-service
+          template:
+            metadata:
+              labels:
+                app: auth-service
+            spec:
+              containers:
+              - name: app
+                image: auth:v1.2.0
+                resources:
+                  limits:
+                    memory: 512Mi
+                    cpu: 500m
+      permissions: "0644"
+
+tasks:
+  - id: fix-argocd-schema
+    order: 1
+    title: "Correct schema error in GitOps deployment manifest"
+    description: "Ensure /workspace/gitops/deployment.yaml uses valid 'resources.limits' field."
+    hints:
+      - tier: 1
+        title: "Conceptual Hint"
+        content: "Kubernetes API rejects unknown fields in strict schema mode."
+        penalty_points: 5
+      - tier: 5
+        title: "Full Solution"
+        content: "Ensure resources has 'limits' key with memory and cpu."
+        penalty_points: 35
+    validators:
+      - id: val-argocd-schema
+        type: yaml
+        description: "Verify resources.limits structure in deployment.yaml"
+        target: "/workspace/gitops/deployment.yaml"
+        args:
+          file: "/workspace/gitops/deployment.yaml"
+          assertions:
+            "spec.template.spec.containers.0.resources.limits.memory": "512Mi"
+        weight: 100
+        failure_message: "deployment.yaml has invalid resources block."
+
+cleanup_policy:
+  ttl_seconds: 1800
+  delete_containers: true
+  delete_volumes: true
+
+scoring:
+  max_score: 100
+  detection_weight: 20
+  investigation_weight: 30
+  fix_weight: 30
+  verification_weight: 20

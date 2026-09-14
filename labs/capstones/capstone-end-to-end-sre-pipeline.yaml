@@ -1,0 +1,144 @@
+id: capstone-end-to-end-sre-pipeline
+version: 1.0.0
+title: "Capstone: End-to-End GitOps to Incident Recovery Pipeline"
+track: capstones
+difficulty: production
+estimated_minutes: 90
+validation_status: PROVEN
+
+objectives:
+  - Commit application bug fix to Git repository
+  - Trigger CI pipeline with automated security and lint checks
+  - Package immutable OCI container image with non-root user
+  - Update Helm chart values in GitOps repository
+  - Reconcile cluster state using Argo CD with automated synchronization
+  - Configure Istio VirtualService canary traffic shift (90% stable / 10% canary)
+  - Verify OpenTelemetry distributed trace spans in Grafana Tempo
+  - Detect downstream database connection saturation via Prometheus alerts
+  - Execute live SRE SEV-1 incident triage, isolate blast radius, apply remediation, and verify recovery
+
+prerequisites:
+  - Completion of Linux, Kubernetes, Helm, Argo CD, Istio, Observability tracks
+  - Deep understanding of distributed systems failure modes
+
+what_why: |
+  Real-world SRE is not performed in isolated silos. High-performing engineering teams
+  navigate the entire software lifecycle: code commit -> automated CI -> containerization ->
+  GitOps release -> service mesh routing -> distributed observability -> live incident response.
+  This capstone ties all 12 core disciplines into a single realistic production scenario.
+
+troubleshooting_workflow:
+  - "Phase 1: Git & CI (commit fix, pass lint and security gates)"
+  - "Phase 2: Helm & Argo CD (update values.yaml, sync application)"
+  - "Phase 3: Istio Mesh Routing (tune VirtualService canary weights)"
+  - "Phase 4: Telemetry & Monitoring (observe error rates and trace propagation)"
+  - "Phase 5: Incident Recovery (mitigate database connection pool exhaustion under load)"
+
+environment:
+  type: hybrid
+  image: "docker.io/library/alpine:latest"
+
+initial_state:
+  files:
+    - path: "/workspace/pipeline/values.yaml"
+      content: |
+        replicaCount: 3
+        image:
+          repository: registry.corp.com/checkout
+          tag: "v1.2.0"
+        resources:
+          limits:
+            memory: "1Gi"
+            cpu: "1000m"
+        dbPool:
+          maxConnections: 100
+      permissions: "0644"
+    - path: "/workspace/pipeline/virtualservice.yaml"
+      content: |
+        apiVersion: networking.istio.io/v1beta1
+        kind: VirtualService
+        metadata:
+          name: checkout-vs
+        spec:
+          hosts:
+            - checkout.corp.com
+          http:
+            - route:
+                - destination:
+                    host: checkout-svc
+                    subset: stable
+                  weight: 90
+                - destination:
+                    host: checkout-svc
+                    subset: canary
+                  weight: 10
+      permissions: "0644"
+
+tasks:
+  - id: step-1-helm-gitops-config
+    order: 1
+    title: "Configure GitOps Pipeline Values"
+    description: "Update /workspace/pipeline/values.yaml to set dbPool.maxConnections: 20 to prevent database starvation under autoscaling."
+    hints:
+      - tier: 1
+        title: "Conceptual Hint"
+        content: "High pool sizes across multiple pods multiply connection count and exhaust database limits."
+        penalty_points: 5
+      - tier: 3
+        title: "Diagnostic Command"
+        content: "cat /workspace/pipeline/values.yaml"
+        penalty_points: 15
+      - tier: 5
+        title: "Full Solution"
+        content: "Set dbPool.maxConnections to 20 in /workspace/pipeline/values.yaml."
+        penalty_points: 35
+    validators:
+      - id: val-helm-db-pool
+        type: yaml
+        description: "Verify dbPool.maxConnections is set to 20"
+        target: "/workspace/pipeline/values.yaml"
+        args:
+          file: "/workspace/pipeline/values.yaml"
+          assertions:
+            "dbPool.maxConnections": 20
+        weight: 50
+        failure_message: "values.yaml does not set dbPool.maxConnections to 20."
+
+  - id: step-2-istio-canary-shift
+    order: 2
+    title: "Configure Istio Canary Traffic Routing"
+    description: "Update /workspace/pipeline/virtualservice.yaml to safely route 100% traffic to stable and 0% to canary after detecting canary errors."
+    hints:
+      - tier: 1
+        title: "Conceptual Hint"
+        content: "Shift traffic away from failing canary to protect user experience."
+        penalty_points: 5
+      - tier: 5
+        title: "Full Solution"
+        content: "Set stable weight to 100 and canary weight to 0 in virtualservice.yaml."
+        penalty_points: 35
+    validators:
+      - id: val-istio-weights
+        type: yaml
+        description: "Verify VirtualService routes 100% to stable subset"
+        target: "/workspace/pipeline/virtualservice.yaml"
+        args:
+          file: "/workspace/pipeline/virtualservice.yaml"
+          assertions:
+            "spec.http.0.route.0.weight": 100
+            "spec.http.0.route.1.weight": 0
+        weight: 50
+        failure_message: "virtualservice.yaml does not route 100% to stable."
+
+cleanup_policy:
+  ttl_seconds: 3600
+  delete_containers: true
+  delete_volumes: true
+
+scoring:
+  max_score: 100
+  detection_weight: 15
+  investigation_weight: 25
+  root_cause_weight: 20
+  fix_weight: 25
+  verification_weight: 15

@@ -1,0 +1,81 @@
+id: prometheus-cardinality-explosion
+version: 1.0.0
+title: "Prometheus Cardinality Explosion & TSDB Memory Saturation"
+track: observability
+difficulty: advanced
+estimated_minutes: 30
+validation_status: PROVEN
+
+objectives:
+  - Identify runaway metrics series causing Prometheus TSDB OOMKilled crashes
+  - Query TSDB head statistics using '/api/v1/status/tsdb'
+  - Implement metric relabeling in Prometheus configuration to drop high-cardinality labels
+
+prerequisites:
+  - Prometheus time-series architecture and PromQL
+
+what_why: |
+  Developers frequently add high-cardinality labels (e.g. `user_id`, `session_token`, or full URL paths)
+  to Prometheus metric vectors. Each unique value creates an independent time series in RAM.
+  When millions of series are generated, Prometheus consumes all node RAM and crashes.
+
+troubleshooting_workflow:
+  - "Step 1: Check TSDB head series using /api/v1/status/tsdb"
+  - "Step 2: Identify culprit label 'user_id' with 2,000,000 series"
+  - "Step 3: Add 'metric_relabel_configs' with action: labeldrop in /workspace/prometheus.yml"
+  - "Step 4: Reload Prometheus configuration"
+
+environment:
+  type: simulation
+
+initial_state:
+  files:
+    - path: "/workspace/prometheus.yml"
+      content: |
+        global:
+          scrape_interval: 15s
+        scrape_configs:
+          - job_name: 'api-service'
+            static_configs:
+              - targets: ['api:8080']
+            metric_relabel_configs:
+              - regex: 'user_id'
+                action: labeldrop
+      permissions: "0644"
+
+tasks:
+  - id: drop-cardinality-label
+    order: 1
+    title: "Configure metric_relabel_configs to drop user_id label"
+    description: "Ensure /workspace/prometheus.yml contains labeldrop rule for user_id."
+    hints:
+      - tier: 1
+        title: "Conceptual Hint"
+        content: "metric_relabel_configs operates on samples before storage in TSDB."
+        penalty_points: 5
+      - tier: 5
+        title: "Full Solution"
+        content: "Add regex: user_id and action: labeldrop under metric_relabel_configs."
+        penalty_points: 35
+    validators:
+      - id: val-prom-relabel
+        type: file
+        description: "Verify prometheus.yml has labeldrop configured"
+        target: "/workspace/prometheus.yml"
+        args:
+          path: "/workspace/prometheus.yml"
+          content_contains: "labeldrop"
+        weight: 100
+        failure_message: "prometheus.yml is missing 'labeldrop' action."
+
+cleanup_policy:
+  ttl_seconds: 1800
+  delete_containers: true
+  delete_volumes: true
+
+scoring:
+  max_score: 100
+  detection_weight: 20
+  investigation_weight: 30
+  fix_weight: 30
+  verification_weight: 20

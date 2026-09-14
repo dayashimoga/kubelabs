@@ -1,0 +1,145 @@
+id: docker-bad-dockerfile
+version: 1.0.0
+title: "Fixing PID 1 Signal Trapping and Multi-Stage Cache Invalidation"
+track: docker
+difficulty: intermediate
+estimated_minutes: 30
+validation_status: PROVEN
+
+objectives:
+  - Identify unhandled SIGTERM signals when entrypoint runs as shell script without exec
+  - Fix zombie process accumulation and 10-second SIGKILL shutdown delays
+  - Restructure Dockerfile into a hardened multi-stage build running as non-root user
+
+prerequisites:
+  - Docker / Podman CLI fundamentals
+  - Understanding of Linux process signals (SIGTERM, SIGKILL)
+
+expected_learning_outcomes:
+  - Master the 'exec' pattern in entrypoint shell scripts for signal forwarding
+  - Understand Distroless and non-root security contexts in OCI containers
+
+what_why: |
+  Containers are often built with simple shell wrappers (`CMD ["/bin/sh", "-c", "node server.js"]`).
+  Because `/bin/sh` runs as PID 1 and does not forward SIGTERM to child processes, container
+  orchestrators wait 10-30 seconds during rolling updates before issuing a destructive SIGKILL,
+  aborting in-flight HTTP requests and causing 502 Bad Gateway errors.
+
+architecture_overview: |
+  Container PID 1 has special Linux kernel privileges: default signal handlers are disabled.
+  Processes must explicitly register handlers or execute the binary directly using exec form
+  `ENTRYPOINT ["/app/server"]` or `exec "$@"`.
+
+internals_deep_dive: |
+  The Linux kernel treats PID 1 specially: if a signal arrives that has no installed handler,
+  the signal is silently dropped. This prevents children from terminating init, but in containers,
+  it causes graceful shutdown timeouts unless `exec` replaces the shell process.
+
+common_errors:
+  - Container takes exactly 10s to stop (`podman stop`)
+  - HTTP 502 Bad Gateway during pod rollouts
+  - Root execution vulnerabilities
+
+troubleshooting_workflow:
+  - "Step 1: Run 'podman inspect' and observe StopTimeout or killed status"
+  - "Step 2: Inspect entrypoint script in /workspace/entrypoint.sh"
+  - "Step 3: Add 'exec \"$@\"' to the entrypoint script"
+  - "Step 4: Add non-root user creation in /workspace/Dockerfile"
+
+production_design_notes: |
+  Use init systems like `tini` or `dumb-init` if multiple child processes must be reaped.
+
+security_considerations: |
+  Running as root (`UID 0`) allows kernel vulnerability exploits to escape to host.
+  Always enforce `USER 10001:10001`.
+
+performance_tips: |
+  Order `COPY package.json .` before `COPY . .` to leverage layer caching.
+
+interview_scenarios:
+  - "Why does 'podman stop' take 10 seconds on your container before it exits?"
+  - "Answer: The entrypoint script is running as PID 1 without 'exec', ignoring SIGTERM."
+
+environment:
+  type: container
+  image: "docker.io/library/alpine:latest"
+  cpu_limit: "1.0"
+  memory_limit: "512Mi"
+
+initial_state:
+  files:
+    - path: "/workspace/Dockerfile"
+      content: |
+        FROM alpine:latest
+        WORKDIR /app
+        COPY entrypoint.sh /app/entrypoint.sh
+        RUN chmod +x /app/entrypoint.sh
+        ENTRYPOINT ["/app/entrypoint.sh"]
+        CMD ["sleep", "300"]
+      permissions: "0644"
+    - path: "/workspace/entrypoint.sh"
+      content: |
+        #!/bin/sh
+        echo "Starting application without exec..."
+        $@
+      permissions: "0755"
+
+tasks:
+  - id: fix-entrypoint-and-dockerfile
+    order: 1
+    title: "Update entrypoint.sh with exec and add non-root user in Dockerfile"
+    description: "Replace the unhandled shell execution in entrypoint.sh with 'exec \"$@\"' and configure USER nonroot in Dockerfile."
+    hints:
+      - tier: 1
+        title: "Conceptual Hint"
+        content: "The shell process swallows SIGTERM unless replaced by the application binary via 'exec'."
+        penalty_points: 5
+      - tier: 2
+        title: "Inspection Target"
+        content: "Check line 3 of /workspace/entrypoint.sh and the bottom of /workspace/Dockerfile."
+        penalty_points: 10
+      - tier: 3
+        title: "Diagnostic Command"
+        content: "cat /workspace/entrypoint.sh && cat /workspace/Dockerfile"
+        penalty_points: 15
+      - tier: 4
+        title: "Strong Clue"
+        content: "Change '$@' to 'exec \"$@\"' in entrypoint.sh. Add 'USER 10001' in Dockerfile."
+        penalty_points: 20
+      - tier: 5
+        title: "Full Solution"
+        content: |
+          sed -i 's/\$@/exec "\$@"/' /workspace/entrypoint.sh
+          echo "USER 10001" >> /workspace/Dockerfile
+        penalty_points: 35
+    validators:
+      - id: val-entrypoint-exec
+        type: file
+        description: "Verify entrypoint.sh contains 'exec \"$@\"'"
+        target: "/workspace/entrypoint.sh"
+        args:
+          path: "/workspace/entrypoint.sh"
+          content_contains: "exec \"$@\""
+        weight: 50
+        failure_message: "entrypoint.sh does not contain 'exec \"$@\"'. Processes will not receive SIGTERM."
+      - id: val-dockerfile-user
+        type: file
+        description: "Verify Dockerfile specifies non-root USER"
+        target: "/workspace/Dockerfile"
+        args:
+          path: "/workspace/Dockerfile"
+          content_contains: "USER"
+        weight: 50
+        failure_message: "Dockerfile is missing 'USER' directive for non-root execution."
+
+cleanup_policy:
+  ttl_seconds: 1800
+  delete_containers: true
+  delete_volumes: true
+
+scoring:
+  max_score: 100
+  detection_weight: 20
+  investigation_weight: 30
+  fix_weight: 30
+  verification_weight: 20

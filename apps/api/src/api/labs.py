@@ -1,0 +1,105 @@
+"""
+REST API endpoints for Labs, Sandboxes, Troubleshooting, and Validators.
+"""
+
+from typing import Any, Dict, List, Optional
+from fastapi import APIRouter, HTTPException, Depends
+from pydantic import BaseModel
+
+from ..core.config import settings
+from ..services.lab_service import LabService
+
+router = APIRouter(prefix="/labs", tags=["labs"])
+lab_service = LabService(settings.LABS_DIR)
+
+
+class StartSessionRequest(BaseModel):
+    force_simulation: bool = False
+
+
+class ExecCommandRequest(BaseModel):
+    command: str
+
+
+class AskAdvisorRequest(BaseModel):
+    task_id: str
+    question: str
+    recent_command: Optional[str] = None
+    recent_output: Optional[str] = None
+
+
+class ValidateTaskRequest(BaseModel):
+    task_id: str
+
+
+@router.get("/tracks")
+def get_tracks():
+    return {"tracks": lab_service.get_tracks()}
+
+
+@router.get("")
+def list_labs(track: Optional[str] = None):
+    labs = lab_service.list_labs(track)
+    return [
+        {
+            "id": l.id,
+            "version": l.version,
+            "title": l.title,
+            "track": l.track,
+            "difficulty": l.difficulty.value,
+            "estimated_minutes": l.estimated_minutes,
+            "validation_status": l.validation_status.value,
+            "objectives": l.objectives,
+        }
+        for l in labs
+    ]
+
+
+@router.get("/{lab_id}")
+def get_lab_detail(lab_id: str):
+    lab = lab_service.get_lab(lab_id)
+    if not lab:
+        raise HTTPException(status_code=404, detail=f"Lab {lab_id} not found.")
+    return lab.model_dump()
+
+
+@router.post("/{lab_id}/session")
+def start_session(lab_id: str, req: StartSessionRequest = StartSessionRequest()):
+    try:
+        return lab_service.start_session(lab_id)
+    except Exception as exc:
+        raise HTTPException(status_code=500, detail=str(exc))
+
+
+@router.post("/session/{session_id}/exec")
+def execute_command(session_id: str, req: ExecCommandRequest):
+    return lab_service.execute_command(session_id, req.command)
+
+
+@router.post("/session/{session_id}/advisor")
+def ask_advisor(session_id: str, req: AskAdvisorRequest):
+    try:
+        return lab_service.ask_advisor(
+            session_id=session_id,
+            task_id=req.task_id,
+            question=req.question,
+            recent_command=req.recent_command,
+            recent_output=req.recent_output,
+        )
+    except Exception as exc:
+        raise HTTPException(status_code=400, detail=str(exc))
+
+
+@router.post("/session/{session_id}/validate")
+def validate_task(session_id: str, req: ValidateTaskRequest):
+    try:
+        report = lab_service.validate_task(session_id, req.task_id)
+        return report.model_dump()
+    except Exception as exc:
+        raise HTTPException(status_code=400, detail=str(exc))
+
+
+@router.delete("/session/{session_id}")
+def terminate_session(session_id: str):
+    success = lab_service.sandbox_manager.terminate_session(session_id)
+    return {"session_id": session_id, "terminated": success}

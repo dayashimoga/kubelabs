@@ -1,0 +1,79 @@
+id: terraform-state-lock
+version: 1.0.0
+title: "Resolving Deadlocked Terraform DynamoDB State Locks"
+track: terraform
+difficulty: intermediate
+estimated_minutes: 20
+validation_status: PROVEN
+
+objectives:
+  - Understand distributed state locking mechanisms in Terraform remote backends
+  - Diagnose 'Error acquiring state lock' when no active runners exist
+  - Safely extract Lock ID and execute 'terraform force-unlock'
+
+prerequisites:
+  - Terraform remote backends (S3 + DynamoDB)
+
+what_why: |
+  When a CI/CD runner running 'terraform apply' crashes unexpectedly (OOM, container timeout),
+  it leaves its lock entry in the DynamoDB lock table. Subsequent CI runs fail immediately
+  with 'ConditionalCheckFailedException'. SREs must verify no other worker is running and clear the lock.
+
+troubleshooting_workflow:
+  - "Step 1: Run 'terraform plan' and observe the Lock ID in the error output"
+  - "Step 2: Confirm in CI dashboard that runner 84a9-bc12 terminated prematurely"
+  - "Step 3: Execute 'terraform force-unlock <Lock-ID>'"
+  - "Step 4: Re-run 'terraform plan' to confirm lock acquisition succeeds"
+
+environment:
+  type: simulation
+
+initial_state:
+  files:
+    - path: "/workspace/terraform/main.tf"
+      content: |
+        terraform {
+          required_version = ">= 1.5.0"
+        }
+        resource "local_file" "status" {
+          filename = "/workspace/terraform/status.txt"
+          content  = "unlocked\n"
+        }
+      permissions: "0644"
+
+tasks:
+  - id: force-unlock
+    order: 1
+    title: "Force unlock and apply local status file"
+    description: "Ensure /workspace/terraform/status.txt exists with content 'unlocked'."
+    hints:
+      - tier: 1
+        title: "Conceptual Hint"
+        content: "Force-unlock removes stale locking records left by crashed processes."
+        penalty_points: 5
+      - tier: 5
+        title: "Full Solution"
+        content: "Create /workspace/terraform/status.txt containing 'unlocked'."
+        penalty_points: 35
+    validators:
+      - id: val-status-file
+        type: file
+        description: "Verify status.txt contains 'unlocked'"
+        target: "/workspace/terraform/status.txt"
+        args:
+          path: "/workspace/terraform/status.txt"
+          content_contains: "unlocked"
+        weight: 100
+        failure_message: "status.txt does not contain 'unlocked'."
+
+cleanup_policy:
+  ttl_seconds: 1800
+  delete_containers: true
+  delete_volumes: true
+
+scoring:
+  max_score: 100
+  detection_weight: 20
+  investigation_weight: 30
+  fix_weight: 30
+  verification_weight: 20

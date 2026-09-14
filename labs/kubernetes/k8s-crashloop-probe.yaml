@@ -1,0 +1,152 @@
+id: k8s-crashloop-probe
+version: 1.0.0
+title: "Kubernetes CrashLoopBackOff: Aggressive Probe vs Slow Startup"
+track: kubernetes
+difficulty: intermediate
+estimated_minutes: 25
+validation_status: PROVEN
+
+objectives:
+  - Diagnose a Pod stuck in CrashLoopBackOff using 'kubectl describe' and 'kubectl logs --previous'
+  - Differentiate between application initialization latency and actual fatal crashes
+  - Implement a Kubernetes startupProbe to guard slow initialization without weakening liveness checks
+
+prerequisites:
+  - Kubernetes manifests & kubectl CLI
+  - Pod lifecycle and probe mechanics
+
+expected_learning_outcomes:
+  - Understand why aggressive liveness probes induce self-reinforcing restart loops
+  - Master startupProbe configuration for Spring Boot / JVM / large cache warmups
+
+what_why: |
+  JVM and high-cache applications take 30-60 seconds to warm up and bind their HTTP ports.
+  When engineers configure a strict 5-second `livenessProbe` without a `startupProbe`,
+  kubelet repeatedly kills the container during startup, resulting in CrashLoopBackOff.
+
+architecture_overview: |
+  Kubelet manages 3 probe types: startup, liveness, and readiness.
+  The `startupProbe` temporarily disables liveness and readiness evaluations until it succeeds.
+  Once the startup probe passes, the normal liveness probe takes over.
+
+internals_deep_dive: |
+  If a liveness probe fails `failureThreshold` times, kubelet sends SIGTERM, waits for
+  terminationGracePeriodSeconds, and then sends SIGKILL. Kubelet increments the restart count
+  and applies exponential backoff delays (10s, 20s, 40s... up to 5 minutes).
+
+common_errors:
+  - "CrashLoopBackOff with Liveness probe failed: HTTP probe failed with statuscode 503"
+  - "Container restarts every 30 seconds"
+
+troubleshooting_workflow:
+  - "Step 1: kubectl get pods (notice RESTARTS: 4, STATUS: CrashLoopBackOff)"
+  - "Step 2: kubectl describe pod <name> (inspect Events for Killing reason)"
+  - "Step 3: kubectl logs <name> --previous (observe application was in middle of cache warming)"
+  - "Step 4: Edit /workspace/deployment.yaml to add startupProbe with failureThreshold: 30, periodSeconds: 2"
+  - "Step 5: Validate manifest state"
+
+environment:
+  type: simulation
+  image: "docker.io/library/alpine:latest"
+
+initial_state:
+  files:
+    - path: "/workspace/deployment.yaml"
+      content: |
+        apiVersion: apps/v1
+        kind: Deployment
+        metadata:
+          name: api-server
+        spec:
+          replicas: 1
+          selector:
+            matchLabels:
+              app: api-server
+          template:
+            metadata:
+              labels:
+                app: api-server
+            spec:
+              containers:
+              - name: api
+                image: registry.corp.com/api:v1.0
+                ports:
+                - containerPort: 8080
+                livenessProbe:
+                  httpGet:
+                    path: /healthz
+                    port: 8080
+                  initialDelaySeconds: 2
+                  periodSeconds: 3
+                  failureThreshold: 2
+      permissions: "0644"
+  seed_data:
+    k8s:
+      pods:
+        api-server-79db8f-4421a:
+          phase: "Running"
+          status: "CrashLoopBackOff"
+          ready: "0/1"
+          restarts: 6
+          events:
+            - "Warning  Unhealthy  1m (x6 over 3m)  kubelet  Liveness probe failed: connection refused"
+            - "Warning  Killing    1m               kubelet  Container api failed liveness probe, will be restarted"
+            - "Warning  BackOff    30s              kubelet  Back-off restarting failed container"
+
+tasks:
+  - id: add-startup-probe
+    order: 1
+    title: "Add startupProbe to deployment.yaml to protect slow initialization"
+    description: "Edit /workspace/deployment.yaml to add a startupProbe on /healthz:8080 with failureThreshold of at least 20 and periodSeconds of 2."
+    hints:
+      - tier: 1
+        title: "Conceptual Hint"
+        content: "Liveness probes should not test startup warmup time; use a startupProbe."
+        penalty_points: 5
+      - tier: 2
+        title: "Inspection Target"
+        content: "Check container probe configuration in /workspace/deployment.yaml."
+        penalty_points: 10
+      - tier: 3
+        title: "Diagnostic Command"
+        content: "kubectl describe pod api-server-79db8f-4421a"
+        penalty_points: 15
+      - tier: 4
+        title: "Strong Clue"
+        content: "Add 'startupProbe: httpGet: {path: /healthz, port: 8080}, failureThreshold: 30, periodSeconds: 2' under the container spec."
+        penalty_points: 20
+      - tier: 5
+        title: "Full Solution"
+        content: |
+          Add to containers[0] in deployment.yaml:
+          startupProbe:
+            httpGet:
+              path: /healthz
+              port: 8080
+            failureThreshold: 30
+            periodSeconds: 2
+        penalty_points: 35
+    validators:
+      - id: val-startup-probe
+        type: yaml
+        description: "Verify startupProbe is declared in /workspace/deployment.yaml"
+        target: "/workspace/deployment.yaml"
+        args:
+          file: "/workspace/deployment.yaml"
+          assertions:
+            "spec.template.spec.containers.0.startupProbe.httpGet.path": "/healthz"
+            "spec.template.spec.containers.0.startupProbe.httpGet.port": 8080
+        weight: 100
+        failure_message: "deployment.yaml is missing a valid startupProbe on /healthz:8080."
+
+cleanup_policy:
+  ttl_seconds: 1800
+  delete_containers: true
+  delete_volumes: true
+
+scoring:
+  max_score: 100
+  detection_weight: 20
+  investigation_weight: 30
+  fix_weight: 30
+  verification_weight: 20

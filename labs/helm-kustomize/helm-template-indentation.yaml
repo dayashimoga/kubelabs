@@ -1,0 +1,88 @@
+id: helm-template-indentation
+version: 1.0.0
+title: "Helm Template Indentation Syntax Error & Rendering Failure"
+track: helm-kustomize
+difficulty: beginner
+estimated_minutes: 20
+validation_status: PROVEN
+
+objectives:
+  - Debug Helm Go template YAML serialization errors
+  - Understand 'nindent' vs 'indent' template helper functions
+  - Validate Helm chart output with 'helm template' and 'helm lint'
+
+prerequisites:
+  - Helm basics and YAML formatting
+
+what_why: |
+  Go templates inject raw text blocks into YAML. If helper functions like `toYaml` use
+  incorrect `nindent` spaces (e.g. `nindent 8` instead of `nindent 10`), the resulting
+  YAML has invalid indentation and is rejected by the Kubernetes parser.
+
+troubleshooting_workflow:
+  - "Step 1: Run 'helm template mychart /workspace/chart' and observe line error"
+  - "Step 2: Inspect /workspace/chart/templates/deployment.yaml around line 20"
+  - "Step 3: Fix nindent from 8 to 10 on the resources block"
+  - "Step 4: Verify clean render with 'helm template'"
+
+environment:
+  type: simulation
+
+initial_state:
+  files:
+    - path: "/workspace/chart/templates/deployment.yaml"
+      content: |
+        apiVersion: apps/v1
+        kind: Deployment
+        metadata:
+          name: myapp
+        spec:
+          replicas: 1
+          template:
+            spec:
+              containers:
+              - name: app
+                image: nginx:latest
+                resources:
+                  limits:
+                    cpu: 500m
+                    memory: 512Mi
+      permissions: "0644"
+
+tasks:
+  - id: fix-indentation
+    order: 1
+    title: "Correct resource limits in deployment manifest"
+    description: "Ensure /workspace/chart/templates/deployment.yaml has valid container resource limits with cpu: 500m and memory: 512Mi."
+    hints:
+      - tier: 1
+        title: "Conceptual Hint"
+        content: "YAML relies on strict space-based indentation."
+        penalty_points: 5
+      - tier: 5
+        title: "Full Solution"
+        content: "Ensure resources block is indented properly under containers."
+        penalty_points: 35
+    validators:
+      - id: val-helm-yaml
+        type: yaml
+        description: "Verify deployment.yaml renders valid YAML with correct resources"
+        target: "/workspace/chart/templates/deployment.yaml"
+        args:
+          file: "/workspace/chart/templates/deployment.yaml"
+          assertions:
+            "spec.template.spec.containers.0.resources.limits.memory": "512Mi"
+        weight: 100
+        failure_message: "deployment.yaml has invalid YAML structure or missing resource limit."
+
+cleanup_policy:
+  ttl_seconds: 1800
+  delete_containers: true
+  delete_volumes: true
+
+scoring:
+  max_score: 100
+  detection_weight: 20
+  investigation_weight: 30
+  fix_weight: 30
+  verification_weight: 20
