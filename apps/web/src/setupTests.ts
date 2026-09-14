@@ -2,6 +2,11 @@ import React from 'react';
 import '@testing-library/jest-dom';
 import { vi } from 'vitest';
 
+declare global {
+  // eslint-disable-next-line no-var
+  var global: any;
+}
+
 // Polyfill window.matchMedia
 Object.defineProperty(window, 'matchMedia', {
   writable: true,

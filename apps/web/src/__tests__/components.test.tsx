@@ -156,6 +156,8 @@ describe('ValidationPanel Component', () => {
       summary: 'Remediation confirmed healthy.',
       items: [
         {
+          rule_id: 'rule-1',
+          rule_type: 'http',
           description: 'Liveness probe healthy',
           passed: true,
           score_awarded: 100,
@@ -178,6 +180,8 @@ describe('ValidationPanel Component', () => {
       summary: 'One check failed.',
       items: [
         {
+          rule_id: 'rule-1',
+          rule_type: 'http',
           description: 'Liveness probe',
           passed: true,
           score_awarded: 50,
@@ -185,6 +189,8 @@ describe('ValidationPanel Component', () => {
           feedback: 'Passed',
         },
         {
+          rule_id: 'rule-2',
+          rule_type: 'tcp',
           description: 'Readiness probe',
           passed: false,
           score_awarded: 0,
@@ -215,8 +221,8 @@ describe('ValidationPanel Component', () => {
 describe('LayeredHintsDialog Component', () => {
   it('handles guided SRE questions and progressive hint tier unlocking', async () => {
     const hints = [
-      { tier: 1, content: 'Conceptual clue: check inodes' },
-      { tier: 2, content: 'Inspect /var/spool' },
+      { tier: 1, title: 'Tier 1 Hint', penalty_points: 5, content: 'Conceptual clue: check inodes' },
+      { tier: 2, title: 'Tier 2 Hint', penalty_points: 10, content: 'Inspect /var/spool' },
     ];
     const onAskAdvisor = vi.fn().mockResolvedValue({
       category: 'Diagnostic Reasoning',
@@ -258,7 +264,7 @@ describe('TopologyViewer Component', () => {
         { id: 'disk', label: 'NFS Volume', type: 'storage', status: 'healthy' },
       ],
       edges: [
-        { source: 'gw', target: 'api', status: 'healthy' },
+        { source: 'gw', target: 'api', status: 'normal' },
         { source: 'api', target: 'db', status: 'broken', label: 'TCP RST' },
       ],
     };
