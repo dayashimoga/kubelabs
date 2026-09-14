@@ -143,7 +143,7 @@ export const IncidentSimulator: React.FC<IncidentSimulatorProps> = ({ initialInc
               Detected Symptoms & Alerts
             </div>
             <ul style={{ marginTop: 8, paddingLeft: 20, fontSize: '0.825rem', color: '#cbd5e1', lineHeight: 1.6 }}>
-              {incident?.initial_symptoms.map((s, idx) => (
+              {(incident?.initial_symptoms || []).map((s, idx) => (
                 <li key={idx}>{s}</li>
               ))}
             </ul>
@@ -155,7 +155,7 @@ export const IncidentSimulator: React.FC<IncidentSimulatorProps> = ({ initialInc
               Investigate & Test Hypotheses
             </div>
             <div style={{ display: 'flex', flexDirection: 'column', gap: 10, marginTop: 10 }}>
-              {incident?.hypotheses.map((h) => {
+              {(incident?.hypotheses || []).map((h) => {
                 const result = hypothesesResults[h.id];
                 return (
                   <div key={h.id} style={{ backgroundColor: '#0d121d', padding: 10, borderRadius: 6 }}>
@@ -283,7 +283,7 @@ export const IncidentSimulator: React.FC<IncidentSimulatorProps> = ({ initialInc
               </div>
 
               <div style={{ marginTop: 12, fontSize: '0.8rem', color: '#cbd5e1' }}>
-                {finalScore.feedback.map((f, i) => (
+                {(finalScore.feedback || []).map((f, i) => (
                   <div key={i}>• {f}</div>
                 ))}
               </div>

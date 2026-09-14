@@ -998,6 +998,19 @@ class ScenarioFactory:
             repair_cmd = meta["repair_cmd"]
             val_target = meta["val_target"]
 
+            if track in ['kubernetes', 'helm', 'kustomize']:
+                rc = LabRuntimeClassification.REAL_KUBERNETES
+            elif track in ['cicd', 'github-actions', 'argo-cd', 'prometheus', 'grafana', 'alertmanager', 'loki', 'opentelemetry', 'istio', 'sre-resilience']:
+                rc = LabRuntimeClassification.REAL_MULTI_CONTAINER
+            elif track in ['linux', 'bash', 'docker', 'git', 'networking', 'http-dns-tls', 'devsecops', 'platform-engineering']:
+                rc = LabRuntimeClassification.REAL_CONTAINER
+            elif track in ['terraform', 'ansible']:
+                rc = LabRuntimeClassification.EMULATED
+            elif track == 'aws-eks':
+                rc = LabRuntimeClassification.CLOUD_REQUIRED
+            else:
+                rc = LabRuntimeClassification.SIMULATED
+
             scenarios.append(
                 LabSpec(
                     id=s_id,
@@ -1006,7 +1019,7 @@ class ScenarioFactory:
                     difficulty=diff,
                     estimated_minutes=30,
                     validation_status=ValidationStatus.PROVEN,
-                    runtime_classification=LabRuntimeClassification.REAL,
+                    runtime_classification=rc,
                     objectives=[
                         f"Diagnose production failure in {track} environment: {s_id}",
                         "Inspect underlying logs, metrics, and configurations",

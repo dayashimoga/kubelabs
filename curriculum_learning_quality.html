@@ -1,0 +1,1265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KubeLabs Curriculum Teaching Quality & Prerequisite Progression</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #0b0f19; color: #e2e8f0; margin: 0; padding: 24px; }
+        h1, h2 { color: #f8fafc; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 16px; margin-bottom: 24px; }
+        .stat-card { background: #1e293b; border: 1px solid #334155; border-radius: 8px; padding: 16px; text-align: center; }
+        .stat-label { font-size: 11px; text-transform: uppercase; color: #94a3b8; font-weight: 600; }
+        .stat-value { font-size: 28px; font-weight: 700; color: #38bdf8; margin-top: 4px; }
+        .stat-pct { font-size: 13px; color: #10b981; }
+        table { width: 100%; border-collapse: collapse; background: #1e293b; border-radius: 8px; overflow: hidden; font-size: 12px; }
+        th, td { padding: 8px 12px; text-align: left; border-bottom: 1px solid #334155; }
+        th { background: #0f172a; color: #94a3b8; font-weight: 600; text-transform: uppercase; font-size: 11px; }
+        .font-mono { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+        .text-xs { font-size: 11px; }
+        .text-center { text-align: center; }
+        .text-green { color: #34d399; font-weight: 700; }
+        .badge { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 10px; font-weight: 700; font-family: monospace; }
+        .bg-green { background: #065f46; color: #d1fae5; }
+        .bg-blue { background: #0369a1; color: #e0f2fe; }
+        .bg-purple { background: #6d28d9; color: #ede9fe; }
+    </style>
+</head>
+<body>
+    <h1>KubeLabs Curriculum Teaching Quality & Prerequisite Progression</h1>
+    <p style="color: #94a3b8;">103 Subtopics Across 24 Tracks | 18 Canonical Pedagogical Dimensions | Zero Circular Dependencies</p>
+    <div class="grid"><div class="stat-card">
+            <div class="stat-label">OPERATIONAL</div>
+            <div class="stat-value">67</div>
+            <div class="stat-pct">72.8%</div>
+        </div><div class="stat-card">
+            <div class="stat-label">PRODUCTION-MASTERY</div>
+            <div class="stat-value">25</div>
+            <div class="stat-pct">27.2%</div>
+        </div><div class="stat-card">
+            <div class="stat-label">PRACTICED</div>
+            <div class="stat-value">0</div>
+            <div class="stat-pct">0.0%</div>
+        </div><div class="stat-card">
+            <div class="stat-label">INTRODUCED</div>
+            <div class="stat-value">0</div>
+            <div class="stat-pct">0.0%</div>
+        </div></div>
+    <h2>Subtopic Depth & Prerequisite Taxonomy</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Subtopic ID</th>
+                <th>Name</th>
+                <th>Track</th>
+                <th>Maturity</th>
+                <th>Prerequisites</th>
+                <th>Lessons</th>
+                <th>Guided</th>
+                <th>Troubleshoot</th>
+                <th>Incidents</th>
+                <th>Elements</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+        <tr>
+            <td class="font-mono text-xs">linux-vfs-inodes</td>
+            <td class="font-semibold">VFS Superblocks & Inode Tables</td>
+            <td>linux</td>
+            <td><span class="badge bg-blue">OPERATIONAL</span></td>
+            <td class="text-xs">None (Entry Point)</td>
+            <td class="text-center font-mono">3</td>
+            <td class="text-center font-mono">3</td>
+            <td class="text-center font-mono">3</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono text-green">18/18</td>
+        </tr>
+        
+        <tr>
+            <td class="font-mono text-xs">linux-process-signals</td>
+            <td class="font-semibold">Process Lifecycle, PID Tables & Signals</td>
+            <td>linux</td>
+            <td><span class="badge bg-blue">OPERATIONAL</span></td>
+            <td class="text-xs">linux-vfs-inodes</td>
+            <td class="text-center font-mono">2</td>
+            <td class="text-center font-mono">2</td>
+            <td class="text-center font-mono">2</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono text-green">18/18</td>
+        </tr>
+        
+        <tr>
+            <td class="font-mono text-xs">linux-memory-oom</td>
+            <td class="font-semibold">Virtual Memory, Page Cache & OOM Killer</td>
+            <td>linux</td>
+            <td><span class="badge bg-blue">OPERATIONAL</span></td>
+            <td class="text-xs">linux-process-signals</td>
+            <td class="text-center font-mono">3</td>
+            <td class="text-center font-mono">3</td>
+            <td class="text-center font-mono">3</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono text-green">18/18</td>
+        </tr>
+        
+        <tr>
+            <td class="font-mono text-xs">linux-cpu-scheduler</td>
+            <td class="font-semibold">CPU Scheduling, CFS Quotas & Nice</td>
+            <td>linux</td>
+            <td><span class="badge bg-blue">OPERATIONAL</span></td>
+            <td class="text-xs">linux-process-signals</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono text-green">18/18</td>
+        </tr>
+        
+        <tr>
+            <td class="font-mono text-xs">linux-network-sockets</td>
+            <td class="font-semibold">Socket Buffers, TCP States & Conntrack</td>
+            <td>linux</td>
+            <td><span class="badge bg-blue">OPERATIONAL</span></td>
+            <td class="text-xs">linux-memory-oom</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono text-green">18/18</td>
+        </tr>
+        
+        <tr>
+            <td class="font-mono text-xs">linux-systemd-cgroups</td>
+            <td class="font-semibold">systemd Units, cgroups v2 & Resource Slices</td>
+            <td>linux</td>
+            <td><span class="badge bg-blue">OPERATIONAL</span></td>
+            <td class="text-xs">linux-cpu-scheduler, linux-memory-oom</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono text-green">18/18</td>
+        </tr>
+        
+        <tr>
+            <td class="font-mono text-xs">bash-pipes-redirection</td>
+            <td class="font-semibold">Subshells, File Descriptors & Pipe Buffers</td>
+            <td>bash</td>
+            <td><span class="badge bg-blue">OPERATIONAL</span></td>
+            <td class="text-xs">None (Entry Point)</td>
+            <td class="text-center font-mono">2</td>
+            <td class="text-center font-mono">2</td>
+            <td class="text-center font-mono">2</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono text-green">18/18</td>
+        </tr>
+        
+        <tr>
+            <td class="font-mono text-xs">bash-traps-signals</td>
+            <td class="font-semibold">Signal Traps (EXIT, ERR, SIGINT, SIGTERM)</td>
+            <td>bash</td>
+            <td><span class="badge bg-blue">OPERATIONAL</span></td>
+            <td class="text-xs">bash-pipes-redirection</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono text-green">18/18</td>
+        </tr>
+        
+        <tr>
+            <td class="font-mono text-xs">bash-text-stream</td>
+            <td class="font-semibold">Stream Processing (Sed, Awk, Cut, Xargs)</td>
+            <td>bash</td>
+            <td><span class="badge bg-blue">OPERATIONAL</span></td>
+            <td class="text-xs">bash-pipes-redirection</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono text-green">18/18</td>
+        </tr>
+        
+        <tr>
+            <td class="font-mono text-xs">bash-error-handling</td>
+            <td class="font-semibold">Defensive Scripting (set -euo pipefail)</td>
+            <td>bash</td>
+            <td><span class="badge bg-green">PRODUCTION-MASTERY</span></td>
+            <td class="text-xs">bash-traps-signals</td>
+            <td class="text-center font-mono">3</td>
+            <td class="text-center font-mono">3</td>
+            <td class="text-center font-mono">3</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono text-green">18/18</td>
+        </tr>
+        
+        <tr>
+            <td class="font-mono text-xs">git-object-model</td>
+            <td class="font-semibold">Git Internals (Blobs, Trees, Commits, Tags)</td>
+            <td>git</td>
+            <td><span class="badge bg-blue">OPERATIONAL</span></td>
+            <td class="text-xs">None (Entry Point)</td>
+            <td class="text-center font-mono">27</td>
+            <td class="text-center font-mono">27</td>
+            <td class="text-center font-mono">27</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono text-green">18/18</td>
+        </tr>
+        
+        <tr>
+            <td class="font-mono text-xs">git-branch-merge</td>
+            <td class="font-semibold">Fast-Forward, 3-Way Merges & Conflicts</td>
+            <td>git</td>
+            <td><span class="badge bg-blue">OPERATIONAL</span></td>
+            <td class="text-xs">git-object-model</td>
+            <td class="text-center font-mono">3</td>
+            <td class="text-center font-mono">3</td>
+            <td class="text-center font-mono">3</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono text-green">18/18</td>
+        </tr>
+        
+        <tr>
+            <td class="font-mono text-xs">git-rebase-interactive</td>
+            <td class="font-semibold">Interactive Rebasing & History Rewriting</td>
+            <td>git</td>
+            <td><span class="badge bg-blue">OPERATIONAL</span></td>
+            <td class="text-xs">git-branch-merge</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono text-green">18/18</td>
+        </tr>
+        
+        <tr>
+            <td class="font-mono text-xs">git-reflog-recovery</td>
+            <td class="font-semibold">Reflog Disaster Recovery & Dangling Commits</td>
+            <td>git</td>
+            <td><span class="badge bg-green">PRODUCTION-MASTERY</span></td>
+            <td class="text-xs">git-rebase-interactive</td>
+            <td class="text-center font-mono">2</td>
+            <td class="text-center font-mono">2</td>
+            <td class="text-center font-mono">2</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono text-green">18/18</td>
+        </tr>
+        
+        <tr>
+            <td class="font-mono text-xs">net-osi-tcpip</td>
+            <td class="font-semibold">OSI Model, Packet Headers & MTU/MSS</td>
+            <td>networking</td>
+            <td><span class="badge bg-blue">OPERATIONAL</span></td>
+            <td class="text-xs">None (Entry Point)</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono text-green">18/18</td>
+        </tr>
+        
+        <tr>
+            <td class="font-mono text-xs">net-ip-routing</td>
+            <td class="font-semibold">CIDR Subnetting, ARP Tables & Routing</td>
+            <td>networking</td>
+            <td><span class="badge bg-blue">OPERATIONAL</span></td>
+            <td class="text-xs">net-osi-tcpip</td>
+            <td class="text-center font-mono">3</td>
+            <td class="text-center font-mono">3</td>
+            <td class="text-center font-mono">3</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono text-green">18/18</td>
+        </tr>
+        
+        <tr>
+            <td class="font-mono text-xs">net-iptables-nftables</td>
+            <td class="font-semibold">iptables/nftables Packet Filtering & NAT</td>
+            <td>networking</td>
+            <td><span class="badge bg-green">PRODUCTION-MASTERY</span></td>
+            <td class="text-xs">net-ip-routing</td>
+            <td class="text-center font-mono">8</td>
+            <td class="text-center font-mono">8</td>
+            <td class="text-center font-mono">8</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono text-green">18/18</td>
+        </tr>
+        
+        <tr>
+            <td class="font-mono text-xs">net-packet-capture</td>
+            <td class="font-semibold">tcpdump, Wireshark & Socket Debugging</td>
+            <td>networking</td>
+            <td><span class="badge bg-green">PRODUCTION-MASTERY</span></td>
+            <td class="text-xs">net-iptables-nftables</td>
+            <td class="text-center font-mono">3</td>
+            <td class="text-center font-mono">3</td>
+            <td class="text-center font-mono">3</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono text-green">18/18</td>
+        </tr>
+        
+        <tr>
+            <td class="font-mono text-xs">dns-resolution-flow</td>
+            <td class="font-semibold">Recursive DNS, TTL & Caching Resolvers</td>
+            <td>http-dns-tls</td>
+            <td><span class="badge bg-blue">OPERATIONAL</span></td>
+            <td class="text-xs">None (Entry Point)</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono text-green">18/18</td>
+        </tr>
+        
+        <tr>
+            <td class="font-mono text-xs">http-keepalive-pipelines</td>
+            <td class="font-semibold">HTTP/1.1 vs HTTP/2 Multiplexing</td>
+            <td>http-dns-tls</td>
+            <td><span class="badge bg-blue">OPERATIONAL</span></td>
+            <td class="text-xs">dns-resolution-flow</td>
+            <td class="text-center font-mono">3</td>
+            <td class="text-center font-mono">3</td>
+            <td class="text-center font-mono">3</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono text-green">18/18</td>
+        </tr>
+        
+        <tr>
+            <td class="font-mono text-xs">tls-handshake-ciphers</td>
+            <td class="font-semibold">TLS 1.3 Handshake, Cipher Suites & SNI</td>
+            <td>http-dns-tls</td>
+            <td><span class="badge bg-green">PRODUCTION-MASTERY</span></td>
+            <td class="text-xs">http-keepalive-pipelines</td>
+            <td class="text-center font-mono">26</td>
+            <td class="text-center font-mono">26</td>
+            <td class="text-center font-mono">26</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono text-green">18/18</td>
+        </tr>
+        
+        <tr>
+            <td class="font-mono text-xs">pki-cert-rotation</td>
+            <td class="font-semibold">Mutual TLS (mTLS) & Root CA Chains</td>
+            <td>http-dns-tls</td>
+            <td><span class="badge bg-green">PRODUCTION-MASTERY</span></td>
+            <td class="text-xs">tls-handshake-ciphers</td>
+            <td class="text-center font-mono">26</td>
+            <td class="text-center font-mono">26</td>
+            <td class="text-center font-mono">26</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono text-green">18/18</td>
+        </tr>
+        
+        <tr>
+            <td class="font-mono text-xs">docker-namespaces-cgroups</td>
+            <td class="font-semibold">Linux Namespaces & Control Groups</td>
+            <td>docker</td>
+            <td><span class="badge bg-blue">OPERATIONAL</span></td>
+            <td class="text-xs">None (Entry Point)</td>
+            <td class="text-center font-mono">3</td>
+            <td class="text-center font-mono">3</td>
+            <td class="text-center font-mono">3</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono text-green">18/18</td>
+        </tr>
+        
+        <tr>
+            <td class="font-mono text-xs">docker-storage-overlay2</td>
+            <td class="font-semibold">OverlayFS Union Mounts & Layer Caching</td>
+            <td>docker</td>
+            <td><span class="badge bg-blue">OPERATIONAL</span></td>
+            <td class="text-xs">docker-namespaces-cgroups</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono text-green">18/18</td>
+        </tr>
+        
+        <tr>
+            <td class="font-mono text-xs">docker-bridge-networking</td>
+            <td class="font-semibold">veth Pairs, Bridge Networks & IPAM</td>
+            <td>docker</td>
+            <td><span class="badge bg-blue">OPERATIONAL</span></td>
+            <td class="text-xs">docker-namespaces-cgroups</td>
+            <td class="text-center font-mono">3</td>
+            <td class="text-center font-mono">3</td>
+            <td class="text-center font-mono">3</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono text-green">18/18</td>
+        </tr>
+        
+        <tr>
+            <td class="font-mono text-xs">docker-multistage-builds</td>
+            <td class="font-semibold">BuildKit Cache & Minimal Distroless</td>
+            <td>docker</td>
+            <td><span class="badge bg-blue">OPERATIONAL</span></td>
+            <td class="text-xs">docker-storage-overlay2</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono text-green">18/18</td>
+        </tr>
+        
+        <tr>
+            <td class="font-mono text-xs">docker-rootless-security</td>
+            <td class="font-semibold">Rootless Podman, Seccomp & Cap-Drop</td>
+            <td>docker</td>
+            <td><span class="badge bg-green">PRODUCTION-MASTERY</span></td>
+            <td class="text-xs">docker-bridge-networking, docker-multistage-builds</td>
+            <td class="text-center font-mono">3</td>
+            <td class="text-center font-mono">3</td>
+            <td class="text-center font-mono">3</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono text-green">18/18</td>
+        </tr>
+        
+        <tr>
+            <td class="font-mono text-xs">k8s-pod-lifecycle</td>
+            <td class="font-semibold">Pod Phase, RestartPolicy & Probes</td>
+            <td>kubernetes</td>
+            <td><span class="badge bg-blue">OPERATIONAL</span></td>
+            <td class="text-xs">None (Entry Point)</td>
+            <td class="text-center font-mono">26</td>
+            <td class="text-center font-mono">26</td>
+            <td class="text-center font-mono">26</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono text-green">18/18</td>
+        </tr>
+        
+        <tr>
+            <td class="font-mono text-xs">k8s-control-plane</td>
+            <td class="font-semibold">etcd Consistency, API Server & Controller</td>
+            <td>kubernetes</td>
+            <td><span class="badge bg-blue">OPERATIONAL</span></td>
+            <td class="text-xs">k8s-pod-lifecycle</td>
+            <td class="text-center font-mono">2</td>
+            <td class="text-center font-mono">2</td>
+            <td class="text-center font-mono">2</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono text-green">18/18</td>
+        </tr>
+        
+        <tr>
+            <td class="font-mono text-xs">k8s-services-endpoints</td>
+            <td class="font-semibold">Service ClusterIP, kube-proxy & Endpoints</td>
+            <td>kubernetes</td>
+            <td><span class="badge bg-blue">OPERATIONAL</span></td>
+            <td class="text-xs">k8s-pod-lifecycle</td>
+            <td class="text-center font-mono">12</td>
+            <td class="text-center font-mono">12</td>
+            <td class="text-center font-mono">12</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono text-green">18/18</td>
+        </tr>
+        
+        <tr>
+            <td class="font-mono text-xs">k8s-ingress-gateway</td>
+            <td class="font-semibold">Ingress Controllers & Gateway API</td>
+            <td>kubernetes</td>
+            <td><span class="badge bg-green">PRODUCTION-MASTERY</span></td>
+            <td class="text-xs">k8s-services-endpoints</td>
+            <td class="text-center font-mono">3</td>
+            <td class="text-center font-mono">3</td>
+            <td class="text-center font-mono">3</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono text-green">18/18</td>
+        </tr>
+        
+        <tr>
+            <td class="font-mono text-xs">k8s-storage-csi</td>
+            <td class="font-semibold">PV, PVC, StorageClass & Dynamic CSI</td>
+            <td>kubernetes</td>
+            <td><span class="badge bg-green">PRODUCTION-MASTERY</span></td>
+            <td class="text-xs">k8s-pod-lifecycle</td>
+            <td class="text-center font-mono">3</td>
+            <td class="text-center font-mono">3</td>
+            <td class="text-center font-mono">3</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono text-green">18/18</td>
+        </tr>
+        
+        <tr>
+            <td class="font-mono text-xs">k8s-scheduler-eviction</td>
+            <td class="font-semibold">Tolerations, NodeAffinity & PDB</td>
+            <td>kubernetes</td>
+            <td><span class="badge bg-blue">OPERATIONAL</span></td>
+            <td class="text-xs">k8s-control-plane</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono text-green">18/18</td>
+        </tr>
+        
+        <tr>
+            <td class="font-mono text-xs">k8s-rbac-security</td>
+            <td class="font-semibold">RBAC Roles, ServiceAccounts & OIDC</td>
+            <td>kubernetes</td>
+            <td><span class="badge bg-blue">OPERATIONAL</span></td>
+            <td class="text-xs">k8s-control-plane</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono text-green">18/18</td>
+        </tr>
+        
+        <tr>
+            <td class="font-mono text-xs">helm-chart-anatomy</td>
+            <td class="font-semibold">Chart.yaml, Templates & Values Schema</td>
+            <td>helm</td>
+            <td><span class="badge bg-blue">OPERATIONAL</span></td>
+            <td class="text-xs">None (Entry Point)</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono text-green">18/18</td>
+        </tr>
+        
+        <tr>
+            <td class="font-mono text-xs">helm-sprig-functions</td>
+            <td class="font-semibold">Go Template Sprig Functions & Control Flow</td>
+            <td>helm</td>
+            <td><span class="badge bg-blue">OPERATIONAL</span></td>
+            <td class="text-xs">helm-chart-anatomy</td>
+            <td class="text-center font-mono">2</td>
+            <td class="text-center font-mono">2</td>
+            <td class="text-center font-mono">2</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono text-green">18/18</td>
+        </tr>
+        
+        <tr>
+            <td class="font-mono text-xs">helm-hooks-lifecycle</td>
+            <td class="font-semibold">Pre/Post Install Hooks & Release Rollback</td>
+            <td>helm</td>
+            <td><span class="badge bg-blue">OPERATIONAL</span></td>
+            <td class="text-xs">helm-sprig-functions</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono text-green">18/18</td>
+        </tr>
+        
+        <tr>
+            <td class="font-mono text-xs">kustomize-bases-overlays</td>
+            <td class="font-semibold">Bases, Overlays & Environment Patches</td>
+            <td>kustomize</td>
+            <td><span class="badge bg-blue">OPERATIONAL</span></td>
+            <td class="text-xs">None (Entry Point)</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono text-green">18/18</td>
+        </tr>
+        
+        <tr>
+            <td class="font-mono text-xs">kustomize-strategic-merge</td>
+            <td class="font-semibold">Strategic Merge & JSON 6902 Patches</td>
+            <td>kustomize</td>
+            <td><span class="badge bg-blue">OPERATIONAL</span></td>
+            <td class="text-xs">kustomize-bases-overlays</td>
+            <td class="text-center font-mono">2</td>
+            <td class="text-center font-mono">2</td>
+            <td class="text-center font-mono">2</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono text-green">18/18</td>
+        </tr>
+        
+        <tr>
+            <td class="font-mono text-xs">kustomize-generators</td>
+            <td class="font-semibold">Secret & ConfigMap Generator Hash Suffixes</td>
+            <td>kustomize</td>
+            <td><span class="badge bg-blue">OPERATIONAL</span></td>
+            <td class="text-xs">kustomize-strategic-merge</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono text-green">18/18</td>
+        </tr>
+        
+        <tr>
+            <td class="font-mono text-xs">tf-hcl-syntax</td>
+            <td class="font-semibold">HCL Blocks, Providers & Resources</td>
+            <td>terraform</td>
+            <td><span class="badge bg-blue">OPERATIONAL</span></td>
+            <td class="text-xs">None (Entry Point)</td>
+            <td class="text-center font-mono">4</td>
+            <td class="text-center font-mono">4</td>
+            <td class="text-center font-mono">4</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono text-green">18/18</td>
+        </tr>
+        
+        <tr>
+            <td class="font-mono text-xs">tf-state-locking</td>
+            <td class="font-semibold">Remote State Backend & DynamoDB Locking</td>
+            <td>terraform</td>
+            <td><span class="badge bg-blue">OPERATIONAL</span></td>
+            <td class="text-xs">tf-hcl-syntax</td>
+            <td class="text-center font-mono">11</td>
+            <td class="text-center font-mono">11</td>
+            <td class="text-center font-mono">11</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono text-green">18/18</td>
+        </tr>
+        
+        <tr>
+            <td class="font-mono text-xs">tf-dynamic-blocks</td>
+            <td class="font-semibold">Dynamic Blocks, For-Each & Conditionals</td>
+            <td>terraform</td>
+            <td><span class="badge bg-blue">OPERATIONAL</span></td>
+            <td class="text-xs">tf-state-locking</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono text-green">18/18</td>
+        </tr>
+        
+        <tr>
+            <td class="font-mono text-xs">tf-import-refactor</td>
+            <td class="font-semibold">Resource Import & Moved Block Refactoring</td>
+            <td>terraform</td>
+            <td><span class="badge bg-green">PRODUCTION-MASTERY</span></td>
+            <td class="text-xs">tf-dynamic-blocks</td>
+            <td class="text-center font-mono">11</td>
+            <td class="text-center font-mono">11</td>
+            <td class="text-center font-mono">11</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono text-green">18/18</td>
+        </tr>
+        
+        <tr>
+            <td class="font-mono text-xs">ansible-inventory-vars</td>
+            <td class="font-semibold">Static/Dynamic Inventories & Host Vars</td>
+            <td>ansible</td>
+            <td><span class="badge bg-blue">OPERATIONAL</span></td>
+            <td class="text-xs">None (Entry Point)</td>
+            <td class="text-center font-mono">3</td>
+            <td class="text-center font-mono">3</td>
+            <td class="text-center font-mono">3</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono text-green">18/18</td>
+        </tr>
+        
+        <tr>
+            <td class="font-mono text-xs">ansible-playbook-roles</td>
+            <td class="font-semibold">Idempotent Tasks, Handlers & Roles</td>
+            <td>ansible</td>
+            <td><span class="badge bg-blue">OPERATIONAL</span></td>
+            <td class="text-xs">ansible-inventory-vars</td>
+            <td class="text-center font-mono">2</td>
+            <td class="text-center font-mono">2</td>
+            <td class="text-center font-mono">2</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono text-green">18/18</td>
+        </tr>
+        
+        <tr>
+            <td class="font-mono text-xs">ansible-vault-security</td>
+            <td class="font-semibold">Ansible Vault Encryption & Rekeying</td>
+            <td>ansible</td>
+            <td><span class="badge bg-green">PRODUCTION-MASTERY</span></td>
+            <td class="text-xs">ansible-playbook-roles</td>
+            <td class="text-center font-mono">36</td>
+            <td class="text-center font-mono">36</td>
+            <td class="text-center font-mono">36</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono text-green">18/18</td>
+        </tr>
+        
+        <tr>
+            <td class="font-mono text-xs">ansible-failure-recovery</td>
+            <td class="font-semibold">Block-Rescue-Always Error Recovery</td>
+            <td>ansible</td>
+            <td><span class="badge bg-green">PRODUCTION-MASTERY</span></td>
+            <td class="text-xs">ansible-vault-security</td>
+            <td class="text-center font-mono">3</td>
+            <td class="text-center font-mono">3</td>
+            <td class="text-center font-mono">3</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono text-green">18/18</td>
+        </tr>
+        
+        <tr>
+            <td class="font-mono text-xs">cicd-pipeline-stages</td>
+            <td class="font-semibold">Build, Test, Scan, Deploy Stage Topology</td>
+            <td>ci-cd</td>
+            <td><span class="badge bg-blue">OPERATIONAL</span></td>
+            <td class="text-xs">None (Entry Point)</td>
+            <td class="text-center font-mono">3</td>
+            <td class="text-center font-mono">3</td>
+            <td class="text-center font-mono">3</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono text-green">18/18</td>
+        </tr>
+        
+        <tr>
+            <td class="font-mono text-xs">cicd-artifact-caching</td>
+            <td class="font-semibold">Layered Cache Invalidation & Ephemeral Agents</td>
+            <td>ci-cd</td>
+            <td><span class="badge bg-blue">OPERATIONAL</span></td>
+            <td class="text-xs">cicd-pipeline-stages</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono text-green">18/18</td>
+        </tr>
+        
+        <tr>
+            <td class="font-mono text-xs">cicd-security-scanning</td>
+            <td class="font-semibold">SAST, DAST & Container Image Vulnerability</td>
+            <td>ci-cd</td>
+            <td><span class="badge bg-green">PRODUCTION-MASTERY</span></td>
+            <td class="text-xs">cicd-artifact-caching</td>
+            <td class="text-center font-mono">3</td>
+            <td class="text-center font-mono">3</td>
+            <td class="text-center font-mono">3</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono text-green">18/18</td>
+        </tr>
+        
+        <tr>
+            <td class="font-mono text-xs">gha-workflow-syntax</td>
+            <td class="font-semibold">Jobs, Steps, Runners & Matrix Strategy</td>
+            <td>github-actions</td>
+            <td><span class="badge bg-blue">OPERATIONAL</span></td>
+            <td class="text-xs">None (Entry Point)</td>
+            <td class="text-center font-mono">3</td>
+            <td class="text-center font-mono">3</td>
+            <td class="text-center font-mono">3</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono text-green">18/18</td>
+        </tr>
+        
+        <tr>
+            <td class="font-mono text-xs">gha-reusable-workflows</td>
+            <td class="font-semibold">Reusable Workflows & Composite Actions</td>
+            <td>github-actions</td>
+            <td><span class="badge bg-blue">OPERATIONAL</span></td>
+            <td class="text-xs">gha-workflow-syntax</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono text-green">18/18</td>
+        </tr>
+        
+        <tr>
+            <td class="font-mono text-xs">gha-oidc-federation</td>
+            <td class="font-semibold">OIDC Cloud Role Federation & Secrets</td>
+            <td>github-actions</td>
+            <td><span class="badge bg-blue">OPERATIONAL</span></td>
+            <td class="text-xs">gha-reusable-workflows</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono text-green">18/18</td>
+        </tr>
+        
+        <tr>
+            <td class="font-mono text-xs">argo-app-crd</td>
+            <td class="font-semibold">Application CRD, Source & Destination Sync</td>
+            <td>argocd</td>
+            <td><span class="badge bg-blue">OPERATIONAL</span></td>
+            <td class="text-xs">None (Entry Point)</td>
+            <td class="text-center font-mono">2</td>
+            <td class="text-center font-mono">2</td>
+            <td class="text-center font-mono">2</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono text-green">18/18</td>
+        </tr>
+        
+        <tr>
+            <td class="font-mono text-xs">argo-sync-waves</td>
+            <td class="font-semibold">Sync Waves, Phases & PreSync Pruning</td>
+            <td>argocd</td>
+            <td><span class="badge bg-blue">OPERATIONAL</span></td>
+            <td class="text-xs">argo-app-crd</td>
+            <td class="text-center font-mono">5</td>
+            <td class="text-center font-mono">5</td>
+            <td class="text-center font-mono">5</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono text-green">18/18</td>
+        </tr>
+        
+        <tr>
+            <td class="font-mono text-xs">argo-app-of-apps</td>
+            <td class="font-semibold">App-of-Apps Pattern & ApplicationSet</td>
+            <td>argocd</td>
+            <td><span class="badge bg-blue">OPERATIONAL</span></td>
+            <td class="text-xs">argo-sync-waves</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono text-green">18/18</td>
+        </tr>
+        
+        <tr>
+            <td class="font-mono text-xs">prom-data-model</td>
+            <td class="font-semibold">Metrics Types (Counter, Gauge, Hist, Summary)</td>
+            <td>prometheus</td>
+            <td><span class="badge bg-blue">OPERATIONAL</span></td>
+            <td class="text-xs">None (Entry Point)</td>
+            <td class="text-center font-mono">5</td>
+            <td class="text-center font-mono">5</td>
+            <td class="text-center font-mono">5</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono text-green">18/18</td>
+        </tr>
+        
+        <tr>
+            <td class="font-mono text-xs">prom-promql-vectors</td>
+            <td class="font-semibold">Instant vs Range Vectors & Rate/Increase</td>
+            <td>prometheus</td>
+            <td><span class="badge bg-blue">OPERATIONAL</span></td>
+            <td class="text-xs">prom-data-model</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono text-green">18/18</td>
+        </tr>
+        
+        <tr>
+            <td class="font-mono text-xs">prom-service-monitor</td>
+            <td class="font-semibold">Prometheus Operator ServiceMonitor & Scrape</td>
+            <td>prometheus</td>
+            <td><span class="badge bg-green">PRODUCTION-MASTERY</span></td>
+            <td class="text-xs">prom-promql-vectors</td>
+            <td class="text-center font-mono">26</td>
+            <td class="text-center font-mono">26</td>
+            <td class="text-center font-mono">26</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono text-green">18/18</td>
+        </tr>
+        
+        <tr>
+            <td class="font-mono text-xs">prom-cardinality-explosion</td>
+            <td class="font-semibold">High Cardinality Churn & TSDB Compaction</td>
+            <td>prometheus</td>
+            <td><span class="badge bg-blue">OPERATIONAL</span></td>
+            <td class="text-xs">prom-service-monitor</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono text-green">18/18</td>
+        </tr>
+        
+        <tr>
+            <td class="font-mono text-xs">grafana-datasource-prom</td>
+            <td class="font-semibold">Datasource Configuration & Dashboard Panels</td>
+            <td>grafana</td>
+            <td><span class="badge bg-blue">OPERATIONAL</span></td>
+            <td class="text-xs">None (Entry Point)</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono text-green">18/18</td>
+        </tr>
+        
+        <tr>
+            <td class="font-mono text-xs">grafana-template-variables</td>
+            <td class="font-semibold">Dynamic Query Variables & Repeats</td>
+            <td>grafana</td>
+            <td><span class="badge bg-blue">OPERATIONAL</span></td>
+            <td class="text-xs">grafana-datasource-prom</td>
+            <td class="text-center font-mono">3</td>
+            <td class="text-center font-mono">3</td>
+            <td class="text-center font-mono">3</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono text-green">18/18</td>
+        </tr>
+        
+        <tr>
+            <td class="font-mono text-xs">grafana-alert-rules</td>
+            <td class="font-semibold">Unified Alerting & Notification Contact Points</td>
+            <td>grafana</td>
+            <td><span class="badge bg-blue">OPERATIONAL</span></td>
+            <td class="text-xs">grafana-template-variables</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono text-green">18/18</td>
+        </tr>
+        
+        <tr>
+            <td class="font-mono text-xs">am-route-tree</td>
+            <td class="font-semibold">Routing Trees, Grouping & Group Wait/Interval</td>
+            <td>alertmanager</td>
+            <td><span class="badge bg-blue">OPERATIONAL</span></td>
+            <td class="text-xs">None (Entry Point)</td>
+            <td class="text-center font-mono">2</td>
+            <td class="text-center font-mono">2</td>
+            <td class="text-center font-mono">2</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono text-green">18/18</td>
+        </tr>
+        
+        <tr>
+            <td class="font-mono text-xs">am-inhibitions-silences</td>
+            <td class="font-semibold">Alert Inhibition Rules & Matcher Silences</td>
+            <td>alertmanager</td>
+            <td><span class="badge bg-blue">OPERATIONAL</span></td>
+            <td class="text-xs">am-route-tree</td>
+            <td class="text-center font-mono">26</td>
+            <td class="text-center font-mono">26</td>
+            <td class="text-center font-mono">26</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono text-green">18/18</td>
+        </tr>
+        
+        <tr>
+            <td class="font-mono text-xs">am-high-availability</td>
+            <td class="font-semibold">Mesh Gossip Protocol & Cluster Split-Brain</td>
+            <td>alertmanager</td>
+            <td><span class="badge bg-green">PRODUCTION-MASTERY</span></td>
+            <td class="text-xs">am-inhibitions-silences</td>
+            <td class="text-center font-mono">2</td>
+            <td class="text-center font-mono">2</td>
+            <td class="text-center font-mono">2</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono text-green">18/18</td>
+        </tr>
+        
+        <tr>
+            <td class="font-mono text-xs">loki-log-streams</td>
+            <td class="font-semibold">Label-Based Streams & Chunk Storage</td>
+            <td>loki</td>
+            <td><span class="badge bg-blue">OPERATIONAL</span></td>
+            <td class="text-xs">None (Entry Point)</td>
+            <td class="text-center font-mono">3</td>
+            <td class="text-center font-mono">3</td>
+            <td class="text-center font-mono">3</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono text-green">18/18</td>
+        </tr>
+        
+        <tr>
+            <td class="font-mono text-xs">loki-logql-parsing</td>
+            <td class="font-semibold">LogQL Filter Expressions, JSON & Unpack</td>
+            <td>loki</td>
+            <td><span class="badge bg-blue">OPERATIONAL</span></td>
+            <td class="text-xs">loki-log-streams</td>
+            <td class="text-center font-mono">3</td>
+            <td class="text-center font-mono">3</td>
+            <td class="text-center font-mono">3</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono text-green">18/18</td>
+        </tr>
+        
+        <tr>
+            <td class="font-mono text-xs">loki-metrics-from-logs</td>
+            <td class="font-semibold">Deriving Prometheus Metrics from LogQL</td>
+            <td>loki</td>
+            <td><span class="badge bg-green">PRODUCTION-MASTERY</span></td>
+            <td class="text-xs">loki-logql-parsing</td>
+            <td class="text-center font-mono">3</td>
+            <td class="text-center font-mono">3</td>
+            <td class="text-center font-mono">3</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono text-green">18/18</td>
+        </tr>
+        
+        <tr>
+            <td class="font-mono text-xs">otel-traces-spans</td>
+            <td class="font-semibold">TraceContext, Span Anatomy & Baggage</td>
+            <td>opentelemetry</td>
+            <td><span class="badge bg-blue">OPERATIONAL</span></td>
+            <td class="text-xs">None (Entry Point)</td>
+            <td class="text-center font-mono">5</td>
+            <td class="text-center font-mono">5</td>
+            <td class="text-center font-mono">5</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono text-green">18/18</td>
+        </tr>
+        
+        <tr>
+            <td class="font-mono text-xs">otel-collector-pipelines</td>
+            <td class="font-semibold">Receivers, Processors & Exporters</td>
+            <td>opentelemetry</td>
+            <td><span class="badge bg-blue">OPERATIONAL</span></td>
+            <td class="text-xs">otel-traces-spans</td>
+            <td class="text-center font-mono">3</td>
+            <td class="text-center font-mono">3</td>
+            <td class="text-center font-mono">3</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono text-green">18/18</td>
+        </tr>
+        
+        <tr>
+            <td class="font-mono text-xs">otel-tail-sampling</td>
+            <td class="font-semibold">Tail-Based Probabilistic Sampling</td>
+            <td>opentelemetry</td>
+            <td><span class="badge bg-green">PRODUCTION-MASTERY</span></td>
+            <td class="text-xs">otel-collector-pipelines</td>
+            <td class="text-center font-mono">2</td>
+            <td class="text-center font-mono">2</td>
+            <td class="text-center font-mono">2</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono text-green">18/18</td>
+        </tr>
+        
+        <tr>
+            <td class="font-mono text-xs">istio-control-plane</td>
+            <td class="font-semibold">Istiod, Envoy Sidecar Proxy Injection</td>
+            <td>istio</td>
+            <td><span class="badge bg-blue">OPERATIONAL</span></td>
+            <td class="text-xs">None (Entry Point)</td>
+            <td class="text-center font-mono">5</td>
+            <td class="text-center font-mono">5</td>
+            <td class="text-center font-mono">5</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono text-green">18/18</td>
+        </tr>
+        
+        <tr>
+            <td class="font-mono text-xs">istio-virtual-service</td>
+            <td class="font-semibold">VirtualService, DestinationRule & Canary</td>
+            <td>istio</td>
+            <td><span class="badge bg-blue">OPERATIONAL</span></td>
+            <td class="text-xs">istio-control-plane</td>
+            <td class="text-center font-mono">2</td>
+            <td class="text-center font-mono">2</td>
+            <td class="text-center font-mono">2</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono text-green">18/18</td>
+        </tr>
+        
+        <tr>
+            <td class="font-mono text-xs">istio-mtls-peer-auth</td>
+            <td class="font-semibold">PeerAuthentication Strict mTLS & Spiffe ID</td>
+            <td>istio</td>
+            <td><span class="badge bg-green">PRODUCTION-MASTERY</span></td>
+            <td class="text-xs">istio-virtual-service</td>
+            <td class="text-center font-mono">3</td>
+            <td class="text-center font-mono">3</td>
+            <td class="text-center font-mono">3</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono text-green">18/18</td>
+        </tr>
+        
+        <tr>
+            <td class="font-mono text-xs">istio-fault-injection</td>
+            <td class="font-semibold">HTTP Delay, Abort & Circuit Breaking</td>
+            <td>istio</td>
+            <td><span class="badge bg-green">PRODUCTION-MASTERY</span></td>
+            <td class="text-xs">istio-mtls-peer-auth</td>
+            <td class="text-center font-mono">2</td>
+            <td class="text-center font-mono">2</td>
+            <td class="text-center font-mono">2</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono text-green">18/18</td>
+        </tr>
+        
+        <tr>
+            <td class="font-mono text-xs">eks-control-plane</td>
+            <td class="font-semibold">Managed Control Plane, VPC CNI & Subnets</td>
+            <td>aws-eks</td>
+            <td><span class="badge bg-blue">OPERATIONAL</span></td>
+            <td class="text-xs">None (Entry Point)</td>
+            <td class="text-center font-mono">4</td>
+            <td class="text-center font-mono">4</td>
+            <td class="text-center font-mono">4</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono text-green">18/18</td>
+        </tr>
+        
+        <tr>
+            <td class="font-mono text-xs">eks-irsa-oidc</td>
+            <td class="font-semibold">IAM Roles for Service Accounts (IRSA)</td>
+            <td>aws-eks</td>
+            <td><span class="badge bg-blue">OPERATIONAL</span></td>
+            <td class="text-xs">eks-control-plane</td>
+            <td class="text-center font-mono">2</td>
+            <td class="text-center font-mono">2</td>
+            <td class="text-center font-mono">2</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono text-green">18/18</td>
+        </tr>
+        
+        <tr>
+            <td class="font-mono text-xs">eks-karpenter-autoscaling</td>
+            <td class="font-semibold">Karpenter NodePools & EC2 Spot Fleets</td>
+            <td>aws-eks</td>
+            <td><span class="badge bg-green">PRODUCTION-MASTERY</span></td>
+            <td class="text-xs">eks-irsa-oidc</td>
+            <td class="text-center font-mono">2</td>
+            <td class="text-center font-mono">2</td>
+            <td class="text-center font-mono">2</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono text-green">18/18</td>
+        </tr>
+        
+        <tr>
+            <td class="font-mono text-xs">eks-alb-ingress</td>
+            <td class="font-semibold">AWS Load Balancer Controller & TargetGroups</td>
+            <td>aws-eks</td>
+            <td><span class="badge bg-green">PRODUCTION-MASTERY</span></td>
+            <td class="text-xs">eks-control-plane</td>
+            <td class="text-center font-mono">31</td>
+            <td class="text-center font-mono">31</td>
+            <td class="text-center font-mono">31</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono text-green">18/18</td>
+        </tr>
+        
+        <tr>
+            <td class="font-mono text-xs">sec-least-privilege</td>
+            <td class="font-semibold">Linux Capabilities & Non-Root Containers</td>
+            <td>devsecops</td>
+            <td><span class="badge bg-blue">OPERATIONAL</span></td>
+            <td class="text-xs">None (Entry Point)</td>
+            <td class="text-center font-mono">3</td>
+            <td class="text-center font-mono">3</td>
+            <td class="text-center font-mono">3</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono text-green">18/18</td>
+        </tr>
+        
+        <tr>
+            <td class="font-mono text-xs">sec-admission-control</td>
+            <td class="font-semibold">Kyverno / OPA Gatekeeper Policies</td>
+            <td>devsecops</td>
+            <td><span class="badge bg-blue">OPERATIONAL</span></td>
+            <td class="text-xs">sec-least-privilege</td>
+            <td class="text-center font-mono">4</td>
+            <td class="text-center font-mono">4</td>
+            <td class="text-center font-mono">4</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono text-green">18/18</td>
+        </tr>
+        
+        <tr>
+            <td class="font-mono text-xs">sec-secret-encryption</td>
+            <td class="font-semibold">SealedSecrets, Vault & KMS Envelope Encryption</td>
+            <td>devsecops</td>
+            <td><span class="badge bg-green">PRODUCTION-MASTERY</span></td>
+            <td class="text-xs">sec-admission-control</td>
+            <td class="text-center font-mono">3</td>
+            <td class="text-center font-mono">3</td>
+            <td class="text-center font-mono">3</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono text-green">18/18</td>
+        </tr>
+        
+        <tr>
+            <td class="font-mono text-xs">sec-supply-chain</td>
+            <td class="font-semibold">Cosign Signatures, Syft SBOM & SLSA</td>
+            <td>devsecops</td>
+            <td><span class="badge bg-green">PRODUCTION-MASTERY</span></td>
+            <td class="text-xs">sec-least-privilege</td>
+            <td class="text-center font-mono">2</td>
+            <td class="text-center font-mono">2</td>
+            <td class="text-center font-mono">2</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono text-green">18/18</td>
+        </tr>
+        
+        <tr>
+            <td class="font-mono text-xs">pe-internal-developer-portal</td>
+            <td class="font-semibold">Backstage Service Catalog & Scaffolding</td>
+            <td>platform-engineering</td>
+            <td><span class="badge bg-blue">OPERATIONAL</span></td>
+            <td class="text-xs">None (Entry Point)</td>
+            <td class="text-center font-mono">6</td>
+            <td class="text-center font-mono">6</td>
+            <td class="text-center font-mono">6</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono text-green">18/18</td>
+        </tr>
+        
+        <tr>
+            <td class="font-mono text-xs">pe-golden-paths</td>
+            <td class="font-semibold">Standardized Microservice Blueprints</td>
+            <td>platform-engineering</td>
+            <td><span class="badge bg-blue">OPERATIONAL</span></td>
+            <td class="text-xs">pe-internal-developer-portal</td>
+            <td class="text-center font-mono">3</td>
+            <td class="text-center font-mono">3</td>
+            <td class="text-center font-mono">3</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono text-green">18/18</td>
+        </tr>
+        
+        <tr>
+            <td class="font-mono text-xs">pe-ephemeral-environments</td>
+            <td class="font-semibold">Dynamic PR Environments & Automated Teardown</td>
+            <td>platform-engineering</td>
+            <td><span class="badge bg-green">PRODUCTION-MASTERY</span></td>
+            <td class="text-xs">pe-golden-paths</td>
+            <td class="text-center font-mono">6</td>
+            <td class="text-center font-mono">6</td>
+            <td class="text-center font-mono">6</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono text-green">18/18</td>
+        </tr>
+        
+        <tr>
+            <td class="font-mono text-xs">sre-sli-slo-error-budget</td>
+            <td class="font-semibold">SLIs, SLOs & Multi-Window Burn Rates</td>
+            <td>sre-resilience</td>
+            <td><span class="badge bg-blue">OPERATIONAL</span></td>
+            <td class="text-xs">None (Entry Point)</td>
+            <td class="text-center font-mono">3</td>
+            <td class="text-center font-mono">3</td>
+            <td class="text-center font-mono">3</td>
+            <td class="text-center font-mono">2</td>
+            <td class="text-center font-mono text-green">18/18</td>
+        </tr>
+        
+        <tr>
+            <td class="font-mono text-xs">sre-incident-war-room</td>
+            <td class="font-semibold">Incident Command, Roles & Timeline Triage</td>
+            <td>sre-resilience</td>
+            <td><span class="badge bg-blue">OPERATIONAL</span></td>
+            <td class="text-xs">sre-sli-slo-error-budget</td>
+            <td class="text-center font-mono">3</td>
+            <td class="text-center font-mono">3</td>
+            <td class="text-center font-mono">3</td>
+            <td class="text-center font-mono">2</td>
+            <td class="text-center font-mono text-green">18/18</td>
+        </tr>
+        
+        <tr>
+            <td class="font-mono text-xs">sre-cascading-failures</td>
+            <td class="font-semibold">Circuit Breakers, Throttling & Deadline Propagation</td>
+            <td>sre-resilience</td>
+            <td><span class="badge bg-blue">OPERATIONAL</span></td>
+            <td class="text-xs">sre-incident-war-room</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono">1</td>
+            <td class="text-center font-mono text-green">18/18</td>
+        </tr>
+        
+        <tr>
+            <td class="font-mono text-xs">sre-blameless-postmortem</td>
+            <td class="font-semibold">Timeline Reconstruction & Action Items</td>
+            <td>sre-resilience</td>
+            <td><span class="badge bg-green">PRODUCTION-MASTERY</span></td>
+            <td class="text-xs">sre-cascading-failures</td>
+            <td class="text-center font-mono">3</td>
+            <td class="text-center font-mono">3</td>
+            <td class="text-center font-mono">3</td>
+            <td class="text-center font-mono">2</td>
+            <td class="text-center font-mono text-green">18/18</td>
+        </tr>
+        
+        </tbody>
+    </table>
+</body>
+</html>

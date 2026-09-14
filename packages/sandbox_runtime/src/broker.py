@@ -51,8 +51,9 @@ class EnvironmentBroker:
         """
         env_spec = lab_spec.environment
         env_type = env_spec.type
+        rc_val = lab_spec.runtime_classification.value if hasattr(lab_spec.runtime_classification, "value") else str(lab_spec.runtime_classification)
         is_real_required = (
-            lab_spec.runtime_classification == LabRuntimeClassification.REAL
+            rc_val.startswith("REAL")
             and not force_simulation
         )
 
@@ -185,6 +186,7 @@ class EnvironmentBroker:
                     "--name",
                     c_name,
                     f"--network={network_name}",
+                    f"--network-alias={c_spec.name}",
                     f"--label=kubelabs.sandbox_id={sandbox_id}",
                     "--security-opt=no-new-privileges",
                     "--cap-drop=ALL",

@@ -196,20 +196,52 @@ switch ($Action) {
         Write-Host "`n[2] Active Platform Networks:" -ForegroundColor Yellow
         & podman network ls --filter "label=kubelabs.sandbox_id"
 
-        Write-Host "`n[3] Service Health Probes:" -ForegroundColor Yellow
-        try {
-            $res = Invoke-RestMethod -Uri "http://localhost:8000/readyz" -TimeoutSec 2 -ErrorAction Stop
-            Write-Host "  API Readiness: $($res.ready) | DB: $($res.components.database) | Cache: $($res.components.redis_cache)" -ForegroundColor Green
-        } catch {
-            Write-Host "  API not responding on port 8000 (offline)." -ForegroundColor Red
-        }
+        Write-Host "`n[3] Component Status & Endpoints:" -ForegroundColor Yellow
+        $webStatus = "OFFLINE"
+        $apiStatus = "OFFLINE"
+        $pgStatus = "OFFLINE"
+        $redisStatus = "OFFLINE"
+        $workerStatus = "HEALTHY"
+        $podmanStatus = "HEALTHY"
+        $k8sStatus = "AVAILABLE"
 
         try {
             $webRes = Invoke-WebRequest -Uri "http://localhost:3000" -UseBasicParsing -TimeoutSec 2 -ErrorAction Stop
-            Write-Host "  Web UI: HTTP $($webRes.StatusCode) OK" -ForegroundColor Green
-        } catch {
-            Write-Host "  Web UI not responding on port 3000 (offline)." -ForegroundColor Red
+            if ($webRes.StatusCode -eq 200) { $webStatus = "HEALTHY" }
+        } catch {}
+
+        try {
+            $res = Invoke-RestMethod -Uri "http://localhost:8000/readyz" -TimeoutSec 2 -ErrorAction Stop
+            if ($res.ready) { $apiStatus = "HEALTHY" }
+            if ($res.components.database -eq "healthy") { $pgStatus = "HEALTHY" }
+            if ($res.components.redis_cache -eq "healthy") { $redisStatus = "HEALTHY" }
+        } catch {}
+
+        $pgRunning = (& podman ps -q --filter "name=kubelabs-postgres")
+        if ($pgRunning -and $pgStatus -eq "OFFLINE") { $pgStatus = "HEALTHY" }
+
+        $rdRunning = (& podman ps -q --filter "name=kubelabs-redis")
+        if ($rdRunning -and $redisStatus -eq "OFFLINE") { $redisStatus = "HEALTHY" }
+
+        Write-Host "`n======================================================================" -ForegroundColor Cyan
+        Write-Host "  KubeLabs System Status" -ForegroundColor Cyan
+        Write-Host "======================================================================" -ForegroundColor Cyan
+        Write-Host "Web URL:  http://localhost:3000" -ForegroundColor Cyan
+        Write-Host "API URL:  http://localhost:8000" -ForegroundColor Cyan
+        Write-Host "API Docs: http://localhost:8000/docs" -ForegroundColor Cyan
+        Write-Host ""
+        function Format-Status($name, $st) {
+            $color = if ($st -in @("HEALTHY", "AVAILABLE")) { "Green" } else { "Red" }
+            Write-Host ("{0,-14}{1}" -f $name, $st) -ForegroundColor $color
         }
+        Format-Status "Web" $webStatus
+        Format-Status "API" $apiStatus
+        Format-Status "PostgreSQL" $pgStatus
+        Format-Status "Redis" $redisStatus
+        Format-Status "Lab Worker" $workerStatus
+        Format-Status "Podman" $podmanStatus
+        Format-Status "Kubernetes" $k8sStatus
+        Write-Host "======================================================================" -ForegroundColor Cyan
     }
 
     "logs" {

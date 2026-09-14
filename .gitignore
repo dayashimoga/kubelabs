@@ -33,6 +33,8 @@ yarn-debug.log*
 yarn-error.log*
 apps/web/dist/
 apps/web/node_modules/
+apps/web/coverage/
+coverage/
 
 # OS
 .DS_Store

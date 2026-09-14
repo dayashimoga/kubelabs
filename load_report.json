@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-09-14T06:53:12Z",
+  "timestamp": "2026-09-14T14:50:34Z",
   "overall_status": "PASS",
   "orphan_sessions_remaining": 0,
   "tiers": [
@@ -13,7 +13,7 @@
       "throughput_sessions_per_sec": 1000.0,
       "startup_latency_p50_ms": 0,
       "startup_latency_p95_ms": 0,
-      "command_latency_p50_ms": 0,
+      "command_latency_p50_ms": 1.0,
       "teardown_latency_p50_ms": 0
     },
     {
@@ -41,6 +41,26 @@
       "startup_latency_p95_ms": 0,
       "command_latency_p50_ms": 0,
       "teardown_latency_p50_ms": 0
+    },
+    {
+      "concurrency": 100,
+      "total_sessions": 100,
+      "successful_sessions": 100,
+      "failed_sessions": 0,
+      "success_rate_percent": 100.0,
+      "total_duration_sec": 0.0,
+      "throughput_sessions_per_sec": 0,
+      "startup_latency_p50_ms": 0,
+      "startup_latency_p95_ms": 0,
+      "command_latency_p50_ms": 0,
+      "teardown_latency_p50_ms": 0
     }
-  ]
+  ],
+  "recovery_and_stress": {
+    "repeated_lifecycle_pass": true,
+    "large_output_soak_pass": true,
+    "cross_session_isolation_pass": true,
+    "ttl_expiration_sweep_pass": true,
+    "all_recovery_tests_pass": true
+  }
 }

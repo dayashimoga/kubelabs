@@ -35,7 +35,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Inode Starvation in High-Throughput Mail Spool in linux infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with df",
@@ -85,7 +85,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Zombie Process Accumulation & PID Table Exhaustion in linux infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with ps",
@@ -135,7 +135,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose OOM Killer Terminating Critical Gateway Daemon in linux infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -185,7 +185,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose cgroups v2 Memory High Reclaim Latency Spikes in linux infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -235,7 +235,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Uninterruptible Sleep (D State) Driving High Load in linux infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with vmstat",
@@ -285,7 +285,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Dirty Page Writeback Stalls During Heavy Ingestion in linux infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -335,7 +335,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose File Descriptor Starvation in Web Server in linux infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with lsof",
@@ -385,7 +385,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Netfilter Connection Tracking Table Saturation in linux infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with sysctl",
@@ -435,7 +435,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose TIME_WAIT Socket Accumulation on Reverse Proxy in linux infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with ss",
@@ -485,7 +485,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose systemd Service Deactivated by Dependency Cycle in linux infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with systemctl",
@@ -535,7 +535,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose IPv4 Packet Forwarding Disabled on Gateway Node in linux infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with sysctl",
@@ -585,7 +585,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Thread Creation Rejection under nproc Limits in linux infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -635,7 +635,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Clock Drift Triggering TLS Handshake Errors in linux infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with chronyc",
@@ -685,7 +685,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose journald Message Suppression Dropping Error Logs in linux infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with journalctl",
@@ -735,7 +735,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Shared Directory File Deletion Race Condition in linux infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with ls",
@@ -785,7 +785,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Shared Memory tmpfs Saturation Triggering OOM in linux infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with df",
@@ -835,7 +835,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Epoll Event Imbalance across Worker Threads in linux infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with pidstat",
@@ -885,7 +885,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Kernel Ring Buffer Overwrite in Hardware Triage in linux infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with dmesg",
@@ -935,7 +935,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Identifying Blocked Kernel Syscalls via wchan in linux infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -985,7 +985,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose CFS Scheduler Microsecond Quota Throttling in linux infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -1035,7 +1035,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Network SoftIRQ Saturation on Single CPU Core in linux infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -1085,7 +1085,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Audit Daemon Backlog Saturation Freezing Kernel in linux infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with auditctl",
@@ -1135,7 +1135,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Circular Symbolic Links Causing Application Hangs in linux infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with find",
@@ -1185,7 +1185,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Dangerous SUID Executables in Container Image in linux infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with find",
@@ -1235,7 +1235,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Host Kernel Panic Triggered by Out of Memory in linux infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with sysctl",
@@ -1286,7 +1286,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Pipeline Silent Failure Masking with set -eo pipefail in bash infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with echo",
@@ -1336,7 +1336,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Temporary Artifact Cleanup via trap EXIT Handlers in bash infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -1386,7 +1386,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Word Splitting and Glob Expansion in Variable Paths in bash infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with shellcheck",
@@ -1436,7 +1436,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Preventing Overlapping Script Executions with flock in bash infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with ps",
@@ -1486,7 +1486,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Variable Mutation Loss in Piped While Loops in bash infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -1536,7 +1536,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Unintended Parameter Expansion in Config Heredocs in bash infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -1586,7 +1586,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Splitting Delimited Records with Custom IFS in bash infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with head",
@@ -1636,7 +1636,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Handling Filenames with Spaces using xargs -0 in bash infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with find",
@@ -1686,7 +1686,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Multiline Stream Pattern Replacement with Sed in bash infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -1736,7 +1736,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Column Extraction with Custom Awk Field Separators in bash infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with awk",
@@ -1786,7 +1786,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Forwarding SIGTERM to Child Processes in Docker in bash infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -1836,7 +1836,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Environment Variable Inheritance across Subshells in bash infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -1886,7 +1886,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Robust CLI Option Parsing with Built-In getopts in bash infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -1936,7 +1936,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Protecting Configuration Constants with readonly in bash infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -1986,7 +1986,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Direct Output Diffing via Process Substitution in bash infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -2036,7 +2036,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Sanitizing Arbitrary Code Execution in eval in bash infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -2086,7 +2086,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Preventing Unmatched Glob Literals with nullglob in bash infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -2136,7 +2136,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Secure Temporary File Allocation with mktemp in bash infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -2186,7 +2186,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Preserving Whitespace in Array Slicing Operations in bash infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -2236,7 +2236,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Checking Binary Dependencies with command -v in bash infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -2286,7 +2286,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Advanced Pattern Matching with Extended Globs (extglob) in bash infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with shopt",
@@ -2336,7 +2336,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Bidirectional Process IPC via Coprocess Descriptors in bash infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -2386,7 +2386,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Unofficial Bash Strict Mode Header Standard in bash infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -2436,7 +2436,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Key-Value Configuration Parsing with declare -A in bash infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -2486,7 +2486,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Disabling Unintended History Expansion in Scripts in bash infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -2537,7 +2537,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Rescuing Unreferenced Commits from Detached HEAD in git infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with git",
@@ -2555,7 +2555,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving git object database in a live git cluster?"],
             topology=_make_topology("git-detached-head-recovery", "git"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/git /etc/git"], failure_injection_commands=["touch /tmp/git-detached-head-recovery_active"]),
             tasks=[
                 TaskSpec(
@@ -2587,7 +2587,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Interactive Rebase Merge Conflict Resolution Loop in git infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with git",
@@ -2605,7 +2605,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving git rebase sequencer in a live git cluster?"],
             topology=_make_topology("git-rebase-conflict-loop", "git"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/git /etc/git"], failure_injection_commands=["touch /tmp/git-rebase-conflict-loop_active"]),
             tasks=[
                 TaskSpec(
@@ -2637,7 +2637,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Restoring Accidentally Deleted Branch via Reflog in git infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with git",
@@ -2655,7 +2655,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving git reflog history in a live git cluster?"],
             topology=_make_topology("git-reflog-deleted-branch", "git"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/git /etc/git"], failure_injection_commands=["touch /tmp/git-reflog-deleted-branch_active"]),
             tasks=[
                 TaskSpec(
@@ -2687,7 +2687,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Git Submodule Detached Commit SHA Pointer Drift in git infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with git",
@@ -2705,7 +2705,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving git submodule manager in a live git cluster?"],
             topology=_make_topology("git-submodule-pointer-drift", "git"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/git /etc/git"], failure_injection_commands=["touch /tmp/git-submodule-pointer-drift_active"]),
             tasks=[
                 TaskSpec(
@@ -2737,7 +2737,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Mass Git Diff Churn from CRLF Line Ending Shifts in git infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with git",
@@ -2755,7 +2755,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving git line endings filter in a live git cluster?"],
             topology=_make_topology("git-crlf-line-ending-churn", "git"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/git /etc/git"], failure_injection_commands=["touch /tmp/git-crlf-line-ending-churn_active"]),
             tasks=[
                 TaskSpec(
@@ -2787,7 +2787,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Git LFS Smudge Filter Skipping Heavy Asset Download in git infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with git",
@@ -2805,7 +2805,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving git lfs filter engine in a live git cluster?"],
             topology=_make_topology("git-lfs-pointer-not-binary", "git"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/git /etc/git"], failure_injection_commands=["touch /tmp/git-lfs-pointer-not-binary_active"]),
             tasks=[
                 TaskSpec(
@@ -2837,7 +2837,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Repairing Corporate Email Mismatch via filter-repo in git infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with git",
@@ -2855,7 +2855,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving git author metadata in a live git cluster?"],
             topology=_make_topology("git-commit-author-amend", "git"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/git /etc/git"], failure_injection_commands=["touch /tmp/git-commit-author-amend_active"]),
             tasks=[
                 TaskSpec(
@@ -2887,7 +2887,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Supplying Fake Merge Resolution with ours Strategy in git infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with git",
@@ -2905,7 +2905,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving git merge driver in a live git cluster?"],
             topology=_make_topology("git-merge-ours-strategy", "git"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/git /etc/git"], failure_injection_commands=["touch /tmp/git-merge-ours-strategy_active"]),
             tasks=[
                 TaskSpec(
@@ -2937,7 +2937,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Handling Empty Commits during Multi-Commit Cherry-Pick in git infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with git",
@@ -2955,7 +2955,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving git sequencer in a live git cluster?"],
             topology=_make_topology("git-cherry-pick-empty-skip", "git"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/git /etc/git"], failure_injection_commands=["touch /tmp/git-cherry-pick-empty-skip_active"]),
             tasks=[
                 TaskSpec(
@@ -2987,7 +2987,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Recovering Untracked Files Omitted by Standard git stash in git infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with git",
@@ -3005,7 +3005,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving git stash stack in a live git cluster?"],
             topology=_make_topology("git-stash-untracked-loss", "git"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/git /etc/git"], failure_injection_commands=["touch /tmp/git-stash-untracked-loss_active"]),
             tasks=[
                 TaskSpec(
@@ -3037,7 +3037,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose CI Shallow Clone Lacking History for Release Tagging in git infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with git",
@@ -3055,7 +3055,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving git packfile transport in a live git cluster?"],
             topology=_make_topology("git-shallow-clone-unshallow", "git"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/git /etc/git"], failure_injection_commands=["touch /tmp/git-shallow-clone-unshallow_active"]),
             tasks=[
                 TaskSpec(
@@ -3087,7 +3087,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Missing Directory in Git Sparse-Checkout Worktree in git infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with git",
@@ -3105,7 +3105,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving sparse checkout filter in a live git cluster?"],
             topology=_make_topology("git-sparse-checkout-paths", "git"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/git /etc/git"], failure_injection_commands=["touch /tmp/git-sparse-checkout-paths_active"]),
             tasks=[
                 TaskSpec(
@@ -3137,7 +3137,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose GPG Key Expiry Blocking Signed Git Commits in git infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with git",
@@ -3155,7 +3155,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving commit crypto verification in a live git cluster?"],
             topology=_make_topology("git-gpg-sign-commit-fail", "git"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/git /etc/git"], failure_injection_commands=["touch /tmp/git-gpg-sign-commit-fail_active"]),
             tasks=[
                 TaskSpec(
@@ -3187,7 +3187,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Client-Side Pre-Commit Hook Skipped on Missing +x in git infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with ls",
@@ -3205,7 +3205,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving git hooks dispatcher in a live git cluster?"],
             topology=_make_topology("git-hook-executable-bit", "git"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/git /etc/git"], failure_injection_commands=["touch /tmp/git-hook-executable-bit_active"]),
             tasks=[
                 TaskSpec(
@@ -3237,7 +3237,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Packaging Offline Repository History with git bundle in git infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with git",
@@ -3255,7 +3255,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving git bundle transport in a live git cluster?"],
             topology=_make_topology("git-bundle-airgap-backup", "git"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/git /etc/git"], failure_injection_commands=["touch /tmp/git-bundle-airgap-backup_active"]),
             tasks=[
                 TaskSpec(
@@ -3287,7 +3287,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Managing Orphaned Worktrees with git worktree prune in git infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with git",
@@ -3305,7 +3305,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving git linked worktrees in a live git cluster?"],
             topology=_make_topology("git-worktree-lock-prune", "git"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/git /etc/git"], failure_injection_commands=["touch /tmp/git-worktree-lock-prune_active"]),
             tasks=[
                 TaskSpec(
@@ -3337,7 +3337,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Pinning Production Regression via git bisect run in git infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with git",
@@ -3355,7 +3355,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving git bisect search in a live git cluster?"],
             topology=_make_topology("git-bisect-automated-run", "git"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/git /etc/git"], failure_injection_commands=["touch /tmp/git-bisect-automated-run_active"]),
             tasks=[
                 TaskSpec(
@@ -3387,7 +3387,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Speeding up Slow Git Status via core.fsmonitor in git infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with git",
@@ -3405,7 +3405,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving filesystem monitor daemon in a live git cluster?"],
             topology=_make_topology("git-untracked-cache-fsmonitor", "git"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/git /etc/git"], failure_injection_commands=["touch /tmp/git-untracked-cache-fsmonitor_active"]),
             tasks=[
                 TaskSpec(
@@ -3437,7 +3437,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Push Rejected by Remote Branch Protection (ff-only) in git infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with git",
@@ -3455,7 +3455,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving git remote ref update in a live git cluster?"],
             topology=_make_topology("git-fast-forward-only-push", "git"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/git /etc/git"], failure_injection_commands=["touch /tmp/git-fast-forward-only-push_active"]),
             tasks=[
                 TaskSpec(
@@ -3487,7 +3487,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Finding Accurate Divergence Point with merge-base in git infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with git",
@@ -3505,7 +3505,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving commit graph ancestry in a live git cluster?"],
             topology=_make_topology("git-merge-base-fork-point", "git"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/git /etc/git"], failure_injection_commands=["touch /tmp/git-merge-base-fork-point_active"]),
             tasks=[
                 TaskSpec(
@@ -3537,7 +3537,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Detecting Huge Binary Files before Git Push Rejection in git infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with git",
@@ -3555,7 +3555,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving git pre-push validator in a live git cluster?"],
             topology=_make_topology("git-blob-size-quota-exceed", "git"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/git /etc/git"], failure_injection_commands=["touch /tmp/git-blob-size-quota-exceed_active"]),
             tasks=[
                 TaskSpec(
@@ -3587,7 +3587,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Attaching CI Build Metadata to Commits via git notes in git infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with git",
@@ -3605,7 +3605,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving git notes tree in a live git cluster?"],
             topology=_make_topology("git-notes-metadata-attach", "git"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/git /etc/git"], failure_injection_commands=["touch /tmp/git-notes-metadata-attach_active"]),
             tasks=[
                 TaskSpec(
@@ -3637,7 +3637,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Converting Lightweight Tag to Cryptographic Annotated Tag in git infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with git",
@@ -3655,7 +3655,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving git tag ref types in a live git cluster?"],
             topology=_make_topology("git-tag-lightweight-vs-annotated", "git"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/git /etc/git"], failure_injection_commands=["touch /tmp/git-tag-lightweight-vs-annotated_active"]),
             tasks=[
                 TaskSpec(
@@ -3687,7 +3687,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Safe Build Artifact Purging with git clean -xfd in git infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with git",
@@ -3705,7 +3705,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving untracked file cleaner in a live git cluster?"],
             topology=_make_topology("git-clean-dry-run-safety", "git"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/git /etc/git"], failure_injection_commands=["touch /tmp/git-clean-dry-run-safety_active"]),
             tasks=[
                 TaskSpec(
@@ -3737,7 +3737,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Splicing Legacy Repository History using git replace in git infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with git",
@@ -3755,7 +3755,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving git object replacement in a live git cluster?"],
             topology=_make_topology("git-replace-historical-commit", "git"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/git /etc/git"], failure_injection_commands=["touch /tmp/git-replace-historical-commit_active"]),
             tasks=[
                 TaskSpec(
@@ -3788,7 +3788,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose TCP Port Binding Conflict on Microservice Interface in networking infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with ss",
@@ -3806,7 +3806,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving socket bind layer in a live networking cluster?"],
             topology=_make_topology("networking-port-bind-conflict", "networking"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/networking /etc/networking"], failure_injection_commands=["touch /tmp/networking-port-bind-conflict_active"]),
             tasks=[
                 TaskSpec(
@@ -3838,7 +3838,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose TCP SYN Flood Backlog Table Exhaustion in networking infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with netstat",
@@ -3856,7 +3856,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving tcp connection backlog in a live networking cluster?"],
             topology=_make_topology("networking-syn-backlog-exhaustion", "networking"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/networking /etc/networking"], failure_injection_commands=["touch /tmp/networking-syn-backlog-exhaustion_active"]),
             tasks=[
                 TaskSpec(
@@ -3888,7 +3888,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Path MTU Black Hole Dropping Segmented Packets in networking infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with ping",
@@ -3906,7 +3906,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving ip packet fragmentation in a live networking cluster?"],
             topology=_make_topology("networking-mtu-black-hole", "networking"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/networking /etc/networking"], failure_injection_commands=["touch /tmp/networking-mtu-black-hole_active"]),
             tasks=[
                 TaskSpec(
@@ -3938,7 +3938,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Neighbor Discovery Table Overflow (ARP Exhaustion) in networking infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with ip",
@@ -3956,7 +3956,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving kernel neighbor table in a live networking cluster?"],
             topology=_make_topology("networking-arp-neighbor-overflow", "networking"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/networking /etc/networking"], failure_injection_commands=["touch /tmp/networking-arp-neighbor-overflow_active"]),
             tasks=[
                 TaskSpec(
@@ -3988,7 +3988,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Asymmetric Routing Packet Drop by Reverse Path Filter in networking infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with sysctl",
@@ -4006,7 +4006,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving fib reverse lookup in a live networking cluster?"],
             topology=_make_topology("networking-rp-filter-asymmetric", "networking"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/networking /etc/networking"], failure_injection_commands=["touch /tmp/networking-rp-filter-asymmetric_active"]),
             tasks=[
                 TaskSpec(
@@ -4038,7 +4038,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose TCP Window Scale Negotiation Failure Capping Throughput in networking infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with ss",
@@ -4056,7 +4056,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving tcp window scaling in a live networking cluster?"],
             topology=_make_topology("networking-tcp-window-scaling", "networking"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/networking /etc/networking"], failure_injection_commands=["touch /tmp/networking-tcp-window-scaling_active"]),
             tasks=[
                 TaskSpec(
@@ -4088,7 +4088,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Ephemeral Port Exhaustion on Outbound Proxy in networking infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -4106,7 +4106,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving local port range in a live networking cluster?"],
             topology=_make_topology("networking-ephemeral-port-exhaust", "networking"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/networking /etc/networking"], failure_injection_commands=["touch /tmp/networking-ephemeral-port-exhaust_active"]),
             tasks=[
                 TaskSpec(
@@ -4138,7 +4138,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Stateful Firewall Dropping Idle TCP Connections in networking infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -4156,7 +4156,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving tcp keepalive timer in a live networking cluster?"],
             topology=_make_topology("networking-keepalive-drop-firewall", "networking"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/networking /etc/networking"], failure_injection_commands=["touch /tmp/networking-keepalive-drop-firewall_active"]),
             tasks=[
                 TaskSpec(
@@ -4188,7 +4188,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Half-Open Socket Leak in Microservice Connection Pool in networking infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with ss",
@@ -4206,7 +4206,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving tcp socket state in a live networking cluster?"],
             topology=_make_topology("networking-half-open-socket-leak", "networking"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/networking /etc/networking"], failure_injection_commands=["touch /tmp/networking-half-open-socket-leak_active"]),
             tasks=[
                 TaskSpec(
@@ -4238,7 +4238,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Layer 2 Broadcast Storm Loop Freezing Network Switch in networking infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with ip",
@@ -4256,7 +4256,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving ethernet bridging in a live networking cluster?"],
             topology=_make_topology("networking-broadcast-storm-loop", "networking"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/networking /etc/networking"], failure_injection_commands=["touch /tmp/networking-broadcast-storm-loop_active"]),
             tasks=[
                 TaskSpec(
@@ -4288,7 +4288,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Large DNS Response UDP Truncation Falling Back to TCP in networking infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with dig",
@@ -4306,7 +4306,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving dns resolution buffer in a live networking cluster?"],
             topology=_make_topology("networking-dns-udp-truncation", "networking"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/networking /etc/networking"], failure_injection_commands=["touch /tmp/networking-dns-udp-truncation_active"]),
             tasks=[
                 TaskSpec(
@@ -4338,7 +4338,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose VLAN Tagging Configuration Mismatch on Trunk Port in networking infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with ip",
@@ -4356,7 +4356,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving 802.1q vlan header in a live networking cluster?"],
             topology=_make_topology("networking-vlan-tag-mismatch", "networking"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/networking /etc/networking"], failure_injection_commands=["touch /tmp/networking-vlan-tag-mismatch_active"]),
             tasks=[
                 TaskSpec(
@@ -4388,7 +4388,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Interface Promiscuous Mode Leaking Bridge Packets in networking infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with ip",
@@ -4406,7 +4406,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving network interface flags in a live networking cluster?"],
             topology=_make_topology("networking-promiscuous-packet-leak", "networking"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/networking /etc/networking"], failure_injection_commands=["touch /tmp/networking-promiscuous-packet-leak_active"]),
             tasks=[
                 TaskSpec(
@@ -4438,7 +4438,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose ICMP Redirect Attacks Altering Host Routing Table in networking infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with sysctl",
@@ -4456,7 +4456,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving routing table cache in a live networking cluster?"],
             topology=_make_topology("networking-icmp-redirect-spoof", "networking"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/networking /etc/networking"], failure_injection_commands=["touch /tmp/networking-icmp-redirect-spoof_active"]),
             tasks=[
                 TaskSpec(
@@ -4488,7 +4488,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose RST Packet Data Truncation on Socket Close with SO_LINGER in networking infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with ss",
@@ -4506,7 +4506,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving tcp teardown sequence in a live networking cluster?"],
             topology=_make_topology("networking-so-linger-data-loss", "networking"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/networking /etc/networking"], failure_injection_commands=["touch /tmp/networking-so-linger-data-loss_active"]),
             tasks=[
                 TaskSpec(
@@ -4538,7 +4538,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose BGP Peering Session Flapping on Flapping Route Announcement in networking infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with birdc",
@@ -4556,7 +4556,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving bgp state machine in a live networking cluster?"],
             topology=_make_topology("networking-bgp-route-flapping", "networking"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/networking /etc/networking"], failure_injection_commands=["touch /tmp/networking-bgp-route-flapping_active"]),
             tasks=[
                 TaskSpec(
@@ -4588,7 +4588,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Gratuitous ARP Packet Storm Triggered by IP Conflict in networking infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with arping",
@@ -4606,7 +4606,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving arp broadcast resolution in a live networking cluster?"],
             topology=_make_topology("networking-ip-address-conflict", "networking"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/networking /etc/networking"], failure_injection_commands=["touch /tmp/networking-ip-address-conflict_active"]),
             tasks=[
                 TaskSpec(
@@ -4638,7 +4638,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose TCP RST Generation upon Closing Socket with Unread Data in networking infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with ss",
@@ -4656,7 +4656,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving socket receive buffer in a live networking cluster?"],
             topology=_make_topology("networking-tcp-rst-unread-data", "networking"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/networking /etc/networking"], failure_injection_commands=["touch /tmp/networking-tcp-rst-unread-data_active"]),
             tasks=[
                 TaskSpec(
@@ -4688,7 +4688,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Multicast Packet Loss Due to Missing IGMP Querier in networking infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with ip",
@@ -4706,7 +4706,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving multicast routing in a live networking cluster?"],
             topology=_make_topology("networking-multicast-igmp-snoop", "networking"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/networking /etc/networking"], failure_injection_commands=["touch /tmp/networking-multicast-igmp-snoop_active"]),
             tasks=[
                 TaskSpec(
@@ -4738,7 +4738,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Container Communication Loopback Failure on Bridge in networking infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with bridge",
@@ -4756,7 +4756,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving bridge forwarding in a live networking cluster?"],
             topology=_make_topology("networking-bridge-hairpin-mode", "networking"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/networking /etc/networking"], failure_injection_commands=["touch /tmp/networking-bridge-hairpin-mode_active"]),
             tasks=[
                 TaskSpec(
@@ -4788,7 +4788,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Localhost Communication Failure on Inactive Loopback in networking infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with ip",
@@ -4806,7 +4806,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving loopback interface in a live networking cluster?"],
             topology=_make_topology("networking-loopback-down-failure", "networking"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/networking /etc/networking"], failure_injection_commands=["touch /tmp/networking-loopback-down-failure_active"]),
             tasks=[
                 TaskSpec(
@@ -4838,7 +4838,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Netfilter Dropping Out-of-Window TCP Packets as INVALID in networking infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with iptables",
@@ -4856,7 +4856,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving conntrack tcp tracking in a live networking cluster?"],
             topology=_make_topology("networking-netfilter-invalid-drop", "networking"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/networking /etc/networking"], failure_injection_commands=["touch /tmp/networking-netfilter-invalid-drop_active"]),
             tasks=[
                 TaskSpec(
@@ -4888,7 +4888,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Search Domain Amplification in /etc/resolv.conf in networking infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -4906,7 +4906,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving dns search list in a live networking cluster?"],
             topology=_make_topology("networking-dns-search-domain-loop", "networking"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/networking /etc/networking"], failure_injection_commands=["touch /tmp/networking-dns-search-domain-loop_active"]),
             tasks=[
                 TaskSpec(
@@ -4938,7 +4938,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Socket Receive Buffer Overflow Dropping UDP Packets in networking infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -4956,7 +4956,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving udp socket buffer in a live networking cluster?"],
             topology=_make_topology("networking-socket-buffer-overrun", "networking"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/networking /etc/networking"], failure_injection_commands=["touch /tmp/networking-socket-buffer-overrun_active"]),
             tasks=[
                 TaskSpec(
@@ -4988,7 +4988,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose TCP Selective Acknowledgment (SACK) Queue Saturation in networking infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with sysctl",
@@ -5006,7 +5006,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving tcp sack processing in a live networking cluster?"],
             topology=_make_topology("networking-tcp-sack-panic-exploit", "networking"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/networking /etc/networking"], failure_injection_commands=["touch /tmp/networking-tcp-sack-panic-exploit_active"]),
             tasks=[
                 TaskSpec(
@@ -5039,7 +5039,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose TLS Certificate Expiry Halting Microservice Handshakes in http-dns-tls infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with openssl",
@@ -5057,7 +5057,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving x509 verification in a live http-dns-tls cluster?"],
             topology=_make_topology("http-dns-tls-tls-cert-expired", "http-dns-tls"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/http-dns-tls /etc/http-dns-tls"], failure_injection_commands=["touch /tmp/http-dns-tls-tls-cert-expired_active"]),
             tasks=[
                 TaskSpec(
@@ -5089,7 +5089,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Missing Intermediate CA Certificate in Server Bundle in http-dns-tls infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with openssl",
@@ -5107,7 +5107,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving x509 trust chain in a live http-dns-tls cluster?"],
             topology=_make_topology("http-dns-tls-missing-intermediate-ca", "http-dns-tls"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/http-dns-tls /etc/http-dns-tls"], failure_injection_commands=["touch /tmp/http-dns-tls-missing-intermediate-ca_active"]),
             tasks=[
                 TaskSpec(
@@ -5139,7 +5139,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose SNI Hostname Header Mismatch on Virtual Host Router in http-dns-tls infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with curl",
@@ -5157,7 +5157,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving tls sni extension in a live http-dns-tls cluster?"],
             topology=_make_topology("http-dns-tls-sni-hostname-mismatch", "http-dns-tls"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/http-dns-tls /etc/http-dns-tls"], failure_injection_commands=["touch /tmp/http-dns-tls-sni-hostname-mismatch_active"]),
             tasks=[
                 TaskSpec(
@@ -5189,7 +5189,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose CoreDNS Upstream Recursive Resolver Query Timeout in http-dns-tls infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with dig",
@@ -5207,7 +5207,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving recursive resolver in a live http-dns-tls cluster?"],
             topology=_make_topology("http-dns-tls-dns-servfail-upstream", "http-dns-tls"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/http-dns-tls /etc/http-dns-tls"], failure_injection_commands=["touch /tmp/http-dns-tls-dns-servfail-upstream_active"]),
             tasks=[
                 TaskSpec(
@@ -5239,7 +5239,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Nginx 502 Bad Gateway Connection Refused by Backend in http-dns-tls infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with grep",
@@ -5257,7 +5257,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving reverse proxy upstream in a live http-dns-tls cluster?"],
             topology=_make_topology("http-dns-tls-http-502-upstream-refused", "http-dns-tls"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/http-dns-tls /etc/http-dns-tls"], failure_injection_commands=["touch /tmp/http-dns-tls-http-502-upstream-refused_active"]),
             tasks=[
                 TaskSpec(
@@ -5289,7 +5289,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Nginx 504 Gateway Timeout on Long Database Query in http-dns-tls infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with grep",
@@ -5307,7 +5307,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving reverse proxy timeout in a live http-dns-tls cluster?"],
             topology=_make_topology("http-dns-tls-http-504-gateway-timeout", "http-dns-tls"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/http-dns-tls /etc/http-dns-tls"], failure_injection_commands=["touch /tmp/http-dns-tls-http-504-gateway-timeout_active"]),
             tasks=[
                 TaskSpec(
@@ -5339,7 +5339,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose HTTP 413 Payload Too Large Rejecting File Uploads in http-dns-tls infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with grep",
@@ -5357,7 +5357,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving request body buffer in a live http-dns-tls cluster?"],
             topology=_make_topology("http-dns-tls-http-413-payload-large", "http-dns-tls"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/http-dns-tls /etc/http-dns-tls"], failure_injection_commands=["touch /tmp/http-dns-tls-http-413-payload-large_active"]),
             tasks=[
                 TaskSpec(
@@ -5389,7 +5389,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose HTTP 429 Too Many Requests Blocking Legitimate API Calls in http-dns-tls infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with grep",
@@ -5407,7 +5407,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving rate limiting engine in a live http-dns-tls cluster?"],
             topology=_make_topology("http-dns-tls-http-429-rate-limit", "http-dns-tls"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/http-dns-tls /etc/http-dns-tls"], failure_injection_commands=["touch /tmp/http-dns-tls-http-429-rate-limit_active"]),
             tasks=[
                 TaskSpec(
@@ -5439,7 +5439,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose TLS 1.3 Cipher Suite Negotiation Failure in http-dns-tls infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with openssl",
@@ -5457,7 +5457,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving tls cipher negotiation in a live http-dns-tls cluster?"],
             topology=_make_topology("http-dns-tls-tls-cipher-mismatch", "http-dns-tls"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/http-dns-tls /etc/http-dns-tls"], failure_injection_commands=["touch /tmp/http-dns-tls-tls-cipher-mismatch_active"]),
             tasks=[
                 TaskSpec(
@@ -5489,7 +5489,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose OCSP Stapling Response Expiration Halting Browsers in http-dns-tls infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with openssl",
@@ -5507,7 +5507,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving ocsp validation in a live http-dns-tls cluster?"],
             topology=_make_topology("http-dns-tls-ocsp-stapling-expired", "http-dns-tls"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/http-dns-tls /etc/http-dns-tls"], failure_injection_commands=["touch /tmp/http-dns-tls-ocsp-stapling-expired_active"]),
             tasks=[
                 TaskSpec(
@@ -5539,7 +5539,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose HTTP/2 GOAWAY Stream Reset on Protocol Error in http-dns-tls infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with curl",
@@ -5557,7 +5557,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving http2 framing layer in a live http-dns-tls cluster?"],
             topology=_make_topology("http-dns-tls-http2-goaway-stream", "http-dns-tls"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/http-dns-tls /etc/http-dns-tls"], failure_injection_commands=["touch /tmp/http-dns-tls-http2-goaway-stream_active"]),
             tasks=[
                 TaskSpec(
@@ -5589,7 +5589,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose DNS CNAME Aliasing Loop Halting Domain Resolution in http-dns-tls infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with dig",
@@ -5607,7 +5607,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving dns record resolver in a live http-dns-tls cluster?"],
             topology=_make_topology("http-dns-tls-dns-cname-loop", "http-dns-tls"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/http-dns-tls /etc/http-dns-tls"], failure_injection_commands=["touch /tmp/http-dns-tls-dns-cname-loop_active"]),
             tasks=[
                 TaskSpec(
@@ -5639,7 +5639,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose DNS PTR Reverse Lookup Failure in Mail Server Check in http-dns-tls infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with dig",
@@ -5657,7 +5657,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving in-addr.arpa lookup in a live http-dns-tls cluster?"],
             topology=_make_topology("http-dns-tls-dns-ptr-reverse-fail", "http-dns-tls"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/http-dns-tls /etc/http-dns-tls"], failure_injection_commands=["touch /tmp/http-dns-tls-dns-ptr-reverse-fail_active"]),
             tasks=[
                 TaskSpec(
@@ -5689,7 +5689,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose CRLF Injection Vulnerability in Custom Header Parser in http-dns-tls infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with curl",
@@ -5707,7 +5707,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving http header framing in a live http-dns-tls cluster?"],
             topology=_make_topology("http-dns-tls-http-header-injection", "http-dns-tls"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/http-dns-tls /etc/http-dns-tls"], failure_injection_commands=["touch /tmp/http-dns-tls-http-header-injection_active"]),
             tasks=[
                 TaskSpec(
@@ -5739,7 +5739,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose HTTP Request Smuggling via Chunked Encoding Desync in http-dns-tls infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with curl",
@@ -5757,7 +5757,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving te.cl smuggling in a live http-dns-tls cluster?"],
             topology=_make_topology("http-dns-tls-chunked-transfer-desync", "http-dns-tls"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/http-dns-tls /etc/http-dns-tls"], failure_injection_commands=["touch /tmp/http-dns-tls-chunked-transfer-desync_active"]),
             tasks=[
                 TaskSpec(
@@ -5789,7 +5789,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose CORS Preflight OPTIONS Request Rejection on API in http-dns-tls infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with curl",
@@ -5807,7 +5807,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving cors origin validator in a live http-dns-tls cluster?"],
             topology=_make_topology("http-dns-tls-cors-preflight-reject", "http-dns-tls"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/http-dns-tls /etc/http-dns-tls"], failure_injection_commands=["touch /tmp/http-dns-tls-cors-preflight-reject_active"]),
             tasks=[
                 TaskSpec(
@@ -5839,7 +5839,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose WebSocket Upgrade Failure (HTTP 400) on Reverse Proxy in http-dns-tls infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with curl",
@@ -5857,7 +5857,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving http upgrade handshake in a live http-dns-tls cluster?"],
             topology=_make_topology("http-dns-tls-websocket-upgrade-fail", "http-dns-tls"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/http-dns-tls /etc/http-dns-tls"], failure_injection_commands=["touch /tmp/http-dns-tls-websocket-upgrade-fail_active"]),
             tasks=[
                 TaskSpec(
@@ -5889,7 +5889,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose HSTS Header Missing max-age and preload Directives in http-dns-tls infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with curl",
@@ -5907,7 +5907,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving strict transport security in a live http-dns-tls cluster?"],
             topology=_make_topology("http-dns-tls-hsts-preload-missing", "http-dns-tls"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/http-dns-tls /etc/http-dns-tls"], failure_injection_commands=["touch /tmp/http-dns-tls-hsts-preload-missing_active"]),
             tasks=[
                 TaskSpec(
@@ -5939,7 +5939,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose HTTP Decompression Bomb Exhausting Server Memory in http-dns-tls infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -5957,7 +5957,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving content-encoding filter in a live http-dns-tls cluster?"],
             topology=_make_topology("http-dns-tls-gzip-decompression-bomb", "http-dns-tls"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/http-dns-tls /etc/http-dns-tls"], failure_injection_commands=["touch /tmp/http-dns-tls-gzip-decompression-bomb_active"]),
             tasks=[
                 TaskSpec(
@@ -5989,7 +5989,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Mutual TLS Client Certificate Rejected by API Gateway in http-dns-tls infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with openssl",
@@ -6007,7 +6007,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving client cert authentication in a live http-dns-tls cluster?"],
             topology=_make_topology("http-dns-tls-mtls-client-cert-reject", "http-dns-tls"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/http-dns-tls /etc/http-dns-tls"], failure_injection_commands=["touch /tmp/http-dns-tls-mtls-client-cert-reject_active"]),
             tasks=[
                 TaskSpec(
@@ -6039,7 +6039,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose DNSSEC RRSIG Signature Validation Failure (SERVFAIL) in http-dns-tls infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with delv",
@@ -6057,7 +6057,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving dnssec crypto validator in a live http-dns-tls cluster?"],
             topology=_make_topology("http-dns-tls-dnssec-bogus-validation", "http-dns-tls"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/http-dns-tls /etc/http-dns-tls"], failure_injection_commands=["touch /tmp/http-dns-tls-dnssec-bogus-validation_active"]),
             tasks=[
                 TaskSpec(
@@ -6089,7 +6089,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Premature TCP Teardown on Upstream Keepalive Discrepancy in http-dns-tls infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with grep",
@@ -6107,7 +6107,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving http keepalive worker in a live http-dns-tls cluster?"],
             topology=_make_topology("http-dns-tls-http-keepalive-drop", "http-dns-tls"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/http-dns-tls /etc/http-dns-tls"], failure_injection_commands=["touch /tmp/http-dns-tls-http-keepalive-drop_active"]),
             tasks=[
                 TaskSpec(
@@ -6139,7 +6139,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose ALPN Protocol Negotiation Failure between Client and Server in http-dns-tls infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with openssl",
@@ -6157,7 +6157,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving alpn tls extension in a live http-dns-tls cluster?"],
             topology=_make_topology("http-dns-tls-alpn-negotiation-fail", "http-dns-tls"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/http-dns-tls /etc/http-dns-tls"], failure_injection_commands=["touch /tmp/http-dns-tls-alpn-negotiation-fail_active"]),
             tasks=[
                 TaskSpec(
@@ -6189,7 +6189,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Weak ETag Validation Causing Stale Microservice Cache in http-dns-tls infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with curl",
@@ -6207,7 +6207,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving http conditional caching in a live http-dns-tls cluster?"],
             topology=_make_topology("http-dns-tls-etag-weak-validator-drift", "http-dns-tls"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/http-dns-tls /etc/http-dns-tls"], failure_injection_commands=["touch /tmp/http-dns-tls-etag-weak-validator-drift_active"]),
             tasks=[
                 TaskSpec(
@@ -6239,7 +6239,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Redirect Loop on Missing X-Forwarded-Proto Header in http-dns-tls infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with curl",
@@ -6257,7 +6257,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving ssl offloading proxy in a live http-dns-tls cluster?"],
             topology=_make_topology("http-dns-tls-forwarded-proto-https-loop", "http-dns-tls"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/http-dns-tls /etc/http-dns-tls"], failure_injection_commands=["touch /tmp/http-dns-tls-forwarded-proto-https-loop_active"]),
             tasks=[
                 TaskSpec(
@@ -6290,7 +6290,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Non-Root File Ownership in Multi-Stage Builds in docker infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with ls",
@@ -6340,7 +6340,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Optimizing Layer Caching & Purging Image Bloat in docker infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with docker",
@@ -6390,7 +6390,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Zombie Process Reaping via Tini Init in Docker in docker infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with docker",
@@ -6440,7 +6440,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Embedded DNS Resolver Failure on Custom Bridge in docker infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with docker",
@@ -6490,7 +6490,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Read-Only Root Filesystem with tmpfs Mounts in docker infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with docker",
@@ -6540,7 +6540,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Host Port Allocation Conflict during Container Start in docker infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with docker",
@@ -6590,7 +6590,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Security Hardening: Eliminating /var/run/docker.sock Mount in docker infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with docker",
@@ -6640,7 +6640,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Detecting and Purging Build Secrets from OCI Layers in docker infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with docker",
@@ -6690,7 +6690,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Container Terminated by CGroup OOM Killer (Exit 137) in docker infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with docker",
@@ -6740,7 +6740,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose json-file Log Driver Exhausting Host Disk Space in docker infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with docker",
@@ -6790,7 +6790,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Container Stop Timeout Escalating to SIGKILL in docker infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with docker",
@@ -6840,7 +6840,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Preventing Accidental Host PID Namespace Sharing in docker infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with docker",
@@ -6890,7 +6890,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Bridge Network Subnet IP Address Depletion in docker infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with docker",
@@ -6940,7 +6940,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose User Namespace Remapping Mismatch on Volume Mount in docker infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with ls",
@@ -6990,7 +6990,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Docker Build Context Bloat from Missing .dockerignore in docker infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with docker",
@@ -7040,7 +7040,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Docker Daemon Failing to Create DOCKER-USER Chains in docker infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with iptables",
@@ -7090,7 +7090,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Entrypoint Array vs CMD Shell String Override Glitch in docker infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with docker",
@@ -7140,7 +7140,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Custom Seccomp Profile Blocking Required ptrace Syscall in docker infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with dmesg",
@@ -7190,7 +7190,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose AppArmor Profile Enforcing Restrictive Mount Denials in docker infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with dmesg",
@@ -7240,7 +7240,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Container Lacking CAP_NET_ADMIN for Wireguard VPN Tunnel in docker infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with docker",
@@ -7290,7 +7290,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Container Denied Access to Host /dev/fuse Character Device in docker infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with ls",
@@ -7340,7 +7340,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Flocker Volume Driver Plugin Daemon Socket Timeout in docker infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with docker",
@@ -7390,7 +7390,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose OverlayFS metacopy Flag Corrupting Hardlink Attributes in docker infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with dmesg",
@@ -7440,7 +7440,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Container Project Quota Exceeded on XFS Root Mount in docker infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with docker",
@@ -7490,7 +7490,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Premature COPY Instruction Busting Downstream Package Cache in docker infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with docker",
@@ -7540,7 +7540,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Docker Compose Crashlooping Service Flapping Host CPU in docker infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with docker",
@@ -7590,7 +7590,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Compose Service Discovery Alias Mismatch Across Stacks in docker infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with docker",
@@ -7640,7 +7640,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Service Launching Before Database Passes Healthcheck in docker infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with docker",
@@ -7690,7 +7690,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Environment Variable File Syntax Error Breaking Parser in docker infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with docker",
@@ -7740,7 +7740,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Healthcheck Interval Too Aggressive Causing False Failure in docker infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with docker",
@@ -7790,7 +7790,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Slow Java Spring Boot App Marked Unhealthy on Startup in docker infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with docker",
@@ -7840,7 +7840,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Insecure Privileged Flag Permitting Host Root Directory Mount in docker infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with docker",
@@ -7890,7 +7890,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Macvlan Network Mode Dropping Host to Container Traffic in docker infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with ip",
@@ -7940,7 +7940,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Docker IPv6 NAT Translation Missing on Dual-Stack Host in docker infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with ip6tables",
@@ -7990,7 +7990,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Docker Daemon Systemd Crash on daemon.json Syntax Error in docker infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with dockerd",
@@ -8040,7 +8040,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Daemon Restart Killing All Active Production Containers in docker infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with systemctl",
@@ -8090,7 +8090,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Container Inheriting Restrictive Default Host ulimits in docker infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with docker",
@@ -8140,7 +8140,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Docker Pull Rejected by Self-Signed HTTP Local Registry in docker infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with docker",
@@ -8190,7 +8190,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Docker Content Trust (DOCKER_CONTENT_TRUST=1) Rejection in docker infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with docker",
@@ -8240,7 +8240,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Multi-Arch Buildx ARM64 Cross-Compilation Emulation Glitch in docker infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with docker",
@@ -8290,7 +8290,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Experimental Docker Build --squash Stripping Labels in docker infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with docker",
@@ -8340,7 +8340,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Unescaped Dollar Signs in Environment Variable Directives in docker infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with docker",
@@ -8390,7 +8390,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Securing Container Workloads against Chroot Escapes in docker infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with docker",
@@ -8440,7 +8440,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Host Core Dumps Writing Sensitive Memory into Container in docker infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -8490,7 +8490,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose PostgreSQL Container Crashing on Low /dev/shm Default (64MB) in docker infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with docker",
@@ -8541,7 +8541,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_KUBERNETES,
             objectives=[
                 "Triage and diagnose Pod CrashLoopBackOff: Missing Mandatory DB Environment Variable in kubernetes infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with kubectl",
@@ -8591,7 +8591,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_KUBERNETES,
             objectives=[
                 "Triage and diagnose Pod CrashLoopBackOff: Command Binary Not Found in Distroless in kubernetes infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with kubectl",
@@ -8641,7 +8641,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_KUBERNETES,
             objectives=[
                 "Triage and diagnose Pod ImagePullBackOff: Semantic Version Tag Typo in Registry in kubernetes infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with kubectl",
@@ -8691,7 +8691,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_KUBERNETES,
             objectives=[
                 "Triage and diagnose Pod ImagePullBackOff: Missing imagePullSecrets for ECR in kubernetes infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with kubectl",
@@ -8741,7 +8741,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_KUBERNETES,
             objectives=[
                 "Triage and diagnose Pod Pending: Unsatisfiable nodeSelector (disktype: nvme) in kubernetes infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with kubectl",
@@ -8791,7 +8791,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_KUBERNETES,
             objectives=[
                 "Triage and diagnose Pod Pending: Untolerated Node Taint (sku=gpu:NoSchedule) in kubernetes infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with kubectl",
@@ -8841,7 +8841,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_KUBERNETES,
             objectives=[
                 "Triage and diagnose Pod OOMKilled: JVM Heap Limit Exceeding Container Limits in kubernetes infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with kubectl",
@@ -8891,7 +8891,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_KUBERNETES,
             objectives=[
                 "Triage and diagnose Pod Evicted: Container Logging Overwhelming Node Ephemeral Storage in kubernetes infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with kubectl",
@@ -8941,7 +8941,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_KUBERNETES,
             objectives=[
                 "Triage and diagnose Pod FailedScheduling: Insufficient CPU Requests Across Nodes in kubernetes infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with kubectl",
@@ -8991,7 +8991,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_KUBERNETES,
             objectives=[
                 "Triage and diagnose Service Zero Endpoints: Selector Label Mismatch against Pod in kubernetes infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with kubectl",
@@ -9041,7 +9041,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_KUBERNETES,
             objectives=[
                 "Triage and diagnose CoreDNS CrashLoopBackOff: Forwarding Loop Detected in resolv.conf in kubernetes infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with kubectl",
@@ -9091,7 +9091,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_KUBERNETES,
             objectives=[
                 "Triage and diagnose NetworkPolicy Default Deny: Pod Unable to Resolve Cluster DNS in kubernetes infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with kubectl",
@@ -9141,7 +9141,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_KUBERNETES,
             objectives=[
                 "Triage and diagnose Liveness Probe Failure: Killing Slow-Starting JVM Container in kubernetes infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with kubectl",
@@ -9191,7 +9191,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_KUBERNETES,
             objectives=[
                 "Triage and diagnose HPA Stuck at Unknown: metrics-server Missing TLS Insecure Flag in kubernetes infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with kubectl",
@@ -9241,7 +9241,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_KUBERNETES,
             objectives=[
                 "Triage and diagnose PVC Pending: Unbound Claim Waiting for StorageClass Provisioner in kubernetes infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with kubectl",
@@ -9291,7 +9291,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_KUBERNETES,
             objectives=[
                 "Triage and diagnose RBAC Denied: ServiceAccount Missing ClusterRoleBinding in kubernetes infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with kubectl",
@@ -9341,7 +9341,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_KUBERNETES,
             objectives=[
                 "Triage and diagnose Node NotReady: Kubelet Triggering DiskPressure Eviction in kubernetes infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with kubectl",
@@ -9391,7 +9391,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_KUBERNETES,
             objectives=[
                 "Triage and diagnose Deployment Rollout Deadlock: maxUnavailable=0 with Single Replica in kubernetes infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with kubectl",
@@ -9441,7 +9441,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_KUBERNETES,
             objectives=[
                 "Triage and diagnose PodDisruptionBudget: maxUnavailable=0 Blocking Node Drain in kubernetes infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with kubectl",
@@ -9491,7 +9491,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_KUBERNETES,
             objectives=[
                 "Triage and diagnose ConfigMap Non-Updating: subPath Volume Mount Freezing Config in kubernetes infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with kubectl",
@@ -9541,7 +9541,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_KUBERNETES,
             objectives=[
                 "Triage and diagnose StatefulSet Headless Service Name Discrepancy in kubernetes infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with kubectl",
@@ -9591,7 +9591,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_KUBERNETES,
             objectives=[
                 "Triage and diagnose StatefulSet Sequential Rollout Stalled on Pod Index 0 in kubernetes infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with kubectl",
@@ -9641,7 +9641,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_KUBERNETES,
             objectives=[
                 "Triage and diagnose DaemonSet Missing Toleration for Control Plane Master Nodes in kubernetes infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with kubectl",
@@ -9691,7 +9691,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_KUBERNETES,
             objectives=[
                 "Triage and diagnose Job Exceeding backoffLimit after Consecutive Failures in kubernetes infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with kubectl",
@@ -9741,7 +9741,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_KUBERNETES,
             objectives=[
                 "Triage and diagnose CronJob ConcurrencyPolicy Forbid Suppressing Execution in kubernetes infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with kubectl",
@@ -9791,7 +9791,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_KUBERNETES,
             objectives=[
                 "Triage and diagnose Immutable Secret Rejecting Hotfix Data Modification in kubernetes infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with kubectl",
@@ -9841,7 +9841,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_KUBERNETES,
             objectives=[
                 "Triage and diagnose Service targetPort Integer Mismatch against ContainerPort in kubernetes infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with kubectl",
@@ -9891,7 +9891,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_KUBERNETES,
             objectives=[
                 "Triage and diagnose ClientIP SessionAffinity Timeout Expiring Connections in kubernetes infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with kubectl",
@@ -9941,7 +9941,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_KUBERNETES,
             objectives=[
                 "Triage and diagnose Ingress Ignored by Missing ingressClassName Specification in kubernetes infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with kubectl",
@@ -9991,7 +9991,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_KUBERNETES,
             objectives=[
                 "Triage and diagnose Nginx Ingress use-regex Annotation Syntax Failure in kubernetes infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with kubectl",
@@ -10041,7 +10041,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_KUBERNETES,
             objectives=[
                 "Triage and diagnose HTTPRoute parentRef Unresolved by Missing Gateway Listener in kubernetes infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with kubectl",
@@ -10091,7 +10091,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_KUBERNETES,
             objectives=[
                 "Triage and diagnose NetworkPolicy Named Port Unresolved by Missing Pod Port Name in kubernetes infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with kubectl",
@@ -10141,7 +10141,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_KUBERNETES,
             objectives=[
                 "Triage and diagnose Calico IPIP Tunnel Encapsulation MTU Packet Drops in kubernetes infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with kubectl",
@@ -10191,7 +10191,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_KUBERNETES,
             objectives=[
                 "Triage and diagnose Cilium eBPF Endpoint Map Exhaustion under High Density in kubernetes infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cilium",
@@ -10241,7 +10241,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_KUBERNETES,
             objectives=[
                 "Triage and diagnose Microservice Experiencing CFS Throttling on 100m Limit in kubernetes infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with kubectl",
@@ -10291,7 +10291,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_KUBERNETES,
             objectives=[
                 "Triage and diagnose Namespace ResourceQuota requests.cpu Hard Ceiling Reached in kubernetes infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with kubectl",
@@ -10341,7 +10341,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_KUBERNETES,
             objectives=[
                 "Triage and diagnose LimitRange Injecting Excessive Default Memory Requests in kubernetes infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with kubectl",
@@ -10391,7 +10391,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_KUBERNETES,
             objectives=[
                 "Triage and diagnose PodTopologySpread maxSkew=1 Unsatisfiable across 3 AZs in kubernetes infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with kubectl",
@@ -10441,7 +10441,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_KUBERNETES,
             objectives=[
                 "Triage and diagnose nodeAffinity preferredDuringScheduling Ignored by Node Pressure in kubernetes infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with kubectl",
@@ -10491,7 +10491,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_KUBERNETES,
             objectives=[
                 "Triage and diagnose Custom NoExecute Taint Evicting All Production Pods in kubernetes infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with kubectl",
@@ -10541,7 +10541,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_KUBERNETES,
             objectives=[
                 "Triage and diagnose Readiness Probe Flapping under Heavy Microservice Traffic in kubernetes infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with kubectl",
@@ -10591,7 +10591,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_KUBERNETES,
             objectives=[
                 "Triage and diagnose Startup Probe failureThreshold Exceeded by Spring Cold Start in kubernetes infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with kubectl",
@@ -10641,7 +10641,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_KUBERNETES,
             objectives=[
                 "Triage and diagnose VerticalPodAutoscaler Eviction Oscillation Loop in kubernetes infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with kubectl",
@@ -10691,7 +10691,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_KUBERNETES,
             objectives=[
                 "Triage and diagnose PodDisruptionBudget minAvailable=100% Blocking Upgrades in kubernetes infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with kubectl",
@@ -10741,7 +10741,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_KUBERNETES,
             objectives=[
                 "Triage and diagnose PV ReclaimPolicy Retain Leaving Volumes in Released State in kubernetes infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with kubectl",
@@ -10791,7 +10791,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_KUBERNETES,
             objectives=[
                 "Triage and diagnose AWS EBS Volume Attachment Stuck in Attaching State in kubernetes infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with kubectl",
@@ -10841,7 +10841,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_KUBERNETES,
             objectives=[
                 "Triage and diagnose ReadWriteOnce Volume Mount Rejected on Multi-Node Schedule in kubernetes infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with kubectl",
@@ -10891,7 +10891,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_KUBERNETES,
             objectives=[
                 "Triage and diagnose automountServiceAccountToken: false Breaking In-Cluster SDK in kubernetes infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with kubectl",
@@ -10941,7 +10941,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_KUBERNETES,
             objectives=[
                 "Triage and diagnose ClusterRole Lacking create/update Verbs for Lease Election in kubernetes infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with kubectl",
@@ -10991,7 +10991,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_KUBERNETES,
             objectives=[
                 "Triage and diagnose Container Crashing on runAsNonRoot with Default UID 0 in kubernetes infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with kubectl",
@@ -11041,7 +11041,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_KUBERNETES,
             objectives=[
                 "Triage and diagnose Application Crashing on ReadOnlyRootFilesystem Writing Logs in kubernetes infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with kubectl",
@@ -11091,7 +11091,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_KUBERNETES,
             objectives=[
                 "Triage and diagnose Kubelet Client Certificate Expired after 365 Days in kubernetes infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with journalctl",
@@ -11141,7 +11141,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_KUBERNETES,
             objectives=[
                 "Triage and diagnose PIDPressure Condition Triggered by Worker Node Fork Bomb in kubernetes infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with kubectl",
@@ -11191,7 +11191,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_KUBERNETES,
             objectives=[
                 "Triage and diagnose Kubelet cgroupfs vs systemd Cgroup Driver Mismatch in kubernetes infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with journalctl",
@@ -11241,7 +11241,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_KUBERNETES,
             objectives=[
                 "Triage and diagnose etcd Alarm NOSPACE Backend Database Exceeding 8GB Quota in kubernetes infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with etcdctl",
@@ -11291,7 +11291,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_KUBERNETES,
             objectives=[
                 "Triage and diagnose etcd Cluster Dropping Connections on Disk Fsync Latency in kubernetes infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with journalctl",
@@ -11341,7 +11341,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_KUBERNETES,
             objectives=[
                 "Triage and diagnose MutatingAdmissionWebhook Timing Out on Network Blip in kubernetes infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with kubectl",
@@ -11391,7 +11391,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_KUBERNETES,
             objectives=[
                 "Triage and diagnose Service IPv6 Address Allocation Failure on Dual-Stack Cluster in kubernetes infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with kubectl",
@@ -11441,7 +11441,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_KUBERNETES,
             objectives=[
                 "Triage and diagnose Nginx Ingress Protocol Negotiation Failure on gRPC Backend in kubernetes infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with kubectl",
@@ -11491,7 +11491,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_KUBERNETES,
             objectives=[
                 "Triage and diagnose StatefulSet Parallel Pod Management Bootstrapping Race in kubernetes infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with kubectl",
@@ -11541,7 +11541,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_KUBERNETES,
             objectives=[
                 "Triage and diagnose kube-proxy Connection Tracking Table Overflow on Node in kubernetes infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with kubectl",
@@ -11591,7 +11591,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_KUBERNETES,
             objectives=[
                 "Triage and diagnose BoundServiceAccountTokenVolume Expiry in Long Running Pod in kubernetes infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with kubectl",
@@ -11641,7 +11641,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_KUBERNETES,
             objectives=[
                 "Triage and diagnose Node Maintained in Unschedulable State after Drain in kubernetes infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with kubectl",
@@ -11691,7 +11691,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_KUBERNETES,
             objectives=[
                 "Triage and diagnose Pod Terminated by Ephemeral Storage Limit Exceeded in kubernetes infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with kubectl",
@@ -11741,7 +11741,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_KUBERNETES,
             objectives=[
                 "Triage and diagnose HPA Thrashing on Short Metric Aggregation Window in kubernetes infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with kubectl",
@@ -11791,7 +11791,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_KUBERNETES,
             objectives=[
                 "Triage and diagnose Deprecated TokenAuthFile Option Breaking API Server Boot in kubernetes infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with journalctl",
@@ -11841,7 +11841,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_KUBERNETES,
             objectives=[
                 "Triage and diagnose EndpointSlice Stale IP Address Retained after Pod Deletion in kubernetes infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with kubectl",
@@ -11891,7 +11891,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_KUBERNETES,
             objectives=[
                 "Triage and diagnose HTTPRoute Cross-Namespace Service Reference Rejected by ReferenceGrant in kubernetes infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with kubectl",
@@ -11941,7 +11941,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_KUBERNETES,
             objectives=[
                 "Triage and diagnose High PriorityClass Pod Preempting Critical System Daemons in kubernetes infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with kubectl",
@@ -11991,7 +11991,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_KUBERNETES,
             objectives=[
                 "Triage and diagnose CSI Node Driver DaemonSet Crashlooping on Worker in kubernetes infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with kubectl",
@@ -12041,7 +12041,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_KUBERNETES,
             objectives=[
                 "Triage and diagnose Admission Webhook FailurePolicy Misconfiguration Blocking Pods in kubernetes infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with kubectl",
@@ -12091,7 +12091,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_KUBERNETES,
             objectives=[
                 "Triage and diagnose HPA Target Average Utilization Set to Zero Percent in kubernetes infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with kubectl",
@@ -12141,7 +12141,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_KUBERNETES,
             objectives=[
                 "Triage and diagnose Kubelet InodePressure Taint Triggering Mass Pod Eviction in kubernetes infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with kubectl",
@@ -12191,7 +12191,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_KUBERNETES,
             objectives=[
                 "Triage and diagnose CoreDNS Custom StubDomain Configuration Syntax Drift in kubernetes infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with kubectl",
@@ -12241,7 +12241,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.REAL,
+            runtime_classification=LabRuntimeClassification.REAL_KUBERNETES,
             objectives=[
                 "Triage and diagnose ExternalName Service Failing on Trailing Dot Omission in kubernetes infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with kubectl",
@@ -12292,7 +12292,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_KUBERNETES,
             objectives=[
                 "Triage and diagnose Helm Release Stuck in pending-upgrade State in helm infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with helm",
@@ -12310,7 +12310,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving helm release storage in a live helm cluster?"],
             topology=_make_topology("helm-release-pending-upgrade", "helm"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.KUBERNETES, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/helm /etc/helm"], failure_injection_commands=["touch /tmp/helm-release-pending-upgrade_active"]),
             tasks=[
                 TaskSpec(
@@ -12342,7 +12342,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_KUBERNETES,
             objectives=[
                 "Triage and diagnose Helm Subchart Dependency Version Conflict in helm infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with helm",
@@ -12360,7 +12360,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving helm chart downloader in a live helm cluster?"],
             topology=_make_topology("helm-subchart-dependency-missing", "helm"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.KUBERNETES, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/helm /etc/helm"], failure_injection_commands=["touch /tmp/helm-subchart-dependency-missing_active"]),
             tasks=[
                 TaskSpec(
@@ -12392,7 +12392,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_KUBERNETES,
             objectives=[
                 "Triage and diagnose Helm values.schema.json Rejecting Invalid Types in helm infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with helm",
@@ -12410,7 +12410,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving json schema validator in a live helm cluster?"],
             topology=_make_topology("helm-values-schema-validation", "helm"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.KUBERNETES, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/helm /etc/helm"], failure_injection_commands=["touch /tmp/helm-values-schema-validation_active"]),
             tasks=[
                 TaskSpec(
@@ -12442,7 +12442,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_KUBERNETES,
             objectives=[
                 "Triage and diagnose Helm Skipping CustomResourceDefinition Upgrades in helm infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with kubectl",
@@ -12460,7 +12460,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving helm crd manager in a live helm cluster?"],
             topology=_make_topology("helm-crd-install-hook-skip", "helm"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.KUBERNETES, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/helm /etc/helm"], failure_injection_commands=["touch /tmp/helm-crd-install-hook-skip_active"]),
             tasks=[
                 TaskSpec(
@@ -12492,7 +12492,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_KUBERNETES,
             objectives=[
                 "Triage and diagnose Helm Release Secret Decryption Failure in helm infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with helm",
@@ -12510,7 +12510,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving k8s secret storage in a live helm cluster?"],
             topology=_make_topology("helm-release-secret-encryption", "helm"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.KUBERNETES, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/helm /etc/helm"], failure_injection_commands=["touch /tmp/helm-release-secret-encryption_active"]),
             tasks=[
                 TaskSpec(
@@ -12542,7 +12542,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_KUBERNETES,
             objectives=[
                 "Triage and diagnose YAML Indentation Syntax Error from Whitespace Chomping in helm infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with helm",
@@ -12560,7 +12560,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving go template engine in a live helm cluster?"],
             topology=_make_topology("helm-template-whitespace-chomp", "helm"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.KUBERNETES, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/helm /etc/helm"], failure_injection_commands=["touch /tmp/helm-template-whitespace-chomp_active"]),
             tasks=[
                 TaskSpec(
@@ -12592,7 +12592,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_KUBERNETES,
             objectives=[
                 "Triage and diagnose Helm --atomic Flag Triggering Premature Rollback in helm infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with helm",
@@ -12610,7 +12610,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving helm client deployment in a live helm cluster?"],
             topology=_make_topology("helm-atomic-rollback-timeout", "helm"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.KUBERNETES, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/helm /etc/helm"], failure_injection_commands=["touch /tmp/helm-atomic-rollback-timeout_active"]),
             tasks=[
                 TaskSpec(
@@ -12642,7 +12642,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_KUBERNETES,
             objectives=[
                 "Triage and diagnose Pre-Install Hook Job Blocking Successive Deployments in helm infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with kubectl",
@@ -12660,7 +12660,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving helm lifecycle hooks in a live helm cluster?"],
             topology=_make_topology("helm-hook-delete-policy-missing", "helm"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.KUBERNETES, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/helm /etc/helm"], failure_injection_commands=["touch /tmp/helm-hook-delete-policy-missing_active"]),
             tasks=[
                 TaskSpec(
@@ -12692,7 +12692,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_KUBERNETES,
             objectives=[
                 "Triage and diagnose Chart Museum OCI Registry Rejecting Duplicate Chart Version in helm infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with helm",
@@ -12710,7 +12710,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving oci chart registry in a live helm cluster?"],
             topology=_make_topology("helm-chart-version-immutability", "helm"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.KUBERNETES, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/helm /etc/helm"], failure_injection_commands=["touch /tmp/helm-chart-version-immutability_active"]),
             tasks=[
                 TaskSpec(
@@ -12742,7 +12742,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_KUBERNETES,
             objectives=[
                 "Triage and diagnose Global Values Overwriting Subchart Specific Overrides in helm infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with helm",
@@ -12760,7 +12760,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving values hierarchy merger in a live helm cluster?"],
             topology=_make_topology("helm-global-values-precedence", "helm"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.KUBERNETES, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/helm /etc/helm"], failure_injection_commands=["touch /tmp/helm-global-values-precedence_active"]),
             tasks=[
                 TaskSpec(
@@ -12792,7 +12792,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_KUBERNETES,
             objectives=[
                 "Triage and diagnose Helm Test Pod Exit Code Failure Blocking CI Gate in helm infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with helm",
@@ -12810,7 +12810,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving helm test engine in a live helm cluster?"],
             topology=_make_topology("helm-helm-test-suite-failure", "helm"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.KUBERNETES, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/helm /etc/helm"], failure_injection_commands=["touch /tmp/helm-helm-test-suite-failure_active"]),
             tasks=[
                 TaskSpec(
@@ -12842,7 +12842,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_KUBERNETES,
             objectives=[
                 "Triage and diagnose Helm --post-renderer Kustomize Executable Failure in helm infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with helm",
@@ -12860,7 +12860,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving helm post renderer in a live helm cluster?"],
             topology=_make_topology("helm-post-render-kustomize-error", "helm"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.KUBERNETES, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/helm /etc/helm"], failure_injection_commands=["touch /tmp/helm-post-render-kustomize-error_active"]),
             tasks=[
                 TaskSpec(
@@ -12892,7 +12892,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_KUBERNETES,
             objectives=[
                 "Triage and diagnose Template .Capabilities.APIVersions Evaluation Error in helm infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with helm",
@@ -12910,7 +12910,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving helm capabilities engine in a live helm cluster?"],
             topology=_make_topology("helm-capabilities-api-versions", "helm"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.KUBERNETES, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/helm /etc/helm"], failure_injection_commands=["touch /tmp/helm-capabilities-api-versions_active"]),
             tasks=[
                 TaskSpec(
@@ -12942,7 +12942,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_KUBERNETES,
             objectives=[
                 "Triage and diagnose Helm lookup Function Returning Empty Map during Dry-Run in helm infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with helm",
@@ -12960,7 +12960,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving helm lookup provider in a live helm cluster?"],
             topology=_make_topology("helm-lookup-function-dry-run", "helm"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.KUBERNETES, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/helm /etc/helm"], failure_injection_commands=["touch /tmp/helm-lookup-function-dry-run_active"]),
             tasks=[
                 TaskSpec(
@@ -12992,7 +12992,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_KUBERNETES,
             objectives=[
                 "Triage and diagnose helm-diff Plugin Highlighting Phantom Deployment Changes in helm infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with helm",
@@ -13010,7 +13010,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving three way merge diff in a live helm cluster?"],
             topology=_make_topology("helm-helm-diff-three-way-merge", "helm"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.KUBERNETES, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/helm /etc/helm"], failure_injection_commands=["touch /tmp/helm-helm-diff-three-way-merge_active"]),
             tasks=[
                 TaskSpec(
@@ -13042,7 +13042,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_KUBERNETES,
             objectives=[
                 "Triage and diagnose Legacy apiVersion: v1 in Chart.yaml Breaking Helm 3 Features in helm infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -13060,7 +13060,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving chart metadata parser in a live helm cluster?"],
             topology=_make_topology("helm-chart-yaml-api-version-v2", "helm"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.KUBERNETES, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/helm /etc/helm"], failure_injection_commands=["touch /tmp/helm-chart-yaml-api-version-v2_active"]),
             tasks=[
                 TaskSpec(
@@ -13092,7 +13092,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_KUBERNETES,
             objectives=[
                 "Triage and diagnose Helm Release Secret Limit Overwhelming Namespace Secret Quota in helm infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with helm",
@@ -13110,7 +13110,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving release history manager in a live helm cluster?"],
             topology=_make_topology("helm-helm-history-max-overflow", "helm"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.KUBERNETES, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/helm /etc/helm"], failure_injection_commands=["touch /tmp/helm-helm-history-max-overflow_active"]),
             tasks=[
                 TaskSpec(
@@ -13142,7 +13142,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_KUBERNETES,
             objectives=[
                 "Triage and diagnose Subchart Alias Name Collision Overwriting Values Keys in helm infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -13160,7 +13160,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving chart dependency parser in a live helm cluster?"],
             topology=_make_topology("helm-subchart-alias-collision", "helm"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.KUBERNETES, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/helm /etc/helm"], failure_injection_commands=["touch /tmp/helm-subchart-alias-collision_active"]),
             tasks=[
                 TaskSpec(
@@ -13192,7 +13192,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_KUBERNETES,
             objectives=[
                 "Triage and diagnose Stale Chart.lock File Diverging from Chart.yaml Requirements in helm infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with helm",
@@ -13210,7 +13210,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving helm lockfile manager in a live helm cluster?"],
             topology=_make_topology("helm-helm-dependency-lock-stale", "helm"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.KUBERNETES, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/helm /etc/helm"], failure_injection_commands=["touch /tmp/helm-helm-dependency-lock-stale_active"]),
             tasks=[
                 TaskSpec(
@@ -13242,7 +13242,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_KUBERNETES,
             objectives=[
                 "Triage and diagnose Clashing define Blocks Overwriting Helper Templates across Charts in helm infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with helm",
@@ -13260,7 +13260,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving go template namespace in a live helm cluster?"],
             topology=_make_topology("helm-template-named-template-clash", "helm"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.KUBERNETES, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/helm /etc/helm"], failure_injection_commands=["touch /tmp/helm-template-named-template-clash_active"]),
             tasks=[
                 TaskSpec(
@@ -13293,7 +13293,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_KUBERNETES,
             objectives=[
                 "Triage and diagnose patchesStrategicMerge Target Selector Mismatch in kustomize infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with kustomize",
@@ -13311,7 +13311,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving kustomize overlay merger in a live kustomize cluster?"],
             topology=_make_topology("kustomize-strategic-merge-mismatch", "kustomize"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.KUBERNETES, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/kustomize /etc/kustomize"], failure_injection_commands=["touch /tmp/kustomize-strategic-merge-mismatch_active"]),
             tasks=[
                 TaskSpec(
@@ -13343,7 +13343,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_KUBERNETES,
             objectives=[
                 "Triage and diagnose configMapGenerator Hash Suffix Cache Busting Drift in kustomize infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with kustomize",
@@ -13361,7 +13361,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving hash suffix generator in a live kustomize cluster?"],
             topology=_make_topology("kustomize-configmap-generator-hash", "kustomize"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.KUBERNETES, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/kustomize /etc/kustomize"], failure_injection_commands=["touch /tmp/kustomize-configmap-generator-hash_active"]),
             tasks=[
                 TaskSpec(
@@ -13393,7 +13393,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_KUBERNETES,
             objectives=[
                 "Triage and diagnose Kustomize Overlay Missing Namespace Transformer in kustomize infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with kustomize",
@@ -13411,7 +13411,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving namespace transformer in a live kustomize cluster?"],
             topology=_make_topology("kustomize-namespace-transformer-skip", "kustomize"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.KUBERNETES, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/kustomize /etc/kustomize"], failure_injection_commands=["touch /tmp/kustomize-namespace-transformer-skip_active"]),
             tasks=[
                 TaskSpec(
@@ -13443,7 +13443,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_KUBERNETES,
             objectives=[
                 "Triage and diagnose Component Layering Collision Overwriting Port Maps in kustomize infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with kustomize",
@@ -13461,7 +13461,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving kustomize components in a live kustomize cluster?"],
             topology=_make_topology("kustomize-component-layering-conflict", "kustomize"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.KUBERNETES, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/kustomize /etc/kustomize"], failure_injection_commands=["touch /tmp/kustomize-component-layering-conflict_active"]),
             tasks=[
                 TaskSpec(
@@ -13493,7 +13493,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_KUBERNETES,
             objectives=[
                 "Triage and diagnose Remote Git Base URL Protocol Timeout in kustomize infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with kustomize",
@@ -13511,7 +13511,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving git getter plugin in a live kustomize cluster?"],
             topology=_make_topology("kustomize-remote-git-base-timeout", "kustomize"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.KUBERNETES, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/kustomize /etc/kustomize"], failure_injection_commands=["touch /tmp/kustomize-remote-git-base-timeout_active"]),
             tasks=[
                 TaskSpec(
@@ -13543,7 +13543,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_KUBERNETES,
             objectives=[
                 "Triage and diagnose Replicas Transformer Overriding Horizontal Pod Autoscaler in kustomize infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with kustomize",
@@ -13561,7 +13561,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving replicas transformer in a live kustomize cluster?"],
             topology=_make_topology("kustomize-replicas-transformer-override", "kustomize"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.KUBERNETES, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/kustomize /etc/kustomize"], failure_injection_commands=["touch /tmp/kustomize-replicas-transformer-override_active"]),
             tasks=[
                 TaskSpec(
@@ -13593,7 +13593,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_KUBERNETES,
             objectives=[
                 "Triage and diagnose commonLabels Mutating Immutable StatefulSet Selector in kustomize infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with kustomize",
@@ -13611,7 +13611,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving common labels transformer in a live kustomize cluster?"],
             topology=_make_topology("kustomize-common-labels-immutable-field", "kustomize"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.KUBERNETES, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/kustomize /etc/kustomize"], failure_injection_commands=["touch /tmp/kustomize-common-labels-immutable-field_active"]),
             tasks=[
                 TaskSpec(
@@ -13643,7 +13643,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_KUBERNETES,
             objectives=[
                 "Triage and diagnose Prefix and Suffix Accumulation Exceeding 63 Character DNS Limit in kustomize infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with kustomize",
@@ -13661,7 +13661,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving name transformer in a live kustomize cluster?"],
             topology=_make_topology("kustomize-name-prefix-suffix-overflow", "kustomize"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.KUBERNETES, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/kustomize /etc/kustomize"], failure_injection_commands=["touch /tmp/kustomize-name-prefix-suffix-overflow_active"]),
             tasks=[
                 TaskSpec(
@@ -13693,7 +13693,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_KUBERNETES,
             objectives=[
                 "Triage and diagnose RFC 6902 JSON Patch Failing on Non-Existent Path Key in kustomize infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with kustomize",
@@ -13711,7 +13711,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving json patch parser in a live kustomize cluster?"],
             topology=_make_topology("kustomize-json-patch-remove-missing", "kustomize"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.KUBERNETES, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/kustomize /etc/kustomize"], failure_injection_commands=["touch /tmp/kustomize-json-patch-remove-missing_active"]),
             tasks=[
                 TaskSpec(
@@ -13743,7 +13743,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_KUBERNETES,
             objectives=[
                 "Triage and diagnose secretGenerator Failing on Missing Local Secret File in kustomize infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with kustomize",
@@ -13761,7 +13761,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving secret generator loader in a live kustomize cluster?"],
             topology=_make_topology("kustomize-secret-generator-files-missing", "kustomize"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.KUBERNETES, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/kustomize /etc/kustomize"], failure_injection_commands=["touch /tmp/kustomize-secret-generator-files-missing_active"]),
             tasks=[
                 TaskSpec(
@@ -13793,7 +13793,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_KUBERNETES,
             objectives=[
                 "Triage and diagnose images Transformer Digest Verification Failure in kustomize infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with kustomize",
@@ -13811,7 +13811,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving image transformer in a live kustomize cluster?"],
             topology=_make_topology("kustomize-images-transformer-digest", "kustomize"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.KUBERNETES, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/kustomize /etc/kustomize"], failure_injection_commands=["touch /tmp/kustomize-images-transformer-digest_active"]),
             tasks=[
                 TaskSpec(
@@ -13843,7 +13843,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_KUBERNETES,
             objectives=[
                 "Triage and diagnose Deprecated vars Directives Failing under Modern Kustomize in kustomize infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with kustomize",
@@ -13861,7 +13861,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving vars replacement engine in a live kustomize cluster?"],
             topology=_make_topology("kustomize-vars-reference-deprecated", "kustomize"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.KUBERNETES, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/kustomize /etc/kustomize"], failure_injection_commands=["touch /tmp/kustomize-vars-reference-deprecated_active"]),
             tasks=[
                 TaskSpec(
@@ -13893,7 +13893,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_KUBERNETES,
             objectives=[
                 "Triage and diagnose Kustomize Output Ordering Failing CRD Before CR Application in kustomize infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with kustomize",
@@ -13911,7 +13911,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving resource ordering engine in a live kustomize cluster?"],
             topology=_make_topology("kustomize-sort-order-crd-dependency", "kustomize"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.KUBERNETES, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/kustomize /etc/kustomize"], failure_injection_commands=["touch /tmp/kustomize-sort-order-crd-dependency_active"]),
             tasks=[
                 TaskSpec(
@@ -13943,7 +13943,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_KUBERNETES,
             objectives=[
                 "Triage and diagnose Custom Resource Schema Validation Failure in Kustomize in kustomize infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with kustomize",
@@ -13961,7 +13961,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving openapi schema validator in a live kustomize cluster?"],
             topology=_make_topology("kustomize-openapi-schema-cache-miss", "kustomize"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.KUBERNETES, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/kustomize /etc/kustomize"], failure_injection_commands=["touch /tmp/kustomize-openapi-schema-cache-miss_active"]),
             tasks=[
                 TaskSpec(
@@ -13993,7 +13993,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_KUBERNETES,
             objectives=[
                 "Triage and diagnose generatorOptions immutable: true Breaking In-Place Updates in kustomize infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with kustomize",
@@ -14011,7 +14011,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving generator options controller in a live kustomize cluster?"],
             topology=_make_topology("kustomize-generator-options-immutable", "kustomize"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.KUBERNETES, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/kustomize /etc/kustomize"], failure_injection_commands=["touch /tmp/kustomize-generator-options-immutable_active"]),
             tasks=[
                 TaskSpec(
@@ -14043,7 +14043,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_KUBERNETES,
             objectives=[
                 "Triage and diagnose Exec Kustomize Plugin Blocked by Security Sandbox in kustomize infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with kustomize",
@@ -14061,7 +14061,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving kustomize plugin runner in a live kustomize cluster?"],
             topology=_make_topology("kustomize-kustomize-plugin-exec-sandbox", "kustomize"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.KUBERNETES, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/kustomize /etc/kustomize"], failure_injection_commands=["touch /tmp/kustomize-kustomize-plugin-exec-sandbox_active"]),
             tasks=[
                 TaskSpec(
@@ -14093,7 +14093,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_KUBERNETES,
             objectives=[
                 "Triage and diagnose commonAnnotations Leaking into Pod Template Metadata in kustomize infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with kustomize",
@@ -14111,7 +14111,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving common annotations transformer in a live kustomize cluster?"],
             topology=_make_topology("kustomize-common-annotations-subpath", "kustomize"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.KUBERNETES, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/kustomize /etc/kustomize"], failure_injection_commands=["touch /tmp/kustomize-common-annotations-subpath_active"]),
             tasks=[
                 TaskSpec(
@@ -14143,7 +14143,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_KUBERNETES,
             objectives=[
                 "Triage and diagnose Kustomize Skipping crds Field in Remote Repository Ingestion in kustomize infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with kustomize",
@@ -14161,7 +14161,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving crd directive parser in a live kustomize cluster?"],
             topology=_make_topology("kustomize-crds-transformer-skip", "kustomize"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.KUBERNETES, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/kustomize /etc/kustomize"], failure_injection_commands=["touch /tmp/kustomize-crds-transformer-skip_active"]),
             tasks=[
                 TaskSpec(
@@ -17946,7 +17946,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.SIMULATED,
             objectives=[
                 "Triage and diagnose Build Pipeline Missing Artifact Upload Path Glob in ci-cd infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -17996,7 +17996,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.SIMULATED,
             objectives=[
                 "Triage and diagnose Docker daemon Connection Refused in CI Runner in ci-cd infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with docker",
@@ -18046,7 +18046,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.SIMULATED,
             objectives=[
                 "Triage and diagnose Race Condition in Concurrent Deployment Stages in ci-cd infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -18096,7 +18096,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.SIMULATED,
             objectives=[
                 "Triage and diagnose Secret Masking Failure in Public Build Log Outputs in ci-cd infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -18146,7 +18146,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.SIMULATED,
             objectives=[
                 "Triage and diagnose GitLab CI Runner /tmp Partition 100% Full in ci-cd infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with df",
@@ -18196,7 +18196,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.SIMULATED,
             objectives=[
                 "Triage and diagnose CI Runner Lacking Credentials for Private Submodule in ci-cd infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -18246,7 +18246,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.SIMULATED,
             objectives=[
                 "Triage and diagnose Infinite Loop in Integration Test Hanging CI Pipeline in ci-cd infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -18296,7 +18296,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.SIMULATED,
             objectives=[
                 "Triage and diagnose Read-Only Job Overwriting Primary Dependency Cache in ci-cd infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -18346,7 +18346,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.SIMULATED,
             objectives=[
                 "Triage and diagnose Dynamic Review App URL Variable Interpolation Error in ci-cd infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -18396,7 +18396,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.SIMULATED,
             objectives=[
                 "Triage and diagnose needs DAG Dependency Cycle Deadlocking Pipeline Execution in ci-cd infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -18446,7 +18446,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.SIMULATED,
             objectives=[
                 "Triage and diagnose CI rules:if Regex Condition Never Evaluating to True in ci-cd infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -18496,7 +18496,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.SIMULATED,
             objectives=[
                 "Triage and diagnose Application Launching Before Postgres Service Healthy in ci-cd infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -18546,7 +18546,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.SIMULATED,
             objectives=[
                 "Triage and diagnose Custom Image Entrypoint Discarding CI Runner Commands in ci-cd infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -18596,7 +18596,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.SIMULATED,
             objectives=[
                 "Triage and diagnose Kaniko Daemonless Container Build Failing on Large Context in ci-cd infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -18646,7 +18646,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.SIMULATED,
             objectives=[
                 "Triage and diagnose Downstream Pipeline Trigger Denied (403 Forbidden) in ci-cd infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -18696,7 +18696,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.SIMULATED,
             objectives=[
                 "Triage and diagnose Malformed JUnit XML Report Failing Test Analytics Parser in ci-cd infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -18746,7 +18746,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.SIMULATED,
             objectives=[
                 "Triage and diagnose Cosign OCI Image Signature Generation Failure in ci-cd infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cosign",
@@ -18796,7 +18796,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.SIMULATED,
             objectives=[
                 "Triage and diagnose Helm Chart Packaging Step Failing on Semantic Version in ci-cd infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with helm",
@@ -18846,7 +18846,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.SIMULATED,
             objectives=[
                 "Triage and diagnose Resource Group Lock Stalling Microservice Deployments in ci-cd infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -18896,7 +18896,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.SIMULATED,
             objectives=[
                 "Triage and diagnose DOCKER_AUTH_CONFIG Secret JSON Syntax Error in ci-cd infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -18946,7 +18946,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.SIMULATED,
             objectives=[
                 "Triage and diagnose SonarQube Quality Gate Breach Halting Merge Progression in ci-cd infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -18996,7 +18996,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.SIMULATED,
             objectives=[
                 "Triage and diagnose Job Stuck in Pending State Waiting on Specific Runner Tag in ci-cd infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -19046,7 +19046,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.SIMULATED,
             objectives=[
                 "Triage and diagnose Transient Flaky Network Calls Lacking retry Directives in ci-cd infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -19096,7 +19096,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.SIMULATED,
             objectives=[
                 "Triage and diagnose Project Variable Overwriting Scheduled Pipeline Variable in ci-cd infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -19146,7 +19146,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.SIMULATED,
             objectives=[
                 "Triage and diagnose Semantic Version Release Script Colliding with Existing Tag in ci-cd infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with git",
@@ -19197,7 +19197,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose Supply Chain Security: Pinning Action to Full 40-Hex SHA in github-actions infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -19215,7 +19215,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving action runner parser in a live github-actions cluster?"],
             topology=_make_topology("github-actions-unpinned-action-sha", "github-actions"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/github-actions /etc/github-actions"], failure_injection_commands=["touch /tmp/github-actions-unpinned-action-sha_active"]),
             tasks=[
                 TaskSpec(
@@ -19247,7 +19247,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose Stale Dependency Restoration from Cache Key Collision in github-actions infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -19265,7 +19265,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving actions/cache action in a live github-actions cluster?"],
             topology=_make_topology("github-actions-cache-key-collision", "github-actions"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/github-actions /etc/github-actions"], failure_injection_commands=["touch /tmp/github-actions-cache-key-collision_active"]),
             tasks=[
                 TaskSpec(
@@ -19297,7 +19297,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose Matrix Build Cancellation on Single Platform Error in github-actions infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -19315,7 +19315,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving matrix job runner in a live github-actions cluster?"],
             topology=_make_topology("github-actions-matrix-build-failure", "github-actions"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/github-actions /etc/github-actions"], failure_injection_commands=["touch /tmp/github-actions-matrix-build-failure_active"]),
             tasks=[
                 TaskSpec(
@@ -19347,7 +19347,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose Missing id-token: write in AWS OIDC AssumeRole Action in github-actions infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -19365,7 +19365,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving github oidc provider in a live github-actions cluster?"],
             topology=_make_topology("github-actions-oidc-token-permission", "github-actions"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/github-actions /etc/github-actions"], failure_injection_commands=["touch /tmp/github-actions-oidc-token-permission_active"]),
             tasks=[
                 TaskSpec(
@@ -19397,7 +19397,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose Premature Workflow Cancellation via concurrency Group in github-actions infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -19415,7 +19415,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving concurrency scheduler in a live github-actions cluster?"],
             topology=_make_topology("github-actions-concurrency-cancel-in-progress", "github-actions"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/github-actions /etc/github-actions"], failure_injection_commands=["touch /tmp/github-actions-concurrency-cancel-in-progress_active"]),
             tasks=[
                 TaskSpec(
@@ -19447,7 +19447,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose Composite Action Step Missing Required shell: Parameter in github-actions infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -19465,7 +19465,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving composite action engine in a live github-actions cluster?"],
             topology=_make_topology("github-actions-composite-action-shell-missing", "github-actions"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/github-actions /etc/github-actions"], failure_injection_commands=["touch /tmp/github-actions-composite-action-shell-missing_active"]),
             tasks=[
                 TaskSpec(
@@ -19497,7 +19497,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose actions/upload-artifact v4 Path and Retention Deprecations in github-actions infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -19515,7 +19515,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving artifact storage api in a live github-actions cluster?"],
             topology=_make_topology("github-actions-artifact-v4-breaking-changes", "github-actions"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/github-actions /etc/github-actions"], failure_injection_commands=["touch /tmp/github-actions-artifact-v4-breaking-changes_active"]),
             tasks=[
                 TaskSpec(
@@ -19547,7 +19547,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose Insecure pull_request_target Trigger Exposing Secrets in github-actions infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -19565,7 +19565,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving workflow security policy in a live github-actions cluster?"],
             topology=_make_topology("github-actions-pull-request-target-secret-leak", "github-actions"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/github-actions /etc/github-actions"], failure_injection_commands=["touch /tmp/github-actions-pull-request-target-secret-leak_active"]),
             tasks=[
                 TaskSpec(
@@ -19597,7 +19597,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose Malformed ${{ }} Syntax in Job if: Expression in github-actions infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -19615,7 +19615,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving workflow expression evaluator in a live github-actions cluster?"],
             topology=_make_topology("github-actions-job-if-expression-syntax", "github-actions"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/github-actions /etc/github-actions"], failure_injection_commands=["touch /tmp/github-actions-job-if-expression-syntax_active"]),
             tasks=[
                 TaskSpec(
@@ -19647,7 +19647,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose Deprecated set-output Command Breaking on Newer Runner in github-actions infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -19665,7 +19665,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving runner environment file in a live github-actions cluster?"],
             topology=_make_topology("github-actions-action-output-set-output-deprecation", "github-actions"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/github-actions /etc/github-actions"], failure_injection_commands=["touch /tmp/github-actions-action-output-set-output-deprecation_active"]),
             tasks=[
                 TaskSpec(
@@ -19697,7 +19697,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose Workflow Queued Indefinitely on Offline Self-Hosted Runner in github-actions infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -19715,7 +19715,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving self-hosted runner pool in a live github-actions cluster?"],
             topology=_make_topology("github-actions-self-hosted-runner-offline", "github-actions"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/github-actions /etc/github-actions"], failure_injection_commands=["touch /tmp/github-actions-self-hosted-runner-offline_active"]),
             tasks=[
                 TaskSpec(
@@ -19747,7 +19747,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose Production Deployment Stalled on Required Environment Review in github-actions infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -19765,7 +19765,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving environment gatekeeper in a live github-actions cluster?"],
             topology=_make_topology("github-actions-environment-protection-review", "github-actions"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/github-actions /etc/github-actions"], failure_injection_commands=["touch /tmp/github-actions-environment-protection-review_active"]),
             tasks=[
                 TaskSpec(
@@ -19797,7 +19797,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose GITHUB_STEP_SUMMARY Size Exceeding 1MB Limit in github-actions infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -19815,7 +19815,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving job summary serializer in a live github-actions cluster?"],
             topology=_make_topology("github-actions-step-summary-markdown-overflow", "github-actions"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/github-actions /etc/github-actions"], failure_injection_commands=["touch /tmp/github-actions-step-summary-markdown-overflow_active"]),
             tasks=[
                 TaskSpec(
@@ -19847,7 +19847,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose Job-Level defaults.run.shell Overwritten by Sub-Steps in github-actions infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -19865,7 +19865,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving defaults configuration parser in a live github-actions cluster?"],
             topology=_make_topology("github-actions-defaults-run-shell-config", "github-actions"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/github-actions /etc/github-actions"], failure_injection_commands=["touch /tmp/github-actions-defaults-run-shell-config_active"]),
             tasks=[
                 TaskSpec(
@@ -19897,7 +19897,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose gh release upload Timing Out on Large Binary Archive in github-actions infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -19915,7 +19915,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving github cli release api in a live github-actions cluster?"],
             topology=_make_topology("github-actions-release-asset-upload-timeout", "github-actions"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/github-actions /etc/github-actions"], failure_injection_commands=["touch /tmp/github-actions-release-asset-upload-timeout_active"]),
             tasks=[
                 TaskSpec(
@@ -19947,7 +19947,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose Dynamic Matrix Generation via fromJson() String Parse in github-actions infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -19965,7 +19965,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving matrix expression engine in a live github-actions cluster?"],
             topology=_make_topology("github-actions-dynamic-matrix-from-script", "github-actions"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/github-actions /etc/github-actions"], failure_injection_commands=["touch /tmp/github-actions-dynamic-matrix-from-script_active"]),
             tasks=[
                 TaskSpec(
@@ -19997,7 +19997,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose Service Container MySQL Port Inaccessible on Localhost in github-actions infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -20015,7 +20015,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving docker service networking in a live github-actions cluster?"],
             topology=_make_topology("github-actions-container-service-network-binding", "github-actions"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/github-actions /etc/github-actions"], failure_injection_commands=["touch /tmp/github-actions-container-service-network-binding_active"]),
             tasks=[
                 TaskSpec(
@@ -20047,7 +20047,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose GITHUB_TOKEN Lacking contents: write for Automatic Tagging in github-actions infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -20065,7 +20065,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving token permission policy in a live github-actions cluster?"],
             topology=_make_topology("github-actions-github-token-contents-read", "github-actions"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/github-actions /etc/github-actions"], failure_injection_commands=["touch /tmp/github-actions-github-token-contents-read_active"]),
             tasks=[
                 TaskSpec(
@@ -20097,7 +20097,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose paths-ignore Filter Accidentally Skipping Production Deployment in github-actions infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -20115,7 +20115,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving path filter matcher in a live github-actions cluster?"],
             topology=_make_topology("github-actions-path-filtering-ignore-docs", "github-actions"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/github-actions /etc/github-actions"], failure_injection_commands=["touch /tmp/github-actions-path-filtering-ignore-docs_active"]),
             tasks=[
                 TaskSpec(
@@ -20147,7 +20147,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose Suboptimal restore-keys Order Restoring Obsolete Node Modules in github-actions infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -20165,7 +20165,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving cache key fallback engine in a live github-actions cluster?"],
             topology=_make_topology("github-actions-cache-restore-keys-order", "github-actions"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/github-actions /etc/github-actions"], failure_injection_commands=["touch /tmp/github-actions-cache-restore-keys-order_active"]),
             tasks=[
                 TaskSpec(
@@ -20197,7 +20197,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose Missing timeout-minutes Directive Permitting 6-Hour Hangs in github-actions infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -20215,7 +20215,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving runner timeout controller in a live github-actions cluster?"],
             topology=_make_topology("github-actions-timeout-minutes-safety-net", "github-actions"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/github-actions /etc/github-actions"], failure_injection_commands=["touch /tmp/github-actions-timeout-minutes-safety-net_active"]),
             tasks=[
                 TaskSpec(
@@ -20247,7 +20247,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose continue-on-error: true Masking Vulnerability Scanner Failure in github-actions infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -20265,7 +20265,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving step failure controller in a live github-actions cluster?"],
             topology=_make_topology("github-actions-step-continue-on-error-mask", "github-actions"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/github-actions /etc/github-actions"], failure_injection_commands=["touch /tmp/github-actions-step-continue-on-error-mask_active"]),
             tasks=[
                 TaskSpec(
@@ -20297,7 +20297,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose Secrets Context Empty in Reusable Workflow Invocation in github-actions infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -20315,7 +20315,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving reusable workflow caller in a live github-actions cluster?"],
             topology=_make_topology("github-actions-secrets-context-unavailable", "github-actions"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/github-actions /etc/github-actions"], failure_injection_commands=["touch /tmp/github-actions-secrets-context-unavailable_active"]),
             tasks=[
                 TaskSpec(
@@ -20347,7 +20347,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose GitHub API Rate Limit (5000 req/hr) Reached by Setup Action in github-actions infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -20365,7 +20365,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving github api client in a live github-actions cluster?"],
             topology=_make_topology("github-actions-rate-limit-github-api", "github-actions"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/github-actions /etc/github-actions"], failure_injection_commands=["touch /tmp/github-actions-rate-limit-github-api_active"]),
             tasks=[
                 TaskSpec(
@@ -20397,7 +20397,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose actions/checkout fetch-depth: 1 Breaking Semantic Release in github-actions infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -20415,7 +20415,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving git clone options in a live github-actions cluster?"],
             topology=_make_topology("github-actions-checkout-fetch-depth-zero", "github-actions"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/github-actions /etc/github-actions"], failure_injection_commands=["touch /tmp/github-actions-checkout-fetch-depth-zero_active"]),
             tasks=[
                 TaskSpec(
@@ -20448,7 +20448,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.SIMULATED,
             objectives=[
                 "Triage and diagnose Argo CD OutOfSync: Live Mutation Overwritten by Controller in argocd infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with argocd",
@@ -20498,7 +20498,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.SIMULATED,
             objectives=[
                 "Triage and diagnose Automated Self-Heal Overwriting Emergency Cluster Fix in argocd infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with argocd",
@@ -20548,7 +20548,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.SIMULATED,
             objectives=[
                 "Triage and diagnose Sync Waves Ordering Deadlock on Migration Job in argocd infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with argocd",
@@ -20598,7 +20598,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.SIMULATED,
             objectives=[
                 "Triage and diagnose Automated Prune Policy Deleting PersistentVolumeClaim in argocd infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with argocd",
@@ -20648,7 +20648,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.SIMULATED,
             objectives=[
                 "Triage and diagnose Repo Server Git Clone Timeout on Monorepo Ingestion in argocd infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with kubectl",
@@ -20698,7 +20698,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.SIMULATED,
             objectives=[
                 "Triage and diagnose App-of-Apps Pattern Infinite Child Application Recursion in argocd infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with kubectl",
@@ -20748,7 +20748,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.SIMULATED,
             objectives=[
                 "Triage and diagnose Target Cluster Connection Secret Lacking Service Account Rights in argocd infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with argocd",
@@ -20798,7 +20798,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.SIMULATED,
             objectives=[
                 "Triage and diagnose Parameters Tab Values Diverging from Git values.yaml in argocd infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with argocd",
@@ -20848,7 +20848,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.SIMULATED,
             objectives=[
                 "Triage and diagnose Kustomize --load-restrictor Flag Blocking External Files in argocd infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with kubectl",
@@ -20898,7 +20898,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.SIMULATED,
             objectives=[
                 "Triage and diagnose Sync Window Block Denying Emergency Production Hotfix in argocd infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with argocd",
@@ -20948,7 +20948,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.SIMULATED,
             objectives=[
                 "Triage and diagnose Argo CD Flagging Legitimate NodeLocal DNS as Orphaned in argocd infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with argocd",
@@ -20998,7 +20998,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.SIMULATED,
             objectives=[
                 "Triage and diagnose Custom Health Assessment Lua Script Crashing on CRD in argocd infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with kubectl",
@@ -21048,7 +21048,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.SIMULATED,
             objectives=[
                 "Triage and diagnose ApplicationSet Git Directory Generator Failing on Regex in argocd infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with kubectl",
@@ -21098,7 +21098,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.SIMULATED,
             objectives=[
                 "Triage and diagnose Git Commit GPG Signature Verification Rejection in argocd infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with argocd",
@@ -21148,7 +21148,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.SIMULATED,
             objectives=[
                 "Triage and diagnose SSO Authentication Loop on Dex OAuth2 Redirect URL in argocd infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with kubectl",
@@ -21198,7 +21198,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.SIMULATED,
             objectives=[
                 "Triage and diagnose Redis Sentinel Quorum Loss Freezing Argo CD Caching in argocd infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with kubectl",
@@ -21248,7 +21248,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.SIMULATED,
             objectives=[
                 "Triage and diagnose Malformed jqPathExpression in ignoreDifferences Spec in argocd infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -21298,7 +21298,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.SIMULATED,
             objectives=[
                 "Triage and diagnose Resource Tracking Method Mutation Losing Managed Objects in argocd infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with argocd",
@@ -21348,7 +21348,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.SIMULATED,
             objectives=[
                 "Triage and diagnose App Project Source Repository Whitelist Rejecting Git URL in argocd infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with kubectl",
@@ -21398,7 +21398,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.SIMULATED,
             objectives=[
                 "Triage and diagnose App Project Destination Cluster and Namespace Denied in argocd infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with argocd",
@@ -21448,7 +21448,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.SIMULATED,
             objectives=[
                 "Triage and diagnose Sync Retry Policy Failing on Rapid Transient Service Failure in argocd infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with argocd",
@@ -21498,7 +21498,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.SIMULATED,
             objectives=[
                 "Triage and diagnose Argo CD Notifications Controller Slack Webhook Timeout in argocd infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with kubectl",
@@ -21548,7 +21548,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.SIMULATED,
             objectives=[
                 "Triage and diagnose Config Management Plugin (CMP) Unix Socket Unreachable in argocd infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with kubectl",
@@ -21598,7 +21598,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.SIMULATED,
             objectives=[
                 "Triage and diagnose GitHub Push Webhook Delivery Dropped by Ingress Firewall in argocd infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with kubectl",
@@ -21648,7 +21648,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.SIMULATED,
             objectives=[
                 "Triage and diagnose Repo Server Container OOMKilled on Massive Helm Render in argocd infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with kubectl",
@@ -21699,7 +21699,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose Prometheus Scrape Timeout on Slow Exporter Endpoint in prometheus infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with curl",
@@ -21717,7 +21717,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving prometheus scraper in a live prometheus cluster?"],
             topology=_make_topology("prometheus-scrape-timeout-target", "prometheus"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/prometheus /etc/prometheus"], failure_injection_commands=["touch /tmp/prometheus-scrape-timeout-target_active"]),
             tasks=[
                 TaskSpec(
@@ -21749,7 +21749,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose High Cardinality User ID Metric Exploding TSDB Memory in prometheus infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with promtool",
@@ -21767,7 +21767,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving tsdb head chunk in a live prometheus cluster?"],
             topology=_make_topology("prometheus-cardinality-explosion", "prometheus"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/prometheus /etc/prometheus"], failure_injection_commands=["touch /tmp/prometheus-cardinality-explosion_active"]),
             tasks=[
                 TaskSpec(
@@ -21799,7 +21799,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose PromQL rate() Counter Reset Anomaly on Pod Restarts in prometheus infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with curl",
@@ -21817,7 +21817,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving promql query engine in a live prometheus cluster?"],
             topology=_make_topology("prometheus-promql-rate-reset", "prometheus"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/prometheus /etc/prometheus"], failure_injection_commands=["touch /tmp/prometheus-promql-rate-reset_active"]),
             tasks=[
                 TaskSpec(
@@ -21849,7 +21849,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose TSDB WAL Corruption Halting Prometheus Server Boot in prometheus infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with journalctl",
@@ -21867,7 +21867,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving write-ahead log replayer in a live prometheus cluster?"],
             topology=_make_topology("prometheus-wal-corruption-crashloop", "prometheus"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/prometheus /etc/prometheus"], failure_injection_commands=["touch /tmp/prometheus-wal-corruption-crashloop_active"]),
             tasks=[
                 TaskSpec(
@@ -21899,7 +21899,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose Metric Relabeling Regex Dropping Required Business Metrics in prometheus infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with promtool",
@@ -21917,7 +21917,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving relabel configuration in a live prometheus cluster?"],
             topology=_make_topology("prometheus-relabel-regex-drop", "prometheus"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/prometheus /etc/prometheus"], failure_injection_commands=["touch /tmp/prometheus-relabel-regex-drop_active"]),
             tasks=[
                 TaskSpec(
@@ -21949,7 +21949,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose Scraped Target Metric Labels Overwriting Prometheus Labels in prometheus infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -21967,7 +21967,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving scrape loop controller in a live prometheus cluster?"],
             topology=_make_topology("prometheus-honor-labels-conflict", "prometheus"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/prometheus /etc/prometheus"], failure_injection_commands=["touch /tmp/prometheus-honor-labels-conflict_active"]),
             tasks=[
                 TaskSpec(
@@ -21999,7 +21999,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose Remote-Write Queue Full Dropping Long-Term Cloud Metrics in prometheus infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with curl",
@@ -22017,7 +22017,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving remote-write storage in a live prometheus cluster?"],
             topology=_make_topology("prometheus-remote-write-backpressure", "prometheus"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/prometheus /etc/prometheus"], failure_injection_commands=["touch /tmp/prometheus-remote-write-backpressure_active"]),
             tasks=[
                 TaskSpec(
@@ -22049,7 +22049,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose Target Scrape Rejected on Exceeding sample_limit in prometheus infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -22067,7 +22067,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving scrape loop governor in a live prometheus cluster?"],
             topology=_make_topology("prometheus-sample-limit-exceeded", "prometheus"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/prometheus /etc/prometheus"], failure_injection_commands=["touch /tmp/prometheus-sample-limit-exceeded_active"]),
             tasks=[
                 TaskSpec(
@@ -22099,7 +22099,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose PromQL histogram_quantile() Calculating NaN on Unsorted Buckets in prometheus infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with curl",
@@ -22117,7 +22117,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving promql quantile calculator in a live prometheus cluster?"],
             topology=_make_topology("prometheus-promql-histogram-bucket-le", "prometheus"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/prometheus /etc/prometheus"], failure_injection_commands=["touch /tmp/prometheus-promql-histogram-bucket-le_active"]),
             tasks=[
                 TaskSpec(
@@ -22149,7 +22149,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose Prometheus Federation Loop Creating Infinite Metric Duplication in prometheus infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with curl",
@@ -22167,7 +22167,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving federation endpoint in a live prometheus cluster?"],
             topology=_make_topology("prometheus-federation-circular-scrape", "prometheus"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/prometheus /etc/prometheus"], failure_injection_commands=["touch /tmp/prometheus-federation-circular-scrape_active"]),
             tasks=[
                 TaskSpec(
@@ -22199,7 +22199,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose Prometheus Alerting Rule Division by Zero in Expr in prometheus infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with promtool",
@@ -22217,7 +22217,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving rules evaluation manager in a live prometheus cluster?"],
             topology=_make_topology("prometheus-alerting-rule-syntax-error", "prometheus"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/prometheus /etc/prometheus"], failure_injection_commands=["touch /tmp/prometheus-alerting-rule-syntax-error_active"]),
             tasks=[
                 TaskSpec(
@@ -22249,7 +22249,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose Disk Exhaustion: retention.time Ignoring Storage Ceiling in prometheus infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with df",
@@ -22267,7 +22267,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving tsdb retention compactor in a live prometheus cluster?"],
             topology=_make_topology("prometheus-retention-time-vs-size", "prometheus"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/prometheus /etc/prometheus"], failure_injection_commands=["touch /tmp/prometheus-retention-time-vs-size_active"]),
             tasks=[
                 TaskSpec(
@@ -22299,7 +22299,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose Blackbox Exporter Probe Failing on Untrusted TLS Cert in prometheus infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with curl",
@@ -22317,7 +22317,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving blackbox probe module in a live prometheus cluster?"],
             topology=_make_topology("prometheus-target-down-blackbox-exporter", "prometheus"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/prometheus /etc/prometheus"], failure_injection_commands=["touch /tmp/prometheus-target-down-blackbox-exporter_active"]),
             tasks=[
                 TaskSpec(
@@ -22349,7 +22349,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose Prometheus Operator ServiceMonitor Selector Mismatch in prometheus infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with kubectl",
@@ -22367,7 +22367,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving service monitor reconciler in a live prometheus cluster?"],
             topology=_make_topology("prometheus-service-monitor-label-mismatch", "prometheus"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/prometheus /etc/prometheus"], failure_injection_commands=["touch /tmp/prometheus-service-monitor-label-mismatch_active"]),
             tasks=[
                 TaskSpec(
@@ -22399,7 +22399,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose kube-state-metrics Emitting Stale Pod Status Metrics in prometheus infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with kubectl",
@@ -22417,7 +22417,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving k8s reflector cache in a live prometheus cluster?"],
             topology=_make_topology("prometheus-kube-state-metrics-resync", "prometheus"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/prometheus /etc/prometheus"], failure_injection_commands=["touch /tmp/prometheus-kube-state-metrics-resync_active"]),
             tasks=[
                 TaskSpec(
@@ -22449,7 +22449,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose Textfile Collector Script Emitting Malformed Syntax in prometheus infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -22467,7 +22467,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving node_exporter collector in a live prometheus cluster?"],
             topology=_make_topology("prometheus-node-exporter-textfile-collector", "prometheus"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/prometheus /etc/prometheus"], failure_injection_commands=["touch /tmp/prometheus-node-exporter-textfile-collector_active"]),
             tasks=[
                 TaskSpec(
@@ -22499,7 +22499,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose Scrape Interval Longer than Sub-Query Range Window in prometheus infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -22517,7 +22517,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving scrape configuration in a live prometheus cluster?"],
             topology=_make_topology("prometheus-scrape-interval-alignment", "prometheus"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/prometheus /etc/prometheus"], failure_injection_commands=["touch /tmp/prometheus-scrape-interval-alignment_active"]),
             tasks=[
                 TaskSpec(
@@ -22549,7 +22549,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose TSDB Block Overlap Error Preventing Historical Compaction in prometheus infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with journalctl",
@@ -22567,7 +22567,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving tsdb block merger in a live prometheus cluster?"],
             topology=_make_topology("prometheus-tsdb-compaction-overlap", "prometheus"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/prometheus /etc/prometheus"], failure_injection_commands=["touch /tmp/prometheus-tsdb-compaction-overlap_active"]),
             tasks=[
                 TaskSpec(
@@ -22599,7 +22599,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose Nested PromQL Subquery Slicing Crashing Memory Usage in prometheus infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with curl",
@@ -22617,7 +22617,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving promql engine execution in a live prometheus cluster?"],
             topology=_make_topology("prometheus-promql-subquery-performance", "prometheus"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/prometheus /etc/prometheus"], failure_injection_commands=["touch /tmp/prometheus-promql-subquery-performance_active"]),
             tasks=[
                 TaskSpec(
@@ -22649,7 +22649,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose Recording Rules Evaluation Interval Lagging Execution in prometheus infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with curl",
@@ -22667,7 +22667,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving rule group scheduler in a live prometheus cluster?"],
             topology=_make_topology("prometheus-recording-rules-evaluation-lag", "prometheus"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/prometheus /etc/prometheus"], failure_injection_commands=["touch /tmp/prometheus-recording-rules-evaluation-lag_active"]),
             tasks=[
                 TaskSpec(
@@ -22699,7 +22699,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose Disabling WAL Compression Inflating Disk Throughput in prometheus infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -22717,7 +22717,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving wal writer compressor in a live prometheus cluster?"],
             topology=_make_topology("prometheus-storage-tsdb-wal-compression", "prometheus"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/prometheus /etc/prometheus"], failure_injection_commands=["touch /tmp/prometheus-storage-tsdb-wal-compression_active"]),
             tasks=[
                 TaskSpec(
@@ -22749,7 +22749,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose Consul Service Discovery Retaining Terminated Services in prometheus infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with curl",
@@ -22767,7 +22767,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving consul sd provider in a live prometheus cluster?"],
             topology=_make_topology("prometheus-consul-sd-deregistration", "prometheus"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/prometheus /etc/prometheus"], failure_injection_commands=["touch /tmp/prometheus-consul-sd-deregistration_active"]),
             tasks=[
                 TaskSpec(
@@ -22799,7 +22799,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose Prometheus Pushgateway Accumulating Stale Batch Metrics in prometheus infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with curl",
@@ -22817,7 +22817,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving pushgateway buffer in a live prometheus cluster?"],
             topology=_make_topology("prometheus-pushgateway-metric-staleness", "prometheus"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/prometheus /etc/prometheus"], failure_injection_commands=["touch /tmp/prometheus-pushgateway-metric-staleness_active"]),
             tasks=[
                 TaskSpec(
@@ -22849,7 +22849,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose metric_relabel_configs vs relabel_configs Execution Order in prometheus infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -22867,7 +22867,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving metric processing pipeline in a live prometheus cluster?"],
             topology=_make_topology("prometheus-label-drop-relabel-phase", "prometheus"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/prometheus /etc/prometheus"], failure_injection_commands=["touch /tmp/prometheus-label-drop-relabel-phase_active"]),
             tasks=[
                 TaskSpec(
@@ -22899,7 +22899,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose OpenTelemetry Exemplars Dropped without Storage Flag in prometheus infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -22917,7 +22917,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving exemplar in-memory ring in a live prometheus cluster?"],
             topology=_make_topology("prometheus-exemplar-storage-disabled", "prometheus"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/prometheus /etc/prometheus"], failure_injection_commands=["touch /tmp/prometheus-exemplar-storage-disabled_active"]),
             tasks=[
                 TaskSpec(
@@ -22950,7 +22950,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose Data Source Gateway Timeout on Long Metric Queries in grafana infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with curl",
@@ -22968,7 +22968,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving grafana backend proxy in a live grafana cluster?"],
             topology=_make_topology("grafana-datasource-proxy-timeout", "grafana"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/grafana /etc/grafana"], failure_injection_commands=["touch /tmp/grafana-datasource-proxy-timeout_active"]),
             tasks=[
                 TaskSpec(
@@ -23000,7 +23000,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose Dashboard Template Variable Returning No Metrics in grafana infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -23018,7 +23018,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving grafana templating in a live grafana cluster?"],
             topology=_make_topology("grafana-dashboard-variable-null", "grafana"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/grafana /etc/grafana"], failure_injection_commands=["touch /tmp/grafana-dashboard-variable-null_active"]),
             tasks=[
                 TaskSpec(
@@ -23050,7 +23050,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose Dashboard Provisioner Unable to Read Configuration File in grafana infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with ls",
@@ -23068,7 +23068,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving dashboard provisioning loader in a live grafana cluster?"],
             topology=_make_topology("grafana-provisioning-file-permissions", "grafana"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/grafana /etc/grafana"], failure_injection_commands=["touch /tmp/grafana-provisioning-file-permissions_active"]),
             tasks=[
                 TaskSpec(
@@ -23100,7 +23100,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose Generic OAuth Login Failing on Redirect URI Mismatch in grafana infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -23118,7 +23118,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving oauth login handler in a live grafana cluster?"],
             topology=_make_topology("grafana-oauth-generic-redirect", "grafana"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/grafana /etc/grafana"], failure_injection_commands=["touch /tmp/grafana-oauth-generic-redirect_active"]),
             tasks=[
                 TaskSpec(
@@ -23150,7 +23150,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose Grafana Image Renderer Plugin Chromium Timeout in grafana infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with kubectl",
@@ -23168,7 +23168,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving chromium render service in a live grafana cluster?"],
             topology=_make_topology("grafana-panel-render-image-plugin", "grafana"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/grafana /etc/grafana"], failure_injection_commands=["touch /tmp/grafana-panel-render-image-plugin_active"]),
             tasks=[
                 TaskSpec(
@@ -23200,7 +23200,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose Grafana SQLite Database Locked on Concurrent User Login in grafana infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with grep",
@@ -23218,7 +23218,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving internal sqlite engine in a live grafana cluster?"],
             topology=_make_topology("grafana-sqlite-database-lock", "grafana"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/grafana /etc/grafana"], failure_injection_commands=["touch /tmp/grafana-sqlite-database-lock_active"]),
             tasks=[
                 TaskSpec(
@@ -23250,7 +23250,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose Unified Alerting Contact Point Routing Rule Deadlock in grafana infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with curl",
@@ -23268,7 +23268,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving unified alert manager in a live grafana cluster?"],
             topology=_make_topology("grafana-alerting-notification-policy", "grafana"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/grafana /etc/grafana"], failure_injection_commands=["touch /tmp/grafana-alerting-notification-policy_active"]),
             tasks=[
                 TaskSpec(
@@ -23300,7 +23300,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose Dashboard Time Range Browser Skew Displaying Blank Panels in grafana infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -23318,7 +23318,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving panel time interval in a live grafana cluster?"],
             topology=_make_topology("grafana-time-range-epoch-skew", "grafana"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/grafana /etc/grafana"], failure_injection_commands=["touch /tmp/grafana-time-range-epoch-skew_active"]),
             tasks=[
                 TaskSpec(
@@ -23350,7 +23350,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose LDAP User Role Mapping Demoting Admin to Viewer in grafana infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -23368,7 +23368,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving ldap authentication engine in a live grafana cluster?"],
             topology=_make_topology("grafana-ldap-group-mapping-sync", "grafana"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/grafana /etc/grafana"], failure_injection_commands=["touch /tmp/grafana-ldap-group-mapping-sync_active"]),
             tasks=[
                 TaskSpec(
@@ -23400,7 +23400,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose Data Source Throttled by CloudWatch / DataDog API Ceiling in grafana infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with curl",
@@ -23418,7 +23418,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving external api data source in a live grafana cluster?"],
             topology=_make_topology("grafana-query-inspector-rate-limit", "grafana"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/grafana /etc/grafana"], failure_injection_commands=["touch /tmp/grafana-query-inspector-rate-limit_active"]),
             tasks=[
                 TaskSpec(
@@ -23450,7 +23450,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose Table Panel Transform Reduce Expression Dropping Columns in grafana infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -23468,7 +23468,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving panel transformation pipeline in a live grafana cluster?"],
             topology=_make_topology("grafana-panel-transform-reduce", "grafana"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/grafana /etc/grafana"], failure_injection_commands=["touch /tmp/grafana-panel-transform-reduce_active"]),
             tasks=[
                 TaskSpec(
@@ -23500,7 +23500,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose Anonymous Access Accidentally Granting Editor Rights in grafana infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -23518,7 +23518,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving auth anonymous settings in a live grafana cluster?"],
             topology=_make_topology("grafana-anonymous-access-org-role", "grafana"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/grafana /etc/grafana"], failure_injection_commands=["touch /tmp/grafana-anonymous-access-org-role_active"]),
             tasks=[
                 TaskSpec(
@@ -23550,7 +23550,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose Community Plugin Blocked by Security Signature Validator in grafana infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with journalctl",
@@ -23568,7 +23568,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving plugin signature verifier in a live grafana cluster?"],
             topology=_make_topology("grafana-plugin-signature-unsigned", "grafana"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/grafana /etc/grafana"], failure_injection_commands=["touch /tmp/grafana-plugin-signature-unsigned_active"]),
             tasks=[
                 TaskSpec(
@@ -23600,7 +23600,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose Data Source Trace-to-Logs Derived Field Regex Mismatch in grafana infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -23618,7 +23618,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving tempo data source integration in a live grafana cluster?"],
             topology=_make_topology("grafana-tempo-trace-to-logs-link", "grafana"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/grafana /etc/grafana"], failure_injection_commands=["touch /tmp/grafana-tempo-trace-to-logs-link_active"]),
             tasks=[
                 TaskSpec(
@@ -23650,7 +23650,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose Service Account Token Expiry Halting Automated Dashboard CI in grafana infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with curl",
@@ -23668,7 +23668,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving service account manager in a live grafana cluster?"],
             topology=_make_topology("grafana-api-key-service-account", "grafana"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/grafana /etc/grafana"], failure_injection_commands=["touch /tmp/grafana-api-key-service-account_active"]),
             tasks=[
                 TaskSpec(
@@ -23700,7 +23700,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose Importing Dashboard JSON Failing on Duplicate UID in grafana infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with curl",
@@ -23718,7 +23718,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving dashboard storage api in a live grafana cluster?"],
             topology=_make_topology("grafana-dashboard-uid-collision", "grafana"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/grafana /etc/grafana"], failure_injection_commands=["touch /tmp/grafana-dashboard-uid-collision_active"]),
             tasks=[
                 TaskSpec(
@@ -23750,7 +23750,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose Grafana Cookie Secure Flag Blocking Plain HTTP Reverse Proxy in grafana infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -23768,7 +23768,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving session cookie manager in a live grafana cluster?"],
             topology=_make_topology("grafana-cookie-secure-httponly", "grafana"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/grafana /etc/grafana"], failure_injection_commands=["touch /tmp/grafana-cookie-secure-httponly_active"]),
             tasks=[
                 TaskSpec(
@@ -23800,7 +23800,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose Grafana Multi-Replica Pods Forcing Repeated Logins in grafana infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -23818,7 +23818,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving session store backend in a live grafana cluster?"],
             topology=_make_topology("grafana-ha-session-storage-redis", "grafana"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/grafana /etc/grafana"], failure_injection_commands=["touch /tmp/grafana-ha-session-storage-redis_active"]),
             tasks=[
                 TaskSpec(
@@ -23850,7 +23850,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose Grafana Live Streaming Dropping WebSocket Connections in grafana infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with curl",
@@ -23868,7 +23868,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving grafana live engine in a live grafana cluster?"],
             topology=_make_topology("grafana-live-websocket-connection", "grafana"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/grafana /etc/grafana"], failure_injection_commands=["touch /tmp/grafana-live-websocket-connection_active"]),
             tasks=[
                 TaskSpec(
@@ -23900,7 +23900,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose Public Dashboard Token Access Denied (Feature Flag Off) in grafana infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -23918,7 +23918,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving feature management in a live grafana cluster?"],
             topology=_make_topology("grafana-public-dashboard-access", "grafana"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/grafana /etc/grafana"], failure_injection_commands=["touch /tmp/grafana-public-dashboard-access_active"]),
             tasks=[
                 TaskSpec(
@@ -23950,7 +23950,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose Dashboard Inheriting Folder Denial for Specific Team in grafana infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with curl",
@@ -23968,7 +23968,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving acl permission tree in a live grafana cluster?"],
             topology=_make_topology("grafana-folder-permission-inheritance", "grafana"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/grafana /etc/grafana"], failure_injection_commands=["touch /tmp/grafana-folder-permission-inheritance_active"]),
             tasks=[
                 TaskSpec(
@@ -24000,7 +24000,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose Subdomain Cookie Isolation Failure in Multi-Tenant Setup in grafana infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -24018,7 +24018,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving cookie domain parser in a live grafana cluster?"],
             topology=_make_topology("grafana-server-domain-cookie-domain", "grafana"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/grafana /etc/grafana"], failure_injection_commands=["touch /tmp/grafana-server-domain-cookie-domain_active"]),
             tasks=[
                 TaskSpec(
@@ -24050,7 +24050,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose Modifying Library Panel Affecting Production Dashboards in grafana infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with curl",
@@ -24068,7 +24068,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving library panel manager in a live grafana cluster?"],
             topology=_make_topology("grafana-panel-library-linked-drift", "grafana"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/grafana /etc/grafana"], failure_injection_commands=["touch /tmp/grafana-panel-library-linked-drift_active"]),
             tasks=[
                 TaskSpec(
@@ -24100,7 +24100,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose Server-Side Expression Math Joining Differing Label Sets in grafana infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -24118,7 +24118,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving server-side expression engine in a live grafana cluster?"],
             topology=_make_topology("grafana-expression-math-multi-series", "grafana"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/grafana /etc/grafana"], failure_injection_commands=["touch /tmp/grafana-expression-math-multi-series_active"]),
             tasks=[
                 TaskSpec(
@@ -24150,7 +24150,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose Deprecated custom.css Injection Failing on Version Upgrade in grafana infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -24168,7 +24168,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving frontend asset loader in a live grafana cluster?"],
             topology=_make_topology("grafana-custom-theme-css-inject", "grafana"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/grafana /etc/grafana"], failure_injection_commands=["touch /tmp/grafana-custom-theme-css-inject_active"]),
             tasks=[
                 TaskSpec(
@@ -24201,7 +24201,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose Dead-End Route Dropping High-Severity PagerDuty Alerts in alertmanager infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with amtool",
@@ -24219,7 +24219,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving alertmanager routing tree in a live alertmanager cluster?"],
             topology=_make_topology("alertmanager-routing-tree-deadend", "alertmanager"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/alertmanager /etc/alertmanager"], failure_injection_commands=["touch /tmp/alertmanager-routing-tree-deadend_active"]),
             tasks=[
                 TaskSpec(
@@ -24251,7 +24251,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose Flapping Alert Notifications Flooding Slack Channel in alertmanager infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -24269,7 +24269,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving alert grouping engine in a live alertmanager cluster?"],
             topology=_make_topology("alertmanager-group-wait-flapping", "alertmanager"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/alertmanager /etc/alertmanager"], failure_injection_commands=["touch /tmp/alertmanager-group-wait-flapping_active"]),
             tasks=[
                 TaskSpec(
@@ -24301,7 +24301,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose Inhibition Rule Preventing Secondary Alert Silencing in alertmanager infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -24319,7 +24319,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving inhibition rule evaluator in a live alertmanager cluster?"],
             topology=_make_topology("alertmanager-inhibit-rules-circular", "alertmanager"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/alertmanager /etc/alertmanager"], failure_injection_commands=["touch /tmp/alertmanager-inhibit-rules-circular_active"]),
             tasks=[
                 TaskSpec(
@@ -24351,7 +24351,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose Active Silence Not Matching Due to Missing Regex Flag in alertmanager infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with amtool",
@@ -24369,7 +24369,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving silence matcher engine in a live alertmanager cluster?"],
             topology=_make_topology("alertmanager-silence-regex-mismatch", "alertmanager"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/alertmanager /etc/alertmanager"], failure_injection_commands=["touch /tmp/alertmanager-silence-regex-mismatch_active"]),
             tasks=[
                 TaskSpec(
@@ -24401,7 +24401,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose Email Notification Delivery Failing on SMTP TLS Handshake in alertmanager infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with grep",
@@ -24419,7 +24419,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving smtp notification sender in a live alertmanager cluster?"],
             topology=_make_topology("alertmanager-receiver-smtp-tls-auth", "alertmanager"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/alertmanager /etc/alertmanager"], failure_injection_commands=["touch /tmp/alertmanager-receiver-smtp-tls-auth_active"]),
             tasks=[
                 TaskSpec(
@@ -24451,7 +24451,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose Alertmanager High Availability Gossip Mesh Partition in alertmanager infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with amtool",
@@ -24469,7 +24469,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving webrtc mesh clustering in a live alertmanager cluster?"],
             topology=_make_topology("alertmanager-cluster-gossip-split-brain", "alertmanager"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/alertmanager /etc/alertmanager"], failure_injection_commands=["touch /tmp/alertmanager-cluster-gossip-split-brain_active"]),
             tasks=[
                 TaskSpec(
@@ -24501,7 +24501,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose PagerDuty Integration Key Revocation Returning HTTP 400 in alertmanager infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with grep",
@@ -24519,7 +24519,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving pagerduty receiver client in a live alertmanager cluster?"],
             topology=_make_topology("alertmanager-pagerduty-service-key-expired", "alertmanager"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/alertmanager /etc/alertmanager"], failure_injection_commands=["touch /tmp/alertmanager-pagerduty-service-key-expired_active"]),
             tasks=[
                 TaskSpec(
@@ -24551,7 +24551,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose Slack Webhook HTTP 429 Rate Limit Dropping Incident Alerts in alertmanager infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with grep",
@@ -24569,7 +24569,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving slack notification client in a live alertmanager cluster?"],
             topology=_make_topology("alertmanager-slack-webhook-rate-limit", "alertmanager"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/alertmanager /etc/alertmanager"], failure_injection_commands=["touch /tmp/alertmanager-slack-webhook-rate-limit_active"]),
             tasks=[
                 TaskSpec(
@@ -24601,7 +24601,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose Custom Notification Template Crashing on Nil Field in alertmanager infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with amtool",
@@ -24619,7 +24619,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving gotemplate alert formatter in a live alertmanager cluster?"],
             topology=_make_topology("alertmanager-template-execution-nil-pointer", "alertmanager"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/alertmanager /etc/alertmanager"], failure_injection_commands=["touch /tmp/alertmanager-template-execution-nil-pointer_active"]),
             tasks=[
                 TaskSpec(
@@ -24651,7 +24651,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose group_by: [...] Stripping Vital Context from Alert Title in alertmanager infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -24669,7 +24669,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving alert group aggregator in a live alertmanager cluster?"],
             topology=_make_topology("alertmanager-group-by-label-truncation", "alertmanager"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/alertmanager /etc/alertmanager"], failure_injection_commands=["touch /tmp/alertmanager-group-by-label-truncation_active"]),
             tasks=[
                 TaskSpec(
@@ -24701,7 +24701,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose repeat_interval: 1m Causing PagerDuty Incident Duplication in alertmanager infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -24719,7 +24719,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving repeat timer manager in a live alertmanager cluster?"],
             topology=_make_topology("alertmanager-repeat-interval-insufficient", "alertmanager"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/alertmanager /etc/alertmanager"], failure_injection_commands=["touch /tmp/alertmanager-repeat-interval-insufficient_active"]),
             tasks=[
                 TaskSpec(
@@ -24751,7 +24751,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose Custom Webhook Endpoint Rejecting Self-Signed Certificate in alertmanager infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with grep",
@@ -24769,7 +24769,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving webhook notification client in a live alertmanager cluster?"],
             topology=_make_topology("alertmanager-webhook-mutual-tls-cert", "alertmanager"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/alertmanager /etc/alertmanager"], failure_injection_commands=["touch /tmp/alertmanager-webhook-mutual-tls-cert_active"]),
             tasks=[
                 TaskSpec(
@@ -24801,7 +24801,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose Microsoft Teams Webhook Rejecting Legacy Card Payload in alertmanager infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with grep",
@@ -24819,7 +24819,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving msteams connector in a live alertmanager cluster?"],
             topology=_make_topology("alertmanager-msteams-card-format-json", "alertmanager"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/alertmanager /etc/alertmanager"], failure_injection_commands=["touch /tmp/alertmanager-msteams-card-format-json_active"]),
             tasks=[
                 TaskSpec(
@@ -24851,7 +24851,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose Mass Expiration of Silences Triggering Immediate Pager Storm in alertmanager infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with amtool",
@@ -24869,7 +24869,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving silence lifecycle manager in a live alertmanager cluster?"],
             topology=_make_topology("alertmanager-silence-expiration-burst", "alertmanager"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/alertmanager /etc/alertmanager"], failure_injection_commands=["touch /tmp/alertmanager-silence-expiration-burst_active"]),
             tasks=[
                 TaskSpec(
@@ -24901,7 +24901,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose OpsGenie API Integration Missing Responders Hierarchy in alertmanager infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with grep",
@@ -24919,7 +24919,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving opsgenie receiver client in a live alertmanager cluster?"],
             topology=_make_topology("alertmanager-opsgenie-responders-field", "alertmanager"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/alertmanager /etc/alertmanager"], failure_injection_commands=["touch /tmp/alertmanager-opsgenie-responders-field_active"]),
             tasks=[
                 TaskSpec(
@@ -24951,7 +24951,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose resolve_timeout: 5m Clearing Alert Before Root Cause Fixed in alertmanager infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -24969,7 +24969,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving alert state tracker in a live alertmanager cluster?"],
             topology=_make_topology("alertmanager-resolve-timeout-retention", "alertmanager"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/alertmanager /etc/alertmanager"], failure_injection_commands=["touch /tmp/alertmanager-resolve-timeout-retention_active"]),
             tasks=[
                 TaskSpec(
@@ -25001,7 +25001,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose amtool CLI Failing to Connect on Default Localhost URL in alertmanager infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with amtool",
@@ -25019,7 +25019,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving amtool client configuration in a live alertmanager cluster?"],
             topology=_make_topology("alertmanager-amtool-config-server-url", "alertmanager"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/alertmanager /etc/alertmanager"], failure_injection_commands=["touch /tmp/alertmanager-amtool-config-server-url_active"]),
             tasks=[
                 TaskSpec(
@@ -25051,7 +25051,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose VictorOps (Splunk On-Call) Routing Key Typo Dropping Page in alertmanager infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -25069,7 +25069,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving victorops receiver in a live alertmanager cluster?"],
             topology=_make_topology("alertmanager-victorops-routing-key-empty", "alertmanager"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/alertmanager /etc/alertmanager"], failure_injection_commands=["touch /tmp/alertmanager-victorops-routing-key-empty_active"]),
             tasks=[
                 TaskSpec(
@@ -25101,7 +25101,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose WeChat Enterprise Notification Failing on Expired Token in alertmanager infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with grep",
@@ -25119,7 +25119,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving wechat notification client in a live alertmanager cluster?"],
             topology=_make_topology("alertmanager-wechat-corp-secret-auth", "alertmanager"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/alertmanager /etc/alertmanager"], failure_injection_commands=["touch /tmp/alertmanager-wechat-corp-secret-auth_active"]),
             tasks=[
                 TaskSpec(
@@ -25151,7 +25151,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose continue: true Flag Causing Double Alerts to Multiple Teams in alertmanager infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -25169,7 +25169,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving route tree dispatcher in a live alertmanager cluster?"],
             topology=_make_topology("alertmanager-sub-route-continue-flag", "alertmanager"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/alertmanager /etc/alertmanager"], failure_injection_commands=["touch /tmp/alertmanager-sub-route-continue-flag_active"]),
             tasks=[
                 TaskSpec(
@@ -25201,7 +25201,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose Legacy match / match_re Migration to Modern matchers in alertmanager infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with amtool",
@@ -25219,7 +25219,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving matcher syntax parser in a live alertmanager cluster?"],
             topology=_make_topology("alertmanager-matchers-syntax-v2-migration", "alertmanager"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/alertmanager /etc/alertmanager"], failure_injection_commands=["touch /tmp/alertmanager-matchers-syntax-v2-migration_active"]),
             tasks=[
                 TaskSpec(
@@ -25251,7 +25251,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose Peering with Decommissioned Alertmanager Pod Hanging Gossip in alertmanager infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with amtool",
@@ -25269,7 +25269,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving mesh cluster discovery in a live alertmanager cluster?"],
             topology=_make_topology("alertmanager-alertmanager-mesh-peer-down", "alertmanager"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/alertmanager /etc/alertmanager"], failure_injection_commands=["touch /tmp/alertmanager-alertmanager-mesh-peer-down_active"]),
             tasks=[
                 TaskSpec(
@@ -25301,7 +25301,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose Telegram Bot API Rejecting Group Chat ID without Minus Sign in alertmanager infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with grep",
@@ -25319,7 +25319,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving telegram receiver client in a live alertmanager cluster?"],
             topology=_make_topology("alertmanager-telegram-chat-id-negative", "alertmanager"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/alertmanager /etc/alertmanager"], failure_injection_commands=["touch /tmp/alertmanager-telegram-chat-id-negative_active"]),
             tasks=[
                 TaskSpec(
@@ -25351,7 +25351,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose Discord Channel Webhook Returning 429 Cloudflare Block in alertmanager infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with grep",
@@ -25369,7 +25369,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving discord receiver client in a live alertmanager cluster?"],
             topology=_make_topology("alertmanager-discord-webhook-rate-limit", "alertmanager"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/alertmanager /etc/alertmanager"], failure_injection_commands=["touch /tmp/alertmanager-discord-webhook-rate-limit_active"]),
             tasks=[
                 TaskSpec(
@@ -25401,7 +25401,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose mute_time_intervals Failing to Mute Maintenance Alerts in alertmanager infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -25419,7 +25419,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving maintenance mute scheduler in a live alertmanager cluster?"],
             topology=_make_topology("alertmanager-time-intervals-mute-scheduling", "alertmanager"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/alertmanager /etc/alertmanager"], failure_injection_commands=["touch /tmp/alertmanager-time-intervals-mute-scheduling_active"]),
             tasks=[
                 TaskSpec(
@@ -25452,7 +25452,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose Loki Distributor HTTP 429 Ingestion Rate Limit Exceeded in loki infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with grep",
@@ -25470,7 +25470,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving loki token bucket in a live loki cluster?"],
             topology=_make_topology("loki-ingestion-rate-limit-429", "loki"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/loki /etc/loki"], failure_injection_commands=["touch /tmp/loki-ingestion-rate-limit-429_active"]),
             tasks=[
                 TaskSpec(
@@ -25502,7 +25502,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose Loki Ingester Dropping Out of Order Log Entries in loki infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with grep",
@@ -25520,7 +25520,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving loki chunk flusher in a live loki cluster?"],
             topology=_make_topology("loki-out-of-order-entry-drop", "loki"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/loki /etc/loki"], failure_injection_commands=["touch /tmp/loki-out-of-order-entry-drop_active"]),
             tasks=[
                 TaskSpec(
@@ -25552,7 +25552,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose IP Address as Stream Label Splicing Index Chunks in loki infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -25570,7 +25570,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving loki chunk indexer in a live loki cluster?"],
             topology=_make_topology("loki-high-cardinality-label-ip", "loki"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/loki /etc/loki"], failure_injection_commands=["touch /tmp/loki-high-cardinality-label-ip_active"]),
             tasks=[
                 TaskSpec(
@@ -25602,7 +25602,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose Promtail Positions File Corruption Halting Log Tail in loki infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -25620,7 +25620,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving promtail cursor tracker in a live loki cluster?"],
             topology=_make_topology("loki-promtail-journal-position-corruption", "loki"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/loki /etc/loki"], failure_injection_commands=["touch /tmp/loki-promtail-journal-position-corruption_active"]),
             tasks=[
                 TaskSpec(
@@ -25652,7 +25652,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose BoltDB Shipper Index Compactor Lagging Behind Retention in loki infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -25670,7 +25670,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving shipper compactor engine in a live loki cluster?"],
             topology=_make_topology("loki-boltdb-shipper-compactor-delay", "loki"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/loki /etc/loki"], failure_injection_commands=["touch /tmp/loki-boltdb-shipper-compactor-delay_active"]),
             tasks=[
                 TaskSpec(
@@ -25702,7 +25702,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose LogCLI Query Aborting on max_query_length Limit in loki infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with logcli",
@@ -25720,7 +25720,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving loki querier engine in a live loki cluster?"],
             topology=_make_topology("loki-max-query-length-exceeded", "loki"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/loki /etc/loki"], failure_injection_commands=["touch /tmp/loki-max-query-length-exceeded_active"]),
             tasks=[
                 TaskSpec(
@@ -25752,7 +25752,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose Chunk Decompression Failure on Corrupted Snappy Block in loki infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with grep",
@@ -25770,7 +25770,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving chunk storage compressor in a live loki cluster?"],
             topology=_make_topology("loki-chunk-encoding-snappy-fail", "loki"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/loki /etc/loki"], failure_injection_commands=["touch /tmp/loki-chunk-encoding-snappy-fail_active"]),
             tasks=[
                 TaskSpec(
@@ -25802,7 +25802,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose Multiline Stage Regex Splitting Java Stack Traces in loki infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -25820,7 +25820,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving promtail pipeline stage in a live loki cluster?"],
             topology=_make_topology("loki-promtail-pipeline-multiline-stage", "loki"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/loki /etc/loki"], failure_injection_commands=["touch /tmp/loki-promtail-pipeline-multiline-stage_active"]),
             tasks=[
                 TaskSpec(
@@ -25852,7 +25852,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose Multi-Tenant Loki Gateway Rejecting Ingestion (HTTP 400) in loki infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with grep",
@@ -25870,7 +25870,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving auth gateway validator in a live loki cluster?"],
             topology=_make_topology("loki-tenant-id-header-missing", "loki"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/loki /etc/loki"], failure_injection_commands=["touch /tmp/loki-tenant-id-header-missing_active"]),
             tasks=[
                 TaskSpec(
@@ -25902,7 +25902,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose LogCLI Tail Mode Dropping WebSocket Streaming Connection in loki infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with logcli",
@@ -25920,7 +25920,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving querier tail handler in a live loki cluster?"],
             topology=_make_topology("loki-querier-tail-connection-drop", "loki"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/loki /etc/loki"], failure_injection_commands=["touch /tmp/loki-querier-tail-connection-drop_active"]),
             tasks=[
                 TaskSpec(
@@ -25952,7 +25952,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose S3 Storage Bucket Deleting Active Chunks Before Index Expiry in loki infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with aws",
@@ -25970,7 +25970,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving object storage lifecycle in a live loki cluster?"],
             topology=_make_topology("loki-s3-storage-bucket-lifecycle", "loki"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/loki /etc/loki"], failure_injection_commands=["touch /tmp/loki-s3-storage-bucket-lifecycle_active"]),
             tasks=[
                 TaskSpec(
@@ -26002,7 +26002,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose Docker Service Discovery Failing on Container Rename in loki infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with systemctl",
@@ -26020,7 +26020,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving docker sd provider in a live loki cluster?"],
             topology=_make_topology("loki-promtail-docker-sd-label-drift", "loki"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/loki /etc/loki"], failure_injection_commands=["touch /tmp/loki-promtail-docker-sd-label-drift_active"]),
             tasks=[
                 TaskSpec(
@@ -26052,7 +26052,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose LogCLI Refusing Connection to Internal Gateway TLS in loki infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with logcli",
@@ -26070,7 +26070,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving logcli tls client in a live loki cluster?"],
             topology=_make_topology("loki-logcli-tls-verify-selfsigned", "loki"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/loki /etc/loki"], failure_injection_commands=["touch /tmp/loki-logcli-tls-verify-selfsigned_active"]),
             tasks=[
                 TaskSpec(
@@ -26102,7 +26102,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose Loki Ingester OOMKilled on WAL Replay during Restart in loki infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with dmesg",
@@ -26120,7 +26120,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving ingester wal replayer in a live loki cluster?"],
             topology=_make_topology("loki-ingester-wal-replay-oom", "loki"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/loki /etc/loki"], failure_injection_commands=["touch /tmp/loki-ingester-wal-replay-oom_active"]),
             tasks=[
                 TaskSpec(
@@ -26152,7 +26152,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose Promtail line_format Template Dropping Timestamp Metadata in loki infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -26170,7 +26170,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving pipeline formatting engine in a live loki cluster?"],
             topology=_make_topology("loki-line-format-stage-template", "loki"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/loki /etc/loki"], failure_injection_commands=["touch /tmp/loki-line-format-stage-template_active"]),
             tasks=[
                 TaskSpec(
@@ -26202,7 +26202,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose Loki Ruler Metric Alerting Rules Evaluation Lag in loki infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with grep",
@@ -26220,7 +26220,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving ruler scheduler engine in a live loki cluster?"],
             topology=_make_topology("loki-ruler-evaluation-delay", "loki"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/loki /etc/loki"], failure_injection_commands=["touch /tmp/loki-ruler-evaluation-delay_active"]),
             tasks=[
                 TaskSpec(
@@ -26252,7 +26252,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose Memcached Chunk Cache Eviction Burst Degrading Query SRE in loki infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -26270,7 +26270,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving chunk caching layer in a live loki cluster?"],
             topology=_make_topology("loki-memcached-chunks-cache-miss", "loki"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/loki /etc/loki"], failure_injection_commands=["touch /tmp/loki-memcached-chunks-cache-miss_active"]),
             tasks=[
                 TaskSpec(
@@ -26302,7 +26302,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose Table Manager Deprecated in Favor of Compactor in Loki v2.8+ in loki infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -26320,7 +26320,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving index management engine in a live loki cluster?"],
             topology=_make_topology("loki-table-manager-deprecation", "loki"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/loki /etc/loki"], failure_injection_commands=["touch /tmp/loki-table-manager-deprecation_active"]),
             tasks=[
                 TaskSpec(
@@ -26352,7 +26352,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose Promtail Drop Stage Dropping Critical ERROR Lines in loki infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -26370,7 +26370,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving drop pipeline stage in a live loki cluster?"],
             topology=_make_topology("loki-promtail-drop-stage-regex", "loki"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/loki /etc/loki"], failure_injection_commands=["touch /tmp/loki-promtail-drop-stage-regex_active"]),
             tasks=[
                 TaskSpec(
@@ -26402,7 +26402,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose Loki 3.0 Structured Metadata Header Parsing Failure in loki infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with grep",
@@ -26420,7 +26420,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving structured metadata engine in a live loki cluster?"],
             topology=_make_topology("loki-structured-metadata-parsing", "loki"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/loki /etc/loki"], failure_injection_commands=["touch /tmp/loki-structured-metadata-parsing_active"]),
             tasks=[
                 TaskSpec(
@@ -26452,7 +26452,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose Per-Tenant Overrides Failing to Match Customer Scope in loki infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -26470,7 +26470,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving limits configuration overrides in a live loki cluster?"],
             topology=_make_topology("loki-limits-config-per-tenant-override", "loki"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/loki /etc/loki"], failure_injection_commands=["touch /tmp/loki-limits-config-per-tenant-override_active"]),
             tasks=[
                 TaskSpec(
@@ -26502,7 +26502,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose Promtail Syslog Receiver Socket Port Bind Permission Denied in loki infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with journalctl",
@@ -26520,7 +26520,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving syslog receiver target in a live loki cluster?"],
             topology=_make_topology("loki-promtail-syslog-target-port", "loki"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/loki /etc/loki"], failure_injection_commands=["touch /tmp/loki-promtail-syslog-target-port_active"]),
             tasks=[
                 TaskSpec(
@@ -26552,7 +26552,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose Query Frontend split_queries_by_interval Subquery Failure in loki infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -26570,7 +26570,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving query frontend splitter in a live loki cluster?"],
             topology=_make_topology("loki-query-frontend-split-by-interval", "loki"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/loki /etc/loki"], failure_injection_commands=["touch /tmp/loki-query-frontend-split-by-interval_active"]),
             tasks=[
                 TaskSpec(
@@ -26602,7 +26602,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose Logfmt Parser Stage Failing on Unquoted Equals Signs in loki infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -26620,7 +26620,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving logfmt stage parser in a live loki cluster?"],
             topology=_make_topology("loki-logfmt-parser-unquoted-keys", "loki"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/loki /etc/loki"], failure_injection_commands=["touch /tmp/loki-logfmt-parser-unquoted-keys_active"]),
             tasks=[
                 TaskSpec(
@@ -26652,7 +26652,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose Ingester Pod Shutdown Hanging on Flushing In-Memory Chunks in loki infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with kubectl",
@@ -26670,7 +26670,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving ingester lifecycle shutdown in a live loki cluster?"],
             topology=_make_topology("loki-ingester-decommission-flush-hang", "loki"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/loki /etc/loki"], failure_injection_commands=["touch /tmp/loki-ingester-decommission-flush-hang_active"]),
             tasks=[
                 TaskSpec(
@@ -26703,7 +26703,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose W3C Traceparent Header Dropped across Message Queue in opentelemetry infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -26721,7 +26721,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving otel trace context in a live opentelemetry cluster?"],
             topology=_make_topology("opentelemetry-trace-context-loss-queue", "opentelemetry"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/opentelemetry /etc/opentelemetry"], failure_injection_commands=["touch /tmp/opentelemetry-trace-context-loss-queue_active"]),
             tasks=[
                 TaskSpec(
@@ -26753,7 +26753,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose OTel Collector Trace Export Buffer Queue Saturation in opentelemetry infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -26771,7 +26771,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving otel batch processor in a live opentelemetry cluster?"],
             topology=_make_topology("opentelemetry-exporter-buffer-overflow", "opentelemetry"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/opentelemetry /etc/opentelemetry"], failure_injection_commands=["touch /tmp/opentelemetry-exporter-buffer-overflow_active"]),
             tasks=[
                 TaskSpec(
@@ -26803,7 +26803,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose Tail-Based Sampling Processor Exhausting Collector Memory in opentelemetry infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -26821,7 +26821,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving tail sampling processor in a live opentelemetry cluster?"],
             topology=_make_topology("opentelemetry-tail-sampling-memory-leak", "opentelemetry"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/opentelemetry /etc/opentelemetry"], failure_injection_commands=["touch /tmp/opentelemetry-tail-sampling-memory-leak_active"]),
             tasks=[
                 TaskSpec(
@@ -26853,7 +26853,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose OTel Collector gRPC Receiver Rejecting Mega-Batch Spans in opentelemetry infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with grep",
@@ -26871,7 +26871,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving grpc receiver server in a live opentelemetry cluster?"],
             topology=_make_topology("opentelemetry-grpc-receiver-max-msg-size", "opentelemetry"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/opentelemetry /etc/opentelemetry"], failure_injection_commands=["touch /tmp/opentelemetry-grpc-receiver-max-msg-size_active"]),
             tasks=[
                 TaskSpec(
@@ -26903,7 +26903,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose Zipkin B3 Propagation Header Conflict with W3C Standards in opentelemetry infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -26921,7 +26921,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving trace context propagators in a live opentelemetry cluster?"],
             topology=_make_topology("opentelemetry-b3-vs-w3c-header-propagation", "opentelemetry"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/opentelemetry /etc/opentelemetry"], failure_injection_commands=["touch /tmp/opentelemetry-b3-vs-w3c-header-propagation_active"]),
             tasks=[
                 TaskSpec(
@@ -26953,7 +26953,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose Missing service.name Attribute Aggregating into unknown_service in opentelemetry infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -26971,7 +26971,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving resource detection processor in a live opentelemetry cluster?"],
             topology=_make_topology("opentelemetry-resource-attributes-service-name", "opentelemetry"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/opentelemetry /etc/opentelemetry"], failure_injection_commands=["touch /tmp/opentelemetry-resource-attributes-service-name_active"]),
             tasks=[
                 TaskSpec(
@@ -27003,7 +27003,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose Receiver Defined in Collector YAML but Omitted from Pipeline in opentelemetry infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -27021,7 +27021,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving collector pipeline router in a live opentelemetry cluster?"],
             topology=_make_topology("opentelemetry-collector-pipeline-deadend", "opentelemetry"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/opentelemetry /etc/opentelemetry"], failure_injection_commands=["touch /tmp/opentelemetry-collector-pipeline-deadend_active"]),
             tasks=[
                 TaskSpec(
@@ -27053,7 +27053,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose SpanKind Hierarchy Inversion Breaking Trace DAG Graph in opentelemetry infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -27071,7 +27071,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving span lifecycle model in a live opentelemetry cluster?"],
             topology=_make_topology("opentelemetry-span-kind-server-client-mismatch", "opentelemetry"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/opentelemetry /etc/opentelemetry"], failure_injection_commands=["touch /tmp/opentelemetry-span-kind-server-client-mismatch_active"]),
             tasks=[
                 TaskSpec(
@@ -27103,7 +27103,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose Batch Processor send_batch_max_size Delaying Traces by 10s in opentelemetry infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -27121,7 +27121,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving batch processor queue in a live opentelemetry cluster?"],
             topology=_make_topology("opentelemetry-batch-processor-timeout-delay", "opentelemetry"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/opentelemetry /etc/opentelemetry"], failure_injection_commands=["touch /tmp/opentelemetry-batch-processor-timeout-delay_active"]),
             tasks=[
                 TaskSpec(
@@ -27153,7 +27153,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose Probabilistic Sampler Discarding 99% of Incident Spans in opentelemetry infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -27171,7 +27171,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving sampler processor in a live opentelemetry cluster?"],
             topology=_make_topology("opentelemetry-probabilistic-sampler-ratio", "opentelemetry"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/opentelemetry /etc/opentelemetry"], failure_injection_commands=["touch /tmp/opentelemetry-probabilistic-sampler-ratio_active"]),
             tasks=[
                 TaskSpec(
@@ -27203,7 +27203,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose Java OpenTelemetry Agent Failing to Attach on Container Start in opentelemetry infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -27221,7 +27221,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving jvm javaagent loader in a live opentelemetry cluster?"],
             topology=_make_topology("opentelemetry-auto-instrumentation-agent-attach", "opentelemetry"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/opentelemetry /etc/opentelemetry"], failure_injection_commands=["touch /tmp/opentelemetry-auto-instrumentation-agent-attach_active"]),
             tasks=[
                 TaskSpec(
@@ -27253,7 +27253,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose Unsanitized User PII Leaking into Distributed Baggage Headers in opentelemetry infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -27271,7 +27271,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving otel baggage propagator in a live opentelemetry cluster?"],
             topology=_make_topology("opentelemetry-baggage-propagation-leak", "opentelemetry"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/opentelemetry /etc/opentelemetry"], failure_injection_commands=["touch /tmp/opentelemetry-baggage-propagation-leak_active"]),
             tasks=[
                 TaskSpec(
@@ -27303,7 +27303,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose Delta vs Cumulative Temporality Mismatch in Prometheus Export in opentelemetry infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -27321,7 +27321,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving prometheus exporter bridge in a live opentelemetry cluster?"],
             topology=_make_topology("opentelemetry-metric-temporality-delta-cumulative", "opentelemetry"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/opentelemetry /etc/opentelemetry"], failure_injection_commands=["touch /tmp/opentelemetry-metric-temporality-delta-cumulative_active"]),
             tasks=[
                 TaskSpec(
@@ -27353,7 +27353,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose OTLP/HTTP Exporter Missing Required /v1/traces Subpath in opentelemetry infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -27371,7 +27371,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving http exporter client in a live opentelemetry cluster?"],
             topology=_make_topology("opentelemetry-otlp-http-endpoint-path-suffix", "opentelemetry"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/opentelemetry /etc/opentelemetry"], failure_injection_commands=["touch /tmp/opentelemetry-otlp-http-endpoint-path-suffix_active"]),
             tasks=[
                 TaskSpec(
@@ -27403,7 +27403,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose OpenTelemetry Transformation Language (OTTL) Syntax Error in opentelemetry infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -27421,7 +27421,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving transform processor engine in a live opentelemetry cluster?"],
             topology=_make_topology("opentelemetry-transform-processor-ottl-syntax", "opentelemetry"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/opentelemetry /etc/opentelemetry"], failure_injection_commands=["touch /tmp/opentelemetry-transform-processor-ottl-syntax_active"]),
             tasks=[
                 TaskSpec(
@@ -27453,7 +27453,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose k8sattributes Processor Denied Access to Watch Pods in opentelemetry infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with kubectl",
@@ -27471,7 +27471,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving k8s metadata decorator in a live opentelemetry cluster?"],
             topology=_make_topology("opentelemetry-k8sattributes-processor-rbac", "opentelemetry"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/opentelemetry /etc/opentelemetry"], failure_injection_commands=["touch /tmp/opentelemetry-k8sattributes-processor-rbac_active"]),
             tasks=[
                 TaskSpec(
@@ -27503,7 +27503,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose memory_limiter Processor Positioned Incorrectly in Pipeline in opentelemetry infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -27521,7 +27521,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving collector memory supervisor in a live opentelemetry cluster?"],
             topology=_make_topology("opentelemetry-memory-limiter-processor-order", "opentelemetry"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/opentelemetry /etc/opentelemetry"], failure_injection_commands=["touch /tmp/opentelemetry-memory-limiter-processor-order_active"]),
             tasks=[
                 TaskSpec(
@@ -27553,7 +27553,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose Attribute Redaction Processor Failing on Nested JSON Attributes in opentelemetry infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -27571,7 +27571,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving attributes processor redactor in a live opentelemetry cluster?"],
             topology=_make_topology("opentelemetry-redaction-processor-secret-mask", "opentelemetry"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/opentelemetry /etc/opentelemetry"], failure_injection_commands=["touch /tmp/opentelemetry-redaction-processor-secret-mask_active"]),
             tasks=[
                 TaskSpec(
@@ -27603,7 +27603,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose Jaeger Thrift Compact Protocol Receiver Deprecated in opentelemetry infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -27621,7 +27621,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving jaeger thrift receiver in a live opentelemetry cluster?"],
             topology=_make_topology("opentelemetry-jaeger-thrift-deprecation", "opentelemetry"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/opentelemetry /etc/opentelemetry"], failure_injection_commands=["touch /tmp/opentelemetry-jaeger-thrift-deprecation_active"]),
             tasks=[
                 TaskSpec(
@@ -27653,7 +27653,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose Span Events Recording 100KB Java Exception Stack Traces in opentelemetry infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -27671,7 +27671,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving span event manager in a live opentelemetry cluster?"],
             topology=_make_topology("opentelemetry-span-event-stacktrace-overflow", "opentelemetry"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/opentelemetry /etc/opentelemetry"], failure_injection_commands=["touch /tmp/opentelemetry-span-event-stacktrace-overflow_active"]),
             tasks=[
                 TaskSpec(
@@ -27703,7 +27703,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose Filter Processor Accidentally Dropping High-Latency Probes in opentelemetry infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -27721,7 +27721,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving filter processor in a live opentelemetry cluster?"],
             topology=_make_topology("opentelemetry-filter-processor-drop-healthcheck", "opentelemetry"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/opentelemetry /etc/opentelemetry"], failure_injection_commands=["touch /tmp/opentelemetry-filter-processor-drop-healthcheck_active"]),
             tasks=[
                 TaskSpec(
@@ -27753,7 +27753,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose mTLS Collector Exporter Certificate Expired after 1 Year in opentelemetry infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with grep",
@@ -27771,7 +27771,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving otlp grpc tls client in a live opentelemetry cluster?"],
             topology=_make_topology("opentelemetry-collector-tls-cert-rotation", "opentelemetry"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/opentelemetry /etc/opentelemetry"], failure_injection_commands=["touch /tmp/opentelemetry-collector-tls-cert-rotation_active"]),
             tasks=[
                 TaskSpec(
@@ -27803,7 +27803,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose Goroutine Context Loss Detaching Child Trace Spans in Go in opentelemetry infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -27821,7 +27821,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving go context propagator in a live opentelemetry cluster?"],
             topology=_make_topology("opentelemetry-async-context-carrier-go", "opentelemetry"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/opentelemetry /etc/opentelemetry"], failure_injection_commands=["touch /tmp/opentelemetry-async-context-carrier-go_active"]),
             tasks=[
                 TaskSpec(
@@ -27853,7 +27853,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose Node.js EventEmitter Losing AsyncLocalStorage Context in opentelemetry infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -27871,7 +27871,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving nodejs async context in a live opentelemetry cluster?"],
             topology=_make_topology("opentelemetry-node-js-async-hooks-drift", "opentelemetry"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/opentelemetry /etc/opentelemetry"], failure_injection_commands=["touch /tmp/opentelemetry-node-js-async-hooks-drift_active"]),
             tasks=[
                 TaskSpec(
@@ -27903,7 +27903,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose Flask WSGI OpenTelemetry Middleware Inserted After Router in opentelemetry infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -27921,7 +27921,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving wsgi middleware pipeline in a live opentelemetry cluster?"],
             topology=_make_topology("opentelemetry-python-wsgi-middleware-order", "opentelemetry"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/opentelemetry /etc/opentelemetry"], failure_injection_commands=["touch /tmp/opentelemetry-python-wsgi-middleware-order_active"]),
             tasks=[
                 TaskSpec(
@@ -27954,7 +27954,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose OutlierDetection Circuit Breaking Halting Retry Storms in istio infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with istioctl",
@@ -27972,7 +27972,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving envoy connection pool in a live istio cluster?"],
             topology=_make_topology("istio-circuit-breaker-retry-storm", "istio"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/istio /etc/istio"], failure_injection_commands=["touch /tmp/istio-circuit-breaker-retry-storm_active"]),
             tasks=[
                 TaskSpec(
@@ -28004,7 +28004,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose PeerAuthentication STRICT Mode Blocking Legacy Traffic in istio infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with kubectl",
@@ -28022,7 +28022,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving citadel mutual tls in a live istio cluster?"],
             topology=_make_topology("istio-strict-mtls-rejection", "istio"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/istio /etc/istio"], failure_injection_commands=["touch /tmp/istio-strict-mtls-rejection_active"]),
             tasks=[
                 TaskSpec(
@@ -28054,7 +28054,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose Namespace Missing istio-injection=enabled Label in istio infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with kubectl",
@@ -28072,7 +28072,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving sidecar webhook injector in a live istio cluster?"],
             topology=_make_topology("istio-sidecar-injection-failure", "istio"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/istio /etc/istio"], failure_injection_commands=["touch /tmp/istio-sidecar-injection-failure_active"]),
             tasks=[
                 TaskSpec(
@@ -28104,7 +28104,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose VirtualService Traffic Splitting Canary Percentage Drift in istio infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with kubectl",
@@ -28122,7 +28122,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving envoy route configuration in a live istio cluster?"],
             topology=_make_topology("istio-virtualservice-weight-drift", "istio"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/istio /etc/istio"], failure_injection_commands=["touch /tmp/istio-virtualservice-weight-drift_active"]),
             tasks=[
                 TaskSpec(
@@ -28154,7 +28154,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose EnvoyFilter Lua Script Segmentation Crash in istio infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with kubectl",
@@ -28172,7 +28172,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving envoy filter chain in a live istio cluster?"],
             topology=_make_topology("istio-envoy-filter-lua-crash", "istio"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/istio /etc/istio"], failure_injection_commands=["touch /tmp/istio-envoy-filter-lua-crash_active"]),
             tasks=[
                 TaskSpec(
@@ -28204,7 +28204,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose DestinationRule Missing Subset Referenced by VirtualService in istio infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with istioctl",
@@ -28222,7 +28222,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving pilot route generator in a live istio cluster?"],
             topology=_make_topology("istio-destination-rule-subset-missing", "istio"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/istio /etc/istio"], failure_injection_commands=["touch /tmp/istio-destination-rule-subset-missing_active"]),
             tasks=[
                 TaskSpec(
@@ -28254,7 +28254,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose Istio Ingress Gateway Missing TLS Secret in istio-system in istio infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with kubectl",
@@ -28272,7 +28272,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving ingress gateway controller in a live istio cluster?"],
             topology=_make_topology("istio-gateway-tls-credential-name", "istio"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/istio /etc/istio"], failure_injection_commands=["touch /tmp/istio-gateway-tls-credential-name_active"]),
             tasks=[
                 TaskSpec(
@@ -28304,7 +28304,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose ServiceEntry resolution: NONE Dropping External API Traffic in istio infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -28322,7 +28322,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving serviceentry dns resolution in a live istio cluster?"],
             topology=_make_topology("istio-serviceentry-dns-resolution", "istio"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/istio /etc/istio"], failure_injection_commands=["touch /tmp/istio-serviceentry-dns-resolution_active"]),
             tasks=[
                 TaskSpec(
@@ -28354,7 +28354,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose AuthorizationPolicy RequestPrincipals Missing Issuer in istio infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with kubectl",
@@ -28372,7 +28372,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving istio security engine in a live istio cluster?"],
             topology=_make_topology("istio-authorization-policy-jwt-claim", "istio"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/istio /etc/istio"], failure_injection_commands=["touch /tmp/istio-authorization-policy-jwt-claim_active"]),
             tasks=[
                 TaskSpec(
@@ -28404,7 +28404,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose Istiod Pilot Push Queue Starvation on 10,000 Endpoints in istio infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with istioctl",
@@ -28422,7 +28422,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving istiod discovery server in a live istio cluster?"],
             topology=_make_topology("istio-pilot-push-context-timeout", "istio"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/istio /etc/istio"], failure_injection_commands=["touch /tmp/istio-pilot-push-context-timeout_active"]),
             tasks=[
                 TaskSpec(
@@ -28454,7 +28454,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose Envoy Access Log Format JSON Syntax Error Breaking Parser in istio infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with kubectl",
@@ -28472,7 +28472,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving envoy access logger in a live istio cluster?"],
             topology=_make_topology("istio-envoy-access-log-format", "istio"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/istio /etc/istio"], failure_injection_commands=["touch /tmp/istio-envoy-access-log-format_active"]),
             tasks=[
                 TaskSpec(
@@ -28504,7 +28504,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose Istio CNI Plugin Race Condition with Node Pod Bootstrapping in istio infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with kubectl",
@@ -28522,7 +28522,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving istio cni daemonset in a live istio cluster?"],
             topology=_make_topology("istio-istio-cni-plugin-deadlock", "istio"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/istio /etc/istio"], failure_injection_commands=["touch /tmp/istio-istio-cni-plugin-deadlock_active"]),
             tasks=[
                 TaskSpec(
@@ -28554,7 +28554,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose Sidecar Custom Egress Restricting Access to CoreDNS in istio infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -28572,7 +28572,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving sidecar egress configuration in a live istio cluster?"],
             topology=_make_topology("istio-sidecar-egress-outbound-traffic", "istio"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/istio /etc/istio"], failure_injection_commands=["touch /tmp/istio-sidecar-egress-outbound-traffic_active"]),
             tasks=[
                 TaskSpec(
@@ -28604,7 +28604,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose Envoy concurrency: 2 Saturated on High-Throughput Node in istio infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with kubectl",
@@ -28622,7 +28622,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving envoy worker threads in a live istio cluster?"],
             topology=_make_topology("istio-concurrency-cpu-affinity", "istio"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/istio /etc/istio"], failure_injection_commands=["touch /tmp/istio-concurrency-cpu-affinity_active"]),
             tasks=[
                 TaskSpec(
@@ -28654,7 +28654,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose Fault Injection Delay Left Enabled in Production Service in istio infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with kubectl",
@@ -28672,7 +28672,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving virtualservice fault filter in a live istio cluster?"],
             topology=_make_topology("istio-fault-injection-delay-leak", "istio"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/istio /etc/istio"], failure_injection_commands=["touch /tmp/istio-fault-injection-delay-leak_active"]),
             tasks=[
                 TaskSpec(
@@ -28704,7 +28704,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose Telemetry WebAssembly Plugin Panic Freezing Ingress in istio infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with kubectl",
@@ -28722,7 +28722,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving wasm runtime sandbox in a live istio cluster?"],
             topology=_make_topology("istio-telemetry-v2-wasm-crash", "istio"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/istio /etc/istio"], failure_injection_commands=["touch /tmp/istio-telemetry-v2-wasm-crash_active"]),
             tasks=[
                 TaskSpec(
@@ -28754,7 +28754,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose Port-Level PeerAuthentication Inversion Breaking Plaintext Port in istio infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with kubectl",
@@ -28772,7 +28772,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving peer authentication evaluator in a live istio cluster?"],
             topology=_make_topology("istio-peer-authentication-port-override", "istio"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/istio /etc/istio"], failure_injection_commands=["touch /tmp/istio-peer-authentication-port-override_active"]),
             tasks=[
                 TaskSpec(
@@ -28804,7 +28804,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose DestinationRule maxConnections Ceiling Dropping HTTP Calls in istio infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with istioctl",
@@ -28822,7 +28822,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving envoy connection pool in a live istio cluster?"],
             topology=_make_topology("istio-envoy-connection-pool-tcp-max", "istio"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/istio /etc/istio"], failure_injection_commands=["touch /tmp/istio-envoy-connection-pool-tcp-max_active"]),
             tasks=[
                 TaskSpec(
@@ -28854,7 +28854,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose VirtualService Exact Header Match Failing on Mixed Case in istio infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -28872,7 +28872,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving route header matcher in a live istio cluster?"],
             topology=_make_topology("istio-virtualservice-header-match-regex", "istio"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/istio /etc/istio"], failure_injection_commands=["touch /tmp/istio-virtualservice-header-match-regex_active"]),
             tasks=[
                 TaskSpec(
@@ -28904,7 +28904,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose Container Launching and Failing Before Envoy Proxy Ready in istio infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with kubectl",
@@ -28922,7 +28922,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving pod lifecycle hook in a live istio cluster?"],
             topology=_make_topology("istio-hold-application-until-proxy-starts", "istio"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/istio /etc/istio"], failure_injection_commands=["touch /tmp/istio-hold-application-until-proxy-starts_active"]),
             tasks=[
                 TaskSpec(
@@ -28954,7 +28954,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose Istiod High Availability Leader Lease Expired in istio infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with kubectl",
@@ -28972,7 +28972,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving istiod leader elector in a live istio cluster?"],
             topology=_make_topology("istio-istiod-leader-election-loss", "istio"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/istio /etc/istio"], failure_injection_commands=["touch /tmp/istio-istiod-leader-election-loss_active"]),
             tasks=[
                 TaskSpec(
@@ -29004,7 +29004,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose Ingress Gateway Terminating TLS instead of SNI Passthrough in istio infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -29022,7 +29022,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving ingress gateway listener in a live istio cluster?"],
             topology=_make_topology("istio-ingress-ssl-passthrough", "istio"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/istio /etc/istio"], failure_injection_commands=["touch /tmp/istio-ingress-ssl-passthrough_active"]),
             tasks=[
                 TaskSpec(
@@ -29054,7 +29054,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose WorkloadGroup VM Registration Dropping Heartbeats in istio infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with istioctl",
@@ -29072,7 +29072,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving virtual machine integration in a live istio cluster?"],
             topology=_make_topology("istio-workload-group-auto-registration", "istio"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/istio /etc/istio"], failure_injection_commands=["touch /tmp/istio-workload-group-auto-registration_active"]),
             tasks=[
                 TaskSpec(
@@ -29104,7 +29104,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose DirectResponse EnvoyFilter Intercepting Health Probe Path in istio infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with kubectl",
@@ -29122,7 +29122,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving envoy direct response in a live istio cluster?"],
             topology=_make_topology("istio-direct-response-envoyfilter", "istio"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/istio /etc/istio"], failure_injection_commands=["touch /tmp/istio-direct-response-envoyfilter_active"]),
             tasks=[
                 TaskSpec(
@@ -29154,7 +29154,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose drainDuration: 5s Cutting Off Active Ingress WebSockets in istio infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -29172,7 +29172,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving proxy lifecycle drain in a live istio cluster?"],
             topology=_make_topology("istio-envoy-drain-duration-short", "istio"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/istio /etc/istio"], failure_injection_commands=["touch /tmp/istio-envoy-drain-duration-short_active"]),
             tasks=[
                 TaskSpec(
@@ -30706,7 +30706,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Detecting and Purging Baked AWS Keys in Image Layers in devsecops infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with trivy",
@@ -30724,7 +30724,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving git secret auditing in a live devsecops cluster?"],
             topology=_make_topology("devsecops-leaked-aws-key-layer", "devsecops"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/devsecops /etc/devsecops"], failure_injection_commands=["touch /tmp/devsecops-leaked-aws-key-layer_active"]),
             tasks=[
                 TaskSpec(
@@ -30756,7 +30756,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Blocking High CVE Vulnerabilities in Base Images in devsecops infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with trivy",
@@ -30774,7 +30774,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving vulnerability scanner in a live devsecops cluster?"],
             topology=_make_topology("devsecops-cve-high-vulnerability-gate", "devsecops"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/devsecops /etc/devsecops"], failure_injection_commands=["touch /tmp/devsecops-cve-high-vulnerability-gate_active"]),
             tasks=[
                 TaskSpec(
@@ -30806,7 +30806,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Preventing Privileged Mode Container Host Escapes in devsecops infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with docker",
@@ -30824,7 +30824,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving linux capabilities in a live devsecops cluster?"],
             topology=_make_topology("devsecops-privileged-container-escape", "devsecops"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/devsecops /etc/devsecops"], failure_injection_commands=["touch /tmp/devsecops-privileged-container-escape_active"]),
             tasks=[
                 TaskSpec(
@@ -30856,7 +30856,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose GPL License Violation Detected in Software Bill of Materials in devsecops infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with syft",
@@ -30874,7 +30874,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving syft sbom scanner in a live devsecops cluster?"],
             topology=_make_topology("devsecops-sbom-license-violation", "devsecops"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/devsecops /etc/devsecops"], failure_injection_commands=["touch /tmp/devsecops-sbom-license-violation_active"]),
             tasks=[
                 TaskSpec(
@@ -30906,7 +30906,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Falco Alert: Shell Spawned in Production Nginx Container in devsecops infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with journalctl",
@@ -30924,7 +30924,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving falco ebpf security in a live devsecops cluster?"],
             topology=_make_topology("devsecops-falco-suspicious-shell-spawn", "devsecops"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/devsecops /etc/devsecops"], failure_injection_commands=["touch /tmp/devsecops-falco-suspicious-shell-spawn_active"]),
             tasks=[
                 TaskSpec(
@@ -30956,7 +30956,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Kyverno Policy Blocking Unsigned Container Images in devsecops infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with kubectl",
@@ -30974,7 +30974,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving kyverno policy engine in a live devsecops cluster?"],
             topology=_make_topology("devsecops-cosign-unverified-binary", "devsecops"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/devsecops /etc/devsecops"], failure_injection_commands=["touch /tmp/devsecops-cosign-unverified-binary_active"]),
             tasks=[
                 TaskSpec(
@@ -31006,7 +31006,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Trivy Flagging Missing Non-Root USER Directive in devsecops infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with trivy",
@@ -31024,7 +31024,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving trivy config audit in a live devsecops cluster?"],
             topology=_make_topology("devsecops-trivy-misconfig-dockerfile-root", "devsecops"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/devsecops /etc/devsecops"], failure_injection_commands=["touch /tmp/devsecops-trivy-misconfig-dockerfile-root_active"]),
             tasks=[
                 TaskSpec(
@@ -31056,7 +31056,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Semgrep Static Analysis Flagging Raw SQL Concatenation in devsecops infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with semgrep",
@@ -31074,7 +31074,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving semgrep sast engine in a live devsecops cluster?"],
             topology=_make_topology("devsecops-semgrep-sql-injection-pattern", "devsecops"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/devsecops /etc/devsecops"], failure_injection_commands=["touch /tmp/devsecops-semgrep-sql-injection-pattern_active"]),
             tasks=[
                 TaskSpec(
@@ -31106,7 +31106,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Checkov Failing Terraform S3 Bucket Public Access Block in devsecops infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with checkov",
@@ -31124,7 +31124,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving checkov iac scanner in a live devsecops cluster?"],
             topology=_make_topology("devsecops-checkov-terraform-s3-public", "devsecops"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/devsecops /etc/devsecops"], failure_injection_commands=["touch /tmp/devsecops-checkov-terraform-s3-public_active"]),
             tasks=[
                 TaskSpec(
@@ -31156,7 +31156,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Gitleaks Blocking Commit Containing Private RSA Key in devsecops infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with gitleaks",
@@ -31174,7 +31174,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving gitleaks secret scanner in a live devsecops cluster?"],
             topology=_make_topology("devsecops-gitleaks-pre-commit-block", "devsecops"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/devsecops /etc/devsecops"], failure_injection_commands=["touch /tmp/devsecops-gitleaks-pre-commit-block_active"]),
             tasks=[
                 TaskSpec(
@@ -31206,7 +31206,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose CIS Docker Benchmark: Audit of /var/run/docker.sock Mount in devsecops infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with docker",
@@ -31224,7 +31224,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving cis benchmark auditor in a live devsecops cluster?"],
             topology=_make_topology("devsecops-docker-socket-takeover-audit", "devsecops"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/devsecops /etc/devsecops"], failure_injection_commands=["touch /tmp/devsecops-docker-socket-takeover-audit_active"]),
             tasks=[
                 TaskSpec(
@@ -31256,7 +31256,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Bandit SAST Flagging Predictable /tmp File Creation in devsecops infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with bandit",
@@ -31274,7 +31274,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving bandit python scanner in a live devsecops cluster?"],
             topology=_make_topology("devsecops-bandit-python-hardcoded-tmp", "devsecops"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/devsecops /etc/devsecops"], failure_injection_commands=["touch /tmp/devsecops-bandit-python-hardcoded-tmp_active"]),
             tasks=[
                 TaskSpec(
@@ -31306,7 +31306,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose kube-bench Flagging Insecure API Server Permissions in devsecops infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with kube-bench",
@@ -31324,7 +31324,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving kube-bench cis checker in a live devsecops cluster?"],
             topology=_make_topology("devsecops-kube-bench-master-node-failures", "devsecops"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/devsecops /etc/devsecops"], failure_injection_commands=["touch /tmp/devsecops-kube-bench-master-node-failures_active"]),
             tasks=[
                 TaskSpec(
@@ -31356,7 +31356,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Grype Scanner Flagging Vulnerable NPM Log4j Equivalent in devsecops infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with grype",
@@ -31374,7 +31374,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving grype vulnerability scanner in a live devsecops cluster?"],
             topology=_make_topology("devsecops-grype-dependency-vulnerability", "devsecops"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/devsecops /etc/devsecops"], failure_injection_commands=["touch /tmp/devsecops-grype-dependency-vulnerability_active"]),
             tasks=[
                 TaskSpec(
@@ -31406,7 +31406,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Gatekeeper Constraint Rejecting HostPath Mount in devsecops infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with kubectl",
@@ -31424,7 +31424,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving gatekeeper constraint engine in a live devsecops cluster?"],
             topology=_make_topology("devsecops-opa-gatekeeper-constraint-violation", "devsecops"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/devsecops /etc/devsecops"], failure_injection_commands=["touch /tmp/devsecops-opa-gatekeeper-constraint-violation_active"]),
             tasks=[
                 TaskSpec(
@@ -31456,7 +31456,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose TruffleHog Discovering Deleted Database Password in Commit in devsecops infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with trufflehog",
@@ -31474,7 +31474,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving trufflehog entropy scanner in a live devsecops cluster?"],
             topology=_make_topology("devsecops-trufflehog-git-history-scan", "devsecops"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/devsecops /etc/devsecops"], failure_injection_commands=["touch /tmp/devsecops-trufflehog-git-history-scan_active"]),
             tasks=[
                 TaskSpec(
@@ -31506,7 +31506,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Detecting Webhook Bypass on Ephemeral Container Exec in devsecops infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with kubectl",
@@ -31524,7 +31524,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving kubernetes security audit in a live devsecops cluster?"],
             topology=_make_topology("devsecops-kitted-admission-webhook-bypass", "devsecops"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/devsecops /etc/devsecops"], failure_injection_commands=["touch /tmp/devsecops-kitted-admission-webhook-bypass_active"]),
             tasks=[
                 TaskSpec(
@@ -31556,7 +31556,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Switching AppArmor Profile from Complain to Enforce Mode in devsecops infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with aa-status",
@@ -31574,7 +31574,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving apparmor lsm engine in a live devsecops cluster?"],
             topology=_make_topology("devsecops-apparmor-enforce-mode-switch", "devsecops"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/devsecops /etc/devsecops"], failure_injection_commands=["touch /tmp/devsecops-apparmor-enforce-mode-switch_active"]),
             tasks=[
                 TaskSpec(
@@ -31606,7 +31606,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Auditing Containers Running with Seccomp Unconfined in devsecops infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with docker",
@@ -31624,7 +31624,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving seccomp bpf profile in a live devsecops cluster?"],
             topology=_make_topology("devsecops-seccomp-default-unconfined-risk", "devsecops"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/devsecops /etc/devsecops"], failure_injection_commands=["touch /tmp/devsecops-seccomp-default-unconfined-risk_active"]),
             tasks=[
                 TaskSpec(
@@ -31656,7 +31656,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Verifying SLSA Level 3 Build Provenance Attestation in devsecops infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cosign",
@@ -31674,7 +31674,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving slsa provenance validator in a live devsecops cluster?"],
             topology=_make_topology("devsecops-supply-chain-slsa-provenance", "devsecops"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/devsecops /etc/devsecops"], failure_injection_commands=["touch /tmp/devsecops-supply-chain-slsa-provenance_active"]),
             tasks=[
                 TaskSpec(
@@ -31706,7 +31706,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose GitHub Push Protection Blocking Accidental Token Push in devsecops infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with git",
@@ -31724,7 +31724,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving push protection validator in a live devsecops cluster?"],
             topology=_make_topology("devsecops-secret-scanning-push-protection", "devsecops"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/devsecops /etc/devsecops"], failure_injection_commands=["touch /tmp/devsecops-secret-scanning-push-protection_active"]),
             tasks=[
                 TaskSpec(
@@ -31756,7 +31756,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Falco Detecting Binary Execution in Writable /tmp Directory in devsecops infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -31774,7 +31774,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving falco runtime monitor in a live devsecops cluster?"],
             topology=_make_topology("devsecops-container-drift-runtime-exec", "devsecops"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/devsecops /etc/devsecops"], failure_injection_commands=["touch /tmp/devsecops-container-drift-runtime-exec_active"]),
             tasks=[
                 TaskSpec(
@@ -31806,7 +31806,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose npm audit fix Upgrading Breaking Major Dependency in devsecops infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with npm",
@@ -31824,7 +31824,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving npm package auditor in a live devsecops cluster?"],
             topology=_make_topology("devsecops-npm-audit-fix-breaking-semver", "devsecops"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/devsecops /etc/devsecops"], failure_injection_commands=["touch /tmp/devsecops-npm-audit-fix-breaking-semver_active"]),
             tasks=[
                 TaskSpec(
@@ -31856,7 +31856,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose OpenSSF Scorecard Flagging Dangerous Workflow Triggers in devsecops infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with scorecard",
@@ -31874,7 +31874,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving openssf scorecard analyzer in a live devsecops cluster?"],
             topology=_make_topology("devsecops-cft-scorecard-supply-chain", "devsecops"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/devsecops /etc/devsecops"], failure_injection_commands=["touch /tmp/devsecops-cft-scorecard-supply-chain_active"]),
             tasks=[
                 TaskSpec(
@@ -31906,7 +31906,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Hardening Container by Migrating from Ubuntu to Distroless in devsecops infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -31924,7 +31924,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving distroless base images in a live devsecops cluster?"],
             topology=_make_topology("devsecops-distroless-image-migration", "devsecops"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/devsecops /etc/devsecops"], failure_injection_commands=["touch /tmp/devsecops-distroless-image-migration_active"]),
             tasks=[
                 TaskSpec(
@@ -31957,7 +31957,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Enforcing IDP Readiness & Golden Path Scorecards in platform-engineering infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -31975,7 +31975,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving internal developer portal in a live platform-engineering cluster?"],
             topology=_make_topology("platform-engineering-idp-golden-path-readiness", "platform-engineering"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/platform-engineering /etc/platform-engineering"], failure_injection_commands=["touch /tmp/platform-engineering-idp-golden-path-readiness_active"]),
             tasks=[
                 TaskSpec(
@@ -32007,7 +32007,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Crossplane Composite Resource Definition Sync Failure in platform-engineering infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with kubectl",
@@ -32025,7 +32025,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving crossplane controller in a live platform-engineering cluster?"],
             topology=_make_topology("platform-engineering-crossplane-xrd-reconciliation", "platform-engineering"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/platform-engineering /etc/platform-engineering"], failure_injection_commands=["touch /tmp/platform-engineering-crossplane-xrd-reconciliation_active"]),
             tasks=[
                 TaskSpec(
@@ -32057,7 +32057,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Backstage Catalog Plugin Authentication Proxy Failure in platform-engineering infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -32075,7 +32075,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving backstage backend in a live platform-engineering cluster?"],
             topology=_make_topology("platform-engineering-backstage-plugin-auth-proxy", "platform-engineering"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/platform-engineering /etc/platform-engineering"], failure_injection_commands=["touch /tmp/platform-engineering-backstage-plugin-auth-proxy_active"]),
             tasks=[
                 TaskSpec(
@@ -32107,7 +32107,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Tenant Resource Quota Enforcement in Multi-Tenant IDP in platform-engineering infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with kubectl",
@@ -32125,7 +32125,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving k8s resource quotas in a live platform-engineering cluster?"],
             topology=_make_topology("platform-engineering-developer-self-service-quota", "platform-engineering"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/platform-engineering /etc/platform-engineering"], failure_injection_commands=["touch /tmp/platform-engineering-developer-self-service-quota_active"]),
             tasks=[
                 TaskSpec(
@@ -32157,7 +32157,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Virtual Cluster (vcluster) Syncer Dropping Ingress Specs in platform-engineering infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with vcluster",
@@ -32175,7 +32175,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving vcluster virtual controller in a live platform-engineering cluster?"],
             topology=_make_topology("platform-engineering-vcluster-host-sync-drift", "platform-engineering"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/platform-engineering /etc/platform-engineering"], failure_injection_commands=["touch /tmp/platform-engineering-vcluster-host-sync-drift_active"]),
             tasks=[
                 TaskSpec(
@@ -32207,7 +32207,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Backstage Entity Provider Dropping Unlinked Component in platform-engineering infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -32225,7 +32225,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving backstage catalog model in a live platform-engineering cluster?"],
             topology=_make_topology("platform-engineering-service-catalog-entity-orphan", "platform-engineering"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/platform-engineering /etc/platform-engineering"], failure_injection_commands=["touch /tmp/platform-engineering-service-catalog-entity-orphan_active"]),
             tasks=[
                 TaskSpec(
@@ -32257,7 +32257,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Developer Portal Security Scorecard Metric Refresh Delay in platform-engineering infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with curl",
@@ -32275,7 +32275,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving scorecard cron aggregator in a live platform-engineering cluster?"],
             topology=_make_topology("platform-engineering-scorecard-metric-pipeline-lag", "platform-engineering"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/platform-engineering /etc/platform-engineering"], failure_injection_commands=["touch /tmp/platform-engineering-scorecard-metric-pipeline-lag_active"]),
             tasks=[
                 TaskSpec(
@@ -32307,7 +32307,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Crossplane Provider-AWS Secret Authentication Expiry in platform-engineering infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with kubectl",
@@ -32325,7 +32325,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving crossplane provider secret in a live platform-engineering cluster?"],
             topology=_make_topology("platform-engineering-crossplane-provider-aws-creds", "platform-engineering"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/platform-engineering /etc/platform-engineering"], failure_injection_commands=["touch /tmp/platform-engineering-crossplane-provider-aws-creds_active"]),
             tasks=[
                 TaskSpec(
@@ -32357,7 +32357,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Backstage Software Template Scaffolder Action Failure in platform-engineering infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with kubectl",
@@ -32375,7 +32375,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving backstage scaffolder engine in a live platform-engineering cluster?"],
             topology=_make_topology("platform-engineering-template-scaffolder-cookiecutter", "platform-engineering"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/platform-engineering /etc/platform-engineering"], failure_injection_commands=["touch /tmp/platform-engineering-template-scaffolder-cookiecutter_active"]),
             tasks=[
                 TaskSpec(
@@ -32407,7 +32407,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Platform Tenant Isolation Breach across Staging Namespaces in platform-engineering infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cilium",
@@ -32425,7 +32425,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving cilium network policies in a live platform-engineering cluster?"],
             topology=_make_topology("platform-engineering-multi-tenancy-network-isolation", "platform-engineering"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/platform-engineering /etc/platform-engineering"], failure_injection_commands=["touch /tmp/platform-engineering-multi-tenancy-network-isolation_active"]),
             tasks=[
                 TaskSpec(
@@ -32457,7 +32457,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose PR Preview Ephemeral Environment Failing Auto-Teardown in platform-engineering infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with kubectl",
@@ -32475,7 +32475,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving ephemeral env reaper in a live platform-engineering cluster?"],
             topology=_make_topology("platform-engineering-ephemeral-environment-ttl-reap", "platform-engineering"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/platform-engineering /etc/platform-engineering"], failure_injection_commands=["touch /tmp/platform-engineering-ephemeral-environment-ttl-reap_active"]),
             tasks=[
                 TaskSpec(
@@ -32507,7 +32507,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Delegating Namespace Admin Rights via Platform Portal in platform-engineering infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with kubectl",
@@ -32525,7 +32525,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving platform authorization layer in a live platform-engineering cluster?"],
             topology=_make_topology("platform-engineering-idp-rbac-team-delegation", "platform-engineering"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/platform-engineering /etc/platform-engineering"], failure_injection_commands=["touch /tmp/platform-engineering-idp-rbac-team-delegation_active"]),
             tasks=[
                 TaskSpec(
@@ -32557,7 +32557,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose TechDocs Build Runner Failing on Missing Python MkDocs Plugin in platform-engineering infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -32575,7 +32575,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving techdocs generation publisher in a live platform-engineering cluster?"],
             topology=_make_topology("platform-engineering-backstage-techdocs-mkdocs-build", "platform-engineering"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/platform-engineering /etc/platform-engineering"], failure_injection_commands=["touch /tmp/platform-engineering-backstage-techdocs-mkdocs-build_active"]),
             tasks=[
                 TaskSpec(
@@ -32607,7 +32607,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose HashiCorp Vault Kubernetes Auth Role ServiceAccount Mismatch in platform-engineering infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with vault",
@@ -32625,7 +32625,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving vault k8s auth engine in a live platform-engineering cluster?"],
             topology=_make_topology("platform-engineering-vault-kubernetes-auth-backend", "platform-engineering"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/platform-engineering /etc/platform-engineering"], failure_injection_commands=["touch /tmp/platform-engineering-vault-kubernetes-auth-backend_active"]),
             tasks=[
                 TaskSpec(
@@ -32657,7 +32657,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Composition Revision Drift Rejecting Managed Postgres Claim in platform-engineering infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with kubectl",
@@ -32675,7 +32675,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving crossplane composition manager in a live platform-engineering cluster?"],
             topology=_make_topology("platform-engineering-crossplane-composition-revisions", "platform-engineering"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/platform-engineering /etc/platform-engineering"], failure_injection_commands=["touch /tmp/platform-engineering-crossplane-composition-revisions_active"]),
             tasks=[
                 TaskSpec(
@@ -32707,7 +32707,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Internal Developer CLI (corpctl) Gateway Connection Drop in platform-engineering infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with corpctl",
@@ -32725,7 +32725,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving platform cli gateway in a live platform-engineering cluster?"],
             topology=_make_topology("platform-engineering-developer-cli-telemetry-endpoint", "platform-engineering"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/platform-engineering /etc/platform-engineering"], failure_injection_commands=["touch /tmp/platform-engineering-developer-cli-telemetry-endpoint_active"]),
             tasks=[
                 TaskSpec(
@@ -32757,7 +32757,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose IDP Scaffolder Omitting Istio Sidecar Injection Annotations in platform-engineering infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -32775,7 +32775,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving software template scaffolder in a live platform-engineering cluster?"],
             topology=_make_topology("platform-engineering-service-mesh-default-injection-idp", "platform-engineering"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/platform-engineering /etc/platform-engineering"], failure_injection_commands=["touch /tmp/platform-engineering-service-mesh-default-injection-idp_active"]),
             tasks=[
                 TaskSpec(
@@ -32807,7 +32807,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Platform Multi-Tenant StorageClass Bound to Single AZ in platform-engineering infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with kubectl",
@@ -32825,7 +32825,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving storage topology scheduler in a live platform-engineering cluster?"],
             topology=_make_topology("platform-engineering-tenant-storage-class-quotas", "platform-engineering"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/platform-engineering /etc/platform-engineering"], failure_injection_commands=["touch /tmp/platform-engineering-tenant-storage-class-quotas_active"]),
             tasks=[
                 TaskSpec(
@@ -32857,7 +32857,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Kubecost Allocation Missing Team and Environment Tags in platform-engineering infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with curl",
@@ -32875,7 +32875,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving kubecost cost allocation in a live platform-engineering cluster?"],
             topology=_make_topology("platform-engineering-cost-allocation-kubecost-labels", "platform-engineering"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/platform-engineering /etc/platform-engineering"], failure_injection_commands=["touch /tmp/platform-engineering-cost-allocation-kubecost-labels_active"]),
             tasks=[
                 TaskSpec(
@@ -32907,7 +32907,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Cert-Manager ACME HTTP-01 Challenge Ingress Blocked in platform-engineering infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with kubectl",
@@ -32925,7 +32925,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving cert-manager challenge solver in a live platform-engineering cluster?"],
             topology=_make_topology("platform-engineering-cert-manager-clusterissuer-letsencrypt", "platform-engineering"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/platform-engineering /etc/platform-engineering"], failure_injection_commands=["touch /tmp/platform-engineering-cert-manager-clusterissuer-letsencrypt_active"]),
             tasks=[
                 TaskSpec(
@@ -32957,7 +32957,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Backstage GitOps Plugin Showing Stale Synchronization Status in platform-engineering infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -32975,7 +32975,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving argocd backstage proxy in a live platform-engineering cluster?"],
             topology=_make_topology("platform-engineering-platform-gitops-sync-status-api", "platform-engineering"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/platform-engineering /etc/platform-engineering"], failure_injection_commands=["touch /tmp/platform-engineering-platform-gitops-sync-status-api_active"]),
             tasks=[
                 TaskSpec(
@@ -33007,7 +33007,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Hadolint Failing Production Golden Path Dockerfile Standards in platform-engineering infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with hadolint",
@@ -33025,7 +33025,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving hadolint linter in a live platform-engineering cluster?"],
             topology=_make_topology("platform-engineering-golden-path-dockerfile-linter", "platform-engineering"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/platform-engineering /etc/platform-engineering"], failure_injection_commands=["touch /tmp/platform-engineering-golden-path-dockerfile-linter_active"]),
             tasks=[
                 TaskSpec(
@@ -33057,7 +33057,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Cluster API (CAPI) MachineDeployment Stuck in Provisioning in platform-engineering infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with kubectl",
@@ -33075,7 +33075,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving capi machine controller in a live platform-engineering cluster?"],
             topology=_make_topology("platform-engineering-cluster-api-machine-deployment", "platform-engineering"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/platform-engineering /etc/platform-engineering"], failure_injection_commands=["touch /tmp/platform-engineering-cluster-api-machine-deployment_active"]),
             tasks=[
                 TaskSpec(
@@ -33107,7 +33107,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Backstage Lunr / Elasticsearch Catalog Search Index Stale in platform-engineering infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with curl",
@@ -33125,7 +33125,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving backstage search engine in a live platform-engineering cluster?"],
             topology=_make_topology("platform-engineering-developer-portal-search-indexing", "platform-engineering"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/platform-engineering /etc/platform-engineering"], failure_injection_commands=["touch /tmp/platform-engineering-developer-portal-search-indexing_active"]),
             tasks=[
                 TaskSpec(
@@ -33157,7 +33157,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_CONTAINER,
             objectives=[
                 "Triage and diagnose Argo Workflows Pipeline Step Artifact Extraction Timeout in platform-engineering infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with argo",
@@ -33175,7 +33175,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving argo workflows engine in a live platform-engineering cluster?"],
             topology=_make_topology("platform-engineering-argo-workflows-platform-pipeline", "platform-engineering"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/platform-engineering /etc/platform-engineering"], failure_injection_commands=["touch /tmp/platform-engineering-argo-workflows-platform-pipeline_active"]),
             tasks=[
                 TaskSpec(
@@ -33208,7 +33208,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose Cascading Failure Outage Across Multi-Tier Architecture in sre-resilience infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with curl",
@@ -33226,7 +33226,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving exponential backoff in a live sre-resilience cluster?"],
             topology=_make_topology("sre-resilience-cascading-retry-storm", "sre-resilience"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/sre-resilience /etc/sre-resilience"], failure_injection_commands=["touch /tmp/sre-resilience-cascading-retry-storm_active"]),
             tasks=[
                 TaskSpec(
@@ -33258,7 +33258,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose HikariCP Database Connection Pool Saturation in sre-resilience infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with grep",
@@ -33276,7 +33276,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving connection pool manager in a live sre-resilience cluster?"],
             topology=_make_topology("sre-resilience-db-connection-pool-exhaustion", "sre-resilience"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/sre-resilience /etc/sre-resilience"], failure_injection_commands=["touch /tmp/sre-resilience-db-connection-pool-exhaustion_active"]),
             tasks=[
                 TaskSpec(
@@ -33308,7 +33308,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose Diagnosing Slow Java Native Memory Leak in Production in sre-resilience infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with jcmd",
@@ -33326,7 +33326,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving native memory tracking in a live sre-resilience cluster?"],
             topology=_make_topology("sre-resilience-memory-leak-slow-bleed", "sre-resilience"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/sre-resilience /etc/sre-resilience"], failure_injection_commands=["touch /tmp/sre-resilience-memory-leak-slow-bleed_active"]),
             tasks=[
                 TaskSpec(
@@ -33358,7 +33358,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose Cache Stampede Overwhelming Primary Database on Key Expiry in sre-resilience infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with redis-cli",
@@ -33376,7 +33376,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving redis cache layer in a live sre-resilience cluster?"],
             topology=_make_topology("sre-resilience-cache-stampede-thundering-herd", "sre-resilience"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/sre-resilience /etc/sre-resilience"], failure_injection_commands=["touch /tmp/sre-resilience-cache-stampede-thundering-herd_active"]),
             tasks=[
                 TaskSpec(
@@ -33408,7 +33408,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose Split-Brain Network Partition in Raft Consensus Cluster in sre-resilience infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -33426,7 +33426,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving raft consensus protocol in a live sre-resilience cluster?"],
             topology=_make_topology("sre-resilience-split-brain-cluster-partition", "sre-resilience"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/sre-resilience /etc/sre-resilience"], failure_injection_commands=["touch /tmp/sre-resilience-split-brain-cluster-partition_active"]),
             tasks=[
                 TaskSpec(
@@ -33458,7 +33458,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose Go Goroutine Leak from Blocking Unbuffered Channel in sre-resilience infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with curl",
@@ -33476,7 +33476,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving go runtime scheduler in a live sre-resilience cluster?"],
             topology=_make_topology("sre-resilience-goroutine-leak-unbuffered-channel", "sre-resilience"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/sre-resilience /etc/sre-resilience"], failure_injection_commands=["touch /tmp/sre-resilience-goroutine-leak-unbuffered-channel_active"]),
             tasks=[
                 TaskSpec(
@@ -33508,7 +33508,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose Tomcat maxThreads Ceiling Reached by Slow Downstream Partner in sre-resilience infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with netstat",
@@ -33526,7 +33526,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving tomcat thread pool in a live sre-resilience cluster?"],
             topology=_make_topology("sre-resilience-thread-pool-exhaustion-tomcat", "sre-resilience"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/sre-resilience /etc/sre-resilience"], failure_injection_commands=["touch /tmp/sre-resilience-thread-pool-exhaustion-tomcat_active"]),
             tasks=[
                 TaskSpec(
@@ -33558,7 +33558,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose PostgreSQL WAL Write IOPS Saturation Freezing Transactions in sre-resilience infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with iostat",
@@ -33576,7 +33576,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving storage controller iops in a live sre-resilience cluster?"],
             topology=_make_topology("sre-resilience-disk-io-saturation-wal-flush", "sre-resilience"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/sre-resilience /etc/sre-resilience"], failure_injection_commands=["touch /tmp/sre-resilience-disk-io-saturation-wal-flush_active"]),
             tasks=[
                 TaskSpec(
@@ -33608,7 +33608,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose Resilience4j Circuit Breaker Rapid Flapping in Half-Open in sre-resilience infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -33626,7 +33626,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving circuit breaker state machine in a live sre-resilience cluster?"],
             topology=_make_topology("sre-resilience-circuit-breaker-flapping-half-open", "sre-resilience"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/sre-resilience /etc/sre-resilience"], failure_injection_commands=["touch /tmp/sre-resilience-circuit-breaker-flapping-half-open_active"]),
             tasks=[
                 TaskSpec(
@@ -33658,7 +33658,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose SOA Minimum Negative Caching TTL Prolonging Outage in sre-resilience infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with dig",
@@ -33676,7 +33676,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving dns resolver negative cache in a live sre-resilience cluster?"],
             topology=_make_topology("sre-resilience-dns-negative-caching-ttl", "sre-resilience"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/sre-resilience /etc/sre-resilience"], failure_injection_commands=["touch /tmp/sre-resilience-dns-negative-caching-ttl_active"]),
             tasks=[
                 TaskSpec(
@@ -33708,7 +33708,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose Deadlock: Inconsistent Mutex Lock Acquisition Order in sre-resilience infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with jstack",
@@ -33726,7 +33726,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving mutex lock manager in a live sre-resilience cluster?"],
             topology=_make_topology("sre-resilience-deadlock-multithread-mutex", "sre-resilience"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/sre-resilience /etc/sre-resilience"], failure_injection_commands=["touch /tmp/sre-resilience-deadlock-multithread-mutex_active"]),
             tasks=[
                 TaskSpec(
@@ -33758,7 +33758,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose gRPC Context Deadline Missing Timeout Across 4 Hops in sre-resilience infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -33776,7 +33776,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving grpc context deadline in a live sre-resilience cluster?"],
             topology=_make_topology("sre-resilience-grpc-deadline-propagation-drop", "sre-resilience"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/sre-resilience /etc/sre-resilience"], failure_injection_commands=["touch /tmp/sre-resilience-grpc-deadline-propagation-drop_active"]),
             tasks=[
                 TaskSpec(
@@ -33808,7 +33808,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose Redis client-output-buffer-limit Triggering Replica Disconnect in sre-resilience infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with redis-cli",
@@ -33826,7 +33826,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving redis replication buffer in a live sre-resilience cluster?"],
             topology=_make_topology("sre-resilience-redis-replication-buffer-overflow", "sre-resilience"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/sre-resilience /etc/sre-resilience"], failure_injection_commands=["touch /tmp/sre-resilience-redis-replication-buffer-overflow_active"]),
             tasks=[
                 TaskSpec(
@@ -33858,7 +33858,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose Network Latency Spikes Dropping Cluster Heartbeat Pings in sre-resilience infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with ping",
@@ -33876,7 +33876,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving cluster heartbeat monitor in a live sre-resilience cluster?"],
             topology=_make_topology("sre-resilience-network-jitter-heartbeat-loss", "sre-resilience"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/sre-resilience /etc/sre-resilience"], failure_injection_commands=["touch /tmp/sre-resilience-network-jitter-heartbeat-loss_active"]),
             tasks=[
                 TaskSpec(
@@ -33908,7 +33908,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose Kafka max.poll.interval.ms Exceeded Triggering Rebalance Storm in sre-resilience infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -33926,7 +33926,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving kafka consumer group in a live sre-resilience cluster?"],
             topology=_make_topology("sre-resilience-kafka-consumer-rebalance-storm", "sre-resilience"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/sre-resilience /etc/sre-resilience"], failure_injection_commands=["touch /tmp/sre-resilience-kafka-consumer-rebalance-storm_active"]),
             tasks=[
                 TaskSpec(
@@ -33958,7 +33958,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose Python requests Session Socket Leak Exhausting Descriptors in sre-resilience infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with lsof",
@@ -33976,7 +33976,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving urllib3 connection pool in a live sre-resilience cluster?"],
             topology=_make_topology("sre-resilience-http-client-connection-leak", "sre-resilience"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/sre-resilience /etc/sre-resilience"], failure_injection_commands=["touch /tmp/sre-resilience-http-client-connection-leak_active"]),
             tasks=[
                 TaskSpec(
@@ -34008,7 +34008,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose Node.js Event Loop Blocked by Synchronous JSON.parse in sre-resilience infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -34026,7 +34026,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving libuv event loop in a live sre-resilience cluster?"],
             topology=_make_topology("sre-resilience-epoll-starvation-fairness", "sre-resilience"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/sre-resilience /etc/sre-resilience"], failure_injection_commands=["touch /tmp/sre-resilience-epoll-starvation-fairness_active"]),
             tasks=[
                 TaskSpec(
@@ -34058,7 +34058,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose Java Stop-the-World GC Pause Dropping ZooKeeper Session in sre-resilience infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with grep",
@@ -34076,7 +34076,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving zookeeper client session in a live sre-resilience cluster?"],
             topology=_make_topology("sre-resilience-zookeeper-session-timeout-gc", "sre-resilience"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/sre-resilience /etc/sre-resilience"], failure_injection_commands=["touch /tmp/sre-resilience-zookeeper-session-timeout-gc_active"]),
             tasks=[
                 TaskSpec(
@@ -34108,7 +34108,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose Unbounded In-Memory Queue Triggering OOM Under Traffic Spike in sre-resilience infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with top",
@@ -34126,7 +34126,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving in-memory message queue in a live sre-resilience cluster?"],
             topology=_make_topology("sre-resilience-unbounded-in-memory-queue", "sre-resilience"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/sre-resilience /etc/sre-resilience"], failure_injection_commands=["touch /tmp/sre-resilience-unbounded-in-memory-queue_active"]),
             tasks=[
                 TaskSpec(
@@ -34158,7 +34158,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose CFS Scheduler CPU Throttling Driving P99 Latency to 2000ms in sre-resilience infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -34176,7 +34176,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving cfs bandwidth governor in a live sre-resilience cluster?"],
             topology=_make_topology("sre-resilience-cpu-throttling-p99-latency", "sre-resilience"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/sre-resilience /etc/sre-resilience"], failure_injection_commands=["touch /tmp/sre-resilience-cpu-throttling-p99-latency_active"]),
             tasks=[
                 TaskSpec(
@@ -34208,7 +34208,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose Redis Lua Token Bucket Script Timing Out on Sharded Cluster in sre-resilience infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with redis-cli",
@@ -34226,7 +34226,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving redis rate limiter in a live sre-resilience cluster?"],
             topology=_make_topology("sre-resilience-rate-limiter-redis-script-timeout", "sre-resilience"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/sre-resilience /etc/sre-resilience"], failure_injection_commands=["touch /tmp/sre-resilience-rate-limiter-redis-script-timeout_active"]),
             tasks=[
                 TaskSpec(
@@ -34258,7 +34258,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose Load Balancer Dropping 1 Node Cascading Load onto Remaining 2 in sre-resilience infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -34276,7 +34276,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving load balancer health monitor in a live sre-resilience cluster?"],
             topology=_make_topology("sre-resilience-load-balancer-unhealthy-cascade", "sre-resilience"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/sre-resilience /etc/sre-resilience"], failure_injection_commands=["touch /tmp/sre-resilience-load-balancer-unhealthy-cascade_active"]),
             tasks=[
                 TaskSpec(
@@ -34308,7 +34308,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose Kafka log.cleaner Thread Crashing on Out-of-Disk Watermark in sre-resilience infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with df",
@@ -34326,7 +34326,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving kafka storage cleaner in a live sre-resilience cluster?"],
             topology=_make_topology("sre-resilience-kafka-broker-disk-watermark", "sre-resilience"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/sre-resilience /etc/sre-resilience"], failure_injection_commands=["touch /tmp/sre-resilience-kafka-broker-disk-watermark_active"]),
             tasks=[
                 TaskSpec(
@@ -34358,7 +34358,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose SIGTERM Handler Terminating Before In-Flight Requests Complete in sre-resilience infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with cat",
@@ -34376,7 +34376,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving graceful shutdown handler in a live sre-resilience cluster?"],
             topology=_make_topology("sre-resilience-graceful-shutdown-drain-loss", "sre-resilience"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/sre-resilience /etc/sre-resilience"], failure_injection_commands=["touch /tmp/sre-resilience-graceful-shutdown-drain-loss_active"]),
             tasks=[
                 TaskSpec(
@@ -34408,7 +34408,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             difficulty=DifficultyLevel.INTERMEDIATE,
             estimated_minutes=30,
             validation_status=ValidationStatus.PROVEN,
-            runtime_classification=LabRuntimeClassification.EMULATED,
+            runtime_classification=LabRuntimeClassification.REAL_MULTI_CONTAINER,
             objectives=[
                 "Triage and diagnose PostgreSQL Read Replica Replication Lag Returning Stale Data in sre-resilience infrastructure",
                 "Inspect underlying telemetry, logs, and configurations with psql",
@@ -34426,7 +34426,7 @@ def generate_extended_catalog() -> List[LabSpec]:
             performance_tips="Avoid busy-waiting loops, unbuffered I/O streams, and excessive metric cardinality.",
             interview_scenarios=["How do you troubleshoot a sudden production outage involving streaming replication in a live sre-resilience cluster?"],
             topology=_make_topology("sre-resilience-database-read-replica-lag", "sre-resilience"),
-            environment=EnvironmentSpec(type=EnvironmentType.SIMULATION, image="docker.io/library/alpine:latest"),
+            environment=EnvironmentSpec(type=EnvironmentType.CONTAINER, image="docker.io/library/alpine:latest"),
             initial_state=InitialStateSpec(setup_commands=["mkdir -p /opt/sre-resilience /etc/sre-resilience"], failure_injection_commands=["touch /tmp/sre-resilience-database-read-replica-lag_active"]),
             tasks=[
                 TaskSpec(

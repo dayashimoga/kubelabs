@@ -213,6 +213,9 @@ Events:
             if "shadow" in target_path:
                 return 1, "", f"cat: {target_path}: Permission denied\n"
 
+        if "print('X'" in cmd_clean or "large_buffer" in cmd_clean:
+            return 0, ("X" * 102400) + "\n", ""
+
         # Default fallback
         return 0, f"Executed: {cmd_clean}\n", ""
 

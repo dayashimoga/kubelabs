@@ -119,28 +119,85 @@ def benchmark_concurrency_tier(tier_concurrency: int, manager: SandboxManager) -
     return tier_stats
 
 
+def test_extended_stress_and_recovery(manager: SandboxManager) -> Dict[str, Any]:
+    """Tests recovery scenarios: repeated start/reset/destroy, large output soak, cross-session isolation, TTL expiry."""
+    print("\n[Stress & Recovery] Testing repeated start/reset/destroy cycles...")
+    lab = REGISTRY.get_by_id("linux-inode-exhaustion") or REGISTRY.list_all()[0]
+    
+    # 1. Repeated start/reset/destroy
+    cycle_success = True
+    for cycle in range(3):
+        s = manager.create_sandbox(lab, force_simulation=True)
+        code, out, _ = manager.execute_command(s.session_id, "echo 'cycle-check'")
+        if code != 0 or "cycle-check" not in out:
+            cycle_success = False
+        reset_ok = manager.reset_sandbox(s.session_id)
+        if not reset_ok:
+            cycle_success = False
+        clean_ok = manager.terminate_session(s.session_id)
+        if not clean_ok:
+            cycle_success = False
+
+    # 2. Large terminal output soak
+    print("[Stress & Recovery] Testing large terminal output soak (100KB buffer)...")
+    s_soak = manager.create_sandbox(lab, force_simulation=True)
+    code, out, _ = manager.execute_command(s_soak.session_id, "python -c \"print('X' * 102400)\"")
+    soak_success = (code == 0 and len(out) >= 100000)
+    manager.terminate_session(s_soak.session_id)
+
+    # 3. Cross-session isolation check
+    print("[Stress & Recovery] Testing cross-session data isolation & zero contamination...")
+    s1 = manager.create_sandbox(lab, force_simulation=True)
+    s2 = manager.create_sandbox(lab, force_simulation=True)
+    manager.execute_command(s1.session_id, "echo 'secret_session_token_12345' > /tmp/s1_secret.txt")
+    code2, out2, _ = manager.execute_command(s2.session_id, "cat /tmp/s1_secret.txt 2>/dev/null || echo 'NOT_FOUND'")
+    cross_contamination = "secret_session_token_12345" in out2
+    manager.terminate_session(s1.session_id)
+    manager.terminate_session(s2.session_id)
+
+    # 4. TTL expiry & sweep test
+    print("[Stress & Recovery] Testing session TTL expiration & automatic sweeping...")
+    s_ttl = manager.create_sandbox(lab, force_simulation=True)
+    s_ttl.expires_at = time.time() - 60  # Force expired 60 seconds ago
+    swept_count = manager.sweep_expired_sessions()
+    ttl_success = (swept_count >= 1) and (s_ttl.session_id not in manager.sessions)
+
+    return {
+        "repeated_lifecycle_pass": cycle_success,
+        "large_output_soak_pass": soak_success,
+        "cross_session_isolation_pass": not cross_contamination,
+        "ttl_expiration_sweep_pass": ttl_success,
+        "all_recovery_tests_pass": (cycle_success and soak_success and (not cross_contamination) and ttl_success),
+    }
+
+
 def main():
     print("======================================================================")
     print("  KubeLabs Concurrency, Load & Reliability Benchmark Runner")
     print("======================================================================")
 
     manager = SandboxManager()
-    tiers = [10, 25, 50]
+    tiers = [10, 25, 50, 100]
     tier_results = []
 
     for c in tiers:
         res = benchmark_concurrency_tier(c, manager)
         tier_results.append(res)
 
+    # Extended Stress, Soak & Recovery
+    recovery_stats = test_extended_stress_and_recovery(manager)
+
     # Orphan Residue Check
     active_remaining = len(manager.sessions)
-    overall_success = all(t["success_rate_percent"] >= 95.0 for t in tier_results) and active_remaining == 0
+    tier_success = all(t["success_rate_percent"] >= 95.0 for t in tier_results)
+    overall_success = tier_success and recovery_stats["all_recovery_tests_pass"] and (active_remaining == 0)
 
     load_data = {
         "timestamp": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
         "overall_status": "PASS" if overall_success else "FAIL",
         "orphan_sessions_remaining": active_remaining,
         "tiers": tier_results,
+        "recovery_and_stress": recovery_stats,
     }
 
     # Save load_report.json

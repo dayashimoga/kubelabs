@@ -24,10 +24,15 @@ class ValidationStatus(str, Enum):
 
 
 class LabRuntimeClassification(str, Enum):
-    REAL = "REAL"
+    REAL_CONTAINER = "REAL-CONTAINER"
+    REAL_MULTI_CONTAINER = "REAL-MULTI-CONTAINER"
+    REAL_KUBERNETES = "REAL-KUBERNETES"
     EMULATED = "EMULATED"
     SIMULATED = "SIMULATED"
     CLOUD_REQUIRED = "CLOUD-REQUIRED"
+    
+    # Backward compatibility alias
+    REAL = "REAL-CONTAINER"
 
 
 class EnvironmentType(str, Enum):

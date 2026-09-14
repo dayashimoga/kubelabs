@@ -92,7 +92,7 @@ class ClickToLabReadyBenchmark:
 
         # Step 2: API accepted -> Broker scheduled
         # Broker inspects lab requirements, concurrency quotas, selects provider
-        is_sim = (runtime_mode == "simulation")
+        is_sim = (runtime_mode.upper() == "SIMULATION")
         t2 = time.perf_counter()
 
         # Step 3: Broker scheduled -> Runtime started
@@ -161,10 +161,10 @@ class ClickToLabReadyBenchmark:
         sim_lab = self.registry.get_by_id("http-dns-tls-certificate-expiry") or linux_lab
 
         runtime_specs = [
-            ("single_podman", "Single Container (Podman Rootless)", linux_lab),
-            ("multi_container_podman", "Multi-Container Bridge (Podman)", mc_lab),
-            ("kubernetes", "Kubernetes Provider (K3s/Kind/Provider)", k8s_lab),
-            ("simulation", "Emulated / Simulated Sandbox Engine", sim_lab),
+            ("REAL-CONTAINER", "REAL-CONTAINER (Single Podman Container)", linux_lab),
+            ("REAL-MULTI-CONTAINER", "REAL-MULTI-CONTAINER (Multi-Container Bridge)", mc_lab),
+            ("REAL-KUBERNETES", "REAL-KUBERNETES (K3s/Provider)", k8s_lab),
+            ("SIMULATION", "SIMULATION (Emulated Sandbox)", sim_lab),
         ]
 
         benchmark_results = {}
@@ -173,20 +173,26 @@ class ClickToLabReadyBenchmark:
         for mode_id, mode_label, lab in runtime_specs:
             print(f"\nBenchmarking {mode_label} ({self.iterations} iterations)...", flush=True)
             iteration_records: List[Dict[str, float]] = []
+            failures = 0
 
             for i in range(self.iterations):
-                sample = self._benchmark_single_iteration(mode_id, lab)
-                iteration_records.append(sample)
-                all_totals.append(sample["click_to_lab_ready_total_ms"])
-                print(f"  Iteration {i+1}/{self.iterations}: {sample['click_to_lab_ready_total_ms']} ms (provider: {sample['provider']})", flush=True)
+                try:
+                    sample = self._benchmark_single_iteration(mode_id, lab)
+                    iteration_records.append(sample)
+                    all_totals.append(sample["click_to_lab_ready_total_ms"])
+                    print(f"  Iteration {i+1}/{self.iterations}: {sample['click_to_lab_ready_total_ms']} ms (provider: {sample['provider']})", flush=True)
+                except Exception as ex:
+                    failures += 1
+                    print(f"  Iteration {i+1}/{self.iterations}: FAILED ({ex})", flush=True)
 
-            totals = [r["click_to_lab_ready_total_ms"] for r in iteration_records]
+            totals = [r["click_to_lab_ready_total_ms"] for r in iteration_records] if iteration_records else [0.0]
             p50 = percentile(totals, 50)
             p95 = percentile(totals, 95)
             p99 = percentile(totals, 99)
             mean = round(statistics.mean(totals), 2)
             min_val = round(min(totals), 2)
             max_val = round(max(totals), 2)
+            failure_rate = round((failures / max(1, self.iterations)) * 100.0, 2)
 
             # Calculate stage breakdowns at p50
             stage_p50 = {
@@ -203,6 +209,9 @@ class ClickToLabReadyBenchmark:
                 "label": mode_label,
                 "representative_lab": lab.id,
                 "sample_count": len(totals),
+                "successful_count": len(iteration_records),
+                "failure_count": failures,
+                "failure_rate_percent": failure_rate,
                 "p50_ms": p50,
                 "p95_ms": p95,
                 "p99_ms": p99,
@@ -212,7 +221,7 @@ class ClickToLabReadyBenchmark:
                 "p50_stage_breakdown_ms": stage_p50,
             }
 
-            print(f"  -> P50: {p50} ms | P95: {p95} ms | P99: {p99} ms (Mean: {mean} ms)")
+            print(f"  -> P50: {p50} ms | P95: {p95} ms | P99: {p99} ms | Failure Rate: {failure_rate}% (Mean: {mean} ms)")
 
         overall_p50 = percentile(all_totals, 50)
         overall_p95 = percentile(all_totals, 95)
@@ -261,10 +270,11 @@ class ClickToLabReadyBenchmark:
                 <h3>{r['label']}</h3>
                 <span class="lab-badge">{r['representative_lab']}</span>
               </div>
-              <div class="stats-grid">
+              <div class="stats-grid" style="grid-template-columns: repeat(4, 1fr);">
                 <div class="stat-box"><span class="stat-val">{r['p50_ms']} ms</span><span class="stat-lbl">P50 (Median)</span></div>
                 <div class="stat-box"><span class="stat-val">{r['p95_ms']} ms</span><span class="stat-lbl">P95</span></div>
                 <div class="stat-box"><span class="stat-val">{r['p99_ms']} ms</span><span class="stat-lbl">P99</span></div>
+                <div class="stat-box"><span class="stat-val" style="color: {'#4ade80' if r['failure_rate_percent'] == 0 else '#f43f5e'};">{r['failure_rate_percent']}%</span><span class="stat-lbl">Failure Rate</span></div>
               </div>
               <h4>P50 Stage Latency Breakdown</h4>
               <div class="pipeline-bar">

@@ -166,17 +166,22 @@ class SandboxManager:
         """Verify that no containers, networks, or volumes remain for this sandbox."""
         return self.broker.verify_zero_residue(session_id)
 
+    def sweep_expired_sessions(self) -> int:
+        """Manually trigger sweeping of any expired sessions and return count."""
+        now = time.time()
+        expired_ids = []
+        with self._lock:
+            for sid, sess in self.sessions.items():
+                if now > sess.expires_at:
+                    expired_ids.append(sid)
+
+        for sid in expired_ids:
+            print(f"[SandboxManager] Sweeping expired sandbox session: {sid}")
+            self.terminate_session(sid)
+        return len(expired_ids)
+
     def _ttl_sweeper_loop(self):
         """Background thread that cleans up expired sessions periodically."""
         while not self._stop_sweeper.is_set():
             time.sleep(30)
-            now = time.time()
-            expired_ids = []
-            with self._lock:
-                for sid, sess in self.sessions.items():
-                    if now > sess.expires_at:
-                        expired_ids.append(sid)
-
-            for sid in expired_ids:
-                print(f"[SandboxManager] Sweeping expired sandbox session: {sid}")
-                self.terminate_session(sid)
+            self.sweep_expired_sessions()

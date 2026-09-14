@@ -36,10 +36,24 @@ VIEWPORTS = [
 ]
 
 KEY_PAGES = [
-    {"path": "/", "name": "Dashboard & Track Navigator"},
-    {"path": "/lab/linux-inode-exhaustion", "name": "Lab Workspace & Split Terminal"},
-    {"path": "/incident/war-room", "name": "Incident Command Center & War Room"},
-    {"path": "/metrics", "name": "Observability & Telemetry Graphs"},
+    {"path": "/onboarding", "name": "Onboarding Modal & Goal Picker", "view": "onboarding"},
+    {"path": "/", "name": "Dashboard & SRE Console", "view": "dashboard"},
+    {"path": "/learning-path", "name": "Learning Path & Roadmap", "view": "learning_path"},
+    {"path": "/skills", "name": "Skill & Dependency Map", "view": "skill_map"},
+    {"path": "/curriculum", "name": "Curriculum Browser & Guides", "view": "curriculum"},
+    {"path": "/track/linux", "name": "Track Deep View", "view": "track"},
+    {"path": "/lesson/linux-cgroups", "name": "Lesson Theory & Mechanisms", "view": "lesson"},
+    {"path": "/labs", "name": "Lab Catalog & Filter Grid", "view": "lab_catalog"},
+    {"path": "/troubleshooting", "name": "Troubleshooting Library & Symptom Search", "view": "troubleshooting"},
+    {"path": "/lab/running", "name": "Running Lab & Split Workspace", "view": "running_lab"},
+    {"path": "/lab/terminal-fullscreen", "name": "Terminal Fullscreen View", "view": "terminal_fullscreen"},
+    {"path": "/lab/hints", "name": "Layered Hints & SRE Advisor", "view": "hints"},
+    {"path": "/lab/validation", "name": "Validation Engine & Report Panel", "view": "validation"},
+    {"path": "/incidents", "name": "Incident War Room & Command Center", "view": "incident_war_room"},
+    {"path": "/incidents/postmortem", "name": "Postmortem & Root Cause RCA", "view": "postmortem"},
+    {"path": "/assessments", "name": "Assessment & Adaptive Quiz", "view": "assessment"},
+    {"path": "/progress", "name": "Progress Tracker & Certification", "view": "progress"},
+    {"path": "/error-states", "name": "Error / Loading / Empty States", "view": "error_loading_empty"},
 ]
 
 

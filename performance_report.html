@@ -133,15 +133,15 @@
 
     <div class="kpi-banner">
       <div class="kpi-card primary">
-        <span class="kpi-val">2192.15 ms</span>
+        <span class="kpi-val">2158.14 ms</span>
         <span class="kpi-lbl">Overall Click-To-Ready (P50)</span>
       </div>
       <div class="kpi-card">
-        <span class="kpi-val">2861.25 ms</span>
+        <span class="kpi-val">2656.07 ms</span>
         <span class="kpi-lbl">P95 SLA Boundary</span>
       </div>
       <div class="kpi-card">
-        <span class="kpi-val">2861.25 ms</span>
+        <span class="kpi-val">2845.44 ms</span>
         <span class="kpi-lbl">P99 Outlier Ceiling</span>
       </div>
       <div class="kpi-card">
@@ -154,85 +154,89 @@
     
             <div class="runtime-card">
               <div class="runtime-header">
-                <h3>Single Container (Podman Rootless)</h3>
+                <h3>REAL-CONTAINER (Single Podman Container)</h3>
                 <span class="lab-badge">linux-inode-exhaustion</span>
               </div>
-              <div class="stats-grid">
-                <div class="stat-box"><span class="stat-val">2797.25 ms</span><span class="stat-lbl">P50 (Median)</span></div>
-                <div class="stat-box"><span class="stat-val">2857.24 ms</span><span class="stat-lbl">P95</span></div>
-                <div class="stat-box"><span class="stat-val">2857.24 ms</span><span class="stat-lbl">P99</span></div>
+              <div class="stats-grid" style="grid-template-columns: repeat(4, 1fr);">
+                <div class="stat-box"><span class="stat-val">2540.11 ms</span><span class="stat-lbl">P50 (Median)</span></div>
+                <div class="stat-box"><span class="stat-val">2845.44 ms</span><span class="stat-lbl">P95</span></div>
+                <div class="stat-box"><span class="stat-val">2845.44 ms</span><span class="stat-lbl">P99</span></div>
+                <div class="stat-box"><span class="stat-val" style="color: #4ade80;">0.0%</span><span class="stat-lbl">Failure Rate</span></div>
               </div>
               <h4>P50 Stage Latency Breakdown</h4>
               <div class="pipeline-bar">
-                <div class="stage-step" title="API Accepted: 0.01ms">API: 0.01ms</div>
+                <div class="stage-step" title="API Accepted: 0.02ms">API: 0.02ms</div>
                 <div class="stage-step" title="Broker Scheduled: 0.0ms">Broker: 0.0ms</div>
-                <div class="stage-step" title="Runtime Started: 2400.15ms">Runtime: 2400.15ms</div>
-                <div class="stage-step" title="Services Healthy: 2.06ms">Health: 2.06ms</div>
-                <div class="stage-step" title="Fault Injected: 1.56ms">Fault: 1.56ms</div>
-                <div class="stage-step" title="Terminal Connected: 393.44ms">PTY: 393.44ms</div>
+                <div class="stage-step" title="Runtime Started: 2112.27ms">Runtime: 2112.27ms</div>
+                <div class="stage-step" title="Services Healthy: 2.26ms">Health: 2.26ms</div>
+                <div class="stage-step" title="Fault Injected: 1.57ms">Fault: 1.57ms</div>
+                <div class="stage-step" title="Terminal Connected: 532.48ms">PTY: 532.48ms</div>
               </div>
             </div>
             
             <div class="runtime-card">
               <div class="runtime-header">
-                <h3>Multi-Container Bridge (Podman)</h3>
+                <h3>REAL-MULTI-CONTAINER (Multi-Container Bridge)</h3>
                 <span class="lab-badge">linux-inode-exhaustion</span>
               </div>
-              <div class="stats-grid">
-                <div class="stat-box"><span class="stat-val">2550.0 ms</span><span class="stat-lbl">P50 (Median)</span></div>
-                <div class="stat-box"><span class="stat-val">2861.25 ms</span><span class="stat-lbl">P95</span></div>
-                <div class="stat-box"><span class="stat-val">2861.25 ms</span><span class="stat-lbl">P99</span></div>
+              <div class="stats-grid" style="grid-template-columns: repeat(4, 1fr);">
+                <div class="stat-box"><span class="stat-val">2543.46 ms</span><span class="stat-lbl">P50 (Median)</span></div>
+                <div class="stat-box"><span class="stat-val">2656.07 ms</span><span class="stat-lbl">P95</span></div>
+                <div class="stat-box"><span class="stat-val">2656.07 ms</span><span class="stat-lbl">P99</span></div>
+                <div class="stat-box"><span class="stat-val" style="color: #4ade80;">0.0%</span><span class="stat-lbl">Failure Rate</span></div>
               </div>
               <h4>P50 Stage Latency Breakdown</h4>
               <div class="pipeline-bar">
-                <div class="stage-step" title="API Accepted: 0.01ms">API: 0.01ms</div>
+                <div class="stage-step" title="API Accepted: 0.02ms">API: 0.02ms</div>
                 <div class="stage-step" title="Broker Scheduled: 0.0ms">Broker: 0.0ms</div>
-                <div class="stage-step" title="Runtime Started: 2129.18ms">Runtime: 2129.18ms</div>
-                <div class="stage-step" title="Services Healthy: 2.05ms">Health: 2.05ms</div>
-                <div class="stage-step" title="Fault Injected: 1.53ms">Fault: 1.53ms</div>
-                <div class="stage-step" title="Terminal Connected: 417.18ms">PTY: 417.18ms</div>
+                <div class="stage-step" title="Runtime Started: 1957.69ms">Runtime: 1957.69ms</div>
+                <div class="stage-step" title="Services Healthy: 2.25ms">Health: 2.25ms</div>
+                <div class="stage-step" title="Fault Injected: 1.58ms">Fault: 1.58ms</div>
+                <div class="stage-step" title="Terminal Connected: 435.53ms">PTY: 435.53ms</div>
               </div>
             </div>
             
             <div class="runtime-card">
               <div class="runtime-header">
-                <h3>Kubernetes Provider (K3s/Kind/Provider)</h3>
+                <h3>REAL-KUBERNETES (K3s/Provider)</h3>
                 <span class="lab-badge">k8s-service-zero-endpoints</span>
               </div>
-              <div class="stats-grid">
-                <div class="stat-box"><span class="stat-val">1905.06 ms</span><span class="stat-lbl">P50 (Median)</span></div>
-                <div class="stat-box"><span class="stat-val">2192.15 ms</span><span class="stat-lbl">P95</span></div>
-                <div class="stat-box"><span class="stat-val">2192.15 ms</span><span class="stat-lbl">P99</span></div>
+              <div class="stats-grid" style="grid-template-columns: repeat(4, 1fr);">
+                <div class="stat-box"><span class="stat-val">2156.77 ms</span><span class="stat-lbl">P50 (Median)</span></div>
+                <div class="stat-box"><span class="stat-val">2305.79 ms</span><span class="stat-lbl">P95</span></div>
+                <div class="stat-box"><span class="stat-val">2305.79 ms</span><span class="stat-lbl">P99</span></div>
+                <div class="stat-box"><span class="stat-val" style="color: #4ade80;">0.0%</span><span class="stat-lbl">Failure Rate</span></div>
               </div>
               <h4>P50 Stage Latency Breakdown</h4>
               <div class="pipeline-bar">
-                <div class="stage-step" title="API Accepted: 0.01ms">API: 0.01ms</div>
+                <div class="stage-step" title="API Accepted: 0.02ms">API: 0.02ms</div>
                 <div class="stage-step" title="Broker Scheduled: 0.0ms">Broker: 0.0ms</div>
-                <div class="stage-step" title="Runtime Started: 1567.42ms">Runtime: 1567.42ms</div>
-                <div class="stage-step" title="Services Healthy: 2.04ms">Health: 2.04ms</div>
-                <div class="stage-step" title="Fault Injected: 1.54ms">Fault: 1.54ms</div>
-                <div class="stage-step" title="Terminal Connected: 334.04ms">PTY: 334.04ms</div>
+                <div class="stage-step" title="Runtime Started: 1601.31ms">Runtime: 1601.31ms</div>
+                <div class="stage-step" title="Services Healthy: 2.11ms">Health: 2.11ms</div>
+                <div class="stage-step" title="Fault Injected: 1.58ms">Fault: 1.58ms</div>
+                <div class="stage-step" title="Terminal Connected: 524.03ms">PTY: 524.03ms</div>
               </div>
             </div>
             
             <div class="runtime-card">
               <div class="runtime-header">
-                <h3>Emulated / Simulated Sandbox Engine</h3>
+                <h3>SIMULATION (Emulated Sandbox)</h3>
                 <span class="lab-badge">http-dns-tls-certificate-expiry</span>
               </div>
-              <div class="stats-grid">
-                <div class="stat-box"><span class="stat-val">3.48 ms</span><span class="stat-lbl">P50 (Median)</span></div>
-                <div class="stat-box"><span class="stat-val">3.78 ms</span><span class="stat-lbl">P95</span></div>
-                <div class="stat-box"><span class="stat-val">3.78 ms</span><span class="stat-lbl">P99</span></div>
+              <div class="stats-grid" style="grid-template-columns: repeat(4, 1fr);">
+                <div class="stat-box"><span class="stat-val">1482.43 ms</span><span class="stat-lbl">P50 (Median)</span></div>
+                <div class="stat-box"><span class="stat-val">1865.02 ms</span><span class="stat-lbl">P95</span></div>
+                <div class="stat-box"><span class="stat-val">1865.02 ms</span><span class="stat-lbl">P99</span></div>
+                <div class="stat-box"><span class="stat-val" style="color: #4ade80;">0.0%</span><span class="stat-lbl">Failure Rate</span></div>
               </div>
               <h4>P50 Stage Latency Breakdown</h4>
               <div class="pipeline-bar">
                 <div class="stage-step" title="API Accepted: 0.01ms">API: 0.01ms</div>
                 <div class="stage-step" title="Broker Scheduled: 0.0ms">Broker: 0.0ms</div>
-                <div class="stage-step" title="Runtime Started: 0.03ms">Runtime: 0.03ms</div>
-                <div class="stage-step" title="Services Healthy: 2.26ms">Health: 2.26ms</div>
-                <div class="stage-step" title="Fault Injected: 1.14ms">Fault: 1.14ms</div>
-                <div class="stage-step" title="Terminal Connected: 0.04ms">PTY: 0.04ms</div>
+                <div class="stage-step" title="Runtime Started: 972.94ms">Runtime: 972.94ms</div>
+                <div class="stage-step" title="Services Healthy: 2.08ms">Health: 2.08ms</div>
+                <div class="stage-step" title="Fault Injected: 1.53ms">Fault: 1.53ms</div>
+                <div class="stage-step" title="Terminal Connected: 505.87ms">PTY: 505.87ms</div>
               </div>
             </div>
             

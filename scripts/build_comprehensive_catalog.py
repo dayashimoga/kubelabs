@@ -70,8 +70,24 @@ def build_file():
             seen_ids.add(s_id)
 
             val_status = 'ValidationStatus.HARDWARE_CLOUD_REQUIRED' if track == 'aws-eks' else 'ValidationStatus.PROVEN'
-            runtime_class = 'LabRuntimeClassification.CLOUD_REQUIRED' if track == 'aws-eks' else ('LabRuntimeClassification.REAL' if track in ['linux', 'bash', 'docker', 'kubernetes'] else 'LabRuntimeClassification.EMULATED')
-            env_type = 'EnvironmentType.KUBERNETES' if track == 'kubernetes' else ('EnvironmentType.CONTAINER' if runtime_class == 'LabRuntimeClassification.REAL' else 'EnvironmentType.SIMULATION')
+            if track in ['kubernetes', 'helm', 'kustomize']:
+                runtime_class = 'LabRuntimeClassification.REAL_KUBERNETES'
+                env_type = 'EnvironmentType.KUBERNETES'
+            elif track in ['linux', 'bash', 'docker', 'git', 'networking', 'http-dns-tls', 'devsecops', 'platform-engineering']:
+                runtime_class = 'LabRuntimeClassification.REAL_CONTAINER'
+                env_type = 'EnvironmentType.CONTAINER'
+            elif track in ['cicd', 'github-actions', 'argo-cd', 'prometheus', 'grafana', 'alertmanager', 'loki', 'opentelemetry', 'istio', 'sre-resilience']:
+                runtime_class = 'LabRuntimeClassification.REAL_MULTI_CONTAINER'
+                env_type = 'EnvironmentType.CONTAINER'
+            elif track in ['terraform', 'ansible']:
+                runtime_class = 'LabRuntimeClassification.EMULATED'
+                env_type = 'EnvironmentType.SIMULATION'
+            elif track == 'aws-eks':
+                runtime_class = 'LabRuntimeClassification.CLOUD_REQUIRED'
+                env_type = 'EnvironmentType.SIMULATION'
+            else:
+                runtime_class = 'LabRuntimeClassification.SIMULATED'
+                env_type = 'EnvironmentType.SIMULATION'
 
             val_target_str = f"test -f /tmp/{s_id}_fixed || {fix}"
 

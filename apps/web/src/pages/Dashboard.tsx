@@ -119,7 +119,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ onSelectLab, onSelectIncid
           </div>
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 16 }}>
-            {data.radar.map((r, idx) => (
+            {(data.radar || []).map((r, idx) => (
               <div key={idx} style={{ backgroundColor: '#0d121d', padding: 12, borderRadius: 6 }}>
                 <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.85rem', marginBottom: 6 }}>
                   <span style={{ fontWeight: 600, color: '#f1f5f9' }}>{r.technology}</span>
@@ -151,7 +151,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ onSelectLab, onSelectIncid
           </div>
 
           <div style={{ display: 'flex', flexDirection: 'column', gap: 12, flex: 1 }}>
-            {data.weak_areas.map((w, idx) => (
+            {(data.weak_areas || []).map((w, idx) => (
               <div
                 key={idx}
                 style={{

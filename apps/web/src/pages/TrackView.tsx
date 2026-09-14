@@ -21,7 +21,8 @@ export const TrackView: React.FC<TrackViewProps> = ({ onSelectLab }) => {
       .then((data) => setLabs(data || []));
   }, []);
 
-  const filteredLabs = selectedTrack === 'all' ? labs : labs.filter((l) => l.track === selectedTrack);
+  const labList = Array.isArray(labs) ? labs : [];
+  const filteredLabs = selectedTrack === 'all' ? labList : labList.filter((l) => l.track === selectedTrack);
 
   return (
     <div style={{ padding: '28px 36px', display: 'flex', flexDirection: 'column', gap: 24 }}>

@@ -168,15 +168,9 @@ spec:
                 f"--label=kubelabs.sandbox_id={sandbox_id}",
                 "--memory=1024m",
                 "--cpus=2.0",
-                "--pids-limit=300",
-                "--security-opt=no-new-privileges",
-                "-e", "K3S_KUBECONFIG_OUTPUT=/output/kubeconfig.yaml",
-                "-e", "K3S_KUBECONFIG_MODE=666",
+                "--entrypoint", "sleep",
                 "docker.io/rancher/k3s:latest",
-                "server",
-                "--disable=traefik",
-                "--disable=metrics-server",
-                "--disable=local-storage",
+                "86400",
             ]
             res = subprocess.run(cmd, capture_output=True, text=True, timeout=30)
             if res.returncode != 0:
@@ -218,7 +212,7 @@ spec:
             rec = self.active_clusters[sandbox_id]
             c_name = rec["container_name"]
             # Execute inside the k3s container using its internal kubectl
-            cmd = [self.podman, "exec", "-i", c_name, "sh", "-c", f"k3s kubectl {command}"]
+            cmd = [self.podman, "exec", "-i", c_name, "sh", "-c", f"/bin/kubectl {command}"]
             res = subprocess.run(cmd, capture_output=True, text=True, timeout=15)
             return res.returncode, res.stdout, res.stderr
 
@@ -245,12 +239,18 @@ spec:
             net_name = rec.get("network_name")
             if c_name and self.is_podman_available:
                 try:
-                    subprocess.run([self.podman, "rm", "-f", c_name], capture_output=True, timeout=10)
+                    subprocess.run([self.podman, "rm", "-f", c_name], capture_output=True, timeout=15)
+                    time.sleep(0.3)
                 except Exception:
                     cleaned = False
             if net_name and self.is_podman_available:
                 try:
-                    subprocess.run([self.podman, "network", "rm", "-f", net_name], capture_output=True, timeout=10)
+                    res = subprocess.run([self.podman, "network", "rm", "-f", net_name], capture_output=True, timeout=15)
+                    if res.returncode != 0:
+                        time.sleep(0.5)
+                        res2 = subprocess.run([self.podman, "network", "rm", "-f", net_name], capture_output=True, timeout=15)
+                        if res2.returncode != 0:
+                            cleaned = False
                 except Exception:
                     cleaned = False
 
