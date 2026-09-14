@@ -9,6 +9,7 @@ Provides comprehensive coverage across:
 6. Troubleshooting advisor diagnostic Q&A and hint mechanics
 """
 
+import sys
 import time
 import pytest
 from unittest.mock import MagicMock, patch
@@ -230,7 +231,10 @@ def test_redis_manager_mocked_client():
     mock_redis.delete.return_value = 1
     mock_redis.incr.return_value = 1
 
-    with patch("redis.from_url", return_value=mock_redis):
+    mock_redis_module = MagicMock()
+    mock_redis_module.from_url.return_value = mock_redis
+
+    with patch.dict(sys.modules, {"redis": mock_redis_module}):
         rm = RedisManager(redis_url="redis://localhost:6379/0")
         assert rm.is_connected is True
         assert rm.get("key1") == "stored_value"

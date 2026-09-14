@@ -14,6 +14,7 @@ Directly targets the remaining uncovered branches in:
 """
 
 import os
+import sys
 import time
 import json
 import tempfile
@@ -478,7 +479,10 @@ def test_redis_manager_error_fallback_and_eviction():
     mock_redis.delete.side_effect = Exception("Redis del error")
     mock_redis.incr.side_effect = Exception("Redis incr error")
 
-    with patch("redis.from_url", return_value=mock_redis):
+    mock_redis_module = MagicMock()
+    mock_redis_module.from_url.return_value = mock_redis
+
+    with patch.dict(sys.modules, {"redis": mock_redis_module}):
         rm = RedisManager(redis_url="redis://localhost:6379/0")
         rm.is_connected = True  # force connected to test try/except blocks
         # Should gracefully catch exception and fall back to in-memory store
@@ -487,6 +491,7 @@ def test_redis_manager_error_fallback_and_eviction():
         assert rm.delete("fb_key") is True
         assert rm.check_rate_limit("client_fb") is True
         assert rm.check_health() is False
+
 
 
 # ---------------------------------------------------------------------------
