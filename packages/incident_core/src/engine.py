@@ -64,9 +64,12 @@ class IncidentSession:
         self.resolved_at = now
         self.status = IncidentStatus.RESOLVED
 
-        # 1. Detection score (Faster ack = higher score)
-        ack_delay = (self.acknowledged_at - self.started_at) if self.acknowledged_at else 300
-        detection_score = max(50, min(100, int(100 - (ack_delay / 10))))
+        # 1. Detection score (Faster ack = higher score; acknowledging within 60s gives full score 100)
+        ack_delay = max(0.0, (self.acknowledged_at - self.started_at)) if self.acknowledged_at else 300.0
+        if ack_delay <= 60:
+            detection_score = 100
+        else:
+            detection_score = max(50, min(100, int(round(100 - ((ack_delay - 60) / 10)))))
 
         # 2. Investigation score (Variety of diagnostic commands)
         investigation_score = min(100, len(self.inspected_commands) * 20) if self.inspected_commands else 30

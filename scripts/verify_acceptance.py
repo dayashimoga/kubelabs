@@ -132,7 +132,9 @@ def run_acceptance_tests():
     print("\n[Gate 7] Validating Incident Simulator & SRE Scoring...")
     inc_engine = IncidentEngine()
     inc_session = inc_engine.start_incident("checkout-latency-spike", "acc-inc-runner")
-    inc_session.record_inspection("kubectl logs -l app=checkout-service")
+    inc_session.record_inspection("kubectl logs -l app=checkout-service --tail=100")
+    inc_session.record_inspection("kubectl describe pod -l app=checkout-service")
+    inc_session.record_inspection("kubectl top pods -l app=checkout-service")
     inc_session.test_hypothesis("hyp-2")
     mitigated = inc_session.apply_fix("kubectl rollout restart deployment/checkout-service")
     scorecard = inc_session.verify_resolution()
@@ -144,7 +146,7 @@ def run_acceptance_tests():
         "status": "PASS" if gate7_pass else "FAIL",
         "details": f"Score: {scorecard.total_score}/100 | Post-Mortem generated: {len(post_mortem)} chars",
     })
-    print(f"  [PASS] Incident simulated: Mitigated={mitigated}, Score={scorecard.total_score}/100, Post-Mortem OK.")
+    print(f"  [{'PASS' if gate7_pass else 'FAIL'}] Incident simulated: Mitigated={mitigated}, Score={scorecard.total_score}/100, Post-Mortem OK.")
 
     # Gate 8: Mini Production Applications Library
     print("\n[Gate 8] Validating Mini Production Applications Library...")
