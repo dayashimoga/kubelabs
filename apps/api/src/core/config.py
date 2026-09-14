@@ -5,6 +5,7 @@ Sets up sys.path for monorepo packages.
 
 import sys
 from pathlib import Path
+from typing import Optional
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 # Monorepo root is 4 levels up from this file (apps/api/src/core/config.py -> parents[4] is workspace root)
@@ -24,8 +25,14 @@ class Settings(BaseSettings):
     VERSION: str = "1.0.0"
     API_V1_STR: str = "/api/v1"
 
+    # Environment
+    ENVIRONMENT: str = "development"
+
     # Database
     DATABASE_URL: str = "sqlite:///./kubelabs.db"
+
+    # Cache & Distributed Locking
+    REDIS_URL: Optional[str] = None
 
     # Security & Sandbox
     SANDBOX_TTL_SECONDS: int = 1800

@@ -13,6 +13,9 @@ router = APIRouter(prefix="/labs", tags=["labs"])
 lab_service = LabService(settings.LABS_DIR)
 
 
+from packages.sandbox_runtime import RuntimeProvisioningError
+
+
 class StartSessionRequest(BaseModel):
     force_simulation: bool = False
 
@@ -66,9 +69,21 @@ def get_lab_detail(lab_id: str):
 @router.post("/{lab_id}/session")
 def start_session(lab_id: str, req: StartSessionRequest = StartSessionRequest()):
     try:
-        return lab_service.start_session(lab_id)
+        return lab_service.start_session(lab_id, force_simulation=req.force_simulation)
+    except RuntimeProvisioningError as exc:
+        raise HTTPException(status_code=503, detail=f"Runtime provisioning failed: {str(exc)}")
+    except ValueError as exc:
+        raise HTTPException(status_code=404, detail=str(exc))
     except Exception as exc:
         raise HTTPException(status_code=500, detail=str(exc))
+
+
+@router.get("/session/{session_id}/health")
+def get_session_health(session_id: str):
+    sess = lab_service.sandbox_manager.get_session(session_id)
+    if not sess:
+        raise HTTPException(status_code=404, detail=f"Session {session_id} not found.")
+    return sess.health
 
 
 @router.post("/session/{session_id}/exec")

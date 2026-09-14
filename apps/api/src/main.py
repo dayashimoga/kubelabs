@@ -38,9 +38,17 @@ app.add_middleware(
 )
 
 
+import uuid
+from fastapi import Response, status
+from .core.database import check_db_health
+from .core.redis_manager import redis_manager
+
+
 @app.middleware("http")
-async def add_security_headers(request, call_next):
+async def add_request_id_and_security_headers(request, call_next):
+    request_id = request.headers.get("X-Request-ID", str(uuid.uuid4()))
     response = await call_next(request)
+    response.headers["X-Request-ID"] = request_id
     response.headers["X-Content-Type-Options"] = "nosniff"
     response.headers["X-Frame-Options"] = "SAMEORIGIN"
     response.headers["X-XSS-Protection"] = "1; mode=block"
@@ -62,6 +70,26 @@ def health_check():
         "status": "healthy",
         "service": settings.PROJECT_NAME,
         "version": settings.VERSION,
+        "environment": settings.ENVIRONMENT,
+    }
+
+
+@app.get("/readyz")
+def readiness_check(response: Response):
+    db_ok = check_db_health()
+    redis_ok = redis_manager.check_health()
+    ready = db_ok and redis_ok
+
+    if not ready:
+        response.status_code = status.HTTP_503_SERVICE_UNAVAILABLE
+
+    return {
+        "ready": ready,
+        "components": {
+            "database": "connected" if db_ok else "unreachable",
+            "redis_cache": "connected" if redis_ok else "degraded",
+            "podman_sandbox": "available" if settings.ENABLE_PODMAN else "simulation_only",
+        },
     }
 
 

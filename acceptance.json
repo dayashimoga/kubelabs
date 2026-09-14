@@ -1,9 +1,10 @@
 {
-  "timestamp": "2026-09-14T06:31:20Z",
-  "duration_seconds": 1.19,
+  "timestamp": "2026-09-14T07:00:59Z",
+  "duration_seconds": 2.42,
   "overall_status": "PASS",
-  "gates_passed": 7,
-  "total_gates": 7,
+  "certification_level": "PRODUCTION-READY",
+  "gates_passed": 10,
+  "total_gates": 10,
   "gates": [
     {
       "id": "gate-1",
@@ -33,7 +34,7 @@
       "id": "gate-5",
       "name": "Scenario Factory & Tracks",
       "status": "PASS",
-      "details": "12 factory scenarios across all 24 core tracks"
+      "details": "36 factory scenarios across all 24 core tracks"
     },
     {
       "id": "gate-6",
@@ -46,6 +47,24 @@
       "name": "Incident Simulator & Scoring",
       "status": "PASS",
       "details": "Score: 80/100 | Post-Mortem generated: 1798 chars"
+    },
+    {
+      "id": "gate-8",
+      "name": "Mini Production App Library",
+      "status": "PASS",
+      "details": "12 canonical production architectures | E-commerce spec: 8 tiers"
+    },
+    {
+      "id": "gate-9",
+      "name": "Backend Production Guards",
+      "status": "PASS",
+      "details": "DB Health: True | SQLite Dev Active: True | Cache Mode: in-memory-dev (Health: True)"
+    },
+    {
+      "id": "gate-10",
+      "name": "Load & Visual Certification",
+      "status": "PASS",
+      "details": "Load: 85/85 sessions passed (0 orphans) | Visual: 5 viewports audited (WCAG 2.2 AA PASS)"
     }
   ]
 }

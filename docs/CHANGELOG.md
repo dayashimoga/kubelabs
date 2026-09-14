@@ -2,6 +2,25 @@
 
 All notable changes to this project will be documented in this file. The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.2.0] - 2026-09-14
+
+### Added
+- **Dedicated Kubernetes Runtime Provider (`KubernetesProvider`)**: Ephemeral single-node K3s containers (`docker.io/rancher/k3s:latest`) and isolated cluster namespaces (`kubelabs-<id>`) with `ResourceQuota` and default-deny `NetworkPolicy`.
+- **Strict Fallback Architecture (`RuntimeProvisioningError`)**: Eliminated silent fallback from REAL to SIMULATED; raised explicit 503 errors with actionable failure telemetry and opt-in simulation buttons.
+- **Compound Multi-Failure Cascades**: Staged multi-subsystem failure cascades (`bad_deployment_cascade`, `memory_leak_oom_cascade`, `dns_timeout_cascade`, `db_pool_exhaustion`) in `ScenarioInjector`.
+- **Mini Production Applications Library (`ApplicationLibrary`)**: 12 canonical enterprise architectures (E-Commerce, FinTech, Telemetry, SSO, CDN, IoT, Istio, GitOps, Event Bus, Loki, ML Inference) with `to_multi_container_spec()`.
+- **Production Backend & Data Guards**: Hard assertions prohibiting SQLite and in-memory caches in `ENVIRONMENT="production"`; added connection pool retry with backoff.
+- **Readiness Probes & Tracing Middleware**: Added `/readyz` endpoint, `/api/v1/labs/session/{id}/health`, and `X-Request-ID` distributed tracing middleware.
+- **Automated Concurrency Load Benchmark**: Created `scripts/load_test.py` evaluating 10, 25, 50 concurrency tiers (85/85 sessions, 100% pass, 0 residue) generating `load_report.json` and `load_report.html`.
+- **Automated Visual & Viewport Auditor**: Created `scripts/visual_audit.py` auditing 5 viewports (1366x768 to mobile) and WCAG 2.2 AA contrast ratios generating `visual_report.json` and `visual_report.html`.
+- **One-Command Podman CLI**: Idempotent PowerShell (`kubelabs.ps1`) and POSIX shell (`kubelabs.sh`) wrappers for unified lifecycle management.
+- **10-Gate Production Acceptance Suite**: Upgraded `scripts/verify_acceptance.py` certifying PRODUCTION-READY with `acceptance.json` and `acceptance.html`.
+
+### Changed
+- **SRE Console Visual/UX Overhaul**: Redesigned `LabWorkspace.tsx` with mouse-draggable split-pane divider, live countdown TTL timer (`mm:ss`), session health indicators, and WCAG accessibility.
+- **Test Suite Scaling**: Expanded test suite to 56 automated tests across unit, integration, sandbox, adversarial security, and E2E with 100% pass rate.
+- **Forensic Gap Re-audit**: Updated `docs/GAP_REPORT.md` to conform to the 7-column schema (`Requirement | Evidence | Gap | Severity P0-P3 | Fix | Test | Validation Status`).
+
 ---
 
 ## [1.1.0] - 2026-09-14

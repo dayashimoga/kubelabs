@@ -1,0 +1,98 @@
+{
+  "timestamp": "2026-09-14T06:53:31Z",
+  "overall_status": "PASS",
+  "contrast_audits": [
+    {
+      "name": "Background to Text Primary",
+      "color1": "#07090e",
+      "color2": "#f8fafc",
+      "measured_ratio": 19.03,
+      "required_ratio": 4.5,
+      "passed": true
+    },
+    {
+      "name": "Panel Background to Text Muted",
+      "color1": "#0d121d",
+      "color2": "#cbd5e1",
+      "measured_ratio": 12.61,
+      "required_ratio": 4.5,
+      "passed": true
+    },
+    {
+      "name": "Background to Cyan Accent",
+      "color1": "#07090e",
+      "color2": "#00f2fe",
+      "measured_ratio": 14.35,
+      "required_ratio": 3.0,
+      "passed": true
+    },
+    {
+      "name": "Background to Emerald Success",
+      "color1": "#07090e",
+      "color2": "#10b981",
+      "measured_ratio": 7.85,
+      "required_ratio": 3.0,
+      "passed": true
+    },
+    {
+      "name": "Background to Red Error",
+      "color1": "#07090e",
+      "color2": "#ef4444",
+      "measured_ratio": 5.29,
+      "required_ratio": 3.0,
+      "passed": true
+    },
+    {
+      "name": "Background to Amber Warning",
+      "color1": "#07090e",
+      "color2": "#f59e0b",
+      "measured_ratio": 9.27,
+      "required_ratio": 3.0,
+      "passed": true
+    }
+  ],
+  "viewport_audits": [
+    {
+      "name": "Desktop Standard",
+      "dimensions": "1366x768",
+      "responsive_meta_present": true,
+      "horizontal_overflow_prevented": true,
+      "status": "PASS"
+    },
+    {
+      "name": "Desktop Widescreen",
+      "dimensions": "1440x900",
+      "responsive_meta_present": true,
+      "horizontal_overflow_prevented": true,
+      "status": "PASS"
+    },
+    {
+      "name": "Full HD Display",
+      "dimensions": "1920x1080",
+      "responsive_meta_present": true,
+      "horizontal_overflow_prevented": true,
+      "status": "PASS"
+    },
+    {
+      "name": "Tablet Portrait",
+      "dimensions": "768x1024",
+      "responsive_meta_present": true,
+      "horizontal_overflow_prevented": true,
+      "status": "PASS"
+    },
+    {
+      "name": "Mobile Screen",
+      "dimensions": "375x812",
+      "responsive_meta_present": true,
+      "horizontal_overflow_prevented": true,
+      "status": "PASS"
+    }
+  ],
+  "accessibility": {
+    "wcag_level": "WCAG 2.2 AA",
+    "semantic_landmarks_verified": true,
+    "aria_labels_found": 2,
+    "explicit_roles_found": 1,
+    "status": "PASS"
+  }
+}

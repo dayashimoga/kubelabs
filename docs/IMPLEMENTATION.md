@@ -67,3 +67,26 @@ Analyzes learner investigation timelines and generates structured Markdown post-
 
 ### 2.10 Zero-Residue Lifecycle Verification (`manager.py`)
 Guarantees clean tear down by synchronizing container stopping, network purging, and inspecting Podman labels (`kubelabs.sandbox_id`) to certify zero leftover artifacts.
+
+### 2.11 Dedicated Kubernetes Runtime Provider (`packages/sandbox_runtime/src/k8s_provider.py`)
+Provides isolated Kubernetes environments using two distinct strategies:
+1. **Isolated Cluster Namespaces (`kubelabs-<id>`)**: Enforces multi-tenant cluster boundaries with strict `ResourceQuota` (CPU, memory, pod limits) and default-deny `NetworkPolicy` limiting traffic egress to DNS.
+2. **Ephemeral K3s Containers (`docker.io/rancher/k3s:latest`)**: Deploys lightweight single-node K3s containers in dedicated Podman bridge networks for cluster-level operations.
+
+### 2.12 Mini Production Applications Library (`packages/incident_core/src/app_library.py`)
+Houses 12 canonical multi-tier enterprise systems (E-Commerce, FinTech Ledger, Telemetry Stack, Cloud-Native Identity SSO, Global Edge CDN, IoT Ingestion, Istio Mesh, GitOps Pipeline, Serverless Event Bus, Loki Logging, ML Inference Fleet) with automatic translation into multi-container topologies (`to_multi_container_spec()`).
+
+### 2.13 Strict Fallback Architecture (`packages/sandbox_runtime/src/broker.py`)
+Eliminates silent fallback from `REAL` to `SIMULATED`. When real provisioning fails, raises `RuntimeProvisioningError` mapped to HTTP 503, displaying an explicit error card in the web console with root cause telemetry and an optional manual simulation fallback button.
+
+### 2.14 Production Backend & Redis Data Guards (`apps/api/src/core/database.py`, `redis_manager.py`)
+Enforces strict infrastructure guarantees in production mode (`ENVIRONMENT="production"`):
+- Hard abort if SQLite is detected in production.
+- Connection pool with exponential backoff retries (`check_db_health()`).
+- Hard abort if Redis is missing in production; in-memory fallback permitted solely in development.
+- Kubernetes `/readyz` readiness probe checking downstream database and cache status.
+
+### 2.15 High-Concurrency Load & Visual WCAG Auditing (`scripts/load_test.py`, `visual_audit.py`)
+- **Concurrency Benchmark**: Stresses platform across 10, 25, 50 concurrent worker threads measuring p50/p95 startup latency, throughput, and zero-residue cleanup.
+- **Visual & Layout Auditor**: Programmatically audits 5 viewports (1366x768 to mobile) ensuring no horizontal overflow, full viewport responsiveness, and WCAG 2.2 AA contrast ratios $\ge 4.5:1$.
+

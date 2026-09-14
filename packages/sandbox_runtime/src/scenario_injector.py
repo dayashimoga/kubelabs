@@ -70,6 +70,26 @@ class ScenarioInjector:
             "repair": "rm -f /tmp/istio_mtls_strict_mismatch.flag",
             "verify": "test -f /tmp/istio_mtls_strict_mismatch.flag",
         },
+        "bad_deployment_cascade": {
+            "inject": "touch /tmp/bad_deploy_active && mkdir -p /tmp/cascade && echo 'RETRY_COUNT=500' > /tmp/cascade/retries.state",
+            "repair": "rm -rf /tmp/bad_deploy_active /tmp/cascade",
+            "verify": "test -f /tmp/bad_deploy_active",
+        },
+        "memory_leak_oom_cascade": {
+            "inject": "touch /tmp/mem_leak_active && echo 'OOM_KILL_IMM_THRESHOLD' > /tmp/mem_leak_active",
+            "repair": "rm -f /tmp/mem_leak_active",
+            "verify": "test -f /tmp/mem_leak_active",
+        },
+        "dns_timeout_cascade": {
+            "inject": "echo 'nameserver 192.0.2.1' > /etc/resolv.conf.corrupt 2>/dev/null || touch /tmp/dns_timeout_active",
+            "repair": "rm -f /etc/resolv.conf.corrupt /tmp/dns_timeout_active",
+            "verify": "test -f /tmp/dns_timeout_active || test -f /etc/resolv.conf.corrupt",
+        },
+        "db_pool_exhaustion": {
+            "inject": "touch /tmp/db_pool_exhausted.flag && echo 'MAX_CONNECTIONS_REACHED: 100/100' > /tmp/db_pool_exhausted.flag",
+            "repair": "rm -f /tmp/db_pool_exhausted.flag",
+            "verify": "test -f /tmp/db_pool_exhausted.flag",
+        },
     }
 
     @classmethod

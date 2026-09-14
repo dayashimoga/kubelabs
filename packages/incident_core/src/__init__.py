@@ -2,6 +2,7 @@ from .models import *
 from .scenarios import IncidentCatalog, INCIDENTS
 from .engine import IncidentSession, IncidentEngine
 from .microservices_topology import get_production_microservices_topology, get_correlated_trace
+from .app_library import ApplicationLibrary, ProductionApp, ServiceNode
 
 __all__ = [
     "IncidentSeverity",
@@ -16,4 +17,7 @@ __all__ = [
     "IncidentEngine",
     "get_production_microservices_topology",
     "get_correlated_trace",
+    "ApplicationLibrary",
+    "ProductionApp",
+    "ServiceNode",
 ]

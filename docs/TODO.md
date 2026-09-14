@@ -58,7 +58,24 @@ This document is **append-only and history-preserving**. Completed items are mar
 - [x] Automated 7 acceptance verification gates in `verify_acceptance.py` generating `acceptance.json` and `acceptance.html` (all 7 gates passed).
 - [x] Achieved 100% test pass rate across all 29 automated tests (`pytest tests/ -v`).
 
+### Sprint 9: Forensic Production-Readiness Remediation, Kubernetes Runtime, App Library & Concurrency Validation (2026-09-14)
+- [x] Implemented dedicated Kubernetes Runtime Provider (`KubernetesProvider`) supporting ephemeral K3s single-node containers (`docker.io/rancher/k3s:latest`) and isolated namespaces with ResourceQuotas and NetworkPolicies.
+- [x] Enforced strict runtime fallback architecture: eliminated silent fallback from REAL to SIMULATED; introduced `RuntimeProvisioningError` (mapped to HTTP 503) and user-facing recovery UI.
+- [x] Developed compound multi-failure cascade engine in `ScenarioInjector` (`bad_deployment_cascade`, `memory_leak_oom_cascade`, `dns_timeout_cascade`, `db_pool_exhaustion`).
+- [x] Created `ApplicationLibrary` with 12 canonical enterprise production architectures (E-Commerce, FinTech, Telemetry, SSO, CDN, IoT, Istio, GitOps, Event Bus, Loki, ML Inference) with `to_multi_container_spec()`.
+- [x] Expanded procedural scenario catalog to 36 scenarios across all 24 tracks with complete 13/15-part pedagogical models and state validators.
+- [x] Implemented backend production data guards in `database.py` and `redis_manager.py` strictly prohibiting SQLite/in-memory in production.
+- [x] Added Kubernetes-native `/readyz` readiness probe, `/api/v1/labs/session/{id}/health` session inspection, and `X-Request-ID` distributed tracing middleware.
+- [x] Overhauled frontend SRE Console in `LabWorkspace.tsx` with mouse-draggable split-pane divider, live countdown TTL timer (`mm:ss`), session health indicator, and reconnect button.
+- [x] Developed automated concurrency load test benchmark (`scripts/load_test.py`) validating 10, 25, 50 concurrency tiers (85/85 sessions, 100% pass, 0 residue) generating `load_report.json` and `load_report.html`.
+- [x] Developed automated visual/UX audit suite (`scripts/visual_audit.py`) auditing 5 viewports (1366x768 to mobile) and WCAG 2.2 AA contrast ratios generating `visual_report.json` and `visual_report.html`.
+- [x] Created idempotent one-command Podman orchestrators: `scripts/kubelabs.ps1` (PowerShell) and `scripts/kubelabs.sh` (POSIX).
+- [x] Upgraded acceptance verification runner to 10 automated gates in `scripts/verify_acceptance.py`, certifying PRODUCTION-READY with `acceptance.json` and `acceptance.html`.
+- [x] Expanded automated test suite from 29 to 56 tests across unit, integration, sandbox, adversarial, and E2E with 100% pass rate.
+- [x] Reconciled `docs/GAP_REPORT.md` with mandated 7-column schema (`Requirement | Evidence | Gap | Severity P0-P3 | Fix | Test | Validation Status`).
+
 ### Future Sprint Items (Pending Backlog)
 - [ ] Ephemeral multi-node Kind/k3d cluster manager plugin.
 - [ ] OIDC SSO integration with GitHub Enterprise and Okta.
 - [ ] Real AWS Sandbox multi-account provisioning via AWS Organizations with STS credentials.
+

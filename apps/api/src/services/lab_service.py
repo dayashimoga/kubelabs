@@ -40,12 +40,12 @@ class LabService:
     def get_tracks(self) -> List[str]:
         return self.registry.get_tracks()
 
-    def start_session(self, lab_id: str) -> Dict[str, Any]:
+    def start_session(self, lab_id: str, force_simulation: bool = False) -> Dict[str, Any]:
         lab = self.get_lab(lab_id)
         if not lab:
             raise ValueError(f"Lab '{lab_id}' not found.")
 
-        session = self.sandbox_manager.create_sandbox(lab)
+        session = self.sandbox_manager.create_sandbox(lab, force_simulation=force_simulation)
         return {
             "session_id": session.session_id,
             "lab_id": lab.id,
@@ -54,6 +54,7 @@ class LabService:
             "is_container": session.is_container,
             "runtime_classification": session.runtime_classification.value,
             "expires_at": session.expires_at,
+            "health": session.health,
             "tasks": [t.model_dump() for t in lab.tasks],
             "topology": lab.topology.model_dump() if lab.topology else None,
         }

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { LabDetail, ValidationReport } from '../types';
 import { TerminalView } from '../components/Terminal/TerminalView';
 import { CodeEditor } from '../components/Editor/CodeEditor';
@@ -20,6 +20,9 @@ import {
   ShieldCheck,
   FileCode,
   CheckCircle2,
+  Clock,
+  RefreshCw,
+  AlertTriangle,
 } from 'lucide-react';
 
 interface LabWorkspaceProps {
@@ -41,27 +44,105 @@ export const LabWorkspace: React.FC<LabWorkspaceProps> = ({ labId, onBack }) => 
     '# Configuration file\napiVersion: v1\nkind: Pod\nmetadata:\n  name: app\n'
   );
 
+  // Resizable split-pane state
+  const [leftWidthPercent, setLeftWidthPercent] = useState<number>(45);
+  const [isDragging, setIsDragging] = useState(false);
+
+  // Session countdown timer state
+  const [timeLeft, setTimeLeft] = useState<number | null>(null);
+  const [provisionError, setProvisionError] = useState<string | null>(null);
+  const [isRetrying, setIsRetrying] = useState(false);
+
+  // 1. Fetch lab details
   useEffect(() => {
-    // 1. Fetch lab details
     fetch(`/api/v1/labs/${labId}`)
-      .then((res) => res.json())
+      .then((res) => {
+        if (!res.ok) throw new Error(`Lab ${labId} not found`);
+        return res.json();
+      })
       .then((data) => {
         setLab(data);
         if (data.initial_state?.files?.[0]?.content) {
           setEditorContent(data.initial_state.files[0].content);
         }
-      });
+      })
+      .catch((err) => setProvisionError(err.message));
+  }, [labId]);
 
-    // 2. Start sandbox session
+  // 2. Start sandbox session
+  const initSession = useCallback((forceSimulation: boolean = false) => {
+    setProvisionError(null);
+    setIsRetrying(true);
     fetch(`/api/v1/labs/${labId}/session`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ force_simulation: false }),
+      body: JSON.stringify({ force_simulation: forceSimulation }),
     })
-      .then((res) => res.json())
-      .then((s) => setSession(s))
-      .catch((err) => console.error('Error starting lab session:', err));
+      .then(async (res) => {
+        if (!res.ok) {
+          const errData = await res.json().catch(() => ({ detail: 'Unknown provisioning failure' }));
+          throw new Error(errData.detail || `Server returned HTTP ${res.status}`);
+        }
+        return res.json();
+      })
+      .then((s) => {
+        setSession(s);
+        setProvisionError(null);
+      })
+      .catch((err) => {
+        console.error('Error starting lab session:', err);
+        setProvisionError(err.message);
+      })
+      .finally(() => setIsRetrying(false));
   }, [labId]);
+
+  useEffect(() => {
+    initSession(false);
+  }, [initSession]);
+
+  // Live countdown timer ticking every second
+  useEffect(() => {
+    if (!session?.expires_at) return;
+
+    const updateTimer = () => {
+      const now = Date.now() / 1000;
+      const rem = Math.max(0, Math.floor(session.expires_at - now));
+      setTimeLeft(rem);
+    };
+
+    updateTimer();
+    const interval = setInterval(updateTimer, 1000);
+    return () => clearInterval(interval);
+  }, [session?.expires_at]);
+
+  // Drag handlers for resizable panels
+  const handleMouseDown = (e: React.MouseEvent) => {
+    e.preventDefault();
+    setIsDragging(true);
+  };
+
+  useEffect(() => {
+    const handleMouseMove = (e: MouseEvent) => {
+      if (!isDragging) return;
+      const newPercent = (e.clientX / window.innerWidth) * 100;
+      if (newPercent >= 25 && newPercent <= 75) {
+        setLeftWidthPercent(newPercent);
+      }
+    };
+
+    const handleMouseUp = () => {
+      if (isDragging) setIsDragging(false);
+    };
+
+    if (isDragging) {
+      window.addEventListener('mousemove', handleMouseMove);
+      window.addEventListener('mouseup', handleMouseUp);
+    }
+    return () => {
+      window.removeEventListener('mousemove', handleMouseMove);
+      window.removeEventListener('mouseup', handleMouseUp);
+    };
+  }, [isDragging]);
 
   const handleRunValidation = async () => {
     if (!session || !lab?.tasks?.[0]) return;
@@ -111,6 +192,13 @@ export const LabWorkspace: React.FC<LabWorkspaceProps> = ({ labId, onBack }) => 
     return res.json();
   };
 
+  const formatCountdown = (seconds: number | null) => {
+    if (seconds === null) return '--:--';
+    const m = Math.floor(seconds / 60);
+    const s = seconds % 60;
+    return `${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}`;
+  };
+
   const getRuntimeBadge = (classification?: string) => {
     const cls = classification || session?.runtime_classification || 'REAL';
     if (cls === 'REAL') {
@@ -140,6 +228,36 @@ export const LabWorkspace: React.FC<LabWorkspaceProps> = ({ labId, onBack }) => 
     }
   };
 
+  // Error screen when provisioning fails
+  if (provisionError) {
+    return (
+      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', height: '100%', padding: 40, gap: 20 }}>
+        <div style={{ width: 64, height: 64, borderRadius: '50%', backgroundColor: 'rgba(239, 68, 68, 0.15)', border: '1px solid #ef4444', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#ef4444' }}>
+          <AlertTriangle size={32} />
+        </div>
+        <div style={{ textAlign: 'center', maxWidth: 600 }}>
+          <h2 style={{ color: '#f8fafc', fontSize: '1.4rem', margin: '0 0 10px 0' }}>Runtime Provisioning Failed</h2>
+          <p style={{ color: '#94a3b8', fontSize: '0.9rem', lineHeight: 1.6, margin: '0 0 20px 0', fontFamily: 'monospace', backgroundColor: '#0d121d', padding: 14, borderRadius: 6, border: '1px solid rgba(255,255,255,0.08)' }}>
+            {provisionError}
+          </p>
+          <div style={{ display: 'flex', justifyContent: 'center', gap: 12 }}>
+            <button onClick={() => initSession(false)} disabled={isRetrying} className="btn btn-primary" style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+              <RefreshCw size={14} className={isRetrying ? 'animate-spin' : ''} />
+              Retry Real Sandbox
+            </button>
+            <button onClick={() => initSession(true)} disabled={isRetrying} className="btn btn-secondary">
+              Launch in Simulation Mode
+            </button>
+            <button onClick={onBack} className="btn btn-secondary">
+              ← Return to Catalog
+            </button>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  // Loading screen
   if (!lab || !session) {
     return (
       <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', height: '100%', gap: 16 }}>
@@ -152,9 +270,9 @@ export const LabWorkspace: React.FC<LabWorkspaceProps> = ({ labId, onBack }) => 
   }
 
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', height: '100%', overflow: 'hidden' }}>
+    <div style={{ display: 'flex', flexDirection: 'column', height: '100%', overflow: 'hidden' }} role="region" aria-label="SRE Lab Workspace">
       {/* Top Workspace Header */}
-      <div
+      <header
         style={{
           height: 52,
           padding: '0 20px',
@@ -167,7 +285,7 @@ export const LabWorkspace: React.FC<LabWorkspaceProps> = ({ labId, onBack }) => 
         }}
       >
         <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
-          <button onClick={onBack} className="btn btn-secondary" style={{ padding: '4px 10px', fontSize: '0.75rem' }}>
+          <button onClick={onBack} className="btn btn-secondary" style={{ padding: '4px 10px', fontSize: '0.75rem' }} aria-label="Back to labs catalog">
             ← All Labs
           </button>
           <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
@@ -179,9 +297,29 @@ export const LabWorkspace: React.FC<LabWorkspaceProps> = ({ labId, onBack }) => 
           </div>
         </div>
 
-        <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+          {/* Live TTL Countdown Timer */}
+          <div
+            style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: 6,
+              padding: '4px 10px',
+              borderRadius: 4,
+              backgroundColor: timeLeft !== null && timeLeft < 300 ? 'rgba(239, 68, 68, 0.15)' : '#07090e',
+              border: `1px solid ${timeLeft !== null && timeLeft < 300 ? '#ef4444' : 'rgba(255,255,255,0.1)'}`,
+              color: timeLeft !== null && timeLeft < 300 ? '#ef4444' : '#cbd5e1',
+              fontSize: '0.75rem',
+              fontWeight: 600,
+              fontFamily: 'monospace',
+            }}
+            title="Remaining session TTL before automatic cleanup"
+          >
+            <Clock size={12} /> {formatCountdown(timeLeft)}
+          </div>
+
           {resetMessage && (
-            <span style={{ fontSize: '0.75rem', color: '#10b981', fontWeight: 600 }}>
+            <span style={{ fontSize: '0.75rem', color: '#10b981', fontWeight: 600 }} aria-live="polite">
               ✓ {resetMessage}
             </span>
           )}
@@ -193,157 +331,144 @@ export const LabWorkspace: React.FC<LabWorkspaceProps> = ({ labId, onBack }) => 
             style={{ padding: '5px 10px', fontSize: '0.75rem', display: 'flex', alignItems: 'center', gap: 6 }}
             title="Reset sandbox to initial failure state"
           >
-            <RotateCcw size={13} /> {isResetting ? 'Resetting...' : 'Reset'}
+            <RotateCcw size={13} className={isResetting ? 'animate-spin' : ''} /> {isResetting ? 'Resetting...' : 'Reset'}
+          </button>
+
+          <button
+            onClick={() => initSession(false)}
+            className="btn btn-secondary"
+            style={{ padding: '5px 10px', fontSize: '0.75rem', display: 'flex', alignItems: 'center', gap: 6 }}
+            title="Reconnect or re-sync active session"
+          >
+            <RefreshCw size={13} /> Reconnect
           </button>
 
           <div style={{ height: 20, width: 1, backgroundColor: 'rgba(255,255,255,0.1)', margin: '0 4px' }} />
 
-          <button
-            onClick={() => setActiveTab('instructions')}
-            className="btn"
-            style={{
-              padding: '5px 12px',
-              fontSize: '0.75rem',
-              backgroundColor: activeTab === 'instructions' ? '#141b2d' : 'transparent',
-              color: activeTab === 'instructions' ? '#00f2fe' : '#94a3b8',
-              border: '1px solid rgba(255,255,255,0.08)',
-            }}
-          >
-            <BookOpen size={13} /> Guide
-          </button>
-          <button
-            onClick={() => setActiveTab('architecture')}
-            className="btn"
-            style={{
-              padding: '5px 12px',
-              fontSize: '0.75rem',
-              backgroundColor: activeTab === 'architecture' ? '#141b2d' : 'transparent',
-              color: activeTab === 'architecture' ? '#00f2fe' : '#94a3b8',
-              border: '1px solid rgba(255,255,255,0.08)',
-            }}
-          >
-            <Layers size={13} /> Topology
-          </button>
-          <button
-            onClick={() => setActiveTab('editor')}
-            className="btn"
-            style={{
-              padding: '5px 12px',
-              fontSize: '0.75rem',
-              backgroundColor: activeTab === 'editor' ? '#141b2d' : 'transparent',
-              color: activeTab === 'editor' ? '#00f2fe' : '#94a3b8',
-              border: '1px solid rgba(255,255,255,0.08)',
-            }}
-          >
-            <Cpu size={13} /> Editor
-          </button>
-          <button
-            onClick={() => setActiveTab('telemetry')}
-            className="btn"
-            style={{
-              padding: '5px 12px',
-              fontSize: '0.75rem',
-              backgroundColor: activeTab === 'telemetry' ? '#141b2d' : 'transparent',
-              color: activeTab === 'telemetry' ? '#00f2fe' : '#94a3b8',
-              border: '1px solid rgba(255,255,255,0.08)',
-            }}
-          >
-            <Activity size={13} /> Telemetry
-          </button>
-          <button
-            onClick={() => setActiveTab('resources')}
-            className="btn"
-            style={{
-              padding: '5px 12px',
-              fontSize: '0.75rem',
-              backgroundColor: activeTab === 'resources' ? '#141b2d' : 'transparent',
-              color: activeTab === 'resources' ? '#00f2fe' : '#94a3b8',
-              border: '1px solid rgba(255,255,255,0.08)',
-            }}
-          >
-            <FileCode size={13} /> Resources
-          </button>
+          {/* Session Health Dot */}
+          <div style={{ display: 'flex', alignItems: 'center', gap: 6, fontSize: '0.75rem', color: '#64748b' }}>
+            <span style={{ width: 8, height: 8, borderRadius: '50%', backgroundColor: '#10b981', display: 'inline-block', boxShadow: '0 0 8px #10b981' }} />
+            Active
+          </div>
         </div>
-      </div>
+      </header>
 
-      {/* Main Multi-Panel Workspace */}
-      <div style={{ flex: 1, display: 'grid', gridTemplateColumns: isTerminalFullscreen ? '0 1fr' : isEditorFullscreen ? '1fr 0' : '1.1fr 1.3fr', overflow: 'hidden' }}>
-        {/* Left Column: Context / Instructions / Editor / Resources */}
+      {/* Main Workspace Body: Resizable Split-Pane */}
+      <div
+        style={{
+          flex: 1,
+          display: 'grid',
+          gridTemplateColumns: isTerminalFullscreen
+            ? '0px 0px 1fr'
+            : isEditorFullscreen
+            ? '1fr 0px 0px'
+            : `${leftWidthPercent}% 6px calc(${100 - leftWidthPercent}% - 6px)`,
+          overflow: 'hidden',
+          position: 'relative',
+        }}
+      >
+        {/* Left Column: Instructions / Architecture / Editor / Telemetry */}
         {!isTerminalFullscreen && (
-          <div
-            style={{
-              borderRight: '1px solid rgba(255,255,255,0.08)',
-              display: 'flex',
-              flexDirection: 'column',
-              overflowY: 'auto',
-              padding: 20,
-              gap: 16,
-            }}
-          >
+          <div style={{ display: 'flex', flexDirection: 'column', overflowY: 'auto', padding: 16, gap: 14 }}>
+            {/* Workspace Sub-Navigation Tabs */}
+            <div style={{ display: 'flex', gap: 4, borderBottom: '1px solid rgba(255,255,255,0.08)', paddingBottom: 8, flexShrink: 0 }}>
+              <button
+                onClick={() => setActiveTab('instructions')}
+                className={`btn ${activeTab === 'instructions' ? 'btn-primary' : 'btn-secondary'}`}
+                style={{ padding: '4px 10px', fontSize: '0.75rem', display: 'flex', alignItems: 'center', gap: 6 }}
+              >
+                <BookOpen size={13} /> Instructions
+              </button>
+              <button
+                onClick={() => setActiveTab('architecture')}
+                className={`btn ${activeTab === 'architecture' ? 'btn-primary' : 'btn-secondary'}`}
+                style={{ padding: '4px 10px', fontSize: '0.75rem', display: 'flex', alignItems: 'center', gap: 6 }}
+              >
+                <Layers size={13} /> Topology
+              </button>
+              <button
+                onClick={() => setActiveTab('editor')}
+                className={`btn ${activeTab === 'editor' ? 'btn-primary' : 'btn-secondary'}`}
+                style={{ padding: '4px 10px', fontSize: '0.75rem', display: 'flex', alignItems: 'center', gap: 6 }}
+              >
+                <FileCode size={13} /> Editor
+              </button>
+              <button
+                onClick={() => setActiveTab('telemetry')}
+                className={`btn ${activeTab === 'telemetry' ? 'btn-primary' : 'btn-secondary'}`}
+                style={{ padding: '4px 10px', fontSize: '0.75rem', display: 'flex', alignItems: 'center', gap: 6 }}
+              >
+                <Activity size={13} /> Telemetry
+              </button>
+              <button
+                onClick={() => setActiveTab('resources')}
+                className={`btn ${activeTab === 'resources' ? 'btn-primary' : 'btn-secondary'}`}
+                style={{ padding: '4px 10px', fontSize: '0.75rem', display: 'flex', alignItems: 'center', gap: 6 }}
+              >
+                <Cpu size={13} /> Resources
+              </button>
+            </div>
+
+            {/* Tab: Instructions */}
             {activeTab === 'instructions' && (
-              <>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
                 <div className="glass-panel" style={{ padding: 18 }}>
-                  <div style={{ fontSize: '0.8rem', color: '#00f2fe', fontWeight: 600, textTransform: 'uppercase' }}>
-                    Objectives & SRE Workflow
+                  <div style={{ fontSize: '0.8rem', color: '#00f2fe', fontWeight: 600, textTransform: 'uppercase', marginBottom: 8 }}>
+                    Lab Mission & Objectives
                   </div>
-                  <ul style={{ marginTop: 8, paddingLeft: 20, fontSize: '0.85rem', color: '#cbd5e1', lineHeight: 1.6 }}>
-                    {lab.objectives.map((obj, i) => (
+                  <ul style={{ margin: 0, paddingLeft: 18, fontSize: '0.85rem', color: '#cbd5e1', lineHeight: 1.6 }}>
+                    {lab.objectives?.map((obj, i) => (
                       <li key={i}>{obj}</li>
                     ))}
                   </ul>
                 </div>
 
-                {lab.what_why && (
-                  <div className="glass-panel" style={{ padding: 18 }}>
-                    <div style={{ fontSize: '0.8rem', color: '#3b82f6', fontWeight: 600, textTransform: 'uppercase' }}>
-                      What & Why It Matters
-                    </div>
-                    <div style={{ marginTop: 6, fontSize: '0.825rem', color: '#94a3b8', whiteSpace: 'pre-wrap', lineHeight: 1.5 }}>
-                      {lab.what_why}
-                    </div>
+                <div className="glass-panel" style={{ padding: 18 }}>
+                  <div style={{ fontSize: '0.8rem', color: '#00f2fe', fontWeight: 600, textTransform: 'uppercase', marginBottom: 8 }}>
+                    Architecture & Why It Matters
                   </div>
-                )}
+                  <div style={{ fontSize: '0.85rem', color: '#cbd5e1', lineHeight: 1.6 }}>
+                    {lab.what_why}
+                  </div>
+                </div>
 
-                {/* Troubleshooting Workflow Steps */}
-                {lab.troubleshooting_workflow && lab.troubleshooting_workflow.length > 0 && (
+                {lab.troubleshooting_workflow && (
                   <div className="glass-panel" style={{ padding: 18 }}>
-                    <div style={{ fontSize: '0.8rem', color: '#f59e0b', fontWeight: 600, textTransform: 'uppercase' }}>
-                      Recommended Diagnostic Steps
+                    <div style={{ fontSize: '0.8rem', color: '#00f2fe', fontWeight: 600, textTransform: 'uppercase', marginBottom: 8 }}>
+                      Recommended Diagnostic Workflow
                     </div>
-                    <div style={{ marginTop: 8, display: 'flex', flexDirection: 'column', gap: 6 }}>
-                      {lab.troubleshooting_workflow.map((st: any, idx) => (
-                        <div
-                          key={idx}
-                          style={{
-                            fontSize: '0.8rem',
-                            color: '#f1f5f9',
-                            padding: '6px 10px',
-                            backgroundColor: '#0d121d',
-                            borderRadius: 4,
-                            fontFamily: 'monospace',
-                          }}
-                        >
-                          {typeof st === 'string' ? st : JSON.stringify(st)}
-                        </div>
+                    <ol style={{ margin: 0, paddingLeft: 18, fontSize: '0.85rem', color: '#cbd5e1', lineHeight: 1.6 }}>
+                      {lab.troubleshooting_workflow?.map((step, i) => (
+                        <li key={i} style={{ marginBottom: 4 }}>{step}</li>
                       ))}
-                    </div>
+                    </ol>
                   </div>
                 )}
-              </>
+              </div>
             )}
 
-            {activeTab === 'architecture' && <TopologyViewer topology={lab.topology} />}
+            {/* Tab: Architecture Topology */}
+            {activeTab === 'architecture' && (
+              <div className="glass-panel" style={{ padding: 16, minHeight: 350 }}>
+                <div style={{ fontSize: '0.8rem', color: '#00f2fe', fontWeight: 600, textTransform: 'uppercase', marginBottom: 12 }}>
+                  System Architecture & Dependency Topology
+                </div>
+                <TopologyViewer topology={lab.topology || session.topology} />
+              </div>
+            )}
 
+            {/* Tab: Monaco Code Editor */}
             {activeTab === 'editor' && (
-              <div style={{ display: 'flex', flexDirection: 'column', height: '100%', minHeight: 450 }}>
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 8 }}>
-                  <span style={{ fontSize: '0.8rem', color: '#94a3b8', fontFamily: 'monospace' }}>
-                    {lab.initial_state?.files?.[0]?.path || 'config.yaml'}
+              <div style={{ flex: 1, minHeight: 400, display: 'flex', flexDirection: 'column' }}>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', paddingBottom: 6 }}>
+                  <span style={{ fontSize: '0.75rem', color: '#64748b', fontWeight: 600 }}>
+                    MANIFEST EDITOR ({lab.initial_state?.files?.[0]?.path || 'config.yaml'})
                   </span>
                   <button
                     onClick={() => setIsEditorFullscreen(!isEditorFullscreen)}
                     className="btn btn-secondary"
                     style={{ padding: '2px 8px', fontSize: '0.75rem' }}
+                    title={isEditorFullscreen ? 'Exit Fullscreen' : 'Fullscreen Editor'}
                   >
                     {isEditorFullscreen ? <Minimize2 size={12} /> : <Maximize2 size={12} />}
                   </button>
@@ -358,8 +483,10 @@ export const LabWorkspace: React.FC<LabWorkspaceProps> = ({ labId, onBack }) => 
               </div>
             )}
 
+            {/* Tab: Telemetry */}
             {activeTab === 'telemetry' && <TelemetryViewer />}
 
+            {/* Tab: Resources & Security Constraints */}
             {activeTab === 'resources' && (
               <div className="glass-panel" style={{ padding: 18 }}>
                 <div style={{ fontSize: '0.8rem', color: '#00f2fe', fontWeight: 600, textTransform: 'uppercase', marginBottom: 12 }}>
@@ -400,6 +527,21 @@ export const LabWorkspace: React.FC<LabWorkspaceProps> = ({ labId, onBack }) => 
             {/* Layered Hints Assistant */}
             <LayeredHintsDialog hints={lab.tasks?.[0]?.hints || []} onAskAdvisor={handleAskAdvisor} />
           </div>
+        )}
+
+        {/* Draggable Vertical Divider Handle */}
+        {!isTerminalFullscreen && !isEditorFullscreen && (
+          <div
+            onMouseDown={handleMouseDown}
+            style={{
+              width: 6,
+              backgroundColor: isDragging ? '#00f2fe' : 'rgba(255,255,255,0.06)',
+              cursor: 'col-resize',
+              transition: isDragging ? 'none' : 'background-color 0.2s',
+              zIndex: 10,
+            }}
+            title="Drag to resize workspace panels"
+          />
         )}
 
         {/* Right Column: Terminal & Validation Panel */}

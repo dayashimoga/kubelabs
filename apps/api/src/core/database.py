@@ -1,14 +1,17 @@
-"""
-Database engine and session management.
-Dynamically supports PostgreSQL (production) and SQLite WAL mode (zero-setup local dev).
-"""
-
-from sqlalchemy import create_engine, event
+import time
+from sqlalchemy import create_engine, event, text
 from sqlalchemy.orm import declarative_base, sessionmaker
 from .config import settings
 
 is_sqlite = "sqlite" in settings.DATABASE_URL
-is_postgres = "postgres" in settings.DATABASE_URL
+is_postgres = "postgres" in settings.DATABASE_URL or "postgresql" in settings.DATABASE_URL
+
+# Strict Production Guard
+if settings.ENVIRONMENT == "production" and is_sqlite:
+    raise RuntimeError(
+        "CRITICAL: Production environment strictly requires PostgreSQL. "
+        "SQLite fallback is prohibited in production to prevent data loss."
+    )
 
 if is_postgres:
     engine = create_engine(
@@ -16,6 +19,7 @@ if is_postgres:
         pool_size=20,
         max_overflow=10,
         pool_pre_ping=True,
+        pool_recycle=300,
         echo=False,
     )
 elif is_sqlite:
@@ -46,3 +50,16 @@ def get_db():
         yield db
     finally:
         db.close()
+
+
+def check_db_health(retries: int = 3, backoff_seconds: float = 0.5) -> bool:
+    """Verifies database connectivity with exponential backoff retries."""
+    for attempt in range(retries):
+        try:
+            with engine.connect() as conn:
+                conn.execute(text("SELECT 1"))
+                return True
+        except Exception:
+            if attempt < retries - 1:
+                time.sleep(backoff_seconds * (2 ** attempt))
+    return False

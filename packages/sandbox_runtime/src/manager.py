@@ -32,13 +32,30 @@ class SandboxSession:
         self.broker_record = broker_record
         self.created_at = time.time()
         self.expires_at = self.created_at + ttl_seconds
+        self.status = "READY"
         self.last_activity = time.time()
         self.scrollback_buffer: List[str] = []
         self._max_scrollback = 1000
 
     @property
     def is_container(self) -> bool:
-        return self.broker_record.get("provider", "").startswith("podman")
+        prov = self.broker_record.get("provider", "")
+        return prov.startswith("podman") or prov.startswith("k8s")
+
+    @property
+    def remaining_ttl_seconds(self) -> int:
+        return max(0, int(self.expires_at - time.time()))
+
+    @property
+    def health(self) -> Dict[str, Any]:
+        return {
+            "session_id": self.session_id,
+            "status": self.status if not self.is_expired() else "EXPIRED",
+            "provider": self.broker_record.get("provider", "unknown"),
+            "classification": self.runtime_classification.value,
+            "remaining_ttl_seconds": self.remaining_ttl_seconds,
+            "expired": self.is_expired(),
+        }
 
     @property
     def container_id(self) -> Optional[str]:
@@ -87,22 +104,8 @@ class SandboxManager:
         """Provision a sandbox for the given lab specification using EnvironmentBroker."""
         session_id = str(uuid.uuid4())[:8]
 
-        # Use broker to start environment
-        if force_simulation:
-            broker_record = {
-                "sandbox_id": session_id,
-                "provider": "simulator",
-                "classification": LabRuntimeClassification.SIMULATED,
-                "simulator": self.broker._start_multi_container if False else None,
-                "created_at": time.time(),
-                "lab_spec": lab,
-            }
-            # Fallback simulator instance
-            from .simulator import DeterministicSimulator
-            broker_record["simulator"] = DeterministicSimulator(lab.id, lab.initial_state.seed_data)
-            self.broker.active_environments[session_id] = broker_record
-        else:
-            broker_record = self.broker.start_environment(session_id, lab)
+        # Use broker to start environment with strict zero-silent-fallback
+        broker_record = self.broker.start_environment(session_id, lab, force_simulation=force_simulation)
 
         session = SandboxSession(
             session_id=session_id,

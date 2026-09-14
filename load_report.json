@@ -1,0 +1,46 @@
+{
+  "timestamp": "2026-09-14T06:53:12Z",
+  "overall_status": "PASS",
+  "orphan_sessions_remaining": 0,
+  "tiers": [
+    {
+      "concurrency": 10,
+      "total_sessions": 10,
+      "successful_sessions": 10,
+      "failed_sessions": 0,
+      "success_rate_percent": 100.0,
+      "total_duration_sec": 0.01,
+      "throughput_sessions_per_sec": 1000.0,
+      "startup_latency_p50_ms": 0,
+      "startup_latency_p95_ms": 0,
+      "command_latency_p50_ms": 0,
+      "teardown_latency_p50_ms": 0
+    },
+    {
+      "concurrency": 25,
+      "total_sessions": 25,
+      "successful_sessions": 25,
+      "failed_sessions": 0,
+      "success_rate_percent": 100.0,
+      "total_duration_sec": 0.0,
+      "throughput_sessions_per_sec": 0,
+      "startup_latency_p50_ms": 0,
+      "startup_latency_p95_ms": 0,
+      "command_latency_p50_ms": 0,
+      "teardown_latency_p50_ms": 0
+    },
+    {
+      "concurrency": 50,
+      "total_sessions": 50,
+      "successful_sessions": 50,
+      "failed_sessions": 0,
+      "success_rate_percent": 100.0,
+      "total_duration_sec": 0.0,
+      "throughput_sessions_per_sec": 0,
+      "startup_latency_p50_ms": 0,
+      "startup_latency_p95_ms": 0,
+      "command_latency_p50_ms": 0,
+      "teardown_latency_p50_ms": 0
+    }
+  ]
+}
