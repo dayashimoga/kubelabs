@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { LabSummary } from '../types';
+import { getApiBase } from '../config';
 import { Terminal, Shield, Cpu, BookOpen, Layers, ArrowRight, CheckCircle2 } from 'lucide-react';
 
 interface TrackViewProps {
@@ -12,11 +13,11 @@ export const TrackView: React.FC<TrackViewProps> = ({ onSelectLab }) => {
   const [selectedTrack, setSelectedTrack] = useState<string>('all');
 
   useEffect(() => {
-    fetch('/api/v1/labs/tracks')
+    fetch(`${getApiBase()}/api/v1/labs/tracks`)
       .then((res) => res.json())
       .then((data) => setTracks(data.tracks || []));
 
-    fetch('/api/v1/labs')
+    fetch(`${getApiBase()}/api/v1/labs`)
       .then((res) => res.json())
       .then((data) => setLabs(data || []));
   }, []);

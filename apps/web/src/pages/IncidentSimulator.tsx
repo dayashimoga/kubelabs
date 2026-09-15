@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { IncidentSummary, IncidentDetail, IncidentScore } from '../types';
+import { getApiBase } from '../config';
 import { TopologyViewer } from '../components/Topology/TopologyViewer';
 import { TelemetryViewer } from '../components/Telemetry/TelemetryViewer';
 import { TerminalView } from '../components/Terminal/TerminalView';
@@ -22,7 +23,7 @@ export const IncidentSimulator: React.FC<IncidentSimulatorProps> = ({ initialInc
   const [showPostMortemModal, setShowPostMortemModal] = useState<boolean>(false);
 
   useEffect(() => {
-    fetch('/api/v1/incidents')
+    fetch(`${getApiBase()}/api/v1/incidents`)
       .then((res) => res.json())
       .then((data) => setIncidents(data));
   }, []);
@@ -30,12 +31,12 @@ export const IncidentSimulator: React.FC<IncidentSimulatorProps> = ({ initialInc
   useEffect(() => {
     if (!activeId) return;
 
-    fetch(`/api/v1/incidents/${activeId}`)
+    fetch(`${getApiBase()}/api/v1/incidents/${activeId}`)
       .then((res) => res.json())
       .then((data) => setIncident(data));
 
     // Start live incident session
-    fetch(`/api/v1/incidents/${activeId}/start`, {
+    fetch(`${getApiBase()}/api/v1/incidents/${activeId}/start`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ session_id: `inc-${Date.now().toString().slice(-6)}` }),
@@ -50,7 +51,7 @@ export const IncidentSimulator: React.FC<IncidentSimulatorProps> = ({ initialInc
 
   const handleTestHypothesis = async (hypId: string) => {
     if (!session) return;
-    const res = await fetch(`/api/v1/incidents/session/${session.session_id}/hypothesis`, {
+    const res = await fetch(`${getApiBase()}/api/v1/incidents/session/${session.session_id}/hypothesis`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ hypothesis_id: hypId }),
@@ -61,7 +62,7 @@ export const IncidentSimulator: React.FC<IncidentSimulatorProps> = ({ initialInc
 
   const handleApplyMitigation = async () => {
     if (!session || !mitigationCmd) return;
-    const res = await fetch(`/api/v1/incidents/session/${session.session_id}/mitigate`, {
+    const res = await fetch(`${getApiBase()}/api/v1/incidents/session/${session.session_id}/mitigate`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ command: mitigationCmd }),
@@ -72,7 +73,7 @@ export const IncidentSimulator: React.FC<IncidentSimulatorProps> = ({ initialInc
 
   const handleResolve = async () => {
     if (!session) return;
-    const res = await fetch(`/api/v1/incidents/session/${session.session_id}/resolve`, {
+    const res = await fetch(`${getApiBase()}/api/v1/incidents/session/${session.session_id}/resolve`, {
       method: 'POST',
     });
     const data = await res.json();

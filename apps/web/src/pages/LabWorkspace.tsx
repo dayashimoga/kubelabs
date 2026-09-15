@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { LabDetail, ValidationReport } from '../types';
+import { getApiBase } from '../config';
 import { TerminalView } from '../components/Terminal/TerminalView';
 import { CodeEditor } from '../components/Editor/CodeEditor';
 import { TopologyViewer } from '../components/Topology/TopologyViewer';
@@ -55,7 +56,7 @@ export const LabWorkspace: React.FC<LabWorkspaceProps> = ({ labId, onBack }) => 
 
   // 1. Fetch lab details
   useEffect(() => {
-    fetch(`/api/v1/labs/${labId}`)
+    fetch(`${getApiBase()}/api/v1/labs/${labId}`)
       .then((res) => {
         if (!res.ok) throw new Error(`Lab ${labId} not found`);
         return res.json();
@@ -73,7 +74,7 @@ export const LabWorkspace: React.FC<LabWorkspaceProps> = ({ labId, onBack }) => 
   const initSession = useCallback((forceSimulation: boolean = false) => {
     setProvisionError(null);
     setIsRetrying(true);
-    fetch(`/api/v1/labs/${labId}/session`, {
+    fetch(`${getApiBase()}/api/v1/labs/${labId}/session`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ force_simulation: forceSimulation }),
@@ -148,7 +149,7 @@ export const LabWorkspace: React.FC<LabWorkspaceProps> = ({ labId, onBack }) => 
     if (!session || !lab?.tasks?.[0]) return;
     setIsValidating(true);
     try {
-      const res = await fetch(`/api/v1/labs/session/${session.session_id}/validate`, {
+      const res = await fetch(`${getApiBase()}/api/v1/labs/session/${session.session_id}/validate`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ task_id: lab.tasks[0].id }),
@@ -166,7 +167,7 @@ export const LabWorkspace: React.FC<LabWorkspaceProps> = ({ labId, onBack }) => 
     if (!session) return;
     setIsResetting(true);
     try {
-      const res = await fetch(`/api/v1/labs/session/${session.session_id}/reset`, { method: 'POST' });
+      const res = await fetch(`${getApiBase()}/api/v1/labs/session/${session.session_id}/reset`, { method: 'POST' });
       const data = await res.json();
       if (data.reset) {
         setResetMessage('Sandbox environment reset to initial failure state.');
@@ -181,7 +182,7 @@ export const LabWorkspace: React.FC<LabWorkspaceProps> = ({ labId, onBack }) => 
 
   const handleAskAdvisor = async (question: string) => {
     if (!session || !lab?.tasks?.[0]) return { guidance: 'Session not active.' };
-    const res = await fetch(`/api/v1/labs/session/${session.session_id}/advisor`, {
+    const res = await fetch(`${getApiBase()}/api/v1/labs/session/${session.session_id}/advisor`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({

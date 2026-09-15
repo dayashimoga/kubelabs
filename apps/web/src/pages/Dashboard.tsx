@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { DashboardData } from '../types';
+import { getApiBase } from '../config';
 import { Award, AlertOctagon, TrendingUp, CheckCircle, ArrowRight, ShieldCheck, Terminal, BookOpen } from 'lucide-react';
 
 interface DashboardProps {
@@ -12,7 +13,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ onSelectLab, onSelectIncid
   const [data, setData] = useState<DashboardData | null>(null);
 
   useEffect(() => {
-    fetch('/api/v1/dashboard')
+    fetch(`${getApiBase()}/api/v1/dashboard`)
       .then((res) => res.json())
       .then((d) => setData(d))
       .catch((err) => console.error('Error loading dashboard:', err));

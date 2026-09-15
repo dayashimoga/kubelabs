@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { getApiBase } from '../config';
 import { Award, CheckCircle2, XCircle, BookOpen, ChevronRight, HelpCircle } from 'lucide-react';
 
 interface QuestionItem {
@@ -19,7 +20,7 @@ export const Assessments: React.FC = () => {
   const [submitting, setSubmitting] = useState(false);
 
   useEffect(() => {
-    fetch(`/api/v1/assessments/${track}`)
+    fetch(`${getApiBase()}/api/v1/assessments/${track}`)
       .then((res) => res.json())
       .then((data) => {
         setQuestions(data.questions || []);
@@ -41,7 +42,7 @@ export const Assessments: React.FC = () => {
   const handleSubmit = async () => {
     setSubmitting(true);
     try {
-      const res = await fetch(`/api/v1/assessments/${track}/submit`, {
+      const res = await fetch(`${getApiBase()}/api/v1/assessments/${track}/submit`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ answers: selectedAnswers }),

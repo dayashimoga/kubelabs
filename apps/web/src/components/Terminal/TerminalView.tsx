@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { Terminal } from '@xterm/xterm';
 import { FitAddon } from '@xterm/addon-fit';
+import { getWsBase } from '../../config';
 import { Maximize2, Minimize2, Terminal as TerminalIcon, RefreshCw } from 'lucide-react';
 
 interface TerminalViewProps {
@@ -50,9 +51,7 @@ export const TerminalView: React.FC<TerminalViewProps> = ({ sessionId, isContain
     fitAddonInstance.current = fitAddon;
 
     // WebSocket connection
-    const protocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
-    const host = window.location.host;
-    const wsUrl = `${protocol}//${host}/ws/terminal/${sessionId}`;
+    const wsUrl = `${getWsBase()}/ws/terminal/${sessionId}`;
 
     const ws = new WebSocket(wsUrl);
     socketRef.current = ws;
