@@ -64,6 +64,38 @@ def test_start_session_and_advisor():
     assert del_res.status_code == 200
 
 
+def test_k8s_zero_endpoints_api_flow():
+    # 1. Start simulation session for k8s-zero-endpoints
+    start_res = client.post("/api/v1/labs/k8s-zero-endpoints/session", json={"force_simulation": True})
+    assert start_res.status_code == 200
+    session_id = start_res.json()["session_id"]
+
+    # 2. Test saving the fixed service.yaml
+    save_res = client.post(
+        f"/api/v1/labs/session/{session_id}/file",
+        json={
+            "path": "/workspace/service.yaml",
+            "content": "apiVersion: v1\nkind: Service\nmetadata:\n  name: checkout-svc\nspec:\n  selector:\n    app: checkout-service\n  ports:\n  - port: 8080\n    targetPort: 8080\n",
+        },
+    )
+    assert save_res.status_code == 200
+    assert save_res.json()["status"] == "saved"
+
+    # 3. Validate task
+    val_res = client.post(
+        f"/api/v1/labs/session/{session_id}/validate",
+        json={"task_id": "fix-service-selector"},
+    )
+    assert val_res.status_code == 200
+    report = val_res.json()
+    assert report["overall_status"] == "PASS"
+    assert report["total_score"] == 100
+
+    # 4. Clean up session
+    client.delete(f"/api/v1/labs/session/{session_id}")
+
+
+
 def test_incidents_catalog_and_start():
     list_res = client.get("/api/v1/incidents")
     assert list_res.status_code == 200

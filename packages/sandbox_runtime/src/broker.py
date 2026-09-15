@@ -135,7 +135,11 @@ class EnvironmentBroker:
                 LabRuntimeClassification.CLOUD_REQUIRED,
             ]
         ):
-            sim = DeterministicSimulator(lab_spec.id, lab_spec.initial_state.seed_data)
+            sim = DeterministicSimulator(
+                lab_spec.id,
+                lab_spec.initial_state.seed_data,
+                initial_files=lab_spec.initial_state.files,
+            )
             env_record = {
                 "sandbox_id": sandbox_id,
                 "provider": "simulator",

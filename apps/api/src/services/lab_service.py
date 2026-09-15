@@ -82,6 +82,19 @@ class LabService:
         exit_code, stdout, stderr = self.sandbox_manager.execute_command(session_id, command)
         return {"exit_code": exit_code, "stdout": stdout, "stderr": stderr}
 
+    def save_file(self, session_id: str, file_path: str, content: str):
+        session = self.sandbox_manager.get_session(session_id)
+        if not session:
+            raise ValueError(f"Session {session_id} not found or expired.")
+
+        if session.is_container:
+            # Stage file into real container
+            c_name = session.container_id
+            cmd = f"cat << 'EOF' > {file_path}\n{content}\nEOF"
+            self.sandbox_manager.execute_command(session_id, cmd)
+        elif session.simulator:
+            session.simulator._sync_file_change(file_path, content)
+
     def ask_advisor(
         self,
         session_id: str,

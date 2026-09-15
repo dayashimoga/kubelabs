@@ -1,7 +1,7 @@
 {
-  "timestamp": "2026-09-15T03:19:29Z",
+  "timestamp": "2026-09-15T04:57:40Z",
   "mode": "FAST",
-  "duration_seconds": 3.07,
+  "duration_seconds": 1.8,
   "overall_status": "PASS",
   "certification_level": "FAST-CI-VERIFIED (FULL ACCEPTANCE REQUIRED FOR PRODUCTION)",
   "gates_passed": 18,

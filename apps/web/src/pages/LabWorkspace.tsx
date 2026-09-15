@@ -145,10 +145,34 @@ export const LabWorkspace: React.FC<LabWorkspaceProps> = ({ labId, onBack }) => 
     };
   }, [isDragging]);
 
+  const handleSaveFile = async (contentToSave: string, targetPath?: string) => {
+    setEditorContent(contentToSave);
+    if (!session) return;
+    const filePath = targetPath || lab?.initial_state?.files?.[0]?.path || '/workspace/service.yaml';
+    try {
+      await fetch(`${getApiBase()}/api/v1/labs/session/${session.session_id}/file`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ path: filePath, content: contentToSave }),
+      });
+    } catch (err) {
+      console.error('Failed to sync saved file:', err);
+    }
+  };
+
   const handleRunValidation = async () => {
     if (!session || !lab?.tasks?.[0]) return;
     setIsValidating(true);
     try {
+      const filePath = lab?.initial_state?.files?.[0]?.path || '/workspace/service.yaml';
+      if (editorContent) {
+        await fetch(`${getApiBase()}/api/v1/labs/session/${session.session_id}/file`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ path: filePath, content: editorContent }),
+        }).catch((e) => console.warn('Could not sync file before validation', e));
+      }
+
       const res = await fetch(`${getApiBase()}/api/v1/labs/session/${session.session_id}/validate`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -478,7 +502,7 @@ export const LabWorkspace: React.FC<LabWorkspaceProps> = ({ labId, onBack }) => 
                   <CodeEditor
                     filename={lab.initial_state?.files?.[0]?.path || 'config.yaml'}
                     initialContent={editorContent}
-                    onSave={(newVal) => setEditorContent(newVal)}
+                    onSave={(newVal) => handleSaveFile(newVal, lab.initial_state?.files?.[0]?.path)}
                   />
                 </div>
               </div>

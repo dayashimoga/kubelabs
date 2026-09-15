@@ -35,6 +35,11 @@ class ValidateTaskRequest(BaseModel):
     task_id: str
 
 
+class SaveFileRequest(BaseModel):
+    path: str
+    content: str
+
+
 @router.get("/tracks")
 def get_tracks():
     return {"tracks": lab_service.get_tracks()}
@@ -101,6 +106,15 @@ def ask_advisor(session_id: str, req: AskAdvisorRequest):
             recent_command=req.recent_command,
             recent_output=req.recent_output,
         )
+    except Exception as exc:
+        raise HTTPException(status_code=400, detail=str(exc))
+
+
+@router.post("/session/{session_id}/file")
+def save_session_file(session_id: str, req: SaveFileRequest):
+    try:
+        lab_service.save_file(session_id, req.path, req.content)
+        return {"session_id": session_id, "path": req.path, "status": "saved"}
     except Exception as exc:
         raise HTTPException(status_code=400, detail=str(exc))
 
