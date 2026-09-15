@@ -206,16 +206,28 @@ switch ($Action) {
         $k8sStatus = "AVAILABLE"
 
         try {
-            $webRes = Invoke-WebRequest -Uri "http://localhost:3000" -UseBasicParsing -TimeoutSec 2 -ErrorAction Stop
+            $webRes = Invoke-WebRequest -Uri "http://127.0.0.1:3000" -UseBasicParsing -TimeoutSec 3 -ErrorAction Stop
             if ($webRes.StatusCode -eq 200) { $webStatus = "HEALTHY" }
-        } catch {}
+        } catch {
+            try {
+                $webRes = Invoke-WebRequest -Uri "http://localhost:3000" -UseBasicParsing -TimeoutSec 3 -ErrorAction Stop
+                if ($webRes.StatusCode -eq 200) { $webStatus = "HEALTHY" }
+            } catch {}
+        }
 
         try {
-            $res = Invoke-RestMethod -Uri "http://localhost:8000/readyz" -TimeoutSec 2 -ErrorAction Stop
+            $res = Invoke-RestMethod -Uri "http://127.0.0.1:8000/readyz" -TimeoutSec 3 -ErrorAction Stop
             if ($res.ready) { $apiStatus = "HEALTHY" }
-            if ($res.components.database -eq "healthy") { $pgStatus = "HEALTHY" }
-            if ($res.components.redis_cache -eq "healthy") { $redisStatus = "HEALTHY" }
-        } catch {}
+            if ($res.components.database -in @("healthy", "connected")) { $pgStatus = "HEALTHY" }
+            if ($res.components.redis_cache -in @("healthy", "connected")) { $redisStatus = "HEALTHY" }
+        } catch {
+            try {
+                $res = Invoke-RestMethod -Uri "http://localhost:8000/readyz" -TimeoutSec 3 -ErrorAction Stop
+                if ($res.ready) { $apiStatus = "HEALTHY" }
+                if ($res.components.database -in @("healthy", "connected")) { $pgStatus = "HEALTHY" }
+                if ($res.components.redis_cache -in @("healthy", "connected")) { $redisStatus = "HEALTHY" }
+            } catch {}
+        }
 
         $pgRunning = (& podman ps -q --filter "name=kubelabs-postgres")
         if ($pgRunning -and $pgStatus -eq "OFFLINE") { $pgStatus = "HEALTHY" }

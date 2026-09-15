@@ -25,6 +25,9 @@ wheels/
 htmlcov/
 *.db
 *.sqlite3
+*.db-wal
+*.db-shm
+
 
 # Node.js
 node_modules/
